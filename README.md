@@ -1,4 +1,4 @@
-**⚠石盤點法不會自動保存⚠**<br><br>
+⚠**石盤點法不會自動保存**⚠<br><br>
 ## 新石盤
 ### 2020/10/30
 [琉琪亞＆七夕青鳥](https://mimirhenrystone.github.io/Sync-Grid/grids/琉琪亞＆七夕青鳥.html)<br>
