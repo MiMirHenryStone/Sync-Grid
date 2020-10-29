@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8' />
+	<title>拍檔石盤</title>
+	<style>
+		body { font-size: 16px }
+	</style>
+</head>
+
+<body>
+	<div>
+		<label id="energy" style="font-size: 24px;">剩餘力量：60</label>
+		<label id="energy" style="font-size: 24px;">　</label>
+		<label id="orb" style="font-size: 24px;">拍檔滴晶：0</label>
+	</div>
+	<div id="skill" style="font-size: 24px;">技能名稱：</div>
+	<div id="effect" style="font-size: 24px;">效果：</div>
+	<div>
+		<svg id="grid" height="1920" width="1080"></svg>
+	</div>
+
+	<script>
+json = [[1011800000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [1011800001, '特攻+5', '特攻+5', 0, 5, 1, '568dd1', 1, -1], [1011800002, '防禦+5', '防禦+5', 0, 5, 1, '568dd1', 0, -1], [1011800003, '特攻+5', '特攻+5', 0, 5, 1, '568dd1', -1, 0], [1011800004, '特防+5', '特防+5', 0, 5, 1, '568dd1', -1, 1], [1011800005, '速度+5', '速度+5', 0, 5, 1, '568dd1', 0, 1], [1011800006, 'ＨＰ+10', 'ＨＰ+10', 2, 24, 1, '568dd1', 1, 1], [1011800007, '中毒無效', '不會陷入中毒狀態和劇毒狀態。', 3, 36, 1, 'e6ce5e', 2, 1], [1011800008, '特攻+5', '特攻+5', 2, 24, 1, '568dd1', 1, 2], [1011800009, '月亮之力：威力+3', '月亮之力：威力+3', 3, 36, 1, '4ab897', 3, 1], [1011800010, '月亮之力：招式後招式計量槽增加３', '招式成功時，有些情況下會幫自己增加１條招式計量槽。', 6, 72, 1, 'e1768a', 2, 2], [1011800011, '月亮之力：威力+3', '月亮之力：威力+3', 3, 36, 2, '4ab897', 1, 3], [1011800012, '月亮之力：威力+3', '月亮之力：威力+3', 3, 36, 1, '4ab897', 3, 2], [1011800013, '月亮之力：威力+3', '月亮之力：威力+3', 3, 36, 2, '4ab897', 2, 3], [1011800014, '特防+10', '特防+10', 5, 60, 3, '568dd1', 1, 4], [1011800015, '月亮之力：威力+3', '月亮之力：威力+3', 3, 36, 2, '4ab897', 3, 3], [1011800016, '拍組招式後計數加速１', '首次使出拍組招式時，會讓發動拍組招式所需的行動數減少１次。', 10, 120, 3, 'e6ce5e', 2, 4], [1011800017, '冰雹無效', '不會受到冰雹所造成的傷害。', 3, 36, 1, 'e6ce5e', -2, 0], [1011800018, '特攻+5', '特攻+5', 2, 24, 1, '568dd1', -3, 0], [1011800019, '特攻+5', '特攻+5', 2, 24, 1, '568dd1', -1, -1], [1011800020, '命中強化Ｇ：招式後招式次數回復３', '招式成功時，有些情況下會回復該招式的使用次數１次。', 7, 84, 1, 'e1768a', -2, -1], [1011800021, '防禦+10', '防禦+10', 5, 60, 2, '568dd1', -3, -1], [1011800022, '特防+10', '特防+10', 5, 60, 2, '568dd1', -1, -2], [1011800023, '特攻+20', '特攻+20', 8, 96, 2, '568dd1', -2, -2], [1011800024, '魅惑之聲：攻擊時能力下降９', '使出招式攻擊成功時，會降低對手的攻擊、防禦、特攻、特防、速度、命中率、閃避率中的一種。', 8, 96, 3, 'e1768a', -3, -2], [1011800025, '依命中率升幅威力提升↑', '自己的命中率提高得越多，招式的威力就提高得越多。', 8, 96, 3, 'e6ce5e', -1, -3], [1011800026, '速度+5', '速度+5', 2, 24, 1, '568dd1', 1, -2], [1011800027, '沙暴無效', '不會受到沙暴所造成的傷害。', 3, 36, 1, 'e6ce5e', 2, -3], [1011800028, '防禦+5', '防禦+5', 2, 24, 1, '568dd1', 1, -3], [1011800029, '魅惑之聲：威力+4', '魅惑之聲：威力+4', 3, 36, 1, '4ab897', 3, -4], [1011800030, '魅惑之聲：招式後招式計量槽增加３', '招式成功時，有些情況下會幫自己增加１條招式計量槽。', 6, 72, 1, 'e1768a', 2, -4], [1011800031, '魅惑之聲：威力+4', '魅惑之聲：威力+4', 3, 36, 2, '4ab897', 1, -4], [1011800032, '魅惑之聲：威力+4', '魅惑之聲：威力+4', 3, 36, 1, '4ab897', 3, -5], [1011800033, '魅惑之聲：威力+4', '魅惑之聲：威力+4', 3, 36, 2, '4ab897', 2, -5], [1011800034, '命中強化Ｇ：招式後ＨＰ回復９', '招式成功時，會回復自己的ＨＰ。', 10, 120, 3, 'e1768a', 1, -5], [1011800035, '魅惑之聲：威力+4', '魅惑之聲：威力+4', 3, 36, 2, '4ab897', 3, -6], [1011800036, '瀕死時我方ＨＰ回復１', '陷入瀕死狀態前，會回復自己以外的我方全體拍組的ＨＰ。', 10, 120, 3, 'e6ce5e', 2, -6], [1011800037, '束縛無效', '不會陷入束縛狀態。', 3, 36, 1, 'e6ce5e', -2, 2], [1011800038, '速度+5', '速度+5', 2, 24, 1, '568dd1', -1, 2], [1011800039, 'ＨＰ+20', 'ＨＰ+20', 5, 60, 1, '568dd1', -3, 3], [1011800040, '拿出全力！！：招式後招式次數回復３', '招式成功時，有些情況下會回復該招式的使用次數１次。', 7, 84, 1, 'e1768a', -2, 3], [1011800041, '防禦+5', '防禦+5', 2, 24, 2, '568dd1', -1, 3], [1011800042, '被攻擊時防禦提升２', '受到招式攻擊時，偶爾會提高自己的防禦。', 7, 84, 2, 'e6ce5e', -3, 4], [1011800043, '被攻擊時特防提升２', '受到招式攻擊時，偶爾會提高自己的特防。', 7, 84, 2, 'e6ce5e', -2, 4], [1011800044, '效果絕佳時威力提升２', '當招式的效果絕佳時，會提高該招式的威力。', 9, 108, 3, 'e6ce5e', -1, 4], [1011800045, 'ＨＰ+50', 'ＨＰ+50', 10, 120, 3, '568dd1', -3, 5], [1011800046, '勇於面對試煉之月亮之力：威力+25', '勇於面對試煉之月亮之力：威力+25', 5, 60, 3, 'ed9bb8', 0, 3], [1011800047, '勇於面對試煉之月亮之力：威力+25', '勇於面對試煉之月亮之力：威力+25', 5, 60, 3, 'ed9bb8', 0, -3]]
+
+		class Tile {
+			constructor(id, skill, effect, energy, orb, lv, color, x, y) {
+				this.id = id;
+				this.skill = skill;
+				this.effect = effect;
+				this.energy = energy;
+				this.orb = orb;
+				this.lv = lv;
+				this.color = color;
+				this.x = x;
+				this.y = y;
+				this.xy = xyz2xy(this.x, this.y);
+				this.hexagon = hexagon(this.xy);
+			}
+			draw() {
+				var e = document.getElementById('grid');
+
+				var h = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+				var points = "";
+				for (var i = 0; i < this.hexagon.length; i++) {
+					points = points + this.hexagon[i][0] + "," + this.hexagon[i][1] + " ";
+				}
+				h.setAttribute("points", points);
+				h.setAttribute("style", "fill:#" + this.color + ";opacity:0.25;stroke:black;stroke-width:1");
+				h.setAttribute("id", this.id);
+				e.appendChild(h);
+
+				if (this.skill.indexOf('：') != -1) {
+					var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+					var line = this.skill.substring(0, this.skill.indexOf('：'));
+					s.innerHTML = line;
+					s.setAttribute("x", this.xy[0] - line.length * f / 2);
+					s.setAttribute("y", this.xy[1]);
+					e.appendChild(s);
+					var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+					var line = this.skill.substring(this.skill.indexOf('：') + 1);
+					s.innerHTML = line;
+					s.setAttribute("x", this.xy[0] - line.length * f / 2);
+					s.setAttribute("y", this.xy[1] + f);
+					e.appendChild(s);
+				}
+				else {
+					var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+					s.innerHTML = this.skill;
+					s.setAttribute("x", this.xy[0] - this.skill.length * f / 2);
+					s.setAttribute("y", this.xy[1] + f / 2);
+					e.appendChild(s);
+				}
+
+
+				var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+				s.innerHTML = '等級' + this.lv;
+				s.setAttribute("x", this.xy[0] - f * 3 / 2);
+				s.setAttribute("y", this.xy[1] - f * 2);
+				e.appendChild(s);
+
+				var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+				s.innerHTML = '能量' + this.energy;
+				s.setAttribute("x", this.xy[0] - f * 3 / 2);
+				s.setAttribute("y", this.xy[1] + f * 3);
+				e.appendChild(s);
+
+				var h = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+				var points = "";
+				for (var i = 0; i < this.hexagon.length; i++) {
+					points = points + this.hexagon[i][0] + "," + this.hexagon[i][1] + " ";
+				}
+				h.setAttribute("points", points);
+				h.setAttribute("style", "fill:#" + this.color + ";opacity:0;stroke:black;stroke-width:1");
+				h.setAttribute("onclick", "c(evt," + this.id + ")");
+				e.appendChild(h);
+			}
+		}
+		function xyz2xy(x, y) {
+			var x1 = x * R * 1.5 + X / 2;
+			var y1 = - x * R * 1.732 / 2 - y * R * 1.732 + Y / 2;
+			return [x1, y1];
+		}
+
+		function hexagon(xy) {
+			var x = xy[0];
+			var y = xy[1];
+			var r2 = r / 2;
+			var r3 = r / 2 * 1.732;
+			var re = [[x + r, y],
+			[x + r2, y + r3],
+			[x - r2, y + r3],
+			[x - r, y],
+			[x - r2, y - r3],
+			[x + r2, y - r3]];
+			return re;
+		}
+
+		function c(evt, id) {
+			for (var i = 0; i < tiles.length; i++) {
+				if (tiles[i].id == id) {
+					var t = tiles[i];
+					break;
+				}
+			}
+			var target = document.getElementById(id);
+			if (target.style.opacity == 0.25) {
+				target.style.opacity = 1;
+				energy = energy - t.energy;
+				orb = orb + t.orb;
+				document.getElementById('skill').innerHTML = '技能名稱：' + t.skill;
+				document.getElementById('effect').innerHTML = '效果：' + t.effect;
+			}
+			else {
+				target.style.opacity = 0.25;
+				energy = energy + t.energy;
+				orb = orb - t.orb;
+				document.getElementById('skill').innerHTML = '技能名稱：';
+				document.getElementById('effect').innerHTML = '效果：';
+			}
+			update();
+		};
+
+		function update() {
+			document.getElementById('energy').innerHTML = '剩餘力量：' + energy;
+			document.getElementById('orb').innerHTML = '拍檔滴晶：' + orb;
+		}
+
+		var name = "莉莉艾＆皮皮";
+		var tcolor = "ed9bb8";
+		var X = 1080;
+		var Y = 1920;
+		var R = 96;
+		var r = 96;
+		var f = 16;
+		var energy = 60;
+		var orb = 0;
+
+		var e = document.getElementById('grid');
+
+		var h = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+		var points = "";
+		var hxy = xyz2xy(0, 0);
+		var hh = hexagon(hxy);
+		for (var i = 0; i < hh.length; i++) {
+			points = points + hh[i][0] + "," + hh[i][1] + " ";
+		}
+		h.setAttribute("points", points);
+		h.setAttribute("style", "fill:#" + tcolor + ";opacity:0.5;stroke:black;stroke-width:1");
+		e.appendChild(h);
+		var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+		var line = name.substring(0, name.indexOf('＆'));
+		s.innerHTML = line;
+		s.setAttribute("x", hxy[0] - line.length * f / 2);
+		s.setAttribute("y", hxy[1]);
+		e.appendChild(s);
+		var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+		var line = name.substring(name.indexOf('＆') + 1);
+		s.innerHTML = line;
+		s.setAttribute("x", hxy[0] - line.length * f / 2);
+		s.setAttribute("y", hxy[1] + f);
+		e.appendChild(s);
+
+		tiles = new Array();
+		for (var i = 0; i < json.length; i++) {
+			var t = json[i];
+			var tile = new Tile(t[0], t[1], t[2], t[3], t[4], t[5], t[6], t[7], t[8]);
+			tile.draw();
+			tiles.push(tile);
+		}
+
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8' />
+	<title>拍檔石盤</title>
+	<style>
+		body { font-size: 16px }
+	</style>
+</head>
+
+<body>
+	<div>
+		<label id="energy" style="font-size: 24px;">剩餘力量：60</label>
+		<label id="energy" style="font-size: 24px;">　</label>
+		<label id="orb" style="font-size: 24px;">拍檔滴晶：0</label>
+	</div>
+	<div id="skill" style="font-size: 24px;">技能名稱：</div>
+	<div id="effect" style="font-size: 24px;">效果：</div>
+	<div>
+		<svg id="grid" height="1920" width="1080"></svg>
+	</div>
+
+	<script>
+json = [[1009100000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [1009100001, '攻擊+5', '攻擊+5', 0, 5, 1, '568dd1', 1, -1], [1009100002, '防禦+5', '防禦+5', 0, 5, 1, '568dd1', 0, -1], [1009100003, '攻擊+5', '攻擊+5', 0, 5, 1, '568dd1', -1, 0], [1009100004, '特防+5', '特防+5', 0, 5, 1, '568dd1', -1, 1], [1009100005, '速度+5', '速度+5', 0, 5, 1, '568dd1', 0, 1], [1009100006, '攻擊+5', '攻擊+5', 2, 24, 1, '568dd1', 1, 1], [1009100007, '跺腳：威力+7', '跺腳：威力+7', 2, 24, 1, '4ab897', 2, 1], [1009100008, '劈開：威力+8', '劈開：威力+8', 2, 24, 1, '4ab897', 3, 1], [1009100009, '跺腳：威力+7', '跺腳：威力+7', 2, 24, 1, '4ab897', 1, 2], [1009100010, '攻擊+5', '攻擊+5', 3, 36, 1, '568dd1', 2, 2], [1009100011, '劈開：威力+8', '劈開：威力+8', 2, 24, 1, '4ab897', 3, 2], [1009100012, '跺腳：威力+7', '跺腳：威力+7', 2, 24, 2, '4ab897', 1, 3], [1009100013, '跺腳：招式後招式計量槽增加４', '招式成功時，有時會幫自己增加１條招式計量槽。', 6, 72, 2, 'e1768a', 2, 3], [1009100014, '劈開：威力+8', '劈開：威力+8', 2, 24, 2, '4ab897', 3, 3], [1009100015, '跺腳：攻擊時防禦下降４ ', '使出招式攻擊成功時，有時會降低對手的防禦。', 7, 84, 3, 'e1768a', 1, 4], [1009100016, '劈開：擊中要害時威力提升３', '擊中對手要害時，會提高當下該攻擊的威力。', 7, 84, 3, 'e1768a', 2, 4], [1009100017, '沙暴無效', '不會受到沙暴所造成的傷害。', 3, 36, 1, 'e6ce5e', -1, -1], [1009100018, '防禦+5', '防禦+5', 2, 24, 1, '568dd1', -2, -1], [1009100019, '力量強化：招式後招式次數回復３', '招式成功時，有些情況下會回復該招式的使用次數１次。', 7, 84, 1, 'e1768a', -3, -1], [1009100020, '特防+5', '特防+5', 2, 24, 1, '568dd1', -1, -2], [1009100021, '沙暴時特防提升', '當天氣為沙暴時，特防會提高１．５倍。', 7, 84, 1, 'e6ce5e', -2, -2], [1009100022, '特防+10', '特防+10', 4, 48, 1, '568dd1', -3, -2], [1009100023, '沙暴時ＨＰ回復１', '當天氣為沙暴時，寶可夢每次行動後都會回復自己的ＨＰ。', 8, 96, 2, 'e6ce5e', -1, -3], [1009100024, '速度+10', '速度+10', 4, 48, 2, '568dd1', -2, -3], [1009100025, 'ＨＰ+50', 'ＨＰ+50', 8, 96, 2, '568dd1', -3, -3], [1009100026, '拍組招式後下次必中要害', '使出拍組招式後，會讓自己變成下次必中要害狀態。', 8, 96, 3, 'e6ce5e', -1, -4], [1009100027, '沙暴時威力提升３', '當天氣為沙暴時，會提高招式的威力。', 10, 120, 3, 'e6ce5e', -2, -4], [1009100028, '速度+5', '速度+5', 2, 24, 1, '568dd1', 2, -1], [1009100029, '速度+5', '速度+5', 2, 24, 1, '568dd1', 3, -2], [1009100030, '地震：威力+3', '地震：威力+3', 4, 48, 1, '4ab897', 2, -2], [1009100031, '地震：威力+3', '地震：威力+3', 4, 48, 1, '4ab897', 1, -2], [1009100032, '地震：威力+3', '地震：威力+3', 4, 48, 2, '4ab897', 3, -3], [1009100033, '探究神話真相之地震：威力+25', '探究神話真相之地震：威力+25', 5, 60, 2, '9b5f41', 2, -3], [1009100034, '地震：威力+3', '地震：威力+3', 4, 48, 2, '4ab897', 1, -3], [1009100035, '依速度升幅威力提升', '自己的速度提高得越多，招式的威力就提高得越多。', 10, 120, 3, 'e6ce5e', 3, -4], [1009100036, '地震：招式後招式計量槽增加４', '招式成功時，有時會幫自己增加１條招式計量槽。', 7, 84, 3, 'e1768a', 2, -4], [1009100037, '攻擊+5', '攻擊+5', 2, 24, 1, '568dd1', -2, 1], [1009100038, '攻擊+5', '攻擊+5', 2, 24, 1, '568dd1', -3, 2], [1009100039, '愉快的對戰！：招式後招式次數回復３', '招式成功時，有些情況下會回復該招式的使用次數１次。', 7, 84, 1, 'e1768a', -2, 2], [1009100040, 'ＨＰ+20', 'ＨＰ+20', 4, 48, 1, '568dd1', -1, 2], [1009100041, '防禦+10', '防禦+10', 4, 48, 2, '568dd1', -3, 3], [1009100042, '探究神話真相之地震：威力+25', '探究神話真相之地震：威力+25', 5, 60, 2, '9b5f41', -2, 3], [1009100043, '沙暴時招式計量槽加速２', '當天氣為沙暴時，招式計量槽會累積得較快。', 8, 96, 2, 'e6ce5e', -1, 3], [1009100044, '愉快的對戰！：招式後計數加速３', '招式成功時，有些情況下會讓自己發動拍組招式所需的行動數減少１次。', 10, 120, 3, 'e1768a', -3, 4], [1009100045, '上場時擊中要害率提升１', '上場時，會提高自己的擊中要害率。', 10, 120, 3, 'e6ce5e', -2, 4], [1009100046, '探究神話真相之地震：威力+25', '探究神話真相之地震：威力+25', 5, 60, 3, '9b5f41', 0, 3], [1009100047, '探究神話真相之地震：威力+25', '探究神話真相之地震：威力+25', 5, 60, 3, '9b5f41', 0, -3]]
+
+		class Tile {
+			constructor(id, skill, effect, energy, orb, lv, color, x, y) {
+				this.id = id;
+				this.skill = skill;
+				this.effect = effect;
+				this.energy = energy;
+				this.orb = orb;
+				this.lv = lv;
+				this.color = color;
+				this.x = x;
+				this.y = y;
+				this.xy = xyz2xy(this.x, this.y);
+				this.hexagon = hexagon(this.xy);
+			}
+			draw() {
+				var e = document.getElementById('grid');
+
+				var h = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+				var points = "";
+				for (var i = 0; i < this.hexagon.length; i++) {
+					points = points + this.hexagon[i][0] + "," + this.hexagon[i][1] + " ";
+				}
+				h.setAttribute("points", points);
+				h.setAttribute("style", "fill:#" + this.color + ";opacity:0.25;stroke:black;stroke-width:1");
+				h.setAttribute("id", this.id);
+				e.appendChild(h);
+
+				if (this.skill.indexOf('：') != -1) {
+					var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+					var line = this.skill.substring(0, this.skill.indexOf('：'));
+					s.innerHTML = line;
+					s.setAttribute("x", this.xy[0] - line.length * f / 2);
+					s.setAttribute("y", this.xy[1]);
+					e.appendChild(s);
+					var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+					var line = this.skill.substring(this.skill.indexOf('：') + 1);
+					s.innerHTML = line;
+					s.setAttribute("x", this.xy[0] - line.length * f / 2);
+					s.setAttribute("y", this.xy[1] + f);
+					e.appendChild(s);
+				}
+				else {
+					var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+					s.innerHTML = this.skill;
+					s.setAttribute("x", this.xy[0] - this.skill.length * f / 2);
+					s.setAttribute("y", this.xy[1] + f / 2);
+					e.appendChild(s);
+				}
+
+
+				var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+				s.innerHTML = '等級' + this.lv;
+				s.setAttribute("x", this.xy[0] - f * 3 / 2);
+				s.setAttribute("y", this.xy[1] - f * 2);
+				e.appendChild(s);
+
+				var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+				s.innerHTML = '能量' + this.energy;
+				s.setAttribute("x", this.xy[0] - f * 3 / 2);
+				s.setAttribute("y", this.xy[1] + f * 3);
+				e.appendChild(s);
+
+				var h = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+				var points = "";
+				for (var i = 0; i < this.hexagon.length; i++) {
+					points = points + this.hexagon[i][0] + "," + this.hexagon[i][1] + " ";
+				}
+				h.setAttribute("points", points);
+				h.setAttribute("style", "fill:#" + this.color + ";opacity:0;stroke:black;stroke-width:1");
+				h.setAttribute("onclick", "c(evt," + this.id + ")");
+				e.appendChild(h);
+			}
+		}
+		function xyz2xy(x, y) {
+			var x1 = x * R * 1.5 + X / 2;
+			var y1 = - x * R * 1.732 / 2 - y * R * 1.732 + Y / 2;
+			return [x1, y1];
+		}
+
+		function hexagon(xy) {
+			var x = xy[0];
+			var y = xy[1];
+			var r2 = r / 2;
+			var r3 = r / 2 * 1.732;
+			var re = [[x + r, y],
+			[x + r2, y + r3],
+			[x - r2, y + r3],
+			[x - r, y],
+			[x - r2, y - r3],
+			[x + r2, y - r3]];
+			return re;
+		}
+
+		function c(evt, id) {
+			for (var i = 0; i < tiles.length; i++) {
+				if (tiles[i].id == id) {
+					var t = tiles[i];
+					break;
+				}
+			}
+			var target = document.getElementById(id);
+			if (target.style.opacity == 0.25) {
+				target.style.opacity = 1;
+				energy = energy - t.energy;
+				orb = orb + t.orb;
+				document.getElementById('skill').innerHTML = '技能名稱：' + t.skill;
+				document.getElementById('effect').innerHTML = '效果：' + t.effect;
+			}
+			else {
+				target.style.opacity = 0.25;
+				energy = energy + t.energy;
+				orb = orb - t.orb;
+				document.getElementById('skill').innerHTML = '技能名稱：';
+				document.getElementById('effect').innerHTML = '效果：';
+			}
+			update();
+		};
+
+		function update() {
+			document.getElementById('energy').innerHTML = '剩餘力量：' + energy;
+			document.getElementById('orb').innerHTML = '拍檔滴晶：' + orb;
+		}
+
+		var name = "竹蘭＆烈咬陸鯊";
+		var tcolor = "9b5f41";
+		var X = 1080;
+		var Y = 1920;
+		var R = 96;
+		var r = 96;
+		var f = 16;
+		var energy = 60;
+		var orb = 0;
+
+		var e = document.getElementById('grid');
+
+		var h = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+		var points = "";
+		var hxy = xyz2xy(0, 0);
+		var hh = hexagon(hxy);
+		for (var i = 0; i < hh.length; i++) {
+			points = points + hh[i][0] + "," + hh[i][1] + " ";
+		}
+		h.setAttribute("points", points);
+		h.setAttribute("style", "fill:#" + tcolor + ";opacity:0.5;stroke:black;stroke-width:1");
+		e.appendChild(h);
+		var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+		var line = name.substring(0, name.indexOf('＆'));
+		s.innerHTML = line;
+		s.setAttribute("x", hxy[0] - line.length * f / 2);
+		s.setAttribute("y", hxy[1]);
+		e.appendChild(s);
+		var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+		var line = name.substring(name.indexOf('＆') + 1);
+		s.innerHTML = line;
+		s.setAttribute("x", hxy[0] - line.length * f / 2);
+		s.setAttribute("y", hxy[1] + f);
+		e.appendChild(s);
+
+		tiles = new Array();
+		for (var i = 0; i < json.length; i++) {
+			var t = json[i];
+			var tile = new Tile(t[0], t[1], t[2], t[3], t[4], t[5], t[6], t[7], t[8]);
+			tile.draw();
+			tiles.push(tile);
+		}
+
+	</script>
+</body>
+
+</html>
