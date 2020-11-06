@@ -4,32 +4,53 @@
 <head>
 	<meta charset='utf-8' />
 	<title>拍檔石盤</title>
-	<style>
-		body { font-size: 16px }
-	</style>
 </head>
 
 <body>
 	<div>
-		<label id="energy" style="font-size: 24px;">剩餘力量：60</label>
-		<label id="energy" style="font-size: 24px;">　</label>
-		<label id="orb" style="font-size: 24px;">拍檔滴晶：0</label>
+		<label id="energy">剩餘力量：60</label>
+		<label id="energy">　</label>
+		<label id="orb">拍檔滴晶：0</label>
 	</div>
-	<div id="skill" style="font-size: 24px;">技能名稱：</div>
-	<div id="effect" style="font-size: 24px;">效果：</div>
-	<div>
-		<svg id="grid" height="1920" width="1080"></svg>
-	</div>
+	<div id="skill">技能名稱：</div>
+	<div id="effect">效果：</div>
+	<svg id="grid" height="1920" width="1080" viewBox="0 0 1080 1920"></svg>
+	<div id="sg" style="width: 33%; float: right;">石盤技能：</div>
 	<div id="trainer" style="width: 66%; float: left;">————————10032000000————————<br>★3 柳伯♂＆小海獅♂<br>體系：特殊攻擊型 | 弱點：電<br>Lv.1：ＨＰ 67 | 攻擊 10 | 防禦 8 | 特攻 10 | 特防 8 | 速度 7<br>Lv.100：ＨＰ 542 | 攻擊 218 | 防禦 64 | 特攻 218 | 特防 126 | 速度 144<br>Lv.110：ＨＰ 574 | 攻擊 232 | 防禦 68 | 特攻 232 | 特防 134 | 速度 152<br>Lv.120：ＨＰ 606 | 攻擊 246 | 防禦 72 | 特攻 246 | 特防 142 | 速度 160<br>Lv.125：ＨＰ 622 | 攻擊 253 | 防禦 74 | 特攻 253 | 特防 146 | 速度 164<br>拍組招式：拍組冰之光線<br>屬性：冰<br>分類：特殊<br>威力：200<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：冰凍光束 ▭▭<br>屬性：冰<br>分類：特殊<br>威力：46<br>命中：100<br>對象：對手１對拍組<br>極少數情況下會讓對手陷入冰凍狀態。<br><br>道具招式：要害攻擊 2/2<br>分類：變化<br>對象：自己<br>提高自己的擊中要害率。<br><br>寶可夢招式：冰凍之風 ▭▭▭<br>屬性：冰<br>分類：特殊<br>威力：92<br>命中：95<br>對象：對手全體拍組<br>降低對手的速度。<br><br>訓練家招式：不夠嚴格！ 2/2<br>分類：變化<br>對象：自己<br>大幅提高自己的特攻和特防。<br><br>效果絕佳時威力提升２<br>當招式的效果絕佳時，會提高該招式的威力。<br><br>————————10032000000————————<br>★3 柳伯♂＆白海獅♂<br>體系：特殊攻擊型 | 弱點：電<br>Lv.1：ＨＰ 85 | 攻擊 15 | 防禦 11 | 特攻 15 | 特防 11 | 速度 11<br>Lv.100：ＨＰ 560 | 攻擊 223 | 防禦 67 | 特攻 236 | 特防 134 | 速度 148<br>Lv.110：ＨＰ 592 | 攻擊 237 | 防禦 71 | 特攻 250 | 特防 142 | 速度 156<br>Lv.120：ＨＰ 624 | 攻擊 251 | 防禦 75 | 特攻 264 | 特防 150 | 速度 164<br>Lv.125：ＨＰ 640 | 攻擊 258 | 防禦 77 | 特攻 271 | 特防 154 | 速度 168<br>拍組招式：領會寒冬嚴酷之極光束<br>屬性：冰<br>分類：特殊<br>威力：250<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：冰凍光束 ▭▭<br>屬性：冰<br>分類：特殊<br>威力：46<br>命中：100<br>對象：對手１對拍組<br>極少數情況下會讓對手陷入冰凍狀態。<br><br>道具招式：要害攻擊 2/2<br>分類：變化<br>對象：自己<br>提高自己的擊中要害率。<br><br>寶可夢招式：冰凍之風 ▭▭▭<br>屬性：冰<br>分類：特殊<br>威力：92<br>命中：95<br>對象：對手全體拍組<br>降低對手的速度。<br><br>訓練家招式：不夠嚴格！ 2/2<br>分類：變化<br>對象：自己<br>大幅提高自己的特攻和特防。<br><br>效果絕佳時威力提升２<br>當招式的效果絕佳時，會提高該招式的威力。<br><br></div>
-	<div id="sg" style="width: 33%; float: right;">
-		石盤技能：
-	</div>
-
+	
 	<script>
 json = [[1003200000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [1003200001, '特攻+5', '特攻+5', 0, 5, 1, '568dd1', 1, -1], [1003200002, '防禦+5', '防禦+5', 0, 5, 1, '568dd1', 0, -1], [1003200003, '特攻+5', '特攻+5', 0, 5, 1, '568dd1', -1, 0], [1003200004, '特防+5', '特防+5', 0, 5, 1, '568dd1', -1, 1], [1003200005, '速度+5', '速度+5', 0, 5, 1, '568dd1', 0, 1], [1003200006, '特攻+5', '特攻+5', 2, 24, 1, '568dd1', 1, 1], [1003200007, '特攻+10', '特攻+10', 4, 48, 1, '568dd1', 2, 1], [1003200008, '冰凍光束：威力+4', '冰凍光束：威力+4', 3, 36, 1, '4ab897', 3, 1], [1003200009, '冰凍光束：威力+4', '冰凍光束：威力+4', 3, 36, 1, '4ab897', 1, 2], [1003200010, '特攻+10', '特攻+10', 4, 48, 1, '568dd1', 2, 2], [1003200011, '冰凍光束：威力+4', '冰凍光束：威力+4', 3, 36, 1, '4ab897', 3, 2], [1003200012, '冰凍光束：威力+4', '冰凍光束：威力+4', 3, 36, 2, '4ab897', 1, 3], [1003200013, '冰凍光束：招式後招式計量槽增加３', '招式成功時，有些情況下會幫自己增加１條招式計量槽。', 6, 72, 2, 'e1768a', 2, 3], [1003200014, '冰凍光束：威力+4', '冰凍光束：威力+4', 4, 48, 2, '4ab897', 3, 3], [1003200015, '冰凍光束：威力+4', '冰凍光束：威力+4', 4, 48, 3, '4ab897', 1, 4], [1003200016, '特攻+10', '特攻+10', 5, 60, 3, '568dd1', 2, 4], [1003200017, 'ＨＰ+10', 'ＨＰ+10', 2, 24, 1, '568dd1', -1, -1], [1003200018, '特防+10', '特防+10', 4, 48, 1, '568dd1', -2, -1], [1003200019, '冰雹時ＨＰ回復１', '當天氣為冰雹時，寶可夢每次行動後都會回復自己的ＨＰ。', 7, 84, 1, 'e6ce5e', -3, -1], [1003200020, '冰雹無效', '不會受到冰雹所造成的傷害。', 7, 84, 1, 'e6ce5e', -1, -2], [1003200021, '速度+20', '速度+20', 5, 60, 1, '568dd1', -2, -2], [1003200022, 'ＨＰ+20', 'ＨＰ+20', 5, 60, 1, '568dd1', -3, -2], [1003200023, '防禦+10', '防禦+10', 4, 48, 2, '568dd1', -1, -3], [1003200024, '不夠嚴格！：招式後招式次數回復３', '招式成功時，有些情況下會回復該招式的使用次數１次。', 7, 84, 2, 'e1768a', -2, -3], [1003200025, '冰雹時威力提升３', '當天氣為冰雹時，會提高招式的威力。', 8, 96, 2, 'e6ce5e', -3, -3], [1003200026, 'ＨＰ+20', 'ＨＰ+20', 5, 60, 3, '568dd1', -1, -4], [1003200027, '冰雹時威力提升３', '當天氣為冰雹時，會提高招式的威力。', 8, 96, 3, 'e6ce5e', -2, -4], [1003200028, '速度+5', '速度+5', 3, 36, 1, '568dd1', 2, -1], [1003200029, '冰凍之風：威力+5', '冰凍之風：威力+5', 5, 60, 1, '4ab897', 3, -2], [1003200030, 'ＨＰ+10', 'ＨＰ+10', 3, 36, 1, '568dd1', 2, -2], [1003200031, '速度+5', '速度+5', 3, 36, 1, '568dd1', 1, -2], [1003200032, '冰凍之風：威力+5', '冰凍之風：威力+5', 5, 60, 2, '4ab897', 3, -3], [1003200033, '冰凍之風：威力+5', '冰凍之風：威力+5', 5, 60, 2, '4ab897', 2, -3], [1003200034, '冰凍之風：威力+5', '冰凍之風：威力+5', 5, 60, 2, '4ab897', 1, -3], [1003200035, '冰凍之風：命中率+5', '冰凍之風：命中率+5', 10, 120, 3, '4ab897', 3, -4], [1003200036, '冰凍之風：招式後招式計量槽增加４', '招式成功時，有時會幫自己增加１條招式計量槽。', 8, 96, 3, 'e1768a', 2, -4], [1003200037, '異常機率提升１', '當招式的追加效果可使對手陷入異常狀態時，會提高該追加效果的成功率。', 7, 84, 1, 'e6ce5e', -2, 1], [1003200038, '特攻+5', '特攻+5', 3, 36, 1, '568dd1', -3, 2], [1003200039, '要害攻擊：招式後招式次數回復３', '招式成功時，有些情況下會回復該招式的使用次數１次。', 7, 84, 1, 'e1768a', -2, 2], [1003200040, '異常機率提升１', '當招式的追加效果可使對手陷入異常狀態時，會提高該追加效果的成功率。', 7, 84, 1, 'e6ce5e', -1, 2], [1003200041, '防禦+10', '防禦+10', 5, 60, 2, '568dd1', -3, 3], [1003200042, '特防+10', '特防+10', 5, 60, 2, '568dd1', -2, 3], [1003200043, '速度+10', '速度+10', 4, 48, 2, '568dd1', -1, 3], [1003200044, '對手冰凍時威力提升８', '當對手陷入冰凍狀態時，會提高招式的威力。', 10, 120, 3, 'e6ce5e', -3, 4], [1003200045, '對手冰凍時威力提升８', '當對手陷入冰凍狀態時，會提高招式的威力。', 10, 120, 3, 'e6ce5e', -2, 4], [1003200046, '領會寒冬嚴酷之極光束：威力+25', '領會寒冬嚴酷之極光束：威力+25', 5, 60, 3, '6eb4b9', 0, 3], [1003200047, '領會寒冬嚴酷之極光束：威力+25', '領會寒冬嚴酷之極光束：威力+25', 5, 60, 3, '6eb4b9', 0, -3]]
 
+		var svg = document.getElementById("grid");
+		if (window.innerHeight < svg.getAttribute('height')) {
+			svg.setAttribute('width', svg.getAttribute('width') / svg.getAttribute('height') * window.innerHeight);
+			svg.setAttribute('height', window.innerHeight);
+		}
+
+		function setCookie(cookieName, cookieValue, cookieDates) {
+			var d = new Date();
+			d.setDate(d.getDate() + cookieDates);
+			document.cookie = cookieName + "=" + cookieValue + ";expires=" + d.toGMTString();
+		}
+		function getCookie(cookieName) {
+			var cookieStr = unescape(document.cookie);
+			var arr = cookieStr.split("; ");
+			var cookieValue = "";
+			for (var i = 0; i < arr.length; i++) {
+				var temp = arr[i].split("=");
+				if (temp[0] == cookieName) {
+					cookieValue = temp[1];
+					break;
+				}
+			}
+			return cookieValue;
+		}
+		function removeCookie(cookieName) {
+			document.cookie = encodeURIComponent(cookieName) + "=; expires=" + new Date();
+		}
+
 		class Tile {
-			constructor(id, skill, effect, energy, orb, lv, color, x, y) {
+			constructor(id, skill, effect, energy, orb, lv, color, x, y, check) {
 				this.id = id;
 				this.skill = skill;
 				this.effect = effect;
@@ -41,6 +62,7 @@ json = [[1003200000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100320
 				this.y = y;
 				this.xy = xyz2xy(this.x, this.y);
 				this.hexagon = hexagon(this.xy);
+				this.check = check;
 			}
 			draw() {
 				var e = document.getElementById('grid');
@@ -51,7 +73,12 @@ json = [[1003200000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100320
 					points = points + this.hexagon[i][0] + "," + this.hexagon[i][1] + " ";
 				}
 				h.setAttribute("points", points);
-				h.setAttribute("style", "fill:#" + this.color + ";opacity:0.25;stroke:black;stroke-width:1");
+				if (this.check == 0) {
+					h.setAttribute("style", "fill:#" + this.color + ";opacity:0.25;stroke:black;stroke-width:1");
+				}
+				else {
+					h.setAttribute("style", "fill:#" + this.color + ";opacity:1;stroke:black;stroke-width:1");
+				}
 				h.setAttribute("id", this.id);
 				e.appendChild(h);
 
@@ -137,7 +164,7 @@ json = [[1003200000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100320
 				document.getElementById('effect').innerHTML = '效果：' + t.effect;
 				for (var i = 0; i < json.length; i++) {
 					if (json[i][0] == id) {
-						check[i] = true;
+						check[i] = 1;
 						break;
 					}
 				}
@@ -150,11 +177,12 @@ json = [[1003200000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100320
 				document.getElementById('effect').innerHTML = '效果：';
 				for (var i = 0; i < json.length; i++) {
 					if (json[i][0] == id) {
-						check[i] = false;
+						check[i] = 0;
 						break;
 					}
 				}
 			}
+			setCookie('syncgrid' + no, check.join(''), 365);
 			update();
 		};
 
@@ -163,11 +191,12 @@ json = [[1003200000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100320
 			document.getElementById('orb').innerHTML = '拍檔滴晶：' + orb;
 			var re = '';
 			for (var i = 0; i < check.length; i++) {
-				if (check[i]) re += '<br>' + json[i][1];
-			document.getElementById('sg').innerHTML = '石盤技能：' + re;
+				if (check[i] == 1) re += '<br>' + json[i][1];
+				document.getElementById('sg').innerHTML = '石盤技能：' + re;
 			}
 		}
 
+		var no = "10032000000";
 		var name = "柳伯＆小海獅";
 		var tcolor = "6eb4b9";
 		var X = 1080;
@@ -177,9 +206,14 @@ json = [[1003200000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100320
 		var f = 16;
 		var energy = 60;
 		var orb = 0;
-		var check = new Array(json.length);
-		for (var i = 0; i < check.length; i++) check[i] = false;
-
+		var check = getCookie('syncgrid' + no);
+		if (check == "") {
+			var check = new Array(json.length);
+			for (var i = 0; i < check.length; i++) check[i] = 0;
+		}
+		else {
+			check = check.split('');
+		}
 		var e = document.getElementById('grid');
 
 		var h = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
@@ -208,7 +242,7 @@ json = [[1003200000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100320
 		tiles = new Array();
 		for (var i = 0; i < json.length; i++) {
 			var t = json[i];
-			var tile = new Tile(t[0], t[1], t[2], t[3], t[4], t[5], t[6], t[7], t[8]);
+			var tile = new Tile(t[0], t[1], t[2], t[3], t[4], t[5], t[6], t[7], t[8], check[i]);
 			tile.draw();
 			tiles.push(tile);
 		}

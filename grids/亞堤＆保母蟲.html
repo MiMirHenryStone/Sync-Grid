@@ -4,32 +4,53 @@
 <head>
 	<meta charset='utf-8' />
 	<title>拍檔石盤</title>
-	<style>
-		body { font-size: 16px }
-	</style>
 </head>
 
 <body>
 	<div>
-		<label id="energy" style="font-size: 24px;">剩餘力量：60</label>
-		<label id="energy" style="font-size: 24px;">　</label>
-		<label id="orb" style="font-size: 24px;">拍檔滴晶：0</label>
+		<label id="energy">剩餘力量：60</label>
+		<label id="energy">　</label>
+		<label id="orb">拍檔滴晶：0</label>
 	</div>
-	<div id="skill" style="font-size: 24px;">技能名稱：</div>
-	<div id="effect" style="font-size: 24px;">效果：</div>
-	<div>
-		<svg id="grid" height="1920" width="1080"></svg>
-	</div>
+	<div id="skill">技能名稱：</div>
+	<div id="effect">效果：</div>
+	<svg id="grid" height="1920" width="1080" viewBox="0 0 1080 1920"></svg>
+	<div id="sg" style="width: 33%; float: right;">石盤技能：</div>
 	<div id="trainer" style="width: 66%; float: left;">————————10170000000————————<br>拍组搜寻★5 亞堤♂＆保母蟲♂<br>體系：特殊攻擊型 | 弱點：火<br>Lv.1：ＨＰ 81 | 攻擊 18 | 防禦 9 | 特攻 22 | 特防 9 | 速度 16<br>Lv.100：ＨＰ 429 | 攻擊 184 | 防禦 129 | 特攻 303 | 特防 129 | 速度 285<br>Lv.110：ＨＰ 453 | 攻擊 196 | 防禦 137 | 特攻 323 | 特防 137 | 速度 305<br>Lv.120：ＨＰ 477 | 攻擊 208 | 防禦 145 | 特攻 343 | 特防 145 | 速度 325<br>Lv.125：ＨＰ 489 | 攻擊 214 | 防禦 149 | 特攻 353 | 特防 149 | 速度 335<br>拍組招式：寵蟲藝術家之蟲之抵抗<br>屬性：蟲<br>分類：特殊<br>威力：250<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：銀色旋風 ▭▭<br>屬性：蟲<br>分類：特殊<br>威力：47<br>命中：100<br>對象：對手１對拍組<br>極少數情況下會提高自己的攻擊、防禦、特攻、特防和速度。<br><br>道具招式：特攻強化 2/2<br>分類：變化<br>對象：自己<br>大幅提高自己的特攻。<br><br>寶可夢招式：蟲鳴 ▭▭▭<br>屬性：蟲<br>分類：特殊<br>威力：99<br>命中：100<br>對象：對手１對拍組<br>極少數情況下會降低對手的特防。<br><br>訓練家招式：好了趕快開始吧 2/2<br>分類：變化<br>對象：自己<br>提高自己的防禦。極大幅提高自己的速度。<br><br>晴天時招式計量槽加速２<br>當天氣為日照強烈時，招式計量槽會累積得較快。<br><br>提升機率↑１<br>當招式的追加效果可提高能力值時，會提高該追加效果的成功率。<br><br>下降機率提升１<br>當招式的追加效果可降低對手能力值時，會提高該追加效果的成功率。<br><br></div>
-	<div id="sg" style="width: 33%; float: right;">
-		石盤技能：
-	</div>
-
+	
 	<script>
 json = [[1017000000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [1017000001, '特攻+5', '特攻+5', 0, 5, 1, '568dd1', 1, -1], [1017000002, '防禦+5', '防禦+5', 0, 5, 1, '568dd1', 0, -1], [1017000003, '特攻+5', '特攻+5', 0, 5, 1, '568dd1', -1, 0], [1017000004, '特防+5', '特防+5', 0, 5, 1, '568dd1', -1, 1], [1017000005, '速度+5', '速度+5', 0, 5, 1, '568dd1', 0, 1], [1017000006, 'ＨＰ+10', 'ＨＰ+10', 2, 24, 1, '568dd1', 1, 1], [1017000007, '防禦+5', '防禦+5', 2, 24, 1, '568dd1', 2, 1], [1017000008, '特攻強化：招式後招式次數回復３', '招式成功時，有些情況下會回復該招式的使用次數１次。', 7, 84, 1, 'e1768a', 3, 1], [1017000009, '特防+5', '特防+5', 2, 24, 1, '568dd1', 1, 2], [1017000010, '蟲鳴：威力+3', '蟲鳴：威力+3', 4, 48, 1, '4ab897', 2, 2], [1017000011, '上場時特攻提升１', '上場時，會提高自己的特攻。', 8, 96, 1, 'e6ce5e', 3, 2], [1017000012, '蟲鳴：威力+3', '蟲鳴：威力+3', 4, 48, 2, '4ab897', 1, 3], [1017000013, '蟲鳴：威力+3', '蟲鳴：威力+3', 4, 48, 2, '4ab897', 2, 3], [1017000014, '上場時特防下降Ｇ１', '上場時，會降低對手全體拍組的特防。', 10, 120, 2, 'e6ce5e', 3, 3], [1017000015, '銀色旋風：攻擊時能力下降９', '使出招式攻擊成功時，會降低對手的攻擊、防禦、特攻、特防、速度、命中率、閃避率中的一種。', 5, 60, 3, 'e1768a', 1, 4], [1017000016, '攻擊時隨機提升１', '使出招式攻擊成功後，少數情況下會提高自己的攻擊、防禦、特攻、特防、速度、命中率、閃避率中的一種。', 10, 120, 3, 'e6ce5e', 2, 4], [1017000017, 'ＨＰ+10', 'ＨＰ+10', 2, 24, 1, '568dd1', -1, -1], [1017000018, '防禦+5', '防禦+5', 2, 24, 1, '568dd1', -2, -1], [1017000019, '好了趕快開始吧：招式後招式次數回復３', '招式成功時，有些情況下會回復該招式的使用次數１次。', 7, 84, 1, 'e1768a', -3, -1], [1017000020, '特防+5', '特防+5', 2, 24, 1, '568dd1', -1, -2], [1017000021, '銀色旋風：威力+4', '銀色旋風：威力+4', 3, 36, 1, '4ab897', -2, -2], [1017000022, '晴天時異常狀態無效', '當天氣為日照強烈時，不會陷入異常狀態。', 5, 60, 1, 'e6ce5e', -3, -2], [1017000023, '銀色旋風：威力+4', '銀色旋風：威力+4', 3, 36, 2, '4ab897', -1, -3], [1017000024, '銀色旋風：威力+4', '銀色旋風：威力+4', 3, 36, 2, '4ab897', -2, -3], [1017000025, '晴天時ＨＰ回復１', '當天氣為日照強烈時，寶可夢每次行動後都會回復自己的ＨＰ。', 8, 96, 2, 'e6ce5e', -3, -3], [1017000026, '晴天時拍組招式威力↑５', '當天氣為日照強烈時，會提高拍組招式的威力。', 8, 96, 3, 'e6ce5e', -1, -4], [1017000027, '晴天時威力提升５', '當天氣為日照強烈時，會提高招式的威力。', 10, 120, 3, 'e6ce5e', -2, -4], [1017000028, 'ＨＰ+20', 'ＨＰ+20', 4, 48, 1, '568dd1', 2, -1], [1017000029, '銀色旋風：招式後招式計量槽增加３', '招式成功時，有些情況下會幫自己增加１條招式計量槽。', 6, 72, 1, 'e1768a', 3, -2], [1017000030, '速度+10', '速度+10', 4, 48, 1, '568dd1', 2, -2], [1017000031, '特攻+5', '特攻+5', 2, 24, 1, '568dd1', 1, -2], [1017000032, '提升機率↑１', '當招式的追加效果可提高能力值時，會提高該追加效果的成功率。', 7, 84, 2, 'e6ce5e', 3, -3], [1017000033, '銀色旋風：威力+4', '銀色旋風：威力+4', 3, 36, 2, '4ab897', 2, -3], [1017000034, '銀色旋風：威力+4', '銀色旋風：威力+4', 3, 36, 2, '4ab897', 1, -3], [1017000035, '提升機率↑１', '當招式的追加效果可提高能力值時，會提高該追加效果的成功率。', 7, 84, 3, 'e6ce5e', 3, -4], [1017000036, '上場時速度下降Ｇ１', '上場時，會降低對手全體拍組的速度。', 7, 84, 3, 'e6ce5e', 2, -4], [1017000037, '特攻+10', '特攻+10', 4, 48, 1, '568dd1', -2, 1], [1017000038, '蟲鳴：招式後招式計量槽增加３', '招式成功時，有些情況下會幫自己增加１條招式計量槽。', 6, 72, 1, 'e1768a', -3, 2], [1017000039, '速度+10', '速度+10', 4, 48, 1, '568dd1', -2, 2], [1017000040, '特攻+5', '特攻+5', 2, 24, 1, '568dd1', -1, 2], [1017000041, '下降機率提升１', '當招式的追加效果可降低對手能力值時，會提高該追加效果的成功率。', 7, 84, 2, 'e6ce5e', -3, 3], [1017000042, '蟲鳴：威力+3', '蟲鳴：威力+3', 4, 48, 2, '4ab897', -2, 3], [1017000043, '蟲鳴：威力+3', '蟲鳴：威力+3', 4, 48, 2, '4ab897', -1, 3], [1017000044, '下降機率提升１', '當招式的追加效果可降低對手能力值時，會提高該追加效果的成功率。', 7, 84, 3, 'e6ce5e', -3, 4], [1017000045, '依對手特防降幅拍組招式↑', '對手的特防降低得越多，拍組招式的威力就提高得越多。', 7, 84, 3, 'e6ce5e', -2, 4], [1017000046, '寵蟲藝術家之蟲之抵抗：威力+25', '寵蟲藝術家之蟲之抵抗：威力+25', 5, 60, 3, '9cb558', 0, 3], [1017000047, '寵蟲藝術家之蟲之抵抗：威力+25', '寵蟲藝術家之蟲之抵抗：威力+25', 5, 60, 3, '9cb558', 0, -3]]
 
+		var svg = document.getElementById("grid");
+		if (window.innerHeight < svg.getAttribute('height')) {
+			svg.setAttribute('width', svg.getAttribute('width') / svg.getAttribute('height') * window.innerHeight);
+			svg.setAttribute('height', window.innerHeight);
+		}
+
+		function setCookie(cookieName, cookieValue, cookieDates) {
+			var d = new Date();
+			d.setDate(d.getDate() + cookieDates);
+			document.cookie = cookieName + "=" + cookieValue + ";expires=" + d.toGMTString();
+		}
+		function getCookie(cookieName) {
+			var cookieStr = unescape(document.cookie);
+			var arr = cookieStr.split("; ");
+			var cookieValue = "";
+			for (var i = 0; i < arr.length; i++) {
+				var temp = arr[i].split("=");
+				if (temp[0] == cookieName) {
+					cookieValue = temp[1];
+					break;
+				}
+			}
+			return cookieValue;
+		}
+		function removeCookie(cookieName) {
+			document.cookie = encodeURIComponent(cookieName) + "=; expires=" + new Date();
+		}
+
 		class Tile {
-			constructor(id, skill, effect, energy, orb, lv, color, x, y) {
+			constructor(id, skill, effect, energy, orb, lv, color, x, y, check) {
 				this.id = id;
 				this.skill = skill;
 				this.effect = effect;
@@ -41,6 +62,7 @@ json = [[1017000000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101700
 				this.y = y;
 				this.xy = xyz2xy(this.x, this.y);
 				this.hexagon = hexagon(this.xy);
+				this.check = check;
 			}
 			draw() {
 				var e = document.getElementById('grid');
@@ -51,7 +73,12 @@ json = [[1017000000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101700
 					points = points + this.hexagon[i][0] + "," + this.hexagon[i][1] + " ";
 				}
 				h.setAttribute("points", points);
-				h.setAttribute("style", "fill:#" + this.color + ";opacity:0.25;stroke:black;stroke-width:1");
+				if (this.check == 0) {
+					h.setAttribute("style", "fill:#" + this.color + ";opacity:0.25;stroke:black;stroke-width:1");
+				}
+				else {
+					h.setAttribute("style", "fill:#" + this.color + ";opacity:1;stroke:black;stroke-width:1");
+				}
 				h.setAttribute("id", this.id);
 				e.appendChild(h);
 
@@ -137,7 +164,7 @@ json = [[1017000000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101700
 				document.getElementById('effect').innerHTML = '效果：' + t.effect;
 				for (var i = 0; i < json.length; i++) {
 					if (json[i][0] == id) {
-						check[i] = true;
+						check[i] = 1;
 						break;
 					}
 				}
@@ -150,11 +177,12 @@ json = [[1017000000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101700
 				document.getElementById('effect').innerHTML = '效果：';
 				for (var i = 0; i < json.length; i++) {
 					if (json[i][0] == id) {
-						check[i] = false;
+						check[i] = 0;
 						break;
 					}
 				}
 			}
+			setCookie('syncgrid' + no, check.join(''), 365);
 			update();
 		};
 
@@ -163,11 +191,12 @@ json = [[1017000000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101700
 			document.getElementById('orb').innerHTML = '拍檔滴晶：' + orb;
 			var re = '';
 			for (var i = 0; i < check.length; i++) {
-				if (check[i]) re += '<br>' + json[i][1];
-			document.getElementById('sg').innerHTML = '石盤技能：' + re;
+				if (check[i] == 1) re += '<br>' + json[i][1];
+				document.getElementById('sg').innerHTML = '石盤技能：' + re;
 			}
 		}
 
+		var no = "10170000000";
 		var name = "亞堤＆保母蟲";
 		var tcolor = "9cb558";
 		var X = 1080;
@@ -177,9 +206,14 @@ json = [[1017000000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101700
 		var f = 16;
 		var energy = 60;
 		var orb = 0;
-		var check = new Array(json.length);
-		for (var i = 0; i < check.length; i++) check[i] = false;
-
+		var check = getCookie('syncgrid' + no);
+		if (check == "") {
+			var check = new Array(json.length);
+			for (var i = 0; i < check.length; i++) check[i] = 0;
+		}
+		else {
+			check = check.split('');
+		}
 		var e = document.getElementById('grid');
 
 		var h = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
@@ -208,7 +242,7 @@ json = [[1017000000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101700
 		tiles = new Array();
 		for (var i = 0; i < json.length; i++) {
 			var t = json[i];
-			var tile = new Tile(t[0], t[1], t[2], t[3], t[4], t[5], t[6], t[7], t[8]);
+			var tile = new Tile(t[0], t[1], t[2], t[3], t[4], t[5], t[6], t[7], t[8], check[i]);
 			tile.draw();
 			tiles.push(tile);
 		}

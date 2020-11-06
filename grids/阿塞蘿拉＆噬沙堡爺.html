@@ -4,32 +4,53 @@
 <head>
 	<meta charset='utf-8' />
 	<title>拍檔石盤</title>
-	<style>
-		body { font-size: 16px }
-	</style>
 </head>
 
 <body>
 	<div>
-		<label id="energy" style="font-size: 24px;">剩餘力量：60</label>
-		<label id="energy" style="font-size: 24px;">　</label>
-		<label id="orb" style="font-size: 24px;">拍檔滴晶：0</label>
+		<label id="energy">剩餘力量：60</label>
+		<label id="energy">　</label>
+		<label id="orb">拍檔滴晶：0</label>
 	</div>
-	<div id="skill" style="font-size: 24px;">技能名稱：</div>
-	<div id="effect" style="font-size: 24px;">效果：</div>
-	<div>
-		<svg id="grid" height="1920" width="1080"></svg>
-	</div>
+	<div id="skill">技能名稱：</div>
+	<div id="effect">效果：</div>
+	<svg id="grid" height="1920" width="1080" viewBox="0 0 1080 1920"></svg>
+	<div id="sg" style="width: 33%; float: right;">石盤技能：</div>
 	<div id="trainer" style="width: 66%; float: left;">————————10007000000————————<br>★5 阿塞蘿拉♀＆噬沙堡爺♀<br>體系：技術型 | 弱點：冰<br>Lv.1：ＨＰ 85 | 攻擊 7 | 防禦 8 | 特攻 6 | 特防 8 | 速度 8<br>Lv.100：ＨＰ 437 | 攻擊 143 | 防禦 149 | 特攻 111 | 特防 144 | 速度 180<br>Lv.110：ＨＰ 463 | 攻擊 151 | 防禦 159 | 特攻 117 | 特防 152 | 速度 192<br>Lv.120：ＨＰ 489 | 攻擊 159 | 防禦 169 | 特攻 123 | 特防 160 | 速度 204<br>Lv.125：ＨＰ 502 | 攻擊 163 | 防禦 174 | 特攻 126 | 特防 164 | 速度 210<br>拍組招式：古代公主之無盡暗夜之誘惑<br>屬性：幽靈<br>分類：物理<br>威力：200<br>對象：對手１對拍組<br>自己的防禦提高得越多，威力就越大。<br><br>寶可夢招式：驚嚇 ▭<br>屬性：幽靈<br>分類：物理<br>威力：12<br>命中：100<br>對象：對手１對拍組<br>偶爾會讓對手陷入畏縮狀態。<br><br>道具招式：防禦強化 2/2<br>分類：變化<br>對象：自己<br>大幅提高自己的防禦。<br><br>寶可夢招式：沙暴 ▭▭<br>屬性：岩石<br>分類：變化<br>對象：全場地<br>會將天氣變成沙暴。<br><br>訓練家招式：看這裡看這裡！ 1/1<br>分類：變化<br>對象：自己<br>讓對手的目標暫時集中於自己。讓自己變成附帶回復狀態。<br><br>沙暴時全種類下降無效<br>當天氣為沙暴時，所有的能力都不會下降。<br><br></div>
-	<div id="sg" style="width: 33%; float: right;">
-		石盤技能：
-	</div>
-
+	
 	<script>
 json = [[1000700000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [1000700001, '攻擊+5', '攻擊+5', 0, 5, 1, '568dd1', 1, -1], [1000700002, '防禦+5', '防禦+5', 0, 5, 1, '568dd1', 0, -1], [1000700003, '攻擊+5', '攻擊+5', 0, 5, 1, '568dd1', -1, 0], [1000700004, '特防+5', '特防+5', 0, 5, 1, '568dd1', -1, 1], [1000700005, '速度+5', '速度+5', 0, 5, 1, '568dd1', 0, 1], [1000700006, '防禦+5', '防禦+5', 2, 24, 1, '568dd1', 1, 1], [1000700007, '速度+5', '速度+5', 2, 24, 1, '568dd1', 2, 1], [1000700008, '速度+5', '速度+5', 2, 24, 1, '568dd1', 1, 2], [1000700009, '攻擊+5', '攻擊+5', 2, 24, 1, '568dd1', 3, 1], [1000700010, '沙暴時ＨＰ回復１', '當天氣為沙暴時，寶可夢每次行動後都會回復自己的ＨＰ。', 5, 60, 1, 'e6ce5e', 2, 2], [1000700011, '防禦強化：招式後招式次數回復３', '招式成功時，有些情況下會回復該招式的使用次數１次。', 7, 84, 2, 'e1768a', 1, 3], [1000700012, '特防+5', '特防+5', 2, 24, 1, '568dd1', 3, 2], [1000700013, '攻擊+10', '攻擊+10', 4, 48, 2, '568dd1', 2, 3], [1000700014, '瀕死時攻擊特攻降低Ｇ１', '陷入瀕死狀態前，會降低對手全體拍組的攻擊和特攻。', 7, 84, 3, 'e6ce5e', 1, 4], [1000700015, '依防禦升幅威力提升', '自己的防禦提高得越多，招式的威力就提高得越多。', 7, 84, 2, 'e6ce5e', 3, 3], [1000700016, '防禦+20', '防禦+20', 8, 96, 3, '568dd1', 2, 4], [1000700017, '驚嚇：威力+5', '驚嚇：威力+5', 2, 24, 1, '4ab897', -2, 1], [1000700018, '驚嚇：威力+5', '驚嚇：威力+5', 2, 24, 1, '4ab897', -3, 1], [1000700019, '驚嚇：妨害機率提升１', '當招式的追加效果可使對手陷入畏縮、混亂或束縛狀態時，會提高該追加效果的成功率。', 10, 120, 1, 'e1768a', -2, 0], [1000700020, '驚嚇：威力+6', '驚嚇：威力+6', 3, 36, 2, '4ab897', -3, 0], [1000700021, '驚嚇：威力+5', '驚嚇：威力+5', 2, 24, 1, '4ab897', -1, -1], [1000700022, '驚嚇：威力+6', '驚嚇：威力+6', 3, 36, 2, '4ab897', -2, -1], [1000700023, '沙暴時威力提升５', '當天氣為沙暴時，會提高招式的威力。', 10, 120, 2, 'e6ce5e', -3, -1], [1000700024, '對手畏縮時威力提升５', '當對手陷入畏縮狀態時，會提高招式的威力。', 8, 96, 3, 'e6ce5e', -1, -2], [1000700025, '驚嚇：招式後招式計量槽增加４', '招式成功時，有時會幫自己增加１條招式計量槽。', 6, 72, 3, 'e1768a', -2, -2], [1000700026, '防禦+5', '防禦+5', 2, 24, 1, '568dd1', 2, -1], [1000700027, '特防+5', '特防+5', 2, 24, 1, '568dd1', 3, -2], [1000700028, '看這裡看這裡！：招式後招式次數回復２', '招式成功時，偶爾會回復該招式的使用次數１次。', 7, 84, 1, 'e1768a', 2, -2], [1000700029, '速度+5', '速度+5', 2, 24, 1, '568dd1', 1, -2], [1000700030, 'ＨＰ+20', 'ＨＰ+20', 4, 48, 2, '568dd1', 3, -3], [1000700031, '看這裡看這裡！：招式後招式次數回復２', '招式成功時，偶爾會回復該招式的使用次數１次。', 7, 84, 2, 'e1768a', 2, -3], [1000700032, 'ＨＰ+20', 'ＨＰ+20', 4, 48, 3, '568dd1', 1, -3], [1000700033, '被攻擊時防禦提升４', '受到招式攻擊時，有時會提高自己的防禦。', 7, 84, 2, 'e6ce5e', 3, -4], [1000700034, '被攻擊時特防提升４', '受到招式攻擊時，有時會提高自己的特防。', 7, 84, 3, 'e6ce5e', 2, -4], [1000700035, '特防+5', '特防+5', 2, 24, 1, '568dd1', -1, 2], [1000700036, '沙暴：招式後招式次數回復３', '招式成功時，有些情況下會回復該招式的使用次數１次。', 7, 84, 1, 'e1768a', -2, 3], [1000700037, 'ＨＰ+10', 'ＨＰ+10', 2, 24, 1, '568dd1', -1, 3], [1000700038, '攻擊+5', '攻擊+5', 2, 24, 1, '568dd1', -3, 4], [1000700039, '特防+5', '特防+5', 2, 24, 1, '568dd1', -2, 4], [1000700040, '沙暴：寶可夢出招後攻擊↑Ｇ９', '在寶可夢使出招式時，會提高我方全體拍組的攻擊。', 10, 120, 1, 'e1768a', -3, 5], [1000700041, '沙暴無效', '不會受到沙暴所造成的傷害。', 3, 36, 2, 'e6ce5e', -1, 4], [1000700042, '沙暴：寶可夢出招後要害率↑Ｇ４', '在寶可夢使出招式時，有時會提高我方全體拍組的擊中要害率。', 7, 84, 2, 'e1768a', -2, 5], [1000700043, '沙暴：招式後招式計量槽增加３', '招式成功時，有些情況下會幫自己增加１條招式計量槽。', 5, 60, 2, 'e1768a', -3, 6], [1000700044, '沙暴：招式後招式計量槽增加３', '招式成功時，有些情況下會幫自己增加１條招式計量槽。', 5, 60, 3, 'e1768a', -1, 5], [1000700045, '攻擊+20', '攻擊+20', 10, 120, 3, '568dd1', -2, 6], [1000700046, '古代公主之無盡暗夜之誘惑：威力+25', '古代公主之無盡暗夜之誘惑：威力+25', 5, 60, 3, 'a0739b', 0, 3], [1000700047, '古代公主之無盡暗夜之誘惑：威力+25', '古代公主之無盡暗夜之誘惑：威力+25', 5, 60, 3, 'a0739b', 0, -3]]
 
+		var svg = document.getElementById("grid");
+		if (window.innerHeight < svg.getAttribute('height')) {
+			svg.setAttribute('width', svg.getAttribute('width') / svg.getAttribute('height') * window.innerHeight);
+			svg.setAttribute('height', window.innerHeight);
+		}
+
+		function setCookie(cookieName, cookieValue, cookieDates) {
+			var d = new Date();
+			d.setDate(d.getDate() + cookieDates);
+			document.cookie = cookieName + "=" + cookieValue + ";expires=" + d.toGMTString();
+		}
+		function getCookie(cookieName) {
+			var cookieStr = unescape(document.cookie);
+			var arr = cookieStr.split("; ");
+			var cookieValue = "";
+			for (var i = 0; i < arr.length; i++) {
+				var temp = arr[i].split("=");
+				if (temp[0] == cookieName) {
+					cookieValue = temp[1];
+					break;
+				}
+			}
+			return cookieValue;
+		}
+		function removeCookie(cookieName) {
+			document.cookie = encodeURIComponent(cookieName) + "=; expires=" + new Date();
+		}
+
 		class Tile {
-			constructor(id, skill, effect, energy, orb, lv, color, x, y) {
+			constructor(id, skill, effect, energy, orb, lv, color, x, y, check) {
 				this.id = id;
 				this.skill = skill;
 				this.effect = effect;
@@ -41,6 +62,7 @@ json = [[1000700000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100070
 				this.y = y;
 				this.xy = xyz2xy(this.x, this.y);
 				this.hexagon = hexagon(this.xy);
+				this.check = check;
 			}
 			draw() {
 				var e = document.getElementById('grid');
@@ -51,7 +73,12 @@ json = [[1000700000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100070
 					points = points + this.hexagon[i][0] + "," + this.hexagon[i][1] + " ";
 				}
 				h.setAttribute("points", points);
-				h.setAttribute("style", "fill:#" + this.color + ";opacity:0.25;stroke:black;stroke-width:1");
+				if (this.check == 0) {
+					h.setAttribute("style", "fill:#" + this.color + ";opacity:0.25;stroke:black;stroke-width:1");
+				}
+				else {
+					h.setAttribute("style", "fill:#" + this.color + ";opacity:1;stroke:black;stroke-width:1");
+				}
 				h.setAttribute("id", this.id);
 				e.appendChild(h);
 
@@ -137,7 +164,7 @@ json = [[1000700000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100070
 				document.getElementById('effect').innerHTML = '效果：' + t.effect;
 				for (var i = 0; i < json.length; i++) {
 					if (json[i][0] == id) {
-						check[i] = true;
+						check[i] = 1;
 						break;
 					}
 				}
@@ -150,11 +177,12 @@ json = [[1000700000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100070
 				document.getElementById('effect').innerHTML = '效果：';
 				for (var i = 0; i < json.length; i++) {
 					if (json[i][0] == id) {
-						check[i] = false;
+						check[i] = 0;
 						break;
 					}
 				}
 			}
+			setCookie('syncgrid' + no, check.join(''), 365);
 			update();
 		};
 
@@ -163,11 +191,12 @@ json = [[1000700000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100070
 			document.getElementById('orb').innerHTML = '拍檔滴晶：' + orb;
 			var re = '';
 			for (var i = 0; i < check.length; i++) {
-				if (check[i]) re += '<br>' + json[i][1];
-			document.getElementById('sg').innerHTML = '石盤技能：' + re;
+				if (check[i] == 1) re += '<br>' + json[i][1];
+				document.getElementById('sg').innerHTML = '石盤技能：' + re;
 			}
 		}
 
+		var no = "10007000000";
 		var name = "阿塞蘿拉＆噬沙堡爺";
 		var tcolor = "a0739b";
 		var X = 1080;
@@ -177,9 +206,14 @@ json = [[1000700000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100070
 		var f = 16;
 		var energy = 60;
 		var orb = 0;
-		var check = new Array(json.length);
-		for (var i = 0; i < check.length; i++) check[i] = false;
-
+		var check = getCookie('syncgrid' + no);
+		if (check == "") {
+			var check = new Array(json.length);
+			for (var i = 0; i < check.length; i++) check[i] = 0;
+		}
+		else {
+			check = check.split('');
+		}
 		var e = document.getElementById('grid');
 
 		var h = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
@@ -208,7 +242,7 @@ json = [[1000700000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100070
 		tiles = new Array();
 		for (var i = 0; i < json.length; i++) {
 			var t = json[i];
-			var tile = new Tile(t[0], t[1], t[2], t[3], t[4], t[5], t[6], t[7], t[8]);
+			var tile = new Tile(t[0], t[1], t[2], t[3], t[4], t[5], t[6], t[7], t[8], check[i]);
 			tile.draw();
 			tiles.push(tile);
 		}
