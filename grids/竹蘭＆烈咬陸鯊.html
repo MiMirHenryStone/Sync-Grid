@@ -72,6 +72,8 @@ json = [[1009100000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100910
 				}
 				else {
 					h.setAttribute("style", "fill:#" + this.color + ";opacity:1;stroke:black;stroke-width:1");
+					energy = energy - this.energy;
+					orb = orb + this.orb;
 				}
 				h.setAttribute("id", this.id);
 				e.appendChild(h);
