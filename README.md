@@ -1,20 +1,20 @@
 ⚠**石盤點法不會自動保存**⚠<br><br>
 ## 新石盤
 ### 2020/10/30
-<a href="https://mimirhenrystone.github.io/Sync-Grid/grids/琉琪亞＆七夕青鳥.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/ch0215_00_lutia_128.png" width="64" height="64"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/pm0334_00_tyltalis_128.png" width="32" height="32">琉琪亞＆七夕青鳥</a><br>
+<a href="https://mimirhenrystone.github.io/Sync-Grid/grids/琉琪亞＆七夕青鳥.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_2100_1W_Normal_01.event_2100_1W_Normal_01_1.png"><br>琉琪亞＆七夕青鳥</a><br>
 ### 2020/11/01
-<a href="https://mimirhenrystone.github.io/Sync-Grid/grids/麗姿＆鬃岩狼人.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/ch0051_00_litchi_128.png" width="64" height="64"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/pm0829_12_okami2night_128.png" width="32" height="32">麗姿＆鬃岩狼人</a><br>
+<a href="https://mimirhenrystone.github.io/Sync-Grid/grids/麗姿＆鬃岩狼人.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_2100_1W_Normal_02.00000000000.png"><br>麗姿＆鬃岩狼人</a><br>
 ### 2020/11/06
-<a href="https://mimirhenrystone.github.io/Sync-Grid/grids/阿戴克＆火神蛾.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/ch0132_00_adeku_128.png" width="64" height="64"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/pm0637_00_ulgamoth_128.png" width="32" height="32">阿戴克＆火神蛾</a><br>
+<a href="https://mimirhenrystone.github.io/Sync-Grid/grids/阿戴克＆火神蛾.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_2105_2W_FesPickup_01.event_2105_2W_FesPickup_01_1.png"><br>阿戴克＆火神蛾</a><br>
 ### 2020/11/11
-<a href="https://mimirhenrystone.github.io/Sync-Grid/grids/青綠＆大比鳥.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/ch0021_00_green_128.png" width="64" height="64"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/pm0018_00_pigeot_128.png" width="32" height="32">青綠＆大比鳥</a><br>
+<a href="https://mimirhenrystone.github.io/Sync-Grid/grids/青綠＆大比鳥.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_2100_2W_Normal_02.event_2100_2W_Normal_02_1.png"><br>青綠＆大比鳥</a><br>
 ### 2020/11/12
-<a href="https://mimirhenrystone.github.io/Sync-Grid/grids/共平＆勇士雄鷹.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/ch0100_00_kyohei_128.png" width="64" height="64"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/pm0628_00_warrgle_128.png" width="32" height="32">共平＆勇士雄鷹</a><br>
+<a href="https://mimirhenrystone.github.io/Sync-Grid/grids/共平＆勇士雄鷹.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_2100_3W_Normal_01.event_2100_3W_Normal_01_1.png"><br>共平＆勇士雄鷹</a><br>
 ### 2020/11/14
-<a href="https://mimirhenrystone.github.io/Sync-Grid/grids/白露＆夢夢蝕.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/ch0102_00_bell_128.png" width="64" height="64"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/pm0518_00_musharna_128.png" width="32" height="32">白露＆夢夢蝕</a><br>
+<a href="https://mimirhenrystone.github.io/Sync-Grid/grids/白露＆夢夢蝕.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_2100_3W_Normal_02.event_2100_3W_Normal_02_1.png"><br>白露＆夢夢蝕</a><br>
 ### 2020/11/16
-<a href="https://mimirhenrystone.github.io/Sync-Grid/grids/鳴依（２０１９冬季）＆信使鳥.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/ch0101_10_mei_128.png" width="64" height="64"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/pm0225_00_delibird_128.png" width="32" height="32">鳴依（２０１９冬季）＆信使鳥</a><br>
-<a href="https://mimirhenrystone.github.io/Sync-Grid/grids/志米（２０１９冬季）＆章魚桶.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/ch0096_10_zumi_128.png" width="64" height="64"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/pm0224_00_okutank_128.png" width="32" height="32">志米（２０１９冬季）＆章魚桶</a><br>
+<a href="https://mimirhenrystone.github.io/Sync-Grid/grids/鳴依（２０１９冬季）＆信使鳥.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_2100_3W_SeasonPickup_03.00000000000.png"><br>鳴依（２０１９冬季）＆信使鳥</a><br>
+<a href="https://mimirhenrystone.github.io/Sync-Grid/grids/志米（２０１９冬季）＆章魚桶.html">志米（２０１９冬季）＆章魚桶</a><br>
 
 ## ⭐⭐⭐⭐⭐
 ### 攻擊型
