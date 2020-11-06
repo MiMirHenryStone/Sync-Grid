@@ -1,4 +1,4 @@
-<p align="center"><b>⚠石盤點法不會自動保存⚠</b></p><br>
+<p align="center">⚠<b>石盤點法只保存在本地cookie</b>⚠<br><br>顯示拍組圖片可能需要科學上網</p><br>
 
 ## 新石盤
 ### 2020/10/30
@@ -89,7 +89,7 @@
 <br>
 
 ## ⭐⭐⭐
-<a href="https://mimirhenrystone.github.io/Sync-Grid/grids/主角＆皮卡丘.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/hero_128.png" width="64" height="64"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/pm0025_00_pikachu_128.png" width="32" height="32">主角＆皮卡丘</a><br>
+<a href="https://mimirhenrystone.github.io/Sync-Grid/grids/主角＆皮卡丘.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/pm0025_00_pikachu_128.png" width="64" height="64">主角＆皮卡丘</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/小剛＆大岩蛇.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/ch0015_00_takeshi_128.png" width="64" height="64"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/pm0095_00_iwark_128.png" width="32" height="32">小剛＆大岩蛇</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/小霞＆寶石海星.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/ch0110_01_kasumi_128.png" width="64" height="64"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/pm0121_00_starmie_128.png" width="32" height="32">小霞＆寶石海星</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/莉佳＆霸王花.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/ch0008_00_erika_128.png" width="64" height="64"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/pm0045_01_ruffresia_128.png" width="32" height="32">莉佳＆霸王花</a><br>
