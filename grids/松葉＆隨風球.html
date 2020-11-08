@@ -15,7 +15,7 @@
 	<div id="skill">技能名稱：</div>
 	<div id="effect">效果：</div>
 	<svg id="grid" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
-	<div id="sg" style="width: 33%; float: right;">石盤技能：</div>
+	<div id="sg" style="width: 33%; float: right;">石盤技能：<br></div>
 	<div id="trainer" style="width: 66%; float: left;">————————10148000000————————<br>拍组搜寻★5 松葉♂＆隨風球♂<br>體系：物理攻擊型 | 弱點：電<br>Lv.1：ＨＰ 104 | 攻擊 18 | 防禦 9 | 特攻 18 | 特防 9 | 速度 17<br>Lv.100：ＨＰ 624 | 攻擊 303 | 防禦 90 | 特攻 251 | 特防 90 | 速度 264<br>Lv.110：ＨＰ 662 | 攻擊 323 | 防禦 96 | 特攻 267 | 特防 96 | 速度 282<br>Lv.120：ＨＰ 700 | 攻擊 343 | 防禦 102 | 特攻 283 | 特防 102 | 速度 300<br>Lv.125：ＨＰ 719 | 攻擊 353 | 防禦 105 | 特攻 291 | 特防 105 | 速度 309<br>拍組招式：千里眼修驗者之潛靈奇襲<br>屬性：幽靈<br>分類：物理<br>威力：250<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：暗影球 ▭▭▭<br>屬性：幽靈<br>分類：特殊<br>威力：99<br>命中：100<br>對象：對手１對拍組<br>少數情況下會降低對手的特防。<br><br>道具招式：要害攻擊＋ 2/2<br>分類：變化<br>對象：自己<br>大幅提高自己的擊中要害率。<br><br>寶可夢招式：潛靈奇襲 3/3<br>屬性：幽靈<br>分類：物理<br>威力：160<br>命中：100<br>對象：對手１對拍組<br>效果標記：快攻 潛靈奇襲狀態<br>變成潛靈奇襲狀態。變成潛靈奇襲狀態一段時間後，將會解除潛靈奇襲狀態並且攻擊對手。在潛靈奇襲狀態時，無法做出其他行動。在潛靈奇襲狀態時，對手的攻擊不會命中。在潛靈奇襲狀態時，若受到拍組招式攻擊，將會解除潛靈奇襲狀態。<br><br>訓練家招式：我能看見 2/2<br>分類：變化<br>對象：自己<br>大幅提高自己的攻擊。當自己陷入異常狀態時，會極巨幅提高。提高自己的特攻和閃避率。當自己陷入異常狀態時，會大幅提高。<br><br>ＨＰ減半時速度提升２<br>對戰中在自己的ＨＰ首次剩下一半以下時，會大幅提高自己的速度。<br><br>瀕死時爆炸<br>陷入瀕死狀態前會使出大爆炸。<br><br>替換時能力轉移<br>替換時，已提高的能力變化會由接替的拍組承接。<br><br></div>
 	
 	<script>
@@ -196,11 +196,26 @@ json = [[1014800000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101480
 		function update() {
 			document.getElementById('energy').innerHTML = '剩餘力量：' + energy;
 			document.getElementById('orb').innerHTML = '拍檔滴晶：' + orb;
-			var re = '';
+			var re = new Array();
 			for (var i = 0; i < check.length; i++) {
-				if (check[i] == 1) re += '<br>' + json[i][1];
-				document.getElementById('sg').innerHTML = '石盤技能：' + re;
+				if (check[i] == 1) {
+					var newline = true;
+					if (json[i][1].indexOf('+') != -1) {
+						for (var j = 0; j < re.length; j++) {
+							if (re[j].indexOf('+') != -1) {
+								if (re[j].slice(0, re[j].indexOf('+')) == json[i][1].slice(0, json[i][1].indexOf('+'))) {
+									re[j] = re[j].slice(0, re[j].indexOf('+') + 1) + (parseInt(re[j].slice(re[j].indexOf('+') + 1, re[j].length)) + parseInt(json[i][1].slice(json[i][1].indexOf('+') + 1, json[i][1].length)));
+									newline = false;
+								}
+							}
+						}
+					}
+					if (newline) {
+						re.push(json[i][1]);
+					}
+				}
 			}
+			document.getElementById('sg').innerHTML = '石盤技能：<br>' + re.join('<br>');
 		}
 
 		var no = "10148000000";

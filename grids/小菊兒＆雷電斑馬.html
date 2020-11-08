@@ -15,7 +15,7 @@
 	<div id="skill">技能名稱：</div>
 	<div id="effect">效果：</div>
 	<svg id="grid" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
-	<div id="sg" style="width: 33%; float: right;">石盤技能：</div>
+	<div id="sg" style="width: 33%; float: right;">石盤技能：<br></div>
 	<div id="trainer" style="width: 66%; float: left;">————————10106000000————————<br>拍组搜寻★5 小菊兒♀＆雷電斑馬♀<br>體系：物理攻擊型 | 弱點：地面<br>Lv.1：ＨＰ 96 | 攻擊 23 | 防禦 10 | 特攻 16 | 特防 10 | 速度 20<br>Lv.100：ＨＰ 700 | 攻擊 270 | 防禦 91 | 特攻 149 | 特防 91 | 速度 289<br>Lv.110：ＨＰ 744 | 攻擊 288 | 防禦 97 | 特攻 159 | 特防 97 | 速度 309<br>Lv.120：ＨＰ 788 | 攻擊 306 | 防禦 103 | 特攻 169 | 特防 103 | 速度 329<br>Lv.125：ＨＰ 810 | 攻擊 315 | 防禦 106 | 特攻 174 | 特防 106 | 速度 339<br>拍組招式：秀出真正光彩之瘋狂伏特<br>屬性：電<br>分類：物理<br>威力：250<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：電光 ▭▭<br>屬性：電<br>分類：物理<br>威力：42<br>命中：100<br>對象：對手１對拍組<br>偶爾會讓對手陷入麻痺狀態。<br><br>道具招式：力量強化 2/2<br>分類：變化<br>對象：自己<br>大幅提高自己的攻擊。<br><br>寶可夢招式：瘋狂伏特 ▭▭▭<br>屬性：電<br>分類：物理<br>威力：125<br>命中：100<br>對象：對手１對拍組<br>效果標記：反衝<br>給予對手傷害後自己也會受到１／５的傷害。<br><br>訓練家招式：當心被我電到喔！ 2/2<br>分類：變化<br>對象：自己<br>效果標記：回復<br>少量回復自己的ＨＰ。讓自己變成下次必中要害狀態。<br><br>寶可夢出招後速度↑２<br>在寶可夢使出招式時，偶爾會提高自己的速度。<br><br>麻痺無效<br>不會陷入麻痺狀態。<br><br></div>
 	
 	<script>
@@ -196,11 +196,26 @@ json = [[1010600000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101060
 		function update() {
 			document.getElementById('energy').innerHTML = '剩餘力量：' + energy;
 			document.getElementById('orb').innerHTML = '拍檔滴晶：' + orb;
-			var re = '';
+			var re = new Array();
 			for (var i = 0; i < check.length; i++) {
-				if (check[i] == 1) re += '<br>' + json[i][1];
-				document.getElementById('sg').innerHTML = '石盤技能：' + re;
+				if (check[i] == 1) {
+					var newline = true;
+					if (json[i][1].indexOf('+') != -1) {
+						for (var j = 0; j < re.length; j++) {
+							if (re[j].indexOf('+') != -1) {
+								if (re[j].slice(0, re[j].indexOf('+')) == json[i][1].slice(0, json[i][1].indexOf('+'))) {
+									re[j] = re[j].slice(0, re[j].indexOf('+') + 1) + (parseInt(re[j].slice(re[j].indexOf('+') + 1, re[j].length)) + parseInt(json[i][1].slice(json[i][1].indexOf('+') + 1, json[i][1].length)));
+									newline = false;
+								}
+							}
+						}
+					}
+					if (newline) {
+						re.push(json[i][1]);
+					}
+				}
 			}
+			document.getElementById('sg').innerHTML = '石盤技能：<br>' + re.join('<br>');
 		}
 
 		var no = "10106000000";

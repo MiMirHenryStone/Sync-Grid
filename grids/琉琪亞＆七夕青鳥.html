@@ -15,7 +15,7 @@
 	<div id="skill">技能名稱：</div>
 	<div id="effect">效果：</div>
 	<svg id="grid" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
-	<div id="sg" style="width: 33%; float: right;">石盤技能：</div>
+	<div id="sg" style="width: 33%; float: right;">石盤技能：<br></div>
 	<div id="trainer" style="width: 66%; float: left;">————————10215000000————————<br>拍组搜寻★5 琉琪亞♀＆七夕青鳥♂<br>體系：技術型 | 弱點：冰<br>Lv.1：ＨＰ 124 | 攻擊 12 | 防禦 14 | 特攻 21 | 特防 14 | 速度 18<br>Lv.100：ＨＰ 540 | 攻擊 259 | 防禦 164 | 特攻 290 | 特防 196 | 速度 202<br>Lv.110：ＨＰ 570 | 攻擊 277 | 防禦 174 | 特攻 310 | 特防 208 | 速度 214<br>Lv.120：ＨＰ 600 | 攻擊 295 | 防禦 184 | 特攻 330 | 特防 220 | 速度 226<br>Lv.125：ＨＰ 615 | 攻擊 304 | 防禦 189 | 特攻 340 | 特防 226 | 速度 232<br>拍組招式：夢幻奇蹟☆偶像之流星群<br>屬性：龍<br>分類：特殊<br>威力：160<br>對象：對手１對拍組<br>變成超級七夕青鳥直到對戰結束。當對手的場地效果與包含天氣、精神場地等場地狀態在內的全場地效果皆未發生時，威力會提高。<br><br>寶可夢招式：龍捲風 ▭▭<br>屬性：龍<br>分類：特殊<br>威力：45<br>命中：100<br>對象：對手全體拍組<br>少數情況下會讓對手陷入畏縮狀態。<br><br>寶可夢招式：清除濃霧 ▭▭<br>屬性：飛行<br>分類：變化<br>對象：對手１對拍組<br>解除精神場地等場地的狀態。解除對手場地的狀態。降低對手的閃避率。<br><br>訓練家招式：表演☆時間！ 2/2<br>分類：變化<br>對象：自己<br>讓對手的目標暫時集中於自己。極大幅提高自己的防禦。提高自己的特攻。<br><br>寶可夢招式：月亮之力 ▭▭▭<br>屬性：妖精<br>分類：特殊<br>威力：98<br>命中：100<br>對象：對手１對拍組<br>偶爾會降低對手的特攻。<br><br>被攻擊時招式計量槽↑９<br>受到招式攻擊時，會幫自己增加１條招式計量槽。<br><br>依ＨＰ降幅威力提升５<br>自己所剩的ＨＰ越低，招式的威力就越大。<br><br>危機時計數加速１<br>對戰中僅限１次，在陷入危機時少數情況下會讓自己發動拍組招式所需的行動數減少１次。<br><br>————————10215000000————————<br>拍组搜寻★5 琉琪亞♀＆超級七夕青鳥♂<br>體系：技術型 | 弱點：冰<br>特攻 120% | 特防 120%<br>拍組招式：夢幻奇蹟☆偶像之流星群<br>屬性：龍<br>分類：特殊<br>威力：160<br>對象：對手１對拍組<br>變成超級七夕青鳥直到對戰結束。當對手的場地效果與包含天氣、精神場地等場地狀態在內的全場地效果皆未發生時，威力會提高。<br><br>寶可夢招式：龍之波動 ▭▭▭<br>屬性：龍<br>分類：特殊<br>威力：100<br>命中：100<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：清除濃霧 ▭▭<br>屬性：飛行<br>分類：變化<br>對象：對手１對拍組<br>解除精神場地等場地的狀態。解除對手場地的狀態。降低對手的閃避率。<br><br>訓練家招式：表演☆時間！ 2/2<br>分類：變化<br>對象：自己<br>讓對手的目標暫時集中於自己。極大幅提高自己的防禦。提高自己的特攻。<br><br>寶可夢招式：月亮之力 ▭▭▭<br>屬性：妖精<br>分類：特殊<br>威力：98<br>命中：100<br>對象：對手１對拍組<br>偶爾會降低對手的特攻。<br><br>被攻擊時招式計量槽↑９<br>受到招式攻擊時，會幫自己增加１條招式計量槽。<br><br>依ＨＰ降幅威力提升５<br>自己所剩的ＨＰ越低，招式的威力就越大。<br><br>危機時計數加速１<br>對戰中僅限１次，在陷入危機時少數情況下會讓自己發動拍組招式所需的行動數減少１次。<br><br></div>
 	
 	<script>
@@ -196,11 +196,26 @@ json = [[1021500000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [102150
 		function update() {
 			document.getElementById('energy').innerHTML = '剩餘力量：' + energy;
 			document.getElementById('orb').innerHTML = '拍檔滴晶：' + orb;
-			var re = '';
+			var re = new Array();
 			for (var i = 0; i < check.length; i++) {
-				if (check[i] == 1) re += '<br>' + json[i][1];
-				document.getElementById('sg').innerHTML = '石盤技能：' + re;
+				if (check[i] == 1) {
+					var newline = true;
+					if (json[i][1].indexOf('+') != -1) {
+						for (var j = 0; j < re.length; j++) {
+							if (re[j].indexOf('+') != -1) {
+								if (re[j].slice(0, re[j].indexOf('+')) == json[i][1].slice(0, json[i][1].indexOf('+'))) {
+									re[j] = re[j].slice(0, re[j].indexOf('+') + 1) + (parseInt(re[j].slice(re[j].indexOf('+') + 1, re[j].length)) + parseInt(json[i][1].slice(json[i][1].indexOf('+') + 1, json[i][1].length)));
+									newline = false;
+								}
+							}
+						}
+					}
+					if (newline) {
+						re.push(json[i][1]);
+					}
+				}
 			}
+			document.getElementById('sg').innerHTML = '石盤技能：<br>' + re.join('<br>');
 		}
 
 		var no = "10215000000";

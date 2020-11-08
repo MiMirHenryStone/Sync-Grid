@@ -15,7 +15,7 @@
 	<div id="skill">技能名稱：</div>
 	<div id="effect">效果：</div>
 	<svg id="grid" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
-	<div id="sg" style="width: 33%; float: right;">石盤技能：</div>
+	<div id="sg" style="width: 33%; float: right;">石盤技能：<br></div>
 	<div id="trainer" style="width: 66%; float: left;">————————10114000000————————<br>拍组搜寻★5 娜姿♀＆胡地♂<br>體系：輔助型 | 弱點：惡<br>Lv.1：ＨＰ 91 | 攻擊 4 | 防禦 7 | 特攻 16 | 特防 18 | 速度 17<br>Lv.100：ＨＰ 444 | 攻擊 55 | 防禦 140 | 特攻 200 | 特防 218 | 速度 286<br>Lv.110：ＨＰ 468 | 攻擊 59 | 防禦 150 | 特攻 212 | 特防 232 | 速度 306<br>Lv.120：ＨＰ 492 | 攻擊 63 | 防禦 160 | 特攻 224 | 特防 246 | 速度 326<br>Lv.125：ＨＰ 504 | 攻擊 65 | 防禦 165 | 特攻 230 | 特防 253 | 速度 336<br>拍組招式：超能力少女之精神波<br>屬性：超能力<br>分類：特殊<br>威力：160<br>對象：對手１對拍組<br>變成超級胡地直到對戰結束。<br><br>寶可夢招式：幻象光線 ▭▭<br>屬性：超能力<br>分類：特殊<br>威力：48<br>命中：100<br>對象：對手１對拍組<br>極少數情況下會讓對手陷入混亂狀態。<br><br>道具招式：要害攻擊Ｇ 2/2<br>分類：變化<br>對象：我方全體拍組<br>提高我方全體拍組的擊中要害率。<br><br>訓練家招式：我看得見 2/2<br>分類：變化<br>對象：我方１對拍組<br>效果標記：回復<br>少量回復我方的ＨＰ。極大幅提高我方的特攻。提高我方的命中率。<br><br>寶可夢招式：反射壁 ▭▭▭<br>屬性：超能力<br>分類：變化<br>對象：我方場地<br>讓我方場地變成物理傷害減輕狀態。<br><br>畏縮無效<br>不會陷入畏縮狀態。<br><br>上場時速度提升１<br>上場時，會提高自己的速度。<br><br>特攻下降無效<br>特攻不會降低。<br><br>————————10114000000————————<br>拍组搜寻★5 娜姿♀＆超級胡地♂<br>體系：輔助型 | 弱點：惡<br>特攻 120% | 速度 120%<br>拍組招式：超能力少女之精神波<br>屬性：超能力<br>分類：特殊<br>威力：160<br>對象：對手１對拍組<br>變成超級胡地直到對戰結束。<br><br>寶可夢招式：精神強念 ▭▭▭<br>屬性：超能力<br>分類：特殊<br>威力：99<br>命中：100<br>對象：對手１對拍組<br>極少數情況下會降低對手的特防。<br><br>道具招式：要害攻擊Ｇ 2/2<br>分類：變化<br>對象：我方全體拍組<br>提高我方全體拍組的擊中要害率。<br><br>訓練家招式：我看得見 2/2<br>分類：變化<br>對象：我方１對拍組<br>效果標記：回復<br>少量回復我方的ＨＰ。極大幅提高我方的特攻。提高我方的命中率。<br><br>寶可夢招式：反射壁 ▭▭▭<br>屬性：超能力<br>分類：變化<br>對象：我方場地<br>讓我方場地變成物理傷害減輕狀態。<br><br>畏縮無效<br>不會陷入畏縮狀態。<br><br>上場時速度提升１<br>上場時，會提高自己的速度。<br><br>特攻下降無效<br>特攻不會降低。<br><br></div>
 	
 	<script>
@@ -196,11 +196,26 @@ json = [[1011400000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101140
 		function update() {
 			document.getElementById('energy').innerHTML = '剩餘力量：' + energy;
 			document.getElementById('orb').innerHTML = '拍檔滴晶：' + orb;
-			var re = '';
+			var re = new Array();
 			for (var i = 0; i < check.length; i++) {
-				if (check[i] == 1) re += '<br>' + json[i][1];
-				document.getElementById('sg').innerHTML = '石盤技能：' + re;
+				if (check[i] == 1) {
+					var newline = true;
+					if (json[i][1].indexOf('+') != -1) {
+						for (var j = 0; j < re.length; j++) {
+							if (re[j].indexOf('+') != -1) {
+								if (re[j].slice(0, re[j].indexOf('+')) == json[i][1].slice(0, json[i][1].indexOf('+'))) {
+									re[j] = re[j].slice(0, re[j].indexOf('+') + 1) + (parseInt(re[j].slice(re[j].indexOf('+') + 1, re[j].length)) + parseInt(json[i][1].slice(json[i][1].indexOf('+') + 1, json[i][1].length)));
+									newline = false;
+								}
+							}
+						}
+					}
+					if (newline) {
+						re.push(json[i][1]);
+					}
+				}
 			}
+			document.getElementById('sg').innerHTML = '石盤技能：<br>' + re.join('<br>');
 		}
 
 		var no = "10114000000";

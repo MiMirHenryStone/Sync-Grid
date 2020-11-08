@@ -15,7 +15,7 @@
 	<div id="skill">技能名稱：</div>
 	<div id="effect">效果：</div>
 	<svg id="grid" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
-	<div id="sg" style="width: 33%; float: right;">石盤技能：</div>
+	<div id="sg" style="width: 33%; float: right;">石盤技能：<br></div>
 	<div id="trainer" style="width: 66%; float: left;">————————10032000000————————<br>★3 柳伯♂＆小海獅♂<br>體系：特殊攻擊型 | 弱點：電<br>Lv.1：ＨＰ 67 | 攻擊 10 | 防禦 8 | 特攻 10 | 特防 8 | 速度 7<br>Lv.100：ＨＰ 542 | 攻擊 218 | 防禦 64 | 特攻 218 | 特防 126 | 速度 144<br>Lv.110：ＨＰ 574 | 攻擊 232 | 防禦 68 | 特攻 232 | 特防 134 | 速度 152<br>Lv.120：ＨＰ 606 | 攻擊 246 | 防禦 72 | 特攻 246 | 特防 142 | 速度 160<br>Lv.125：ＨＰ 622 | 攻擊 253 | 防禦 74 | 特攻 253 | 特防 146 | 速度 164<br>拍組招式：拍組冰之光線<br>屬性：冰<br>分類：特殊<br>威力：200<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：冰凍光束 ▭▭<br>屬性：冰<br>分類：特殊<br>威力：46<br>命中：100<br>對象：對手１對拍組<br>極少數情況下會讓對手陷入冰凍狀態。<br><br>道具招式：要害攻擊 2/2<br>分類：變化<br>對象：自己<br>提高自己的擊中要害率。<br><br>寶可夢招式：冰凍之風 ▭▭▭<br>屬性：冰<br>分類：特殊<br>威力：92<br>命中：95<br>對象：對手全體拍組<br>降低對手的速度。<br><br>訓練家招式：不夠嚴格！ 2/2<br>分類：變化<br>對象：自己<br>大幅提高自己的特攻和特防。<br><br>效果絕佳時威力提升２<br>當招式的效果絕佳時，會提高該招式的威力。<br><br>————————10032000000————————<br>★3 柳伯♂＆白海獅♂<br>體系：特殊攻擊型 | 弱點：電<br>Lv.1：ＨＰ 85 | 攻擊 15 | 防禦 11 | 特攻 15 | 特防 11 | 速度 11<br>Lv.100：ＨＰ 560 | 攻擊 223 | 防禦 67 | 特攻 236 | 特防 134 | 速度 148<br>Lv.110：ＨＰ 592 | 攻擊 237 | 防禦 71 | 特攻 250 | 特防 142 | 速度 156<br>Lv.120：ＨＰ 624 | 攻擊 251 | 防禦 75 | 特攻 264 | 特防 150 | 速度 164<br>Lv.125：ＨＰ 640 | 攻擊 258 | 防禦 77 | 特攻 271 | 特防 154 | 速度 168<br>拍組招式：領會寒冬嚴酷之極光束<br>屬性：冰<br>分類：特殊<br>威力：250<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：冰凍光束 ▭▭<br>屬性：冰<br>分類：特殊<br>威力：46<br>命中：100<br>對象：對手１對拍組<br>極少數情況下會讓對手陷入冰凍狀態。<br><br>道具招式：要害攻擊 2/2<br>分類：變化<br>對象：自己<br>提高自己的擊中要害率。<br><br>寶可夢招式：冰凍之風 ▭▭▭<br>屬性：冰<br>分類：特殊<br>威力：92<br>命中：95<br>對象：對手全體拍組<br>降低對手的速度。<br><br>訓練家招式：不夠嚴格！ 2/2<br>分類：變化<br>對象：自己<br>大幅提高自己的特攻和特防。<br><br>效果絕佳時威力提升２<br>當招式的效果絕佳時，會提高該招式的威力。<br><br></div>
 	
 	<script>
@@ -196,11 +196,26 @@ json = [[1003200000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100320
 		function update() {
 			document.getElementById('energy').innerHTML = '剩餘力量：' + energy;
 			document.getElementById('orb').innerHTML = '拍檔滴晶：' + orb;
-			var re = '';
+			var re = new Array();
 			for (var i = 0; i < check.length; i++) {
-				if (check[i] == 1) re += '<br>' + json[i][1];
-				document.getElementById('sg').innerHTML = '石盤技能：' + re;
+				if (check[i] == 1) {
+					var newline = true;
+					if (json[i][1].indexOf('+') != -1) {
+						for (var j = 0; j < re.length; j++) {
+							if (re[j].indexOf('+') != -1) {
+								if (re[j].slice(0, re[j].indexOf('+')) == json[i][1].slice(0, json[i][1].indexOf('+'))) {
+									re[j] = re[j].slice(0, re[j].indexOf('+') + 1) + (parseInt(re[j].slice(re[j].indexOf('+') + 1, re[j].length)) + parseInt(json[i][1].slice(json[i][1].indexOf('+') + 1, json[i][1].length)));
+									newline = false;
+								}
+							}
+						}
+					}
+					if (newline) {
+						re.push(json[i][1]);
+					}
+				}
 			}
+			document.getElementById('sg').innerHTML = '石盤技能：<br>' + re.join('<br>');
 		}
 
 		var no = "10032000000";
