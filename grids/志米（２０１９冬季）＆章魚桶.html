@@ -312,11 +312,10 @@ json = [[1009610000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100961
 		}
 		
 		update();
-		document.location.href="#content1";
 
 		var svg = document.getElementById("grid");
 		if (svgright - svgleft > 1080) {
-			svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + svgright + ' ' + svgbottom);
+			svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
 			svg.setAttribute('width', Math.ceil(svgright - svgleft));
 			svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
 		}
