@@ -9,7 +9,7 @@
 
 ### 2020/11/10
 <p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/風露（２０２０冬季）＆波克基斯.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_2110_3W_MasterTicket_01.event_2110_3W_MasterTicket_01_1.png"><br>風露（２０２０冬季）＆波克基斯</a></p>
-<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/莉佳（２０２０冬季）＆花療環環.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_2110_3W_MasterTicket_02.event_2110_3W_MasterTicket_02_1.png"><br>莉佳（２０２０冬季）＆花療環環</a><br>
+<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/莉佳（２０２０冬季）＆花療環環.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_2110_3W_MasterTicket_02.event_2110_3W_MasterTicket_02_1.png"><br>莉佳（２０２０冬季）＆花療環環</a></p>
 <br>
 
 ## ⭐⭐⭐⭐⭐
