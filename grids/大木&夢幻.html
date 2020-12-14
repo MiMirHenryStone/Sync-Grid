@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8' />
+	<title>拍檔石盤</title>
+	<style>
+		.box{
+			position: relative;
+			width: 66%;
+		}
+		.tab{
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			list-style-type: none;
+			display: flex;
+			flex-direction: row;
+			justify-content:space-around;
+			align-items:center;
+		}
+		.tab li{
+			background-color: #ccc;
+			border: 1px solid #fff;
+		}
+		.tab li a{
+			text-decoration: none;
+			color: #000;
+			display: inline-block;
+			width: 160px;
+			text-align: center;
+		}
+		.content{
+			border: 1px solid #888 ;
+		}
+		.content1,.content2,.content3,.content4{
+			display: none;
+			word-break: break-word;
+			word-wrap: break-word;
+		}
+		.content1:target,.content2:target,.content3:target,.content4:target{
+			display: block;
+		}
+	</style>
+</head>
+
+
+<body>
+	<div>
+		<label id="energy">剩餘力量：60</label>
+		<label id="energy">　</label>
+		<label id="orb">拍檔滴晶：0</label>
+	</div>
+	<div id="skill">技能名稱：</div>
+	<div id="effect">效果：</div>
+	<svg id="grid" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
+	<div id="sg" style="width: 33%; float: right;">石盤技能：<br></div>
+    <div class="box" style="width: 66%;">
+        <ul class="tab"><li><a href="#content1">夢幻<br>（使用拍組招式前）</a></li><li><a href="#content2">夢幻<br>（使用拍組招式後）</a></li></ul>
+        <div class="content"><div class="content1" id="content1">————————10137000000————————<br>★3 大木♂&夢幻（使用拍組招式前）<br>體系：技術型 | 弱點：蟲<br>Lv.1：ＨＰ 100 | 攻擊 10 | 防禦 10 | 特攻 10 | 特防 10 | 速度 10<br>Lv.100：ＨＰ 302 | 攻擊 200 | 防禦 200 | 特攻 200 | 特防 200 | 速度 200<br>Lv.110：ＨＰ 321 | 攻擊 220 | 防禦 220 | 特攻 220 | 特防 220 | 速度 220<br>Lv.120：ＨＰ 340 | 攻擊 240 | 防禦 240 | 特攻 240 | 特防 240 | 速度 240<br>Lv.125：ＨＰ 347 | 攻擊 247 | 防禦 247 | 特攻 247 | 特防 247 | 速度 247<br>拍組招式：偉大的寶可夢博士之精神強念<br>屬性：超能力<br>分類：特殊<br>威力：250<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：高速星星 ▭▭<br>屬性：一般<br>分類：特殊<br>威力：57<br>對象：對手全體拍組<br>效果標記：必中<br>攻擊必定會命中。<br><br>道具招式：速度強化 2/2<br>分類：變化<br>對象：自己<br>大幅提高自己的速度。<br><br>寶可夢招式：精神強念 ▭▭▭<br>屬性：超能力<br>分類：特殊<br>威力：99<br>命中：100<br>對象：對手１對拍組<br>極少數情況下會降低對手的特防。<br><br>訓練家招式：Let's Go! 2/2<br>分類：變化<br>對象：自己<br>大幅提高自己的特攻。<br>極大幅提高自己的攻擊、防禦、特防、速度、命中率、閃避率中的一種。<br><br>大木的研究成果<br>使出拍組招式後，<br>會讓自己的部分招式變化成其他招式。<br><br>效果絕佳時威力提升１<br>當招式的效果絕佳時，會提高該招式的威力。<br><br>攻擊時能力下降９<br>使出招式攻擊成功時，<br>會降低對手的攻擊、防禦、特攻、特防、<br>速度、命中率、閃避率中的一種。<br></div><div class="content2" id="content2">————————10137000000————————<br>★3 大木♂&夢幻（使用拍組招式後）<br>體系：技術型 | 弱點：蟲<br>拍組招式：偉大的寶可夢博士之精神強念<br>屬性：超能力<br>分類：特殊<br>威力：250<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：大字爆炎 ▭▭▭<br>屬性：火<br>分類：特殊<br>威力：116<br>命中：85<br>對象：對手１對拍組<br>極少數情況下會讓對手陷入灼傷狀態。<br><br>寶可夢招式：打雷 ▭▭▭<br>屬性：電<br>分類：特殊<br>威力：124<br>命中：70<br>對象：對手１對拍組<br>當天氣為下雨時，攻擊必定會命中。<br>偶爾會讓對手陷入麻痺狀態。<br><br>寶可夢招式：精神強念 ▭▭▭<br>屬性：超能力<br>分類：特殊<br>威力：99<br>命中：100<br>對象：對手１對拍組<br>極少數情況下會降低對手的特防。<br><br>寶可夢招式：暴風雪 ▭▭▭<br>屬性：冰<br>分類：特殊<br>威力：126<br>命中：70<br>對象：對手全體拍組<br>當天氣為冰雹時，攻擊必定會命中。<br>極少數情況下會讓對手陷入冰凍狀態。<br><br>大木的研究成果<br>使出拍組招式後，<br>會讓自己的部分招式變化成其他招式。<br><br>效果絕佳時威力提升１<br>當招式的效果絕佳時，會提高該招式的威力。<br><br>攻擊時能力下降９<br>使出招式攻擊成功時，<br>會降低對手的攻擊、防禦、特攻、特防、<br>速度、命中率、閃避率中的一種。<br></div></div></div>
+    </div>
+	
+	<script>
+json = [[1013700000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [1013700001, '特攻+5', '特攻+5', 0, 5, 1, '568dd1', 1, -1], [1013700002, '防禦+5', '防禦+5', 0, 5, 1, '568dd1', 0, -1], [1013700003, '特攻+5', '特攻+5', 0, 5, 1, '568dd1', -1, 0], [1013700004, '特防+5', '特防+5', 0, 5, 1, '568dd1', -1, 1], [1013700005, '速度+5', '速度+5', 0, 5, 1, '568dd1', 0, 1], [1013700006, '速度+10', '速度+10', 2, 24, 1, '568dd1', 0, 2], [1013700007, '暴風雪：威力+5', '暴風雪：威力+5', 3, 36, 1, '4ab897', -1, 3], [1013700008, '速度強化：招式後招式次數回復３', '招式成功時，有些情況下會\n回復該招式的使用次數１次。', 7, 84, 2, 'e1768a', -1, 4], [1013700009, '暴風雪：命中率+20', '暴風雪：命中率+20', 7, 84, 2, '4ab897', 0, 4], [1013700010, '暴風雪：威力+5', '暴風雪：威力+5', 3, 36, 2, '4ab897', 1, 3], [1013700011, '高速星星：招式後招式計量槽增加３', '招式成功時，有些情況下會\n幫自己增加１條招式計量槽。', 6, 72, 1, 'e1768a', 1, 2], [1013700012, '暴風雪：威力+5', '暴風雪：威力+5', 3, 36, 1, '4ab897', 0, 3], [1013700013, 'ＨＰ+20', 'ＨＰ+20', 3, 36, 1, '568dd1', 2, 0], [1013700014, '高速星星：威力+5', '高速星星：威力+5', 2, 24, 1, '4ab897', 2, 1], [1013700015, '依速度升幅拍組招式↑', '自己的速度提高得越多，\n拍組招式的威力就提高得越多。', 8, 96, 3, 'e6ce5e', 3, 1], [1013700016, '高速星星：威力+5', '高速星星：威力+5', 2, 24, 3, '4ab897', 4, 0], [1013700017, '依閃避率升幅拍組招式↑', '自己的閃避率提高得越多，\n拍組招式的威力就提高得越多。', 8, 96, 3, 'e6ce5e', 4, -1], [1013700018, '高速星星：威力+5', '高速星星：威力+5', 2, 24, 1, '4ab897', 3, -1], [1013700019, '偉大的寶可夢博士之精神強念：威力+25', '偉大的寶可夢博士之精神強念：威力+25', 5, 60, 1, 'e66e9b', 3, 0], [1013700020, '特攻+10', '特攻+10', 4, 48, 1, '568dd1', 2, -2], [1013700021, '大字爆炎：威力+5', '大字爆炎：威力+5', 3, 36, 1, '4ab897', 3, -2], [1013700022, '天氣變化時威力提升３', '只有在天氣變化時，會提高招式的威力。', 7, 84, 2, 'e6ce5e', 4, -3], [1013700023, '大字爆炎：命中率+10', '大字爆炎：命中率+10', 5, 60, 2, '4ab897', 4, -4], [1013700024, '對手異常時威力提升３', '當對手陷入異常狀態時，會提高招式的威力。', 7, 84, 2, 'e6ce5e', 3, -4], [1013700025, '大字爆炎：威力+5', '大字爆炎：威力+5', 3, 36, 1, '4ab897', 2, -3], [1013700026, '大字爆炎：威力+5', '大字爆炎：威力+5', 3, 36, 1, '4ab897', 3, -3], [1013700027, '特攻+5', '特攻+5', 2, 24, 1, '568dd1', 0, -2], [1013700028, '精神強念：威力+4', '精神強念：威力+4', 5, 60, 1, '4ab897', 1, -3], [1013700029, '上場時閃避率提升２', '上場時，會大幅提高自己的閃避率。', 10, 120, 3, 'e6ce5e', 1, -4], [1013700030, '精神強念：威力+4', '精神強念：威力+4', 5, 60, 3, '4ab897', 0, -4], [1013700031, '寶可夢出招後閃避率↑２', '在寶可夢使出招式時，\n偶爾會提高自己的閃避率。', 10, 120, 3, 'e6ce5e', -1, -3], [1013700032, '精神強念：威力+4', '精神強念：威力+4', 5, 60, 1, '4ab897', -1, -2], [1013700033, '精神強念：威力+4', '精神強念：威力+4', 4, 48, 1, '4ab897', 0, -3], [1013700034, 'ＨＰ+20', 'ＨＰ+20', 3, 36, 1, '568dd1', -2, 0], [1013700035, '特防+10', '特防+10', 5, 60, 1, '568dd1', -2, -1], [1013700036, '解除異常狀態', '對戰中僅限１次，當自己陷入異常狀態時\n會解除自己的異常狀態。', 4, 48, 2, 'e6ce5e', -3, -1], [1013700037, "Let's Go!：招式後招式次數回復３", '招式成功時，有些情況下會\n回復該招式的使用次數１次。', 7, 84, 2, 'e1768a', -4, 0], [1013700038, '危機時ＨＰ回復４', '對戰中僅限１次，在陷入危機時會少量回復自己的ＨＰ。', 7, 84, 2, 'e6ce5e', -4, 1], [1013700039, '防禦+10', '防禦+10', 5, 60, 1, '568dd1', -3, 1], [1013700040, '偉大的寶可夢博士之精神強念：威力+25', '偉大的寶可夢博士之精神強念：威力+25', 5, 60, 1, 'e66e9b', -3, 0], [1013700041, '速度+10', '速度+10', 3, 36, 1, '568dd1', -2, 2], [1013700042, '打雷：威力+5', '打雷：威力+5', 3, 36, 1, '4ab897', -3, 2], [1013700043, '異常機率提升１', '當招式的追加效果可使對手陷入異常狀態時，會提高該追加效果的成功率。', 8, 96, 3, 'e6ce5e', -4, 3], [1013700044, '打雷：命中率+20', '打雷：命中率+20', 7, 84, 3, '4ab897', -4, 4], [1013700045, '危機時特攻提升２', '對戰中僅限１次，\n在陷入危機時會大幅提高自己的特攻。', 6, 72, 3, 'e6ce5e', -3, 4], [1013700046, '打雷：威力+5', '打雷：威力+5', 3, 36, 1, '4ab897', -2, 3], [1013700047, '打雷：威力+5', '打雷：威力+5', 3, 36, 1, '4ab897', -3, 3]]
+
+		function setCookie(cookieName, cookieValue, cookieDates) {
+			var d = new Date();
+			d.setDate(d.getDate() + cookieDates);
+			document.cookie = cookieName + "=" + cookieValue + ";expires=" + d.toGMTString();
+		}
+		function getCookie(cookieName) {
+			var cookieStr = unescape(document.cookie);
+			var arr = cookieStr.split("; ");
+			var cookieValue = "";
+			for (var i = 0; i < arr.length; i++) {
+				var temp = arr[i].split("=");
+				if (temp[0] == cookieName) {
+					cookieValue = temp[1];
+					break;
+				}
+			}
+			return cookieValue;
+		}
+		function removeCookie(cookieName) {
+			document.cookie = encodeURIComponent(cookieName) + "=; expires=" + new Date();
+		}
+
+		class Tile {
+			constructor(id, skill, effect, energy, orb, lv, color, x, y, check) {
+				this.id = id;
+				this.skill = skill;
+				this.effect = effect;
+				this.energy = energy;
+				this.orb = orb;
+				this.lv = lv;
+				this.color = color;
+				this.x = x;
+				this.y = y;
+				this.xy = xyz2xy(this.x, this.y);
+				this.hexagon = hexagon(this.xy);
+				this.check = check;
+			}
+			draw() {
+				var e = document.getElementById('grid');
+
+				var h = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+				var points = "";
+				for (var i = 0; i < this.hexagon.length; i++) {
+					points = points + this.hexagon[i][0] + "," + this.hexagon[i][1] + " ";
+				}
+				h.setAttribute("points", points);
+				if (this.check == 0) {
+					h.setAttribute("style", "fill:#" + this.color + ";opacity:0.25;stroke:black;stroke-width:1");
+				}
+				else {
+					h.setAttribute("style", "fill:#" + this.color + ";opacity:1;stroke:black;stroke-width:1");
+					energy = energy - this.energy;
+					orb = orb + this.orb;
+				}
+				h.setAttribute("id", this.id);
+				e.appendChild(h);
+
+				if (this.skill.indexOf('：') != -1) {
+					var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+					var line = this.skill.substring(0, this.skill.indexOf('：'));
+					s.innerHTML = line;
+					s.setAttribute("x", this.xy[0] - line.length * f / 2);
+					s.setAttribute("y", this.xy[1]);
+					e.appendChild(s);
+					var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+					var line = this.skill.substring(this.skill.indexOf('：') + 1);
+					s.innerHTML = line;
+					s.setAttribute("x", this.xy[0] - line.length * f / 2);
+					s.setAttribute("y", this.xy[1] + f);
+					e.appendChild(s);
+				}
+				else {
+					var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+					s.innerHTML = this.skill;
+					s.setAttribute("x", this.xy[0] - this.skill.length * f / 2);
+					s.setAttribute("y", this.xy[1] + f / 2);
+					e.appendChild(s);
+				}
+
+
+				var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+				s.innerHTML = '等級' + this.lv;
+				s.setAttribute("x", this.xy[0] - f * 3 / 2);
+				s.setAttribute("y", this.xy[1] - f * 2);
+				e.appendChild(s);
+
+				var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+				s.innerHTML = '能量' + this.energy;
+				s.setAttribute("x", this.xy[0] - f * 3 / 2);
+				s.setAttribute("y", this.xy[1] + f * 3);
+				e.appendChild(s);
+
+				var h = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+				var points = "";
+				for (var i = 0; i < this.hexagon.length; i++) {
+					points = points + this.hexagon[i][0] + "," + this.hexagon[i][1] + " ";
+				}
+				h.setAttribute("points", points);
+				h.setAttribute("style", "fill:#" + this.color + ";opacity:0;stroke:black;stroke-width:1");
+				h.setAttribute("onclick", "c(evt," + this.id + ")");
+				e.appendChild(h);
+			}
+		}
+		function xyz2xy(x, y) {
+			var x1 = x * R * 1.5 + X / 2;
+			var y1 = - x * R * 1.732 / 2 - y * R * 1.732 + Y / 2;
+			return [x1, y1];
+		}
+
+		var svgleft = 540;
+		var svgtop = 960;
+		var svgright = 540;
+		var svgbottom = 960;
+
+		function hexagon(xy) {
+			var x = xy[0];
+			var y = xy[1];
+			var r2 = r / 2;
+			var r3 = r / 2 * 1.732;
+			var re = [[x + r, y],
+			[x + r2, y + r3],
+			[x - r2, y + r3],
+			[x - r, y],
+			[x - r2, y - r3],
+			[x + r2, y - r3]];
+			for (var i = 0; i < 6; i ++) {
+				if (re[i][0] < svgleft) svgleft = Math.floor(re[i][0]);
+				if (re[i][0] > svgright) svgright = Math.ceil(re[i][0]);
+				if (re[i][1] < svgtop) svgtop = Math.floor(re[i][1]);
+				if (re[i][1] > svgbottom) svgbottom = Math.ceil(re[i][1]);
+			}
+			return re;
+		}
+
+		function c(evt, id) {
+			for (var i = 0; i < tiles.length; i++) {
+				if (tiles[i].id == id) {
+					var t = tiles[i];
+					break;
+				}
+			}
+			var target = document.getElementById(id);
+			if (target.style.opacity == 0.25) {
+				target.style.opacity = 1;
+				energy = energy - t.energy;
+				orb = orb + t.orb;
+				document.getElementById('skill').innerHTML = '技能名稱：' + t.skill;
+				document.getElementById('effect').innerHTML = '效果：' + t.effect;
+				for (var i = 0; i < json.length; i++) {
+					if (json[i][0] == id) {
+						check[i] = 1;
+						break;
+					}
+				}
+			}
+			else {
+				target.style.opacity = 0.25;
+				energy = energy + t.energy;
+				orb = orb - t.orb;
+				document.getElementById('skill').innerHTML = '技能名稱：';
+				document.getElementById('effect').innerHTML = '效果：';
+				for (var i = 0; i < json.length; i++) {
+					if (json[i][0] == id) {
+						check[i] = 0;
+						break;
+					}
+				}
+			}
+			setCookie('syncgrid' + no, check.join(''), 365);
+			update();
+		};
+
+		function update() {
+			document.getElementById('energy').innerHTML = '剩餘力量：' + energy;
+			document.getElementById('orb').innerHTML = '拍檔滴晶：' + orb;
+			var re = new Array();
+			for (var i = 0; i < check.length; i++) {
+				if (check[i] == 1) {
+					var newline = true;
+					if (json[i][1].indexOf('+') != -1) {
+						for (var j = 0; j < re.length; j++) {
+							if (re[j].indexOf('+') != -1) {
+								if (re[j].slice(0, re[j].indexOf('+')) == json[i][1].slice(0, json[i][1].indexOf('+'))) {
+									re[j] = re[j].slice(0, re[j].indexOf('+') + 1) + (parseInt(re[j].slice(re[j].indexOf('+') + 1, re[j].length)) + parseInt(json[i][1].slice(json[i][1].indexOf('+') + 1, json[i][1].length)));
+									newline = false;
+								}
+							}
+						}
+					}
+					if (newline) {
+						re.push(json[i][1]);
+					}
+				}
+			}
+			document.getElementById('sg').innerHTML = '石盤技能：<br>' + re.join('<br>');
+		}
+
+		var no = "10137000000";
+		var name = "大木&夢幻";
+		var tcolor = "e66e9b";
+		var X = 1080;
+		var Y = 1920;
+		var R = 96;
+		var r = 96;
+		var f = 16;
+		var energy = 60;
+		var orb = 0;
+		var check = getCookie('syncgrid' + no);
+		if (check == "") {
+			var check = new Array(json.length);
+			for (var i = 0; i < check.length; i++) check[i] = 0;
+		}
+		else {
+			check = check.split('');
+		}
+		var e = document.getElementById('grid');
+
+		var h = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+		var points = "";
+		var hxy = xyz2xy(0, 0);
+		var hh = hexagon(hxy);
+		for (var i = 0; i < hh.length; i++) {
+			points = points + hh[i][0] + "," + hh[i][1] + " ";
+		}
+		h.setAttribute("points", points);
+		h.setAttribute("style", "fill:#" + tcolor + ";opacity:0.5;stroke:black;stroke-width:1");
+		e.appendChild(h);
+		var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+		var line = name.substring(0, name.indexOf('＆'));
+		s.innerHTML = line;
+		s.setAttribute("x", hxy[0] - line.length * f / 2);
+		s.setAttribute("y", hxy[1]);
+		e.appendChild(s);
+		var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+		var line = name.substring(name.indexOf('＆') + 1);
+		s.innerHTML = line;
+		s.setAttribute("x", hxy[0] - line.length * f / 2);
+		s.setAttribute("y", hxy[1] + f);
+		e.appendChild(s);
+
+		tiles = new Array();
+		for (var i = 0; i < json.length; i++) {
+			var t = json[i];
+			var tile = new Tile(t[0], t[1], t[2], t[3], t[4], t[5], t[6], t[7], t[8], check[i]);
+			tile.draw();
+			tiles.push(tile);
+		}
+		
+		update();
+
+		var svg = document.getElementById("grid");
+		if (svgright - svgleft > 1080) {
+			svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
+			svg.setAttribute('width', Math.ceil(svgright - svgleft));
+			svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		}
+		if (window.innerHeight < svg.getAttribute('height')) {
+			svg.setAttribute('width', Math.ceil(svg.getAttribute('width') / svg.getAttribute('height') * window.innerHeight));
+			svg.setAttribute('height', Math.ceil(window.innerHeight));
+		}
+
+	</script>
+</body>
+
+</html>
