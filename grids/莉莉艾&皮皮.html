@@ -291,7 +291,7 @@ json = [[1011800000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101180
 		h.setAttribute("style", "fill:#" + tcolor + ";opacity:0.5;stroke:black;stroke-width:1");
 		e.appendChild(h);
 		var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-		var line = name.substring(0, name.indexOf('＆'));
+		var line = name.substring(0, name.indexOf('&'));
 		s.innerHTML = line;
 		s.setAttribute("x", hxy[0] - line.length * f / 2);
 		s.setAttribute("y", hxy[1]);
