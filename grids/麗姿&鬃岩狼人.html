@@ -57,7 +57,7 @@
 	<div id="sg" style="width: 33%; float: right;">石盤技能：<br></div>
     <div class="box" style="width: 66%;">
         <ul class="tab"><li><a href="#content1">鬃岩狼人<br>（黑夜的樣子）</a></li></ul>
-        <div class="content"><div class="content1" id="content1">————————10051000000————————<br>拍组搜寻★5 麗姿♀&鬃岩狼人（黑夜的樣子）♂<br>體系：物理攻擊型 | 弱點：草<br>Lv.1：ＨＰ 97 | 攻擊 25 | 防禦 10 | 特攻 8 | 特防 10 | 速度 15<br>Lv.100：ＨＰ 472 | 攻擊 357 | 防禦 130 | 特攻 72 | 特防 130 | 速度 216<br>Lv.110：ＨＰ 500 | 攻擊 379 | 防禦 138 | 特攻 76 | 特防 138 | 速度 230<br>Lv.120：ＨＰ 528 | 攻擊 401 | 防禦 146 | 特攻 80 | 特防 146 | 速度 244<br>Lv.125：ＨＰ 542 | 攻擊 412 | 防禦 150 | 特攻 82 | 特防 150 | 速度 251<br>拍組招式：更增光輝之毀天滅地巨岩墜<br>屬性：岩石<br>分類：物理<br>威力：250<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：落石 ▭<br>屬性：岩石<br>分類：物理<br>威力：23<br>命中：90<br>對象：對手１對拍組<br>沒有追加效果。<br><br>道具招式：力量強化 2/2<br>分類：變化<br>對象：自己<br>大幅提高自己的攻擊。<br><br>寶可夢招式：尖石攻擊 ▭▭▭<br>屬性：岩石<br>分類：物理<br>威力：100<br>命中：80<br>對象：對手１對拍組<br>容易擊中要害。<br><br>訓練家招式：我要來硬的了！ 2/2<br>分類：變化<br>對象：自己<br>大幅提高自己的命中率。<br>大幅提高自己的擊中要害率。<br>大幅降低自己的特防。<br><br>擊中要害時速度提升１<br>擊中對手要害時，會提高自己的速度。<br></div></div></div>
+        <div class="content"><div class="content1" id="content1">————————10051000000————————<br>拍组搜寻★5 麗姿♀&鬃岩狼人（黑夜的樣子）♂<br>體系：物理攻擊型 | 弱點：草<br>Lv.1：ＨＰ 97 | 攻擊 25 | 防禦 10 | 特攻 8 | 特防 10 | 速度 15<br>Lv.100：ＨＰ 472 | 攻擊 357 | 防禦 130 | 特攻 72 | 特防 130 | 速度 216<br>Lv.110：ＨＰ 500 | 攻擊 379 | 防禦 138 | 特攻 76 | 特防 138 | 速度 230<br>Lv.120：ＨＰ 528 | 攻擊 401 | 防禦 146 | 特攻 80 | 特防 146 | 速度 244<br>Lv.125：ＨＰ 542 | 攻擊 412 | 防禦 150 | 特攻 82 | 特防 150 | 速度 251<br>Lv.130：ＨＰ 556 | 攻擊 423 | 防禦 154 | 特攻 84 | 特防 154 | 速度 258<br>拍組招式：更增光輝之毀天滅地巨岩墜<br>屬性：岩石<br>分類：物理<br>威力：250<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：落石 ▭<br>屬性：岩石<br>分類：物理<br>威力：23<br>命中：90<br>對象：對手１對拍組<br>沒有追加效果。<br><br>道具招式：力量強化 2/2<br>分類：變化<br>對象：自己<br>大幅提高自己的攻擊。<br><br>寶可夢招式：尖石攻擊 ▭▭▭<br>屬性：岩石<br>分類：物理<br>威力：100<br>命中：80<br>對象：對手１對拍組<br>容易擊中要害。<br><br>訓練家招式：我要來硬的了！ 2/2<br>分類：變化<br>對象：自己<br>大幅提高自己的命中率。<br>大幅提高自己的擊中要害率。<br>大幅降低自己的特防。<br><br>擊中要害時速度提升１<br>擊中對手要害時，會提高自己的速度。<br></div></div></div>
     </div>
 	
 	<script>
@@ -314,14 +314,14 @@ json = [[1005100000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100510
 		update();
 
 		var svg = document.getElementById("grid");
-		if (svgright - svgleft > 1080) {
+		if (svgright - svgleft > 1080 || window.innerHeight < svg.getAttribute('height')) {
 			svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
 			svg.setAttribute('width', Math.ceil(svgright - svgleft));
 			svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
 		}
 		if (window.innerHeight < svg.getAttribute('height')) {
-			svg.setAttribute('width', Math.ceil(svg.getAttribute('width') / svg.getAttribute('height') * window.innerHeight));
-			svg.setAttribute('height', Math.ceil(window.innerHeight));
+			svg.setAttribute('width', Math.ceil(svg.getAttribute('width') / svg.getAttribute('height') * window.innerHeight*0.9));
+			svg.setAttribute('height', Math.ceil(window.innerHeight*0.9));
 		}
 
 	</script>
