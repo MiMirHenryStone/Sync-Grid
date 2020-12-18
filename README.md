@@ -93,5 +93,5 @@
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/阿馴&帝王拿波.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/阿馴&帝王拿波.png" width="64" height="64">阿馴&帝王拿波</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/小霞&寶石海星.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/小霞&寶石海星.png" width="64" height="64">小霞&寶石海星</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/大木&夢幻.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/大木&夢幻.png" width="64" height="64">大木&夢幻</a><br>
-<a href="https://mimirhenrystone.github.io/Sync-Grid/grids/主角&皮卡丘.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/pm0025_00_pikachu_128.png" width="64" height="64">主角&皮卡丘</a><br>
+<a href="https://mimirhenrystone.github.io/Sync-Grid/grids/主角&皮卡丘.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/主角&皮卡丘.png" width="64" height="64">主角&皮卡丘</a><br>
 <br>
