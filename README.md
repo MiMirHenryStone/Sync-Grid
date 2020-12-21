@@ -31,8 +31,8 @@
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/布爾美麗&焰后蜥.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/布爾美麗&焰后蜥.png" width="64" height="64">布爾美麗&焰后蜥</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/竹蘭&烈咬陸鯊.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/竹蘭&烈咬陸鯊.png" width="64" height="64">竹蘭&烈咬陸鯊</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/青綠&大比鳥.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/青綠&大比鳥.png" width="64" height="64">青綠&大比鳥</a><br>
-<a href="https://mimirhenrystone.github.io/Sync-Grid/grids/阿渡（２０２１新春）&暴鯉龍.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/阿渡（２０２１新春）&暴鯉龍.png" width="64" height="64">阿渡（２０２１新春）&暴鯉龍</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/共平&勇士雄鷹.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/共平&勇士雄鷹.png" width="64" height="64">共平&勇士雄鷹</a><br>
+<a href="https://mimirhenrystone.github.io/Sync-Grid/grids/阿渡（２０２１新春）&暴鯉龍.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/阿渡（２０２１新春）&暴鯉龍.png" width="64" height="64">阿渡（２０２１新春）&暴鯉龍</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/嘉德麗雅&人造細胞卵.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/嘉德麗雅&人造細胞卵.png" width="64" height="64">嘉德麗雅&人造細胞卵</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/露莎米奈&費洛美螂.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/露莎米奈&費洛美螂.png" width="64" height="64">露莎米奈&費洛美螂</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/古茲馬&具甲武者.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/古茲馬&具甲武者.png" width="64" height="64">古茲馬&具甲武者</a><br>
