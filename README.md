@@ -1,4 +1,4 @@
-<p align="center">⚠<b>石盤點法只保存在本地cookie</b>⚠<br><br>顯示拍組圖片可能需要科學上網<br><br><a href="https://github.com/MiMirHenryStone/Sync-Grid/issues/new">有BUG要反馈？</a></p><br>
+<p align="center">⚠<b>石盤點法只保存在本地cookie</b>⚠<br><br>顯示拍組圖片可能需要科學上網<br><br>BUG反馈请私信bilibili@MiMirHenryStone<br>或发送邮件至511879766@qq.com</p><br>
 
 ## 新石盤
 ### 2020/12/24
