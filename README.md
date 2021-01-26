@@ -8,6 +8,7 @@
 <p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/小光（２０２１春季）&霜奶仙.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_3010_1W_MasterTicket_02.event_3010_1W_MasterTicket_02_1.png"><br>小光（２０２１春季）&霜奶仙</a></p>
 
 ### 2021/02/11
+<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/布拉塔諾&哲爾尼亞斯.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/Campaign.event_3010_3W_EventQuest_01_appeal_01.png"><br>布拉塔諾&哲爾尼亞斯</a></p>
 <p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/弗拉達利&伊裴爾塔爾.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_3010_3W_FesPickup_01.event_3010_3W_FesPickup_01_1.png"><br>弗拉達利&伊裴爾塔爾</a></p>
 
 ### 2021/02/18
