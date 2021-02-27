@@ -104,8 +104,8 @@ json = [[1008900000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100890
 		function newCookie() {
 			var re = "";
 			for (var i = 0; i < 4; i++) {
-				re = re + checks[2 * i] + ',';
-				re = re + escape(pres[2 * i + 1]) + ',';
+				re = re + checks[i] + ',';
+				re = re + escape(pres[i]) + ',';
 			}
 			re = re + set;
 			return re;
