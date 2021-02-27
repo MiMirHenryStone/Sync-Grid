@@ -1,51 +1,67 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
 	<meta charset='utf-8' />
 	<title>拍檔石盤</title>
 	<style>
-		.box{
+		.box {
 			position: relative;
 			width: 66%;
 		}
-		.tab{
+
+		.tab {
 			margin: 0;
 			padding: 0;
 			overflow: hidden;
 			list-style-type: none;
 			display: flex;
 			flex-direction: row;
-			justify-content:space-around;
-			align-items:center;
+			justify-content: space-around;
+			align-items: center;
 		}
-		.tab li{
-			background-color: #ccc;
-			border: 1px solid #fff;
+
+			.tab li {
+				background-color: #ccc;
+				border: 1px solid #fff;
+			}
+
+				.tab li a {
+					text-decoration: none;
+					color: #000;
+					display: inline-block;
+					width: 160px;
+					text-align: center;
+				}
+
+		.content {
+			border: 1px solid #888;
 		}
-		.tab li a{
-			text-decoration: none;
-			color: #000;
-			display: inline-block;
-			width: 160px;
-			text-align: center;
-		}
-		.content{
-			border: 1px solid #888 ;
-		}
-		.content1,.content2,.content3,.content4{
+
+		.content1, .content2, .content3, .content4 {
 			display: none;
 			word-break: break-word;
 			word-wrap: break-word;
 		}
-		.content1:target,.content2:target,.content3:target,.content4:target{
-			display: block;
-		}
+
+			.content1:target, .content2:target, .content3:target, .content4:target {
+				display: block;
+			}
 	</style>
 </head>
 
 
 <body>
+	<div>
+		<select id="ms" onchange=changeSet()>
+			<option value="0">No.1</option>
+			<option value="1">No.2</option>
+			<option value="2">No.3</option>
+			<option value="3">No.4</option>
+		</select>
+		<button onclick=rename()>重命名</button>
+		<button onclick=reset()>全部重設</button>
+	</div>
 	<div>
 		<label id="energy">剩餘力量：60</label>
 		<label id="energy">　</label>
@@ -55,11 +71,11 @@
 	<div id="effect">效果：</div>
 	<svg id="grid" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
 	<div id="sg" style="width: 33%; float: right;">石盤技能：<br></div>
-    <div class="box" style="width: 66%;">
-        <ul class="tab"><li><a href="#content1">烈咬陸鯊</a></li><li><a href="#content2">超級烈咬陸鯊</a></li></ul>
-        <div class="content"><div class="content1" id="content1">————————10091000000————————<br>群星盛典★5 竹蘭♀&烈咬陸鯊♀<br>體系：物理攻擊型 | 弱點：冰<br>Lv.1：ＨＰ 108 | 攻擊 22 | 防禦 12 | 特攻 13 | 特防 10 | 速度 21<br>Lv.100：ＨＰ 491 | 攻擊 291 | 防禦 128 | 特攻 116 | 特防 125 | 速度 289<br>Lv.110：ＨＰ 519 | 攻擊 311 | 防禦 136 | 特攻 122 | 特防 133 | 速度 307<br>Lv.120：ＨＰ 547 | 攻擊 331 | 防禦 144 | 特攻 128 | 特防 141 | 速度 325<br>Lv.125：ＨＰ 561 | 攻擊 341 | 防禦 148 | 特攻 131 | 特防 145 | 速度 334<br>Lv.130：ＨＰ 575 | 攻擊 351 | 防禦 152 | 特攻 134 | 特防 149 | 速度 343<br>拍組招式：探究神話真相之地震<br>屬性：地面<br>分類：物理<br>威力：160<br>對象：對手１對拍組<br>變成超級烈咬陸鯊直到對戰結束。<br><br>寶可夢招式：跺腳 ▭▭<br>屬性：地面<br>分類：物理<br>威力：44<br>命中：100<br>對象：對手１對拍組<br>當自己上次使出的招式失敗時，威力會變成２倍。<br><br>道具招式：力量強化 2/2<br>分類：變化<br>對象：自己<br>大幅提高自己的攻擊。<br><br>寶可夢招式：地震 ▭▭▭<br>屬性：地面<br>分類：物理<br>威力：100<br>命中：100<br>對象：對手全體拍組<br>沒有追加效果。<br><br>訓練家招式：愉快的對戰！ 2/2<br>分類：變化<br>對象：自己<br>提高自己的速度和擊中要害率。<br>當天氣為沙暴時，效果會大幅提高。<br><br>寶可夢出招後速度↑２<br>在寶可夢使出招式時，<br>偶爾會提高自己的速度。<br><br>沙暴時威力提升５<br>當天氣為沙暴時，會提高招式的威力。<br></div><div class="content2" id="content2">————————10091000000————————<br>群星盛典★5 竹蘭♀&超級烈咬陸鯊♀<br>體系：物理攻擊型 | 弱點：冰<br>攻擊 120% | 防禦 120%<br>拍組招式：探究神話真相之地震<br>屬性：地面<br>分類：物理<br>威力：160<br>對象：對手１對拍組<br>變成超級烈咬陸鯊直到對戰結束。<br><br>寶可夢招式：地震 ▭▭▭<br>屬性：地面<br>分類：物理<br>威力：100<br>命中：100<br>對象：對手全體拍組<br>沒有追加效果。<br><br>道具招式：力量強化 2/2<br>分類：變化<br>對象：自己<br>大幅提高自己的攻擊。<br><br>寶可夢招式：劈開 ▭▭<br>屬性：一般<br>分類：物理<br>威力：50<br>命中：100<br>對象：對手１對拍組<br>容易擊中要害。<br><br>訓練家招式：愉快的對戰！ 2/2<br>分類：變化<br>對象：自己<br>提高自己的速度和擊中要害率。<br>當天氣為沙暴時，效果會大幅提高。<br><br>寶可夢出招後速度↑２<br>在寶可夢使出招式時，<br>偶爾會提高自己的速度。<br><br>沙暴時威力提升５<br>當天氣為沙暴時，會提高招式的威力。<br><br>地面屬性替換<br>一般屬性的招式會變成地面屬性。<br></div></div></div>
-    </div>
-	
+	<div class="box" style="width: 66%;">
+		<ul class="tab"><li><a href="#content1">烈咬陸鯊</a></li><li><a href="#content2">超級烈咬陸鯊</a></li></ul>
+		<div class="content"><div class="content1" id="content1">————————10091000000————————<br>群星盛典★5 竹蘭♀&烈咬陸鯊♀<br>體系：物理攻擊型 | 弱點：冰<br>Lv.1：ＨＰ 108 | 攻擊 22 | 防禦 12 | 特攻 13 | 特防 10 | 速度 21<br>Lv.100：ＨＰ 491 | 攻擊 291 | 防禦 128 | 特攻 116 | 特防 125 | 速度 289<br>Lv.110：ＨＰ 519 | 攻擊 311 | 防禦 136 | 特攻 122 | 特防 133 | 速度 307<br>Lv.120：ＨＰ 547 | 攻擊 331 | 防禦 144 | 特攻 128 | 特防 141 | 速度 325<br>Lv.125：ＨＰ 561 | 攻擊 341 | 防禦 148 | 特攻 131 | 特防 145 | 速度 334<br>Lv.130：ＨＰ 575 | 攻擊 351 | 防禦 152 | 特攻 134 | 特防 149 | 速度 343<br>拍組招式：探究神話真相之地震<br>屬性：地面<br>分類：物理<br>威力：160<br>對象：對手１對拍組<br>變成超級烈咬陸鯊直到對戰結束。<br><br>寶可夢招式：跺腳 ▭▭<br>屬性：地面<br>分類：物理<br>威力：44<br>命中：100<br>對象：對手１對拍組<br>當自己上次使出的招式失敗時，威力會變成２倍。<br><br>道具招式：力量強化 2/2<br>分類：變化<br>對象：自己<br>大幅提高自己的攻擊。<br><br>寶可夢招式：地震 ▭▭▭<br>屬性：地面<br>分類：物理<br>威力：100<br>命中：100<br>對象：對手全體拍組<br>沒有追加效果。<br><br>訓練家招式：愉快的對戰！ 2/2<br>分類：變化<br>對象：自己<br>提高自己的速度和擊中要害率。<br>當天氣為沙暴時，效果會大幅提高。<br><br>寶可夢出招後速度↑２<br>在寶可夢使出招式時，<br>偶爾會提高自己的速度。<br><br>沙暴時威力提升５<br>當天氣為沙暴時，會提高招式的威力。<br></div><div class="content2" id="content2">————————10091000000————————<br>群星盛典★5 竹蘭♀&超級烈咬陸鯊♀<br>體系：物理攻擊型 | 弱點：冰<br>攻擊 120% | 防禦 120%<br>拍組招式：探究神話真相之地震<br>屬性：地面<br>分類：物理<br>威力：160<br>對象：對手１對拍組<br>變成超級烈咬陸鯊直到對戰結束。<br><br>寶可夢招式：地震 ▭▭▭<br>屬性：地面<br>分類：物理<br>威力：100<br>命中：100<br>對象：對手全體拍組<br>沒有追加效果。<br><br>道具招式：力量強化 2/2<br>分類：變化<br>對象：自己<br>大幅提高自己的攻擊。<br><br>寶可夢招式：劈開 ▭▭<br>屬性：一般<br>分類：物理<br>威力：50<br>命中：100<br>對象：對手１對拍組<br>容易擊中要害。<br><br>訓練家招式：愉快的對戰！ 2/2<br>分類：變化<br>對象：自己<br>提高自己的速度和擊中要害率。<br>當天氣為沙暴時，效果會大幅提高。<br><br>寶可夢出招後速度↑２<br>在寶可夢使出招式時，<br>偶爾會提高自己的速度。<br><br>沙暴時威力提升５<br>當天氣為沙暴時，會提高招式的威力。<br><br>地面屬性替換<br>一般屬性的招式會變成地面屬性。<br></div></div></div>
+	</div>
+
 	<script>
 json = [[1009100000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [1009100001, '攻擊+5', '攻擊+5', 0, 5, 1, '568dd1', 1, -1], [1009100002, '防禦+5', '防禦+5', 0, 5, 1, '568dd1', 0, -1], [1009100003, '攻擊+5', '攻擊+5', 0, 5, 1, '568dd1', -1, 0], [1009100004, '特防+5', '特防+5', 0, 5, 1, '568dd1', -1, 1], [1009100005, '速度+5', '速度+5', 0, 5, 1, '568dd1', 0, 1], [1009100006, '攻擊+5', '攻擊+5', 2, 24, 1, '568dd1', 1, 1], [1009100007, '跺腳：威力+7', '跺腳：威力+7', 2, 24, 1, '4ab897', 2, 1], [1009100008, '劈開：威力+8', '劈開：威力+8', 2, 24, 1, '4ab897', 3, 1], [1009100009, '跺腳：威力+7', '跺腳：威力+7', 2, 24, 1, '4ab897', 1, 2], [1009100010, '攻擊+5', '攻擊+5', 3, 36, 1, '568dd1', 2, 2], [1009100011, '劈開：威力+8', '劈開：威力+8', 2, 24, 1, '4ab897', 3, 2], [1009100012, '跺腳：威力+7', '跺腳：威力+7', 2, 24, 2, '4ab897', 1, 3], [1009100013, '跺腳：招式後招式計量槽增加４', '招式成功時，有時會\n幫自己增加１條招式計量槽。', 6, 72, 2, 'e1768a', 2, 3], [1009100014, '劈開：威力+8', '劈開：威力+8', 2, 24, 2, '4ab897', 3, 3], [1009100015, '跺腳：攻擊時防禦下降４ ', '使出招式攻擊成功時，\n有時會降低對手的防禦。', 7, 84, 3, 'e1768a', 1, 4], [1009100016, '劈開：擊中要害時威力提升３', '擊中對手要害時，會提高當下該攻擊的威力。', 7, 84, 3, 'e1768a', 2, 4], [1009100017, '沙暴無效', '不會受到沙暴所造成的傷害。', 3, 36, 1, 'e6ce5e', -1, -1], [1009100018, '防禦+5', '防禦+5', 2, 24, 1, '568dd1', -2, -1], [1009100019, '力量強化：招式後招式次數回復３', '招式成功時，有些情況下會\n回復該招式的使用次數１次。', 7, 84, 1, 'e1768a', -3, -1], [1009100020, '特防+5', '特防+5', 2, 24, 1, '568dd1', -1, -2], [1009100021, '沙暴時特防提升', '當天氣為沙暴時，特防會提高１．５倍。', 7, 84, 1, 'e6ce5e', -2, -2], [1009100022, '特防+10', '特防+10', 4, 48, 1, '568dd1', -3, -2], [1009100023, '沙暴時ＨＰ回復１', '當天氣為沙暴時，\n寶可夢每次行動後都會回復自己的ＨＰ。', 8, 96, 2, 'e6ce5e', -1, -3], [1009100024, '速度+10', '速度+10', 4, 48, 2, '568dd1', -2, -3], [1009100025, 'ＨＰ+50', 'ＨＰ+50', 8, 96, 2, '568dd1', -3, -3], [1009100026, '拍組招式後下次必中要害', '使出拍組招式後，\n會讓自己變成下次必中要害狀態。', 8, 96, 3, 'e6ce5e', -1, -4], [1009100027, '沙暴時威力提升３', '當天氣為沙暴時，會提高招式的威力。', 10, 120, 3, 'e6ce5e', -2, -4], [1009100028, '速度+5', '速度+5', 2, 24, 1, '568dd1', 2, -1], [1009100029, '速度+5', '速度+5', 2, 24, 1, '568dd1', 3, -2], [1009100030, '地震：威力+3', '地震：威力+3', 4, 48, 1, '4ab897', 2, -2], [1009100031, '地震：威力+3', '地震：威力+3', 4, 48, 1, '4ab897', 1, -2], [1009100032, '地震：威力+3', '地震：威力+3', 4, 48, 2, '4ab897', 3, -3], [1009100033, '探究神話真相之地震：威力+25', '探究神話真相之地震：威力+25', 5, 60, 2, '9b5f41', 2, -3], [1009100034, '地震：威力+3', '地震：威力+3', 4, 48, 2, '4ab897', 1, -3], [1009100035, '依速度升幅威力提升', '自己的速度提高得越多，招式的威力就提高得越多。', 10, 120, 3, 'e6ce5e', 3, -4], [1009100036, '地震：招式後招式計量槽增加４', '招式成功時，有時會\n幫自己增加１條招式計量槽。', 7, 84, 3, 'e1768a', 2, -4], [1009100037, '攻擊+5', '攻擊+5', 2, 24, 1, '568dd1', -2, 1], [1009100038, '攻擊+5', '攻擊+5', 2, 24, 1, '568dd1', -3, 2], [1009100039, '愉快的對戰！：招式後招式次數回復３', '招式成功時，有些情況下會\n回復該招式的使用次數１次。', 7, 84, 1, 'e1768a', -2, 2], [1009100040, 'ＨＰ+20', 'ＨＰ+20', 4, 48, 1, '568dd1', -1, 2], [1009100041, '防禦+10', '防禦+10', 4, 48, 2, '568dd1', -3, 3], [1009100042, '探究神話真相之地震：威力+25', '探究神話真相之地震：威力+25', 5, 60, 2, '9b5f41', -2, 3], [1009100043, '沙暴時招式計量槽加速２', '當天氣為沙暴時，\n招式計量槽會累積得較快。', 8, 96, 2, 'e6ce5e', -1, 3], [1009100044, '愉快的對戰！：招式後計數加速３', '招式成功時，有些情況下會讓自己\n發動拍組招式所需的行動數減少１次。', 10, 120, 3, 'e1768a', -3, 4], [1009100045, '上場時擊中要害率提升１', '上場時，會提高自己的擊中要害率。', 10, 120, 3, 'e6ce5e', -2, 4], [1009100046, '探究神話真相之地震：威力+25', '探究神話真相之地震：威力+25', 5, 60, 3, '9b5f41', 0, 3], [1009100047, '探究神話真相之地震：威力+25', '探究神話真相之地震：威力+25', 5, 60, 3, '9b5f41', 0, -3]]
 
@@ -83,6 +99,16 @@ json = [[1009100000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100910
 		}
 		function removeCookie(cookieName) {
 			document.cookie = encodeURIComponent(cookieName) + "=; expires=" + new Date();
+		}
+		
+		function newCookie() {
+			var re = "";
+			for (var i = 0; i < 4; i++) {
+				re = re + checks[2 * i] + ',';
+				re = re + pres[2 * i + 1] + ',';
+			}
+			re = re + set;
+			return re;
 		}
 
 		class Tile {
@@ -119,7 +145,10 @@ json = [[1009100000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100910
 				}
 				h.setAttribute("id", this.id);
 				e.appendChild(h);
-
+			}
+			skin() {
+				var e = document.getElementById('grid');
+				
 				if (this.skill.indexOf('：') != -1) {
 					var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
 					var line = this.skill.substring(0, this.skill.indexOf('：'));
@@ -188,7 +217,7 @@ json = [[1009100000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100910
 			[x - r, y],
 			[x - r2, y - r3],
 			[x + r2, y - r3]];
-			for (var i = 0; i < 6; i ++) {
+			for (var i = 0; i < 6; i++) {
 				if (re[i][0] < svgleft) svgleft = Math.floor(re[i][0]);
 				if (re[i][0] > svgright) svgright = Math.ceil(re[i][0]);
 				if (re[i][1] < svgtop) svgtop = Math.floor(re[i][1]);
@@ -231,13 +260,88 @@ json = [[1009100000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100910
 					}
 				}
 			}
-			setCookie('syncgrid' + no, check.join(''), 365);
+			checks[set] = check.join('');
+			setCookie('syncgrid' + no, newCookie(), 999);
 			update();
 		};
+		
+		function rename() {
+			var pre = prompt("請輸入預設名稱");
+			if (pre != null) {
+				pres[set] = pre;
+				var select = document.getElementById("ms");
+				select.options[set].text = pre;
+				setCookie('syncgrid' + no, newCookie, 999);
+			}
+		}
+		
+		function reset() {
+			checks[set] = "";
+			setCookie('syncgrid' + no, newCookie, 999);
+			update();
+			newGrid();
+		}
+		
+		function changeSet() {
+			var select = document.getElementById("ms");
+			set = select.selectedIndex;
+			update();
+			newGrid();
+		}
+		
+		function newGrid() {
+			var e = document.getElementById("grid")
+			e.innerHTML = "";
+			
+			var h = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+			var points = "";
+			var hxy = xyz2xy(0, 0);
+			var hh = hexagon(hxy);
+			for (var i = 0; i < hh.length; i++) {
+				points = points + hh[i][0] + "," + hh[i][1] + " ";
+			}
+			h.setAttribute("points", points);
+			h.setAttribute("style", "fill:#" + tcolor + ";opacity:0.5;stroke:black;stroke-width:1");
+			e.appendChild(h);
+			var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+			var line = name.substring(0, name.indexOf('&'));
+			s.innerHTML = line;
+			s.setAttribute("x", hxy[0] - line.length * f / 2);
+			s.setAttribute("y", hxy[1]);
+			e.appendChild(s);
+			var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+			var line = name.substring(name.indexOf('&') + 1);
+			s.innerHTML = line;
+			s.setAttribute("x", hxy[0] - line.length * f / 2);
+			s.setAttribute("y", hxy[1] + f);
+			e.appendChild(s);
+			
+			tiles = new Array();
+			for (var i = 0; i < json.length; i++) {
+				var t = json[i];
+				var tile = new Tile(t[0], t[1], t[2], t[3], t[4], t[5], t[6], t[7], t[8], check[i]);
+				tile.draw();
+				tiles.push(tile);
+			}
+			for (var i = 0; i < tiles.length; i++) {
+				var tile = tiles[i];
+				tile.skin();
+			}
+		}
 
 		function update() {
-			document.getElementById('energy').innerHTML = '剩餘力量：' + energy;
-			document.getElementById('orb').innerHTML = '拍檔滴晶：' + orb;
+			var select = document.getElementById("ms");
+			select.selectedIndex = set;
+			check = checks[set];
+			if (check == "") {
+				check = new Array(json.length);
+				for (var i = 0; i < check.length; i++) check[i] = 0;
+			}
+			else {
+				check = check.split('');
+			}
+			document.getElementById('energy').innerHTML = '剩餘力量：' + energys[set];
+			document.getElementById('orb').innerHTML = '拍檔滴晶：' + orbs[set];
 			var re = new Array();
 			for (var i = 0; i < check.length; i++) {
 				if (check[i] == 1) {
@@ -268,50 +372,44 @@ json = [[1009100000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100910
 		var R = 96;
 		var r = 96;
 		var f = 16;
-		var energy = 60;
-		var orb = 0;
-		var check = getCookie('syncgrid' + no);
+		var energys = [60, 60, 60, 60];
+		var orbs = [0, 0, 0, 0];
+		var checks = ["", "", "", ""];
+		var pres = ["", "", "", ""];
+		var set = 0;
+		var cookie = getCookie('syncgrid' + no);
+		if (cookie.indexOf(',')!=-1) {
+			cookie = cookie.split(',');
+			if (cookie.length == 9) {
+				for (var i = 0; i < 8; i = i + 2) {
+					checks[i] = cookie[2 * i];
+					pres[i] = cookie[2 * i + 1];
+				}
+				set = cookie[8];
+			}
+		}
+		else {
+			checks[0] = cookie;
+		}
+		
+		var select = document.getElementById("ms");
+		for (var i = 0; i < 4; i++) {
+			if (pres[i] == '') select.options[i].text = "No." + (i + 1);
+			else select.options[i].text = pres[i];
+		}
+
+		var check = checks[set];
 		if (check == "") {
-			var check = new Array(json.length);
+			check = new Array(json.length);
 			for (var i = 0; i < check.length; i++) check[i] = 0;
 		}
 		else {
 			check = check.split('');
 		}
-		var e = document.getElementById('grid');
-
-		var h = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
-		var points = "";
-		var hxy = xyz2xy(0, 0);
-		var hh = hexagon(hxy);
-		for (var i = 0; i < hh.length; i++) {
-			points = points + hh[i][0] + "," + hh[i][1] + " ";
-		}
-		h.setAttribute("points", points);
-		h.setAttribute("style", "fill:#" + tcolor + ";opacity:0.5;stroke:black;stroke-width:1");
-		e.appendChild(h);
-		var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-		var line = name.substring(0, name.indexOf('&'));
-		s.innerHTML = line;
-		s.setAttribute("x", hxy[0] - line.length * f / 2);
-		s.setAttribute("y", hxy[1]);
-		e.appendChild(s);
-		var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-		var line = name.substring(name.indexOf('&') + 1);
-		s.innerHTML = line;
-		s.setAttribute("x", hxy[0] - line.length * f / 2);
-		s.setAttribute("y", hxy[1] + f);
-		e.appendChild(s);
-
-		tiles = new Array();
-		for (var i = 0; i < json.length; i++) {
-			var t = json[i];
-			var tile = new Tile(t[0], t[1], t[2], t[3], t[4], t[5], t[6], t[7], t[8], check[i]);
-			tile.draw();
-			tiles.push(tile);
-		}
 		
 		update();
+
+		newGrid();
 
 		var svg = document.getElementById("grid");
 		if (svgright - svgleft > 1080 || window.innerHeight < svg.getAttribute('height')) {
@@ -320,8 +418,8 @@ json = [[1009100000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100910
 			svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
 		}
 		if (window.innerHeight < svg.getAttribute('height')) {
-			svg.setAttribute('width', Math.ceil(svg.getAttribute('width') / svg.getAttribute('height') * window.innerHeight*0.9));
-			svg.setAttribute('height', Math.ceil(window.innerHeight*0.9));
+			svg.setAttribute('width', Math.ceil(svg.getAttribute('width') / svg.getAttribute('height') * window.innerHeight * 0.9));
+			svg.setAttribute('height', Math.ceil(window.innerHeight * 0.9));
 		}
 
 	</script>

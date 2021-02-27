@@ -1,51 +1,67 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
 	<meta charset='utf-8' />
 	<title>拍檔石盤</title>
 	<style>
-		.box{
+		.box {
 			position: relative;
 			width: 66%;
 		}
-		.tab{
+
+		.tab {
 			margin: 0;
 			padding: 0;
 			overflow: hidden;
 			list-style-type: none;
 			display: flex;
 			flex-direction: row;
-			justify-content:space-around;
-			align-items:center;
+			justify-content: space-around;
+			align-items: center;
 		}
-		.tab li{
-			background-color: #ccc;
-			border: 1px solid #fff;
+
+			.tab li {
+				background-color: #ccc;
+				border: 1px solid #fff;
+			}
+
+				.tab li a {
+					text-decoration: none;
+					color: #000;
+					display: inline-block;
+					width: 160px;
+					text-align: center;
+				}
+
+		.content {
+			border: 1px solid #888;
 		}
-		.tab li a{
-			text-decoration: none;
-			color: #000;
-			display: inline-block;
-			width: 160px;
-			text-align: center;
-		}
-		.content{
-			border: 1px solid #888 ;
-		}
-		.content1,.content2,.content3,.content4{
+
+		.content1, .content2, .content3, .content4 {
 			display: none;
 			word-break: break-word;
 			word-wrap: break-word;
 		}
-		.content1:target,.content2:target,.content3:target,.content4:target{
-			display: block;
-		}
+
+			.content1:target, .content2:target, .content3:target, .content4:target {
+				display: block;
+			}
 	</style>
 </head>
 
 
 <body>
+	<div>
+		<select id="ms" onchange=changeSet()>
+			<option value="0">No.1</option>
+			<option value="1">No.2</option>
+			<option value="2">No.3</option>
+			<option value="3">No.4</option>
+		</select>
+		<button onclick=rename()>重命名</button>
+		<button onclick=reset()>全部重設</button>
+	</div>
 	<div>
 		<label id="energy">剩餘力量：60</label>
 		<label id="energy">　</label>
@@ -55,11 +71,11 @@
 	<div id="effect">效果：</div>
 	<svg id="grid" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
 	<div id="sg" style="width: 33%; float: right;">石盤技能：<br></div>
-    <div class="box" style="width: 66%;">
-        <ul class="tab"><li><a href="#content1">章魚桶</a></li></ul>
-        <div class="content"><div class="content1" id="content1">————————10096100000————————<br>季节限定★5 志米（２０１９冬季）♂&章魚桶♂<br>體系：技術型 | 弱點：電<br>Lv.1：ＨＰ 101 | 攻擊 8 | 防禦 16 | 特攻 15 | 特防 16 | 速度 9<br>Lv.100：ＨＰ 485 | 攻擊 123 | 防禦 170 | 特攻 203 | 特防 170 | 速度 158<br>Lv.110：ＨＰ 513 | 攻擊 131 | 防禦 180 | 特攻 217 | 特防 180 | 速度 168<br>Lv.120：ＨＰ 541 | 攻擊 139 | 防禦 190 | 特攻 231 | 特防 190 | 速度 178<br>Lv.125：ＨＰ 555 | 攻擊 143 | 防禦 195 | 特攻 238 | 特防 195 | 速度 183<br>Lv.130：ＨＰ 569 | 攻擊 147 | 防禦 200 | 特攻 245 | 特防 200 | 速度 188<br>拍組招式：本日主餐之章魚桶炮<br>屬性：水<br>分類：特殊<br>威力：200<br>對象：對手１對拍組<br>當對手陷入灼傷狀態時，威力會提高。<br><br>寶可夢招式：章魚桶炮 ▭▭<br>屬性：水<br>分類：特殊<br>威力：56<br>命中：85<br>對象：對手１對拍組<br>有時會降低對手的命中率。<br><br>道具招式：特防強化 2/2<br>分類：變化<br>對象：自己<br>大幅提高自己的特防。<br><br>寶可夢招式：熱水 ▭▭▭<br>屬性：水<br>分類：特殊<br>威力：87<br>命中：100<br>對象：對手１對拍組<br>解除自己的冰凍狀態。<br>偶爾會讓對手陷入灼傷狀態。<br><br>訓練家招式：決不妥協！ 2/2<br>分類：變化<br>對象：自己<br>大幅提高自己的防禦和特攻。<br><br>異常機率提升１<br>當招式的追加效果可使對手陷入異常狀態時，會提高該追加效果的成功率。<br><br>攻擊時隨機提升４<br>使出招式攻擊成功後，<br>有時會提高自己的攻擊、防禦、<br>特攻、特防、速度、命中率、閃避率中的一種。<br><br>必中化<br>招式必定會命中。<br></div></div></div>
-    </div>
-	
+	<div class="box" style="width: 66%;">
+		<ul class="tab"><li><a href="#content1">章魚桶</a></li></ul>
+		<div class="content"><div class="content1" id="content1">————————10096100000————————<br>季节限定★5 志米（２０１９冬季）♂&章魚桶♂<br>體系：技術型 | 弱點：電<br>Lv.1：ＨＰ 101 | 攻擊 8 | 防禦 16 | 特攻 15 | 特防 16 | 速度 9<br>Lv.100：ＨＰ 485 | 攻擊 123 | 防禦 170 | 特攻 203 | 特防 170 | 速度 158<br>Lv.110：ＨＰ 513 | 攻擊 131 | 防禦 180 | 特攻 217 | 特防 180 | 速度 168<br>Lv.120：ＨＰ 541 | 攻擊 139 | 防禦 190 | 特攻 231 | 特防 190 | 速度 178<br>Lv.125：ＨＰ 555 | 攻擊 143 | 防禦 195 | 特攻 238 | 特防 195 | 速度 183<br>Lv.130：ＨＰ 569 | 攻擊 147 | 防禦 200 | 特攻 245 | 特防 200 | 速度 188<br>拍組招式：本日主餐之章魚桶炮<br>屬性：水<br>分類：特殊<br>威力：200<br>對象：對手１對拍組<br>當對手陷入灼傷狀態時，威力會提高。<br><br>寶可夢招式：章魚桶炮 ▭▭<br>屬性：水<br>分類：特殊<br>威力：56<br>命中：85<br>對象：對手１對拍組<br>有時會降低對手的命中率。<br><br>道具招式：特防強化 2/2<br>分類：變化<br>對象：自己<br>大幅提高自己的特防。<br><br>寶可夢招式：熱水 ▭▭▭<br>屬性：水<br>分類：特殊<br>威力：87<br>命中：100<br>對象：對手１對拍組<br>解除自己的冰凍狀態。<br>偶爾會讓對手陷入灼傷狀態。<br><br>訓練家招式：決不妥協！ 2/2<br>分類：變化<br>對象：自己<br>大幅提高自己的防禦和特攻。<br><br>異常機率提升１<br>當招式的追加效果可使對手陷入異常狀態時，會提高該追加效果的成功率。<br><br>攻擊時隨機提升４<br>使出招式攻擊成功後，<br>有時會提高自己的攻擊、防禦、<br>特攻、特防、速度、命中率、閃避率中的一種。<br><br>必中化<br>招式必定會命中。<br></div></div></div>
+	</div>
+
 	<script>
 json = [[1009610000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [1009610001, '特攻+5', '特攻+5', 0, 5, 1, '568dd1', 1, -1], [1009610002, '防禦+5', '防禦+5', 0, 5, 1, '568dd1', 0, -1], [1009610003, '特攻+5', '特攻+5', 0, 5, 1, '568dd1', -1, 0], [1009610004, '特防+5', '特防+5', 0, 5, 1, '568dd1', -1, 1], [1009610005, '速度+5', '速度+5', 0, 5, 1, '568dd1', 0, 1], [1009610006, '特攻+5', '特攻+5', 2, 24, 1, '568dd1', 1, 1], [1009610007, '速度+5', '速度+5', 2, 24, 1, '568dd1', 2, 1], [1009610008, '防禦+5', '防禦+5', 2, 24, 1, '568dd1', 1, 2], [1009610009, '章魚桶炮：威力+4', '章魚桶炮：威力+4', 3, 36, 1, '4ab897', 3, 1], [1009610010, '章魚桶炮：招式後招式計量槽增加３', '招式成功時，有些情況下會\n幫自己增加１條招式計量槽。', 6, 72, 1, 'e1768a', 2, 2], [1009610011, '章魚桶炮：威力+4', '章魚桶炮：威力+4', 3, 36, 2, '4ab897', 1, 3], [1009610012, '章魚桶炮：威力+4', '章魚桶炮：威力+4', 3, 36, 1, '4ab897', 3, 2], [1009610013, 'ＨＰ+10', 'ＨＰ+10', 2, 24, 2, '568dd1', 2, 3], [1009610014, '攻擊時隨機提升４', '使出招式攻擊成功後，\n有時會提高自己的攻擊、防禦、\n特攻、特防、速度、命中率、閃避率中的一種。', 10, 120, 3, 'e6ce5e', 1, 4], [1009610015, '拍組招式後要害率提升１', '使出拍組招式後，\n會提高自己的擊中要害率。', 7, 84, 2, 'e6ce5e', 3, 3], [1009610016, '依能力升幅拍組招式↑', '自己的能力提高得越多，\n拍組招式的威力就提高得越多。', 8, 96, 3, 'e6ce5e', 2, 4], [1009610017, '擊中要害率下降無效', '擊中要害率不會降低。', 3, 36, 1, 'e6ce5e', -2, 1], [1009610018, '速度+5', '速度+5', 2, 24, 1, '568dd1', -3, 1], [1009610019, '熱水：招式後招式計量槽增加３', '招式成功時，有些情況下會\n幫自己增加１條招式計量槽。', 6, 72, 1, 'e1768a', -2, 0], [1009610020, '對手灼傷時威力提升３', '當對手陷入灼傷狀態時，會提高招式的威力。', 8, 96, 2, 'e6ce5e', -3, 0], [1009610021, '熱水：威力+3', '熱水：威力+3', 4, 48, 1, '4ab897', -1, -1], [1009610022, '熱水：威力+3', '熱水：威力+3', 4, 48, 2, '4ab897', -2, -1], [1009610023, '特防+10', '特防+10', 4, 48, 2, '568dd1', -3, -1], [1009610024, '防禦+20', '防禦+20', 7, 84, 3, '568dd1', -1, -2], [1009610025, '依對手命中率降幅威力↑', '對手的命中率降低得越多，\n招式的威力就提高得越多。', 8, 96, 3, 'e6ce5e', -2, -2], [1009610026, '速度+5', '速度+5', 2, 24, 1, '568dd1', 2, -1], [1009610027, '熱水：威力+3', '熱水：威力+3', 4, 48, 1, '4ab897', 3, -2], [1009610028, '特防強化：招式後招式次數回復３', '招式成功時，有些情況下會\n回復該招式的使用次數１次。', 7, 84, 1, 'e1768a', 2, -2], [1009610029, '熱水：威力+3', '熱水：威力+3', 4, 48, 1, '4ab897', 1, -2], [1009610030, '章魚桶炮：寶可夢出招後要害率↑４', '在寶可夢使出招式時，\n有時會提高自己的擊中要害率。', 8, 96, 2, 'e1768a', 3, -3], [1009610031, '熱水：威力+3', '熱水：威力+3', 4, 48, 2, '4ab897', 2, -3], [1009610032, 'ＨＰ+30', 'ＨＰ+30', 7, 84, 3, '568dd1', 1, -3], [1009610033, '危機時減輕物理傷害３', '在陷入危機時，\n會減輕受到物理招式攻擊時的傷害。', 8, 96, 2, 'e6ce5e', 3, -4], [1009610034, '章魚桶炮：攻擊時命中率下降４', '使出招式攻擊成功時，\n有時會降低對手的命中率。', 8, 96, 3, 'e1768a', 2, -4], [1009610035, '特攻+5', '特攻+5', 2, 24, 1, '568dd1', -1, 2], [1009610036, '防禦+5', '防禦+5', 2, 24, 1, '568dd1', -2, 3], [1009610037, 'ＨＰ+10', 'ＨＰ+10', 2, 24, 1, '568dd1', -1, 3], [1009610038, '章魚桶炮：威力+4', '章魚桶炮：威力+4', 3, 36, 1, '4ab897', -3, 4], [1009610039, '決不妥協！：招式後招式次數回復３', '招式成功時，有些情況下會\n回復該招式的使用次數１次。', 7, 84, 1, 'e1768a', -2, 4], [1009610040, '章魚桶炮：威力+4', '章魚桶炮：威力+4', 3, 36, 1, '4ab897', -3, 5], [1009610041, '章魚桶炮：威力+4', '章魚桶炮：威力+4', 3, 36, 2, '4ab897', -1, 4], [1009610042, '特攻+10', '特攻+10', 4, 48, 2, '568dd1', -2, 5], [1009610043, '對手灼傷傷害提升２', '增加對手受到的灼傷傷害。', 7, 84, 2, 'e6ce5e', -3, 6], [1009610044, '速度+20', '速度+20', 7, 84, 3, '568dd1', -1, 5], [1009610045, '擊中要害時威力提升３', '擊中對手要害時，會提高當下該攻擊的威力。', 10, 120, 3, 'e6ce5e', -2, 6], [1009610046, '本日主餐之章魚桶炮：威力+25', '本日主餐之章魚桶炮：威力+25', 5, 60, 3, '55b8e2', 0, 3], [1009610047, '本日主餐之章魚桶炮：威力+25', '本日主餐之章魚桶炮：威力+25', 5, 60, 3, '55b8e2', 0, -3]]
 
@@ -83,6 +99,16 @@ json = [[1009610000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100961
 		}
 		function removeCookie(cookieName) {
 			document.cookie = encodeURIComponent(cookieName) + "=; expires=" + new Date();
+		}
+		
+		function newCookie() {
+			var re = "";
+			for (var i = 0; i < 4; i++) {
+				re = re + checks[2 * i] + ',';
+				re = re + pres[2 * i + 1] + ',';
+			}
+			re = re + set;
+			return re;
 		}
 
 		class Tile {
@@ -119,7 +145,10 @@ json = [[1009610000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100961
 				}
 				h.setAttribute("id", this.id);
 				e.appendChild(h);
-
+			}
+			skin() {
+				var e = document.getElementById('grid');
+				
 				if (this.skill.indexOf('：') != -1) {
 					var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
 					var line = this.skill.substring(0, this.skill.indexOf('：'));
@@ -188,7 +217,7 @@ json = [[1009610000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100961
 			[x - r, y],
 			[x - r2, y - r3],
 			[x + r2, y - r3]];
-			for (var i = 0; i < 6; i ++) {
+			for (var i = 0; i < 6; i++) {
 				if (re[i][0] < svgleft) svgleft = Math.floor(re[i][0]);
 				if (re[i][0] > svgright) svgright = Math.ceil(re[i][0]);
 				if (re[i][1] < svgtop) svgtop = Math.floor(re[i][1]);
@@ -231,13 +260,88 @@ json = [[1009610000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100961
 					}
 				}
 			}
-			setCookie('syncgrid' + no, check.join(''), 365);
+			checks[set] = check.join('');
+			setCookie('syncgrid' + no, newCookie(), 999);
 			update();
 		};
+		
+		function rename() {
+			var pre = prompt("請輸入預設名稱");
+			if (pre != null) {
+				pres[set] = pre;
+				var select = document.getElementById("ms");
+				select.options[set].text = pre;
+				setCookie('syncgrid' + no, newCookie, 999);
+			}
+		}
+		
+		function reset() {
+			checks[set] = "";
+			setCookie('syncgrid' + no, newCookie, 999);
+			update();
+			newGrid();
+		}
+		
+		function changeSet() {
+			var select = document.getElementById("ms");
+			set = select.selectedIndex;
+			update();
+			newGrid();
+		}
+		
+		function newGrid() {
+			var e = document.getElementById("grid")
+			e.innerHTML = "";
+			
+			var h = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+			var points = "";
+			var hxy = xyz2xy(0, 0);
+			var hh = hexagon(hxy);
+			for (var i = 0; i < hh.length; i++) {
+				points = points + hh[i][0] + "," + hh[i][1] + " ";
+			}
+			h.setAttribute("points", points);
+			h.setAttribute("style", "fill:#" + tcolor + ";opacity:0.5;stroke:black;stroke-width:1");
+			e.appendChild(h);
+			var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+			var line = name.substring(0, name.indexOf('&'));
+			s.innerHTML = line;
+			s.setAttribute("x", hxy[0] - line.length * f / 2);
+			s.setAttribute("y", hxy[1]);
+			e.appendChild(s);
+			var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+			var line = name.substring(name.indexOf('&') + 1);
+			s.innerHTML = line;
+			s.setAttribute("x", hxy[0] - line.length * f / 2);
+			s.setAttribute("y", hxy[1] + f);
+			e.appendChild(s);
+			
+			tiles = new Array();
+			for (var i = 0; i < json.length; i++) {
+				var t = json[i];
+				var tile = new Tile(t[0], t[1], t[2], t[3], t[4], t[5], t[6], t[7], t[8], check[i]);
+				tile.draw();
+				tiles.push(tile);
+			}
+			for (var i = 0; i < tiles.length; i++) {
+				var tile = tiles[i];
+				tile.skin();
+			}
+		}
 
 		function update() {
-			document.getElementById('energy').innerHTML = '剩餘力量：' + energy;
-			document.getElementById('orb').innerHTML = '拍檔滴晶：' + orb;
+			var select = document.getElementById("ms");
+			select.selectedIndex = set;
+			check = checks[set];
+			if (check == "") {
+				check = new Array(json.length);
+				for (var i = 0; i < check.length; i++) check[i] = 0;
+			}
+			else {
+				check = check.split('');
+			}
+			document.getElementById('energy').innerHTML = '剩餘力量：' + energys[set];
+			document.getElementById('orb').innerHTML = '拍檔滴晶：' + orbs[set];
 			var re = new Array();
 			for (var i = 0; i < check.length; i++) {
 				if (check[i] == 1) {
@@ -268,50 +372,44 @@ json = [[1009610000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100961
 		var R = 96;
 		var r = 96;
 		var f = 16;
-		var energy = 60;
-		var orb = 0;
-		var check = getCookie('syncgrid' + no);
+		var energys = [60, 60, 60, 60];
+		var orbs = [0, 0, 0, 0];
+		var checks = ["", "", "", ""];
+		var pres = ["", "", "", ""];
+		var set = 0;
+		var cookie = getCookie('syncgrid' + no);
+		if (cookie.indexOf(',')!=-1) {
+			cookie = cookie.split(',');
+			if (cookie.length == 9) {
+				for (var i = 0; i < 8; i = i + 2) {
+					checks[i] = cookie[2 * i];
+					pres[i] = cookie[2 * i + 1];
+				}
+				set = cookie[8];
+			}
+		}
+		else {
+			checks[0] = cookie;
+		}
+		
+		var select = document.getElementById("ms");
+		for (var i = 0; i < 4; i++) {
+			if (pres[i] == '') select.options[i].text = "No." + (i + 1);
+			else select.options[i].text = pres[i];
+		}
+
+		var check = checks[set];
 		if (check == "") {
-			var check = new Array(json.length);
+			check = new Array(json.length);
 			for (var i = 0; i < check.length; i++) check[i] = 0;
 		}
 		else {
 			check = check.split('');
 		}
-		var e = document.getElementById('grid');
-
-		var h = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
-		var points = "";
-		var hxy = xyz2xy(0, 0);
-		var hh = hexagon(hxy);
-		for (var i = 0; i < hh.length; i++) {
-			points = points + hh[i][0] + "," + hh[i][1] + " ";
-		}
-		h.setAttribute("points", points);
-		h.setAttribute("style", "fill:#" + tcolor + ";opacity:0.5;stroke:black;stroke-width:1");
-		e.appendChild(h);
-		var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-		var line = name.substring(0, name.indexOf('&'));
-		s.innerHTML = line;
-		s.setAttribute("x", hxy[0] - line.length * f / 2);
-		s.setAttribute("y", hxy[1]);
-		e.appendChild(s);
-		var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-		var line = name.substring(name.indexOf('&') + 1);
-		s.innerHTML = line;
-		s.setAttribute("x", hxy[0] - line.length * f / 2);
-		s.setAttribute("y", hxy[1] + f);
-		e.appendChild(s);
-
-		tiles = new Array();
-		for (var i = 0; i < json.length; i++) {
-			var t = json[i];
-			var tile = new Tile(t[0], t[1], t[2], t[3], t[4], t[5], t[6], t[7], t[8], check[i]);
-			tile.draw();
-			tiles.push(tile);
-		}
 		
 		update();
+
+		newGrid();
 
 		var svg = document.getElementById("grid");
 		if (svgright - svgleft > 1080 || window.innerHeight < svg.getAttribute('height')) {
@@ -320,8 +418,8 @@ json = [[1009610000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100961
 			svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
 		}
 		if (window.innerHeight < svg.getAttribute('height')) {
-			svg.setAttribute('width', Math.ceil(svg.getAttribute('width') / svg.getAttribute('height') * window.innerHeight*0.9));
-			svg.setAttribute('height', Math.ceil(window.innerHeight*0.9));
+			svg.setAttribute('width', Math.ceil(svg.getAttribute('width') / svg.getAttribute('height') * window.innerHeight * 0.9));
+			svg.setAttribute('height', Math.ceil(window.innerHeight * 0.9));
 		}
 
 	</script>

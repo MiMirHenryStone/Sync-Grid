@@ -1,51 +1,67 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
 	<meta charset='utf-8' />
 	<title>拍檔石盤</title>
 	<style>
-		.box{
+		.box {
 			position: relative;
 			width: 66%;
 		}
-		.tab{
+
+		.tab {
 			margin: 0;
 			padding: 0;
 			overflow: hidden;
 			list-style-type: none;
 			display: flex;
 			flex-direction: row;
-			justify-content:space-around;
-			align-items:center;
+			justify-content: space-around;
+			align-items: center;
 		}
-		.tab li{
-			background-color: #ccc;
-			border: 1px solid #fff;
+
+			.tab li {
+				background-color: #ccc;
+				border: 1px solid #fff;
+			}
+
+				.tab li a {
+					text-decoration: none;
+					color: #000;
+					display: inline-block;
+					width: 160px;
+					text-align: center;
+				}
+
+		.content {
+			border: 1px solid #888;
 		}
-		.tab li a{
-			text-decoration: none;
-			color: #000;
-			display: inline-block;
-			width: 160px;
-			text-align: center;
-		}
-		.content{
-			border: 1px solid #888 ;
-		}
-		.content1,.content2,.content3,.content4{
+
+		.content1, .content2, .content3, .content4 {
 			display: none;
 			word-break: break-word;
 			word-wrap: break-word;
 		}
-		.content1:target,.content2:target,.content3:target,.content4:target{
-			display: block;
-		}
+
+			.content1:target, .content2:target, .content3:target, .content4:target {
+				display: block;
+			}
 	</style>
 </head>
 
 
 <body>
+	<div>
+		<select id="ms" onchange=changeSet()>
+			<option value="0">No.1</option>
+			<option value="1">No.2</option>
+			<option value="2">No.3</option>
+			<option value="3">No.4</option>
+		</select>
+		<button onclick=rename()>重命名</button>
+		<button onclick=reset()>全部重設</button>
+	</div>
 	<div>
 		<label id="energy">剩餘力量：60</label>
 		<label id="energy">　</label>
@@ -55,11 +71,11 @@
 	<div id="effect">效果：</div>
 	<svg id="grid" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
 	<div id="sg" style="width: 33%; float: right;">石盤技能：<br></div>
-    <div class="box" style="width: 66%;">
-        <ul class="tab"><li><a href="#content1">暴鯉龍</a></li></ul>
-        <div class="content"><div class="content1" id="content1">————————10111400000————————<br>季节限定★5 阿渡（２０２１新春）♂&暴鯉龍♂<br>體系：物理攻擊型 | 弱點：電<br>Lv.1：ＨＰ 98 | 攻擊 25 | 防禦 10 | 特攻 25 | 特防 11 | 速度 10<br>Lv.100：ＨＰ 515 | 攻擊 293 | 防禦 112 | 特攻 310 | 特防 127 | 速度 176<br>Lv.110：ＨＰ 545 | 攻擊 311 | 防禦 118 | 特攻 330 | 特防 135 | 速度 188<br>Lv.120：ＨＰ 575 | 攻擊 329 | 防禦 124 | 特攻 350 | 特防 143 | 速度 200<br>Lv.125：ＨＰ 590 | 攻擊 338 | 防禦 127 | 特攻 360 | 特防 147 | 速度 206<br>Lv.130：ＨＰ 605 | 攻擊 347 | 防禦 130 | 特攻 370 | 特防 151 | 速度 212<br>拍組招式：盛裝王者之飛行衝擊<br>屬性：飛行<br>分類：物理<br>威力：250<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：彈跳 3/3<br>屬性：飛行<br>分類：物理<br>威力：182<br>命中：85<br>對象：對手１對拍組<br>變成彈跳狀態。<br>變成彈跳狀態一段時間後，將會解除彈跳狀態並且攻擊對手。<br>偶爾會讓對手陷入麻痺狀態。<br>在彈跳狀態時，無法做出其他行動。<br>在彈跳狀態時，對手絕大多數的招式不會命中。<br>在彈跳狀態時，若受到拍組招式攻擊，將會解除彈跳狀態。<br><br>道具招式：傷藥 2/2<br>分類：變化<br>對象：我方１對拍組<br>少量回復我方的ＨＰ。<br><br>寶可夢招式：破壞光線 ▭▭▭▭<br>屬性：一般<br>分類：特殊<br>威力：223<br>命中：90<br>對象：對手１對拍組<br>沒有追加效果。<br><br>訓練家招式：冠絕天下！ 2/2<br>分類：變化<br>對象：自己<br>幫自己增加３條招式計量槽。<br>提高自己的攻擊、特攻和命中率。<br>會受到自己所剩ＨＰ的３３％的傷害。<br><br>飛行屬性替換<br>一般屬性的招式會變成飛行屬性。<br><br>威力隨招式計量槽提升５<br>招式計量槽的剩餘量越多，招式的威力就提高得越多。<br><br>拍組招式後計數加速１<br>首次使出拍組招式時，<br>會讓發動拍組招式所需的行動數減少１次。<br></div></div></div>
-    </div>
-	
+	<div class="box" style="width: 66%;">
+		<ul class="tab"><li><a href="#content1">暴鯉龍</a></li></ul>
+		<div class="content"><div class="content1" id="content1">————————10111400000————————<br>季节限定★5 阿渡（２０２１新春）♂&暴鯉龍♂<br>體系：物理攻擊型 | 弱點：電<br>Lv.1：ＨＰ 98 | 攻擊 25 | 防禦 10 | 特攻 25 | 特防 11 | 速度 10<br>Lv.100：ＨＰ 515 | 攻擊 293 | 防禦 112 | 特攻 310 | 特防 127 | 速度 176<br>Lv.110：ＨＰ 545 | 攻擊 311 | 防禦 118 | 特攻 330 | 特防 135 | 速度 188<br>Lv.120：ＨＰ 575 | 攻擊 329 | 防禦 124 | 特攻 350 | 特防 143 | 速度 200<br>Lv.125：ＨＰ 590 | 攻擊 338 | 防禦 127 | 特攻 360 | 特防 147 | 速度 206<br>Lv.130：ＨＰ 605 | 攻擊 347 | 防禦 130 | 特攻 370 | 特防 151 | 速度 212<br>拍組招式：盛裝王者之飛行衝擊<br>屬性：飛行<br>分類：物理<br>威力：250<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：彈跳 3/3<br>屬性：飛行<br>分類：物理<br>威力：182<br>命中：85<br>對象：對手１對拍組<br>變成彈跳狀態。<br>變成彈跳狀態一段時間後，將會解除彈跳狀態並且攻擊對手。<br>偶爾會讓對手陷入麻痺狀態。<br>在彈跳狀態時，無法做出其他行動。<br>在彈跳狀態時，對手絕大多數的招式不會命中。<br>在彈跳狀態時，若受到拍組招式攻擊，將會解除彈跳狀態。<br><br>道具招式：傷藥 2/2<br>分類：變化<br>對象：我方１對拍組<br>少量回復我方的ＨＰ。<br><br>寶可夢招式：破壞光線 ▭▭▭▭<br>屬性：一般<br>分類：特殊<br>威力：223<br>命中：90<br>對象：對手１對拍組<br>沒有追加效果。<br><br>訓練家招式：冠絕天下！ 2/2<br>分類：變化<br>對象：自己<br>幫自己增加３條招式計量槽。<br>提高自己的攻擊、特攻和命中率。<br>會受到自己所剩ＨＰ的３３％的傷害。<br><br>飛行屬性替換<br>一般屬性的招式會變成飛行屬性。<br><br>威力隨招式計量槽提升５<br>招式計量槽的剩餘量越多，招式的威力就提高得越多。<br><br>拍組招式後計數加速１<br>首次使出拍組招式時，<br>會讓發動拍組招式所需的行動數減少１次。<br></div></div></div>
+	</div>
+
 	<script>
 json = [[1011140000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [1011140001, '攻擊+5', '攻擊+5', 0, 5, 1, '568dd1', 1, -1], [1011140002, '防禦+5', '防禦+5', 0, 5, 1, '568dd1', 0, -1], [1011140003, '特攻+5', '特攻+5', 0, 5, 1, '568dd1', -1, 0], [1011140004, '特防+5', '特防+5', 0, 5, 1, '568dd1', -1, 1], [1011140005, '速度+5', '速度+5', 0, 5, 1, '568dd1', 0, 1], [1011140006, '攻擊+5', '攻擊+5', 2, 24, 1, '568dd1', 1, 1], [1011140007, '速度+5', '速度+5', 2, 24, 1, '568dd1', 2, 1], [1011140008, '破壞光線：命中率+5', '破壞光線：命中率+5', 4, 48, 1, '4ab897', 3, 1], [1011140009, '防禦+5', '防禦+5', 2, 24, 1, '568dd1', 1, 2], [1011140010, '特防+5', '特防+5', 2, 24, 1, '568dd1', 2, 2], [1011140011, '破壞光線：威力+3', '破壞光線：威力+3', 4, 48, 1, '4ab897', 3, 2], [1011140012, '破壞光線：命中率+5', '破壞光線：命中率+5', 4, 48, 2, '4ab897', 1, 3], [1011140013, '破壞光線：招式後招式計量槽增加２', '招式成功時，偶爾會\n幫自己增加１條招式計量槽。', 7, 84, 2, 'e1768a', 2, 3], [1011140014, '下雨時拍組招式提升５', '當天氣為下雨時，會提高拍組招式的威力。', 8, 96, 2, 'e6ce5e', 3, 3], [1011140015, '破壞光線：威力+3', '破壞光線：威力+3', 4, 48, 3, '4ab897', 1, 4], [1011140016, '破壞光線：招式後招式計量槽增加３', '招式成功時，有些情況下會\n幫自己增加１條招式計量槽。', 7, 84, 3, 'e1768a', 2, 4], [1011140017, '特攻+5', '特攻+5', 2, 24, 1, '568dd1', -1, -1], [1011140018, '速度+5', '速度+5', 2, 24, 1, '568dd1', -2, -1], [1011140019, '彈跳：威力+3', '彈跳：威力+3', 4, 48, 1, '4ab897', -3, -1], [1011140020, '攻擊+5', '攻擊+5', 2, 24, 1, '568dd1', -1, -2], [1011140021, '彈跳：招式後招式次數回復１', '招式成功時，少數情況下會\n回復該招式的使用次數１次。', 7, 84, 1, 'e1768a', -2, -2], [1011140022, '彈跳：命中率+5', '彈跳：命中率+5', 4, 48, 1, '4ab897', -3, -2], [1011140023, '彈跳：命中率+5', '彈跳：命中率+5', 4, 48, 2, '4ab897', -1, -3], [1011140024, '彈跳：威力+3', '彈跳：威力+3', 4, 48, 2, '4ab897', -2, -3], [1011140025, '速度+10', '速度+10', 4, 48, 2, '568dd1', -3, -3], [1011140026, '彈跳：下雨時招式瞄準要害２', '當天氣為下雨且使出招式攻擊時，容易擊中要害。', 10, 120, 3, 'e1768a', -1, -4], [1011140027, '拍組招式後快攻次數回復１', '使出拍組招式後，\n當自己的招式有快攻效果時，會幫該招式的使用次數回復１。', 10, 120, 3, 'e6ce5e', -2, -4], [1011140028, '特攻+5', '特攻+5', 2, 24, 1, '568dd1', 2, -1], [1011140029, '彈跳：威力+3', '彈跳：威力+3', 4, 48, 1, '4ab897', 3, -2], [1011140030, '下雨時妨害狀態無效', '當天氣為下雨時，\n不會陷入畏縮狀態、混亂狀態或束縛狀態。', 8, 96, 1, 'e6ce5e', 2, -2], [1011140031, 'ＨＰ+10', 'ＨＰ+10', 2, 24, 1, '568dd1', 1, -2], [1011140032, '下雨時招式計量槽加速３', '當天氣為下雨時，招式計量槽會累積得較快。', 8, 96, 2, 'e6ce5e', 3, -3], [1011140033, '彈跳：招式後招式次數回復１', '招式成功時，少數情況下會\n回復該招式的使用次數１次。', 7, 84, 2, 'e1768a', 2, -3], [1011140034, '彈跳：威力+3', '彈跳：威力+3', 4, 48, 2, '4ab897', 1, -3], [1011140035, '危機時計數加速９', '對戰中僅限１次，在陷入危機時會\n讓自己發動拍組招式所需的行動數減少１次。', 10, 120, 3, 'e6ce5e', 3, -4], [1011140036, '下雨時威力提升２', '當天氣為下雨時，會提高招式的威力。', 10, 120, 3, 'e6ce5e', 2, -4], [1011140037, 'ＨＰ+10', 'ＨＰ+10', 2, 24, 1, '568dd1', -2, 1], [1011140038, '冠絕天下！：招式後招式次數回復２', '招式成功時，偶爾會\n回復該招式的使用次數１次。', 7, 84, 1, 'e1768a', -3, 2], [1011140039, 'ＨＰ+10', 'ＨＰ+10', 2, 24, 1, '568dd1', -2, 2], [1011140040, '破壞光線：威力+3', '破壞光線：威力+3', 4, 48, 1, '4ab897', -1, 2], [1011140041, '破壞光線：對手麻痺時威力提升１', '當對手陷入麻痺狀態時，會提高招式的威力。', 8, 96, 2, 'e1768a', -3, 3], [1011140042, '上場時攻擊下降Ｇ１', '登場時，會降低對手全體拍組的攻擊。', 10, 120, 2, 'e6ce5e', -2, 3], [1011140043, '彈跳：異常機率提升１', '當招式的追加效果可使對手陷入異常狀態時，會提高該追加效果的成功率。', 8, 96, 2, 'e1768a', -1, 3], [1011140044, '下雨時ＨＰ回復１', '當天氣為下雨時，\n寶可夢每次行動後都會回復自己的ＨＰ。', 10, 120, 3, 'e6ce5e', -3, 4], [1011140045, '其他拍組瀕死時攻擊↑１', '當自己以外的拍組陷入瀕死狀態時，\n會提高自己的攻擊。', 10, 120, 3, 'e6ce5e', -2, 4], [1011140046, '盛裝王者之飛行衝擊：威力+25', '盛裝王者之飛行衝擊：威力+25', 5, 60, 3, '5a82f0', 0, 3], [1011140047, '盛裝王者之飛行衝擊：威力+25', '盛裝王者之飛行衝擊：威力+25', 5, 60, 3, '5a82f0', 0, -3]]
 
@@ -83,6 +99,16 @@ json = [[1011140000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101114
 		}
 		function removeCookie(cookieName) {
 			document.cookie = encodeURIComponent(cookieName) + "=; expires=" + new Date();
+		}
+		
+		function newCookie() {
+			var re = "";
+			for (var i = 0; i < 4; i++) {
+				re = re + checks[2 * i] + ',';
+				re = re + pres[2 * i + 1] + ',';
+			}
+			re = re + set;
+			return re;
 		}
 
 		class Tile {
@@ -119,7 +145,10 @@ json = [[1011140000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101114
 				}
 				h.setAttribute("id", this.id);
 				e.appendChild(h);
-
+			}
+			skin() {
+				var e = document.getElementById('grid');
+				
 				if (this.skill.indexOf('：') != -1) {
 					var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
 					var line = this.skill.substring(0, this.skill.indexOf('：'));
@@ -188,7 +217,7 @@ json = [[1011140000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101114
 			[x - r, y],
 			[x - r2, y - r3],
 			[x + r2, y - r3]];
-			for (var i = 0; i < 6; i ++) {
+			for (var i = 0; i < 6; i++) {
 				if (re[i][0] < svgleft) svgleft = Math.floor(re[i][0]);
 				if (re[i][0] > svgright) svgright = Math.ceil(re[i][0]);
 				if (re[i][1] < svgtop) svgtop = Math.floor(re[i][1]);
@@ -231,13 +260,88 @@ json = [[1011140000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101114
 					}
 				}
 			}
-			setCookie('syncgrid' + no, check.join(''), 365);
+			checks[set] = check.join('');
+			setCookie('syncgrid' + no, newCookie(), 999);
 			update();
 		};
+		
+		function rename() {
+			var pre = prompt("請輸入預設名稱");
+			if (pre != null) {
+				pres[set] = pre;
+				var select = document.getElementById("ms");
+				select.options[set].text = pre;
+				setCookie('syncgrid' + no, newCookie, 999);
+			}
+		}
+		
+		function reset() {
+			checks[set] = "";
+			setCookie('syncgrid' + no, newCookie, 999);
+			update();
+			newGrid();
+		}
+		
+		function changeSet() {
+			var select = document.getElementById("ms");
+			set = select.selectedIndex;
+			update();
+			newGrid();
+		}
+		
+		function newGrid() {
+			var e = document.getElementById("grid")
+			e.innerHTML = "";
+			
+			var h = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+			var points = "";
+			var hxy = xyz2xy(0, 0);
+			var hh = hexagon(hxy);
+			for (var i = 0; i < hh.length; i++) {
+				points = points + hh[i][0] + "," + hh[i][1] + " ";
+			}
+			h.setAttribute("points", points);
+			h.setAttribute("style", "fill:#" + tcolor + ";opacity:0.5;stroke:black;stroke-width:1");
+			e.appendChild(h);
+			var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+			var line = name.substring(0, name.indexOf('&'));
+			s.innerHTML = line;
+			s.setAttribute("x", hxy[0] - line.length * f / 2);
+			s.setAttribute("y", hxy[1]);
+			e.appendChild(s);
+			var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+			var line = name.substring(name.indexOf('&') + 1);
+			s.innerHTML = line;
+			s.setAttribute("x", hxy[0] - line.length * f / 2);
+			s.setAttribute("y", hxy[1] + f);
+			e.appendChild(s);
+			
+			tiles = new Array();
+			for (var i = 0; i < json.length; i++) {
+				var t = json[i];
+				var tile = new Tile(t[0], t[1], t[2], t[3], t[4], t[5], t[6], t[7], t[8], check[i]);
+				tile.draw();
+				tiles.push(tile);
+			}
+			for (var i = 0; i < tiles.length; i++) {
+				var tile = tiles[i];
+				tile.skin();
+			}
+		}
 
 		function update() {
-			document.getElementById('energy').innerHTML = '剩餘力量：' + energy;
-			document.getElementById('orb').innerHTML = '拍檔滴晶：' + orb;
+			var select = document.getElementById("ms");
+			select.selectedIndex = set;
+			check = checks[set];
+			if (check == "") {
+				check = new Array(json.length);
+				for (var i = 0; i < check.length; i++) check[i] = 0;
+			}
+			else {
+				check = check.split('');
+			}
+			document.getElementById('energy').innerHTML = '剩餘力量：' + energys[set];
+			document.getElementById('orb').innerHTML = '拍檔滴晶：' + orbs[set];
 			var re = new Array();
 			for (var i = 0; i < check.length; i++) {
 				if (check[i] == 1) {
@@ -268,50 +372,44 @@ json = [[1011140000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101114
 		var R = 96;
 		var r = 96;
 		var f = 16;
-		var energy = 60;
-		var orb = 0;
-		var check = getCookie('syncgrid' + no);
+		var energys = [60, 60, 60, 60];
+		var orbs = [0, 0, 0, 0];
+		var checks = ["", "", "", ""];
+		var pres = ["", "", "", ""];
+		var set = 0;
+		var cookie = getCookie('syncgrid' + no);
+		if (cookie.indexOf(',')!=-1) {
+			cookie = cookie.split(',');
+			if (cookie.length == 9) {
+				for (var i = 0; i < 8; i = i + 2) {
+					checks[i] = cookie[2 * i];
+					pres[i] = cookie[2 * i + 1];
+				}
+				set = cookie[8];
+			}
+		}
+		else {
+			checks[0] = cookie;
+		}
+		
+		var select = document.getElementById("ms");
+		for (var i = 0; i < 4; i++) {
+			if (pres[i] == '') select.options[i].text = "No." + (i + 1);
+			else select.options[i].text = pres[i];
+		}
+
+		var check = checks[set];
 		if (check == "") {
-			var check = new Array(json.length);
+			check = new Array(json.length);
 			for (var i = 0; i < check.length; i++) check[i] = 0;
 		}
 		else {
 			check = check.split('');
 		}
-		var e = document.getElementById('grid');
-
-		var h = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
-		var points = "";
-		var hxy = xyz2xy(0, 0);
-		var hh = hexagon(hxy);
-		for (var i = 0; i < hh.length; i++) {
-			points = points + hh[i][0] + "," + hh[i][1] + " ";
-		}
-		h.setAttribute("points", points);
-		h.setAttribute("style", "fill:#" + tcolor + ";opacity:0.5;stroke:black;stroke-width:1");
-		e.appendChild(h);
-		var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-		var line = name.substring(0, name.indexOf('&'));
-		s.innerHTML = line;
-		s.setAttribute("x", hxy[0] - line.length * f / 2);
-		s.setAttribute("y", hxy[1]);
-		e.appendChild(s);
-		var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-		var line = name.substring(name.indexOf('&') + 1);
-		s.innerHTML = line;
-		s.setAttribute("x", hxy[0] - line.length * f / 2);
-		s.setAttribute("y", hxy[1] + f);
-		e.appendChild(s);
-
-		tiles = new Array();
-		for (var i = 0; i < json.length; i++) {
-			var t = json[i];
-			var tile = new Tile(t[0], t[1], t[2], t[3], t[4], t[5], t[6], t[7], t[8], check[i]);
-			tile.draw();
-			tiles.push(tile);
-		}
 		
 		update();
+
+		newGrid();
 
 		var svg = document.getElementById("grid");
 		if (svgright - svgleft > 1080 || window.innerHeight < svg.getAttribute('height')) {
@@ -320,8 +418,8 @@ json = [[1011140000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101114
 			svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
 		}
 		if (window.innerHeight < svg.getAttribute('height')) {
-			svg.setAttribute('width', Math.ceil(svg.getAttribute('width') / svg.getAttribute('height') * window.innerHeight*0.9));
-			svg.setAttribute('height', Math.ceil(window.innerHeight*0.9));
+			svg.setAttribute('width', Math.ceil(svg.getAttribute('width') / svg.getAttribute('height') * window.innerHeight * 0.9));
+			svg.setAttribute('height', Math.ceil(window.innerHeight * 0.9));
 		}
 
 	</script>
