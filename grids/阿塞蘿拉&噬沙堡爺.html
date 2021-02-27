@@ -283,10 +283,12 @@ json = [[1000700000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100070
 		}
 		
 		function reset() {
-			checks[set] = "";
-			setCookie('syncgrid' + no, newCookie(), 999);
-			update();
-			newGrid();
+			if (confirm("確定要重設所有已開放的格子嗎？")) {
+				checks[set] = "";
+				setCookie('syncgrid' + no, newCookie(), 999);
+				update();
+				newGrid();
+			}
 		}
 		
 		function changeSet() {
