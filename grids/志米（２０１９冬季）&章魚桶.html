@@ -340,6 +340,8 @@ json = [[1009610000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100961
 			else {
 				check = check.split('');
 			}
+			energy = energys[set];
+			orb = orbs[set];
 			document.getElementById('energy').innerHTML = '剩餘力量：' + energys[set];
 			document.getElementById('orb').innerHTML = '拍檔滴晶：' + orbs[set];
 			var re = new Array();
@@ -397,7 +399,9 @@ json = [[1009610000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100961
 			if (pres[i] == '') select.options[i].text = "No." + (i + 1);
 			else select.options[i].text = pres[i];
 		}
-
+		
+		energy = energys[set];
+		orbs = orbs[set];
 		var check = checks[set];
 		if (check == "") {
 			check = new Array(json.length);
@@ -406,6 +410,7 @@ json = [[1009610000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100961
 		else {
 			check = check.split('');
 		}
+
 		
 		update();
 
