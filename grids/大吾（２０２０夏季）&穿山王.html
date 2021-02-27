@@ -342,8 +342,8 @@ json = [[1009040000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100904
 			}
 			energy = energys[set];
 			orb = orbs[set];
-			document.getElementById('energy').innerHTML = '剩餘力量：' + energys[set];
-			document.getElementById('orb').innerHTML = '拍檔滴晶：' + orbs[set];
+			document.getElementById('energy').innerHTML = '剩餘力量：' + energy;
+			document.getElementById('orb').innerHTML = '拍檔滴晶：' + orb;
 			var re = new Array();
 			for (var i = 0; i < check.length; i++) {
 				if (check[i] == 1) {
@@ -402,7 +402,7 @@ json = [[1009040000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100904
 		}
 		
 		var energy = energys[set];
-		var orbs = orbs[set];
+		var orb = orbs[set];
 		var check = checks[set];
 		if (check == "") {
 			check = new Array(json.length);
