@@ -390,7 +390,7 @@ json = [[1009610000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100961
 		if (cookie.indexOf(',')!=-1) {
 			cookie = cookie.split(',');
 			if (cookie.length == 9) {
-				for (var i = 0; i < 8; i = i + 2) {
+				for (var i = 0; i < 8; i ++) {
 					checks[i] = cookie[2 * i];
 					pres[i] = cookie[2 * i + 1];
 				}
