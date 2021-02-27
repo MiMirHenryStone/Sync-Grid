@@ -395,6 +395,7 @@ json = [[1019600000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101960
 		}
 		
 		var select = document.getElementById("ms");
+		select.selectedIndex = set;
 		for (var i = 0; i < 4; i++) {
 			if (pres[i] == '') select.options[i].text = "No." + (i + 1);
 			else select.options[i].text = pres[i];
