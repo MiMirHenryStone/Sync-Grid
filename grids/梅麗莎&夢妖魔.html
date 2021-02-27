@@ -105,7 +105,7 @@ json = [[1015100000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101510
 			var re = "";
 			for (var i = 0; i < 4; i++) {
 				re = re + checks[2 * i] + ',';
-				re = re + pres[2 * i + 1] + ',';
+				re = re + URLEncodor.encode(pres[2 * i + 1]) + ',';
 			}
 			re = re + set;
 			return re;
@@ -271,13 +271,13 @@ json = [[1015100000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101510
 				pres[set] = pre;
 				var select = document.getElementById("ms");
 				select.options[set].text = pre;
-				setCookie('syncgrid' + no, newCookie, 999);
+				setCookie('syncgrid' + no, newCookie(), 999);
 			}
 		}
 		
 		function reset() {
 			checks[set] = "";
-			setCookie('syncgrid' + no, newCookie, 999);
+			setCookie('syncgrid' + no, newCookie(), 999);
 			update();
 			newGrid();
 		}
@@ -385,7 +385,7 @@ json = [[1015100000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101510
 			if (cookie.length == 9) {
 				for (var i = 0; i < 8; i = i + 2) {
 					checks[i] = cookie[2 * i];
-					pres[i] = cookie[2 * i + 1];
+					pres[i] = URLDecoder.decode(cookie[2 * i + 1]);
 				}
 				set = cookie[8];
 			}
