@@ -292,6 +292,7 @@ json = [[1024500000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [102450
 		function changeSet() {
 			var select = document.getElementById("ms");
 			set = select.selectedIndex;
+			setCookie('syncgrid' + no, newCookie(), 999);
 			update();
 			newGrid();
 		}
