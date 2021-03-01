@@ -342,8 +342,6 @@ json = [[1015800000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101580
 				var tile = tiles[i];
 				tile.skin();
 			}
-			document.getElementById('energy').innerHTML = '剩餘力量：' + energy;
-			document.getElementById('orb').innerHTML = '拍檔滴晶：' + orb;
 		}
 
 		function update() {
@@ -381,6 +379,8 @@ json = [[1015800000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101580
 				}
 			}
 			document.getElementById('sg').innerHTML = '石盤技能：<br>' + re.join('<br>');
+			document.getElementById('energy').innerHTML = '剩餘力量：' + energy;
+			document.getElementById('orb').innerHTML = '拍檔滴晶：' + orb;
 		}
 
 		var no = "10158000000";
