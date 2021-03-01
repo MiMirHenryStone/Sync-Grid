@@ -432,10 +432,8 @@ json = [[1012500000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101250
 			check = check.split('');
 		}
 
-		
-		update();
-
 		newGrid();
+		update();
 
 		var svg = document.getElementById("grid");
 		if (svgright - svgleft > 1080 || window.innerHeight < svg.getAttribute('height')) {
