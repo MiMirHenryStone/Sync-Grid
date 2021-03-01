@@ -288,7 +288,7 @@ json = [[1009500000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100950
 		function reset() {
 			if (confirm("確定要重設所有已開放的格子嗎？")) {
 				checks[set] = "";
-				energys[set] = 0;
+				energys[set] = 60;
 				orbs[set] = 0;
 				setCookie('syncgrid' + no, newCookie(), 999);
 				update();
