@@ -143,10 +143,8 @@ json = [[1005400000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100540
 				}
 				else {
 					h.setAttribute("style", "fill:#" + this.color + ";opacity:1;stroke:black;stroke-width:1");
-					energy = energy - this.energy;
-					orb = orb + this.orb;
-					energys[set] = energy;
-					orbs[set] = orb;
+					energys[set] = energys[set] - this.energy;
+					orbs[set] = orbs[set] + this.orb;
 				}
 				h.setAttribute("id", this.id);
 				e.appendChild(h);
@@ -241,10 +239,8 @@ json = [[1005400000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100540
 			var target = document.getElementById(id);
 			if (target.style.opacity == 0.25) {
 				target.style.opacity = 1;
-				energy = energy - t.energy;
-				orb = orb + t.orb;
-				energys[set] = energy;
-				orbs[set] = orb;
+				energys[set] = energys[set] - t.energy;
+				orbs[set] = orbs[set] + t.orb;
 				
 				document.getElementById('skill').innerHTML = '技能名稱：' + t.skill;
 				document.getElementById('effect').innerHTML = '效果：' + t.effect;
@@ -257,10 +253,8 @@ json = [[1005400000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100540
 			}
 			else {
 				target.style.opacity = 0.25;
-				energy = energy + t.energy;
-				orb = orb - t.orb;
-				energys[set] = energy;
-				orbs[set] = orb;
+				energys[set] = energys[set] + t.energy;
+				orbs[set] = orbs[set] - t.orb;
 				document.getElementById('skill').innerHTML = '技能名稱：';
 				document.getElementById('effect').innerHTML = '效果：';
 				for (var i = 0; i < json.length; i++) {
@@ -307,6 +301,9 @@ json = [[1005400000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100540
 		function newGrid() {
 			var e = document.getElementById("grid")
 			e.innerHTML = "";
+			
+			energys[set] = 60;
+			orbs[set] = 0;
 			
 			var h = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
 			var points = "";
@@ -355,10 +352,8 @@ json = [[1005400000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100540
 			else {
 				check = check.split('');
 			}
-			energy = energys[set];
-			orb = orbs[set];
-			document.getElementById('energy').innerHTML = '剩餘力量：' + energy;
-			document.getElementById('orb').innerHTML = '拍檔滴晶：' + orb;
+			document.getElementById('energy').innerHTML = '剩餘力量：' + energys[set];
+			document.getElementById('orb').innerHTML = '拍檔滴晶：' + orbs[set];
 			var re = new Array();
 			for (var i = 0; i < check.length; i++) {
 				if (check[i] == 1) {
@@ -379,8 +374,8 @@ json = [[1005400000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100540
 				}
 			}
 			document.getElementById('sg').innerHTML = '石盤技能：<br>' + re.join('<br>');
-			document.getElementById('energy').innerHTML = '剩餘力量：' + energy;
-			document.getElementById('orb').innerHTML = '拍檔滴晶：' + orb;
+			document.getElementById('energy').innerHTML = '剩餘力量：' + energys[set];
+			document.getElementById('orb').innerHTML = '拍檔滴晶：' + orbs[set];
 		}
 
 		var no = "10054000000";
@@ -421,8 +416,6 @@ json = [[1005400000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100540
 			else select.options[i].text = pres[i];
 		}
 		
-		var energy = energys[set];
-		var orb = orbs[set];
 		var check = checks[set];
 		if (check == "") {
 			check = new Array(json.length);
