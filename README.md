@@ -8,13 +8,14 @@
 ### 2021/04/05
 <p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/葉子&伊布.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_3030_1W_Normal_01.00000000000.png"><br>葉子&伊布</a></p>
 
+### 2021/04/08
+<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/希嘉娜&烈空坐.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/Campaign.event_2100_1W_EventQuest_02_appeal_01.png"><br>希嘉娜&烈空坐</a></p>
+
 ### 2021/04/15
-<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/美月&狙射樹梟.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_3030_3W_Normal_01.event_3030_3W_Normal_01_1.png"><br>美月&狙 
-射樹梟</a></p>
+<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/美月&狙射樹梟.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_3030_3W_Normal_01.event_3030_3W_Normal_01_1.png"><br>美月&狙射樹梟</a></p>
 
 ### 2021/04/17
-<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/小陽&西獅海壬.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_3030_3W_Normal_02.event_3030_3W_Normal_02_1.png"><br>小陽&西 
-獅海壬</a></p>
+<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/小陽&西獅海壬.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_3030_3W_Normal_02.event_3030_3W_Normal_02_1.png"><br>小陽&西獅海壬</a></p>
 <br>
 
 ## ⭐⭐⭐⭐⭐
