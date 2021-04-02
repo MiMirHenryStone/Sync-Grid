@@ -57,23 +57,23 @@
 
 <body>
 	<div align="center">
-		<select style="font-size:12pt;" id="ms" onchange=changeSet()>
+		<select style="font-size:16pt;" id="ms" onchange=changeSet()>
 			<option value="0">No.1</option>
 			<option value="1">No.2</option>
 			<option value="2">No.3</option>
 			<option value="3">No.4</option>
 		</select>
-		<button style="font-size:12pt;" onclick=rename()>重命名</button>
-		<button style="font-size:12pt;" onclick=reset()>全部重設</button>
+		<button style="font-size:16pt;" onclick=rename()>重命名</button>
+		<button style="font-size:16pt;" onclick=reset()>全部重設</button>
 		<label>　</label>
-		<label style="font-size:12pt;" id="energy">剩餘力量：60</label>
+		<label style="font-size:16pt;" id="energy">剩餘力量：60</label>
 		<label>　</label>
-		<label style="font-size:12pt;" id="orb">拍檔滴晶：0</label>
+		<label style="font-size:16pt;" id="orb">拍檔滴晶：0</label>
 	</div>
-	<div style="font-size:12pt;" id="skill">技能名稱：</div>
-	<div style="font-size:12pt;" id="effect">效果：</div>
+	<div style="font-size:16pt;" id="skill">技能名稱：</div>
+	<div style="font-size:16pt;" id="effect">效果：</div>
 	<svg id="grid" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
-	<div id="sg" style="font-size:12pt; width: 33%; float: right;">石盤技能：<br></div>
+	<div id="sg" style="font-size:16pt; width: 33%; float: right;">石盤技能：<br></div>
 	<div class="box" style="width: 66%;">
 		<ul class="tab"><li><a href="#content1">莫魯貝可<br>（滿腹花紋）</a></li><li><a href="#content2">莫魯貝可<br>（空腹花紋）</a></li></ul>
 		<div class="content"><div class="content1" id="content1">————————10245000000————————<br>群星盛典★5 瑪俐♀&莫魯貝可（滿腹花紋）♀<br>體系：技術型 | 弱點：蟲<br>Lv.1：ＨＰ 114 | 攻擊 16 | 防禦 14 | 特攻 13 | 特防 14 | 速度 22<br>Lv.100：ＨＰ 530 | 攻擊 284 | 防禦 146 | 特攻 264 | 特防 146 | 速度 307<br>Lv.110：ＨＰ 560 | 攻擊 302 | 防禦 154 | 特攻 282 | 特防 154 | 速度 327<br>Lv.120：ＨＰ 590 | 攻擊 320 | 防禦 162 | 特攻 300 | 特防 162 | 速度 347<br>Lv.125：ＨＰ 605 | 攻擊 329 | 防禦 166 | 特攻 309 | 特防 166 | 速度 357<br>Lv.130：ＨＰ 620 | 攻擊 338 | 防禦 170 | 特攻 318 | 特防 170 | 速度 367<br>拍組招式：我要讓你舒舒服服地躺平之瘋狂伏特<br>屬性：電<br>分類：物理<br>威力：200<br>對象：對手１對拍組<br>當自己為空腹花紋時，會變成滿腹花紋。<br>當對手陷入麻痺狀態時，威力會提高。<br><br>寶可夢招式：電擊 ▭<br>屬性：電<br>分類：特殊<br>威力：17<br>命中：100<br>對象：對手１對拍組<br>極少數情況下會讓對手陷入麻痺狀態。<br><br>寶可夢招式：囂張 ▭▭<br>屬性：惡<br>分類：物理<br>威力：13<br>命中：100<br>對象：對手１對拍組<br>自己的能力提高得越多，威力就越大。<br><br>寶可夢招式：氣場輪 ▭▭▭<br>屬性：電<br>分類：物理<br>威力：80<br>命中：100<br>對象：對手１對拍組<br>提高自己的速度。<br>當自己為滿腹花紋時，會以電屬性進行攻擊。<br>當自己為空腹花紋時，會以惡屬性進行攻擊。<br><br>訓練家招式：配合人家的節奏吧！ 2/2<br>分類：變化<br>對象：自己<br>提高自己的攻擊。<br>當自己的速度處於提高狀態時，會再以同等幅度提高攻擊。<br>當自己為滿腹花紋時，會讓自己變成附帶回復狀態。<br>當自己為空腹花紋時，會提高自己的擊中要害率。<br><br>飽了又餓<br>寶可夢使出招式後，<br>會切換滿腹花紋及空腹花紋。<br><br>依花紋不同威力提升<br>當自己為滿腹花紋時，<br>會提高自己電屬性招式的威力。<br>當自己為空腹花紋時，<br>會提高自己惡屬性招式的威力。<br><br>異常機率提升５<br>當招式的追加效果可使對手陷入異常狀態時，會提高該追加效果的成功率。<br></div><div class="content2" id="content2">————————10245000000————————<br>群星盛典★5 瑪俐♀&莫魯貝可（空腹花紋）♀<br>體系：技術型 | 弱點：蟲<br>拍組招式：我要讓你舒舒服服地躺平之瘋狂伏特<br>屬性：電<br>分類：物理<br>威力：200<br>對象：對手１對拍組<br>當自己為空腹花紋時，會變成滿腹花紋。<br>當對手陷入麻痺狀態時，威力會提高。<br><br>寶可夢招式：電擊 ▭<br>屬性：電<br>分類：特殊<br>威力：17<br>命中：100<br>對象：對手１對拍組<br>極少數情況下會讓對手陷入麻痺狀態。<br><br>寶可夢招式：囂張 ▭▭<br>屬性：惡<br>分類：物理<br>威力：13<br>命中：100<br>對象：對手１對拍組<br>自己的能力提高得越多，威力就越大。<br><br>寶可夢招式：氣場輪 ▭▭▭<br>屬性：電<br>分類：物理<br>威力：80<br>命中：100<br>對象：對手１對拍組<br>提高自己的速度。<br>當自己為滿腹花紋時，會以電屬性進行攻擊。<br>當自己為空腹花紋時，會以惡屬性進行攻擊。<br><br>訓練家招式：配合人家的節奏吧！ 2/2<br>分類：變化<br>對象：自己<br>提高自己的攻擊。<br>當自己的速度處於提高狀態時，會再以同等幅度提高攻擊。<br>當自己為滿腹花紋時，會讓自己變成附帶回復狀態。<br>當自己為空腹花紋時，會提高自己的擊中要害率。<br><br>飽了又餓<br>寶可夢使出招式後，<br>會切換滿腹花紋及空腹花紋。<br><br>依花紋不同威力提升<br>當自己為滿腹花紋時，<br>會提高自己電屬性招式的威力。<br>當自己為空腹花紋時，<br>會提高自己惡屬性招式的威力。<br><br>異常機率提升５<br>當招式的追加效果可使對手陷入異常狀態時，會提高該追加效果的成功率。<br></div></div></div>

@@ -57,23 +57,23 @@
 
 <body>
 	<div align="center">
-		<select style="font-size:12pt;" id="ms" onchange=changeSet()>
+		<select style="font-size:16pt;" id="ms" onchange=changeSet()>
 			<option value="0">No.1</option>
 			<option value="1">No.2</option>
 			<option value="2">No.3</option>
 			<option value="3">No.4</option>
 		</select>
-		<button style="font-size:12pt;" onclick=rename()>重命名</button>
-		<button style="font-size:12pt;" onclick=reset()>全部重設</button>
+		<button style="font-size:16pt;" onclick=rename()>重命名</button>
+		<button style="font-size:16pt;" onclick=reset()>全部重設</button>
 		<label>　</label>
-		<label style="font-size:12pt;" id="energy">剩餘力量：60</label>
+		<label style="font-size:16pt;" id="energy">剩餘力量：60</label>
 		<label>　</label>
-		<label style="font-size:12pt;" id="orb">拍檔滴晶：0</label>
+		<label style="font-size:16pt;" id="orb">拍檔滴晶：0</label>
 	</div>
-	<div style="font-size:12pt;" id="skill">技能名稱：</div>
-	<div style="font-size:12pt;" id="effect">效果：</div>
+	<div style="font-size:16pt;" id="skill">技能名稱：</div>
+	<div style="font-size:16pt;" id="effect">效果：</div>
 	<svg id="grid" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
-	<div id="sg" style="font-size:12pt; width: 33%; float: right;">石盤技能：<br></div>
+	<div id="sg" style="font-size:16pt; width: 33%; float: right;">石盤技能：<br></div>
 	<div class="box" style="width: 66%;">
 		<ul class="tab"><li><a href="#content1">草苗龜</a></li><li><a href="#content2">樹林龜</a></li><li><a href="#content3">土台龜</a></li></ul>
 		<div class="content"><div class="content1" id="content1">————————10116000000————————<br>拍组搜寻★5 小光♀&草苗龜♀<br>體系：輔助型 | 弱點：蟲<br>Lv.1：ＨＰ 104 | 攻擊 14 | 防禦 20 | 特攻 11 | 特防 16 | 速度 9<br>Lv.100：ＨＰ 488 | 攻擊 196 | 防禦 204 | 特攻 161 | 特防 182 | 速度 141<br>Lv.110：ＨＰ 516 | 攻擊 208 | 防禦 216 | 特攻 171 | 特防 194 | 速度 149<br>Lv.120：ＨＰ 544 | 攻擊 220 | 防禦 228 | 特攻 181 | 特防 206 | 速度 157<br>Lv.125：ＨＰ 558 | 攻擊 226 | 防禦 234 | 特攻 186 | 特防 212 | 速度 161<br>Lv.130：ＨＰ 572 | 攻擊 232 | 防禦 240 | 特攻 191 | 特防 218 | 速度 165<br>拍組招式：拍組草之衝擊<br>屬性：草<br>分類：物理<br>威力：200<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：飛葉快刀 ▭▭<br>屬性：草<br>分類：物理<br>威力：43<br>命中：95<br>對象：對手全體拍組<br>容易擊中要害。<br><br>道具招式：防禦強化Ｇ 2/2<br>分類：變化<br>對象：我方全體拍組<br>大幅提高我方全體拍組的防禦。<br><br>訓練家招式：包在我身上！ 1/1<br>分類：變化<br>對象：我方１對拍組<br>將我方的ＨＰ回復至最大值。<br>解除我方的異常狀態。<br>解除我方的畏縮、混亂和束縛狀態。<br><br>寶可夢招式：種子炸彈 ▭▭▭<br>屬性：草<br>分類：物理<br>威力：100<br>命中：100<br>對象：對手１對拍組<br>沒有追加效果。<br><br>被攻擊時攻擊能力吸收９<br>受到招式攻擊時，會降低對手的攻擊，<br>並且等量提高自己的攻擊。<br><br>擊中要害無效<br>對手的攻擊不會擊中要害。<br></div><div class="content2" id="content2">————————10116000000————————<br>拍组搜寻★5 小光♀&樹林龜♀<br>體系：輔助型 | 弱點：蟲<br>Lv.1：ＨＰ 121 | 攻擊 18 | 防禦 25 | 特攻 14 | 特防 20 | 速度 12<br>Lv.100：ＨＰ 505 | 攻擊 202 | 防禦 224 | 特攻 164 | 特防 186 | 速度 144<br>Lv.110：ＨＰ 533 | 攻擊 214 | 防禦 238 | 特攻 174 | 特防 198 | 速度 152<br>Lv.120：ＨＰ 561 | 攻擊 226 | 防禦 252 | 特攻 184 | 特防 210 | 速度 160<br>Lv.125：ＨＰ 575 | 攻擊 232 | 防禦 259 | 特攻 189 | 特防 216 | 速度 164<br>Lv.130：ＨＰ 589 | 攻擊 238 | 防禦 266 | 特攻 194 | 特防 222 | 速度 168<br>拍組招式：拍組草之衝擊<br>屬性：草<br>分類：物理<br>威力：200<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：飛葉快刀 ▭▭<br>屬性：草<br>分類：物理<br>威力：43<br>命中：95<br>對象：對手全體拍組<br>容易擊中要害。<br><br>道具招式：防禦強化Ｇ 2/2<br>分類：變化<br>對象：我方全體拍組<br>大幅提高我方全體拍組的防禦。<br><br>訓練家招式：包在我身上！ 1/1<br>分類：變化<br>對象：我方１對拍組<br>將我方的ＨＰ回復至最大值。<br>解除我方的異常狀態。<br>解除我方的畏縮、混亂和束縛狀態。<br><br>寶可夢招式：種子炸彈 ▭▭▭<br>屬性：草<br>分類：物理<br>威力：100<br>命中：100<br>對象：對手１對拍組<br>沒有追加效果。<br><br>被攻擊時攻擊能力吸收９<br>受到招式攻擊時，會降低對手的攻擊，<br>並且等量提高自己的攻擊。<br><br>擊中要害無效<br>對手的攻擊不會擊中要害。<br></div><div class="content3" id="content3">————————10116000000————————<br>拍组搜寻★5 小光♀&土台龜♀<br>體系：輔助型 | 弱點：蟲<br>Lv.1：ＨＰ 146 | 攻擊 26 | 防禦 34 | 特攻 20 | 特防 27 | 速度 17<br>Lv.100：ＨＰ 530 | 攻擊 225 | 防禦 235 | 特攻 170 | 特防 193 | 速度 149<br>Lv.110：ＨＰ 558 | 攻擊 239 | 防禦 249 | 特攻 180 | 特防 205 | 速度 157<br>Lv.120：ＨＰ 586 | 攻擊 253 | 防禦 263 | 特攻 190 | 特防 217 | 速度 165<br>Lv.125：ＨＰ 600 | 攻擊 260 | 防禦 270 | 特攻 195 | 特防 223 | 速度 169<br>Lv.130：ＨＰ 614 | 攻擊 267 | 防禦 277 | 特攻 200 | 特防 229 | 速度 173<br>拍組招式：不可能會輸之木槌<br>屬性：草<br>分類：物理<br>威力：200<br>對象：對手１對拍組<br>自己的攻擊提高得越多，威力就越大。<br><br>寶可夢招式：飛葉快刀 ▭▭<br>屬性：草<br>分類：物理<br>威力：43<br>命中：95<br>對象：對手全體拍組<br>容易擊中要害。<br><br>道具招式：防禦強化Ｇ 2/2<br>分類：變化<br>對象：我方全體拍組<br>大幅提高我方全體拍組的防禦。<br><br>訓練家招式：包在我身上！ 1/1<br>分類：變化<br>對象：我方１對拍組<br>將我方的ＨＰ回復至最大值。<br>解除我方的異常狀態。<br>解除我方的畏縮、混亂和束縛狀態。<br><br>寶可夢招式：種子炸彈 ▭▭▭<br>屬性：草<br>分類：物理<br>威力：100<br>命中：100<br>對象：對手１對拍組<br>沒有追加效果。<br><br>被攻擊時攻擊能力吸收９<br>受到招式攻擊時，會降低對手的攻擊，<br>並且等量提高自己的攻擊。<br><br>擊中要害無效<br>對手的攻擊不會擊中要害。<br></div></div></div>

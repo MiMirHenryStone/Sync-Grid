@@ -57,23 +57,23 @@
 
 <body>
 	<div align="center">
-		<select style="font-size:12pt;" id="ms" onchange=changeSet()>
+		<select style="font-size:16pt;" id="ms" onchange=changeSet()>
 			<option value="0">No.1</option>
 			<option value="1">No.2</option>
 			<option value="2">No.3</option>
 			<option value="3">No.4</option>
 		</select>
-		<button style="font-size:12pt;" onclick=rename()>重命名</button>
-		<button style="font-size:12pt;" onclick=reset()>全部重設</button>
+		<button style="font-size:16pt;" onclick=rename()>重命名</button>
+		<button style="font-size:16pt;" onclick=reset()>全部重設</button>
 		<label>　</label>
-		<label style="font-size:12pt;" id="energy">剩餘力量：60</label>
+		<label style="font-size:16pt;" id="energy">剩餘力量：60</label>
 		<label>　</label>
-		<label style="font-size:12pt;" id="orb">拍檔滴晶：0</label>
+		<label style="font-size:16pt;" id="orb">拍檔滴晶：0</label>
 	</div>
-	<div style="font-size:12pt;" id="skill">技能名稱：</div>
-	<div style="font-size:12pt;" id="effect">效果：</div>
+	<div style="font-size:16pt;" id="skill">技能名稱：</div>
+	<div style="font-size:16pt;" id="effect">效果：</div>
 	<svg id="grid" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
-	<div id="sg" style="font-size:12pt; width: 33%; float: right;">石盤技能：<br></div>
+	<div id="sg" style="font-size:16pt; width: 33%; float: right;">石盤技能：<br></div>
 	<div class="box" style="width: 66%;">
 		<ul class="tab"><li><a href="#content1">菊草葉</a></li><li><a href="#content2">月桂葉</a></li><li><a href="#content3">大竺葵</a></li></ul>
 		<div class="content"><div class="content1" id="content1">————————10002000000————————<br>拍组搜寻★5 琴音♀&菊草葉♀<br>體系：輔助型 | 弱點：火<br>Lv.1：ＨＰ 132 | 攻擊 11 | 防禦 18 | 特攻 12 | 特防 17 | 速度 11<br>Lv.100：ＨＰ 635 | 攻擊 113 | 防禦 104 | 特攻 183 | 特防 133 | 速度 148<br>Lv.110：ＨＰ 671 | 攻擊 119 | 防禦 110 | 特攻 195 | 特防 141 | 速度 158<br>Lv.120：ＨＰ 707 | 攻擊 125 | 防禦 116 | 特攻 207 | 特防 149 | 速度 168<br>Lv.125：ＨＰ 725 | 攻擊 128 | 防禦 119 | 特攻 213 | 特防 153 | 速度 173<br>Lv.130：ＨＰ 743 | 攻擊 131 | 防禦 122 | 特攻 219 | 特防 157 | 速度 178<br>拍組招式：拍組草之光線<br>屬性：草<br>分類：特殊<br>威力：200<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：能量球 ▭▭<br>屬性：草<br>分類：特殊<br>威力：49<br>命中：100<br>對象：對手１對拍組<br>極少數情況下會降低對手的特防。<br><br>道具招式：要害攻擊Ｇ 2/2<br>分類：變化<br>對象：我方全體拍組<br>提高我方全體拍組的擊中要害率。<br><br>訓練家招式：要嗨起來囉！ 2/2<br>分類：變化<br>對象：我方全體拍組<br>提高我方全體拍組的攻擊、特攻和速度。<br>當天氣為日照強烈時，效果會大幅提高。<br><br>寶可夢招式：光牆 ▭▭▭ 2/2<br>屬性：超能力<br>分類：變化<br>對象：我方場地<br>讓我方場地變成特殊傷害減輕狀態。<br><br>晴天時異常狀態無效<br>當天氣為日照強烈時，不會陷入異常狀態。<br></div><div class="content2" id="content2">————————10002000000————————<br>拍组搜寻★5 琴音♀&月桂葉♀<br>體系：輔助型 | 弱點：火<br>Lv.1：ＨＰ 155 | 攻擊 13 | 防禦 21 | 特攻 16 | 特防 21 | 速度 14<br>Lv.100：ＨＰ 695 | 攻擊 115 | 防禦 107 | 特攻 187 | 特防 141 | 速度 151<br>Lv.110：ＨＰ 733 | 攻擊 121 | 防禦 113 | 特攻 199 | 特防 149 | 速度 161<br>Lv.120：ＨＰ 771 | 攻擊 127 | 防禦 119 | 特攻 211 | 特防 157 | 速度 171<br>Lv.125：ＨＰ 790 | 攻擊 130 | 防禦 122 | 特攻 217 | 特防 161 | 速度 176<br>Lv.130：ＨＰ 809 | 攻擊 133 | 防禦 125 | 特攻 223 | 特防 165 | 速度 181<br>拍組招式：拍組草之光線<br>屬性：草<br>分類：特殊<br>威力：200<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：能量球 ▭▭<br>屬性：草<br>分類：特殊<br>威力：49<br>命中：100<br>對象：對手１對拍組<br>極少數情況下會降低對手的特防。<br><br>道具招式：要害攻擊Ｇ 2/2<br>分類：變化<br>對象：我方全體拍組<br>提高我方全體拍組的擊中要害率。<br><br>訓練家招式：要嗨起來囉！ 2/2<br>分類：變化<br>對象：我方全體拍組<br>提高我方全體拍組的攻擊、特攻和速度。<br>當天氣為日照強烈時，效果會大幅提高。<br><br>寶可夢招式：光牆 ▭▭▭ 2/2<br>屬性：超能力<br>分類：變化<br>對象：我方場地<br>讓我方場地變成特殊傷害減輕狀態。<br><br>晴天時異常狀態無效<br>當天氣為日照強烈時，不會陷入異常狀態。<br></div><div class="content3" id="content3">————————10002000000————————<br>拍组搜寻★5 琴音♀&大竺葵♀<br>體系：輔助型 | 弱點：火<br>Lv.1：ＨＰ 177 | 攻擊 17 | 防禦 26 | 特攻 22 | 特防 27 | 速度 20<br>Lv.100：ＨＰ 722 | 攻擊 119 | 防禦 112 | 特攻 193 | 特防 159 | 速度 157<br>Lv.110：ＨＰ 762 | 攻擊 125 | 防禦 118 | 特攻 205 | 特防 167 | 速度 167<br>Lv.120：ＨＰ 802 | 攻擊 131 | 防禦 124 | 特攻 217 | 特防 175 | 速度 177<br>Lv.125：ＨＰ 822 | 攻擊 134 | 防禦 127 | 特攻 223 | 特防 179 | 速度 182<br>Lv.130：ＨＰ 842 | 攻擊 137 | 防禦 130 | 特攻 229 | 特防 183 | 速度 187<br>拍組招式：心光閃閃之飛葉風暴<br>屬性：草<br>分類：特殊<br>威力：200<br>對象：對手１對拍組<br>自己的能力提高得越多，威力就越大。<br><br>寶可夢招式：能量球 ▭▭<br>屬性：草<br>分類：特殊<br>威力：49<br>命中：100<br>對象：對手１對拍組<br>極少數情況下會降低對手的特防。<br><br>道具招式：要害攻擊Ｇ 2/2<br>分類：變化<br>對象：我方全體拍組<br>提高我方全體拍組的擊中要害率。<br><br>訓練家招式：要嗨起來囉！ 2/2<br>分類：變化<br>對象：我方全體拍組<br>提高我方全體拍組的攻擊、特攻和速度。<br>當天氣為日照強烈時，效果會大幅提高。<br><br>寶可夢招式：光牆 ▭▭▭ 2/2<br>屬性：超能力<br>分類：變化<br>對象：我方場地<br>讓我方場地變成特殊傷害減輕狀態。<br><br>晴天時異常狀態無效<br>當天氣為日照強烈時，不會陷入異常狀態。<br></div></div></div>

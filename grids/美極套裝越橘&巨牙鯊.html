@@ -57,23 +57,23 @@
 
 <body>
 	<div align="center">
-		<select style="font-size:12pt;" id="ms" onchange=changeSet()>
+		<select style="font-size:16pt;" id="ms" onchange=changeSet()>
 			<option value="0">No.1</option>
 			<option value="1">No.2</option>
 			<option value="2">No.3</option>
 			<option value="3">No.4</option>
 		</select>
-		<button style="font-size:12pt;" onclick=rename()>重命名</button>
-		<button style="font-size:12pt;" onclick=reset()>全部重設</button>
+		<button style="font-size:16pt;" onclick=rename()>重命名</button>
+		<button style="font-size:16pt;" onclick=reset()>全部重設</button>
 		<label>　</label>
-		<label style="font-size:12pt;" id="energy">剩餘力量：60</label>
+		<label style="font-size:16pt;" id="energy">剩餘力量：60</label>
 		<label>　</label>
-		<label style="font-size:12pt;" id="orb">拍檔滴晶：0</label>
+		<label style="font-size:16pt;" id="orb">拍檔滴晶：0</label>
 	</div>
-	<div style="font-size:12pt;" id="skill">技能名稱：</div>
-	<div style="font-size:12pt;" id="effect">效果：</div>
+	<div style="font-size:16pt;" id="skill">技能名稱：</div>
+	<div style="font-size:16pt;" id="effect">效果：</div>
 	<svg id="grid" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
-	<div id="sg" style="font-size:12pt; width: 33%; float: right;">石盤技能：<br></div>
+	<div id="sg" style="font-size:16pt; width: 33%; float: right;">石盤技能：<br></div>
 	<div class="box" style="width: 66%;">
 		<ul class="tab"><li><a href="#content1">巨牙鯊</a></li><li><a href="#content2">超級巨牙鯊</a></li></ul>
 		<div class="content"><div class="content1" id="content1">————————10048100000————————<br>拍组搜寻★5 美極套裝越橘♂&巨牙鯊♂<br>體系：物理攻擊型 | 弱點：妖精<br>Lv.1：ＨＰ 82 | 攻擊 22 | 防禦 9 | 特攻 18 | 特防 9 | 速度 18<br>Lv.100：ＨＰ 533 | 攻擊 286 | 防禦 124 | 特攻 286 | 特防 124 | 速度 316<br>Lv.110：ＨＰ 565 | 攻擊 304 | 防禦 132 | 特攻 304 | 特防 132 | 速度 336<br>Lv.120：ＨＰ 597 | 攻擊 322 | 防禦 140 | 特攻 322 | 特防 140 | 速度 356<br>Lv.125：ＨＰ 613 | 攻擊 331 | 防禦 144 | 特攻 331 | 特防 144 | 速度 366<br>Lv.130：ＨＰ 629 | 攻擊 340 | 防禦 148 | 特攻 340 | 特防 148 | 速度 376<br>拍組招式：賭運高漲之水流裂破<br>屬性：水<br>分類：物理<br>威力：160<br>對象：對手１對拍組<br>變成超級巨牙鯊直到對戰結束。<br><br>寶可夢招式：攀瀑 ▭▭<br>屬性：水<br>分類：物理<br>威力：45<br>命中：100<br>對象：對手１對拍組<br>少數情況下會讓對手陷入畏縮狀態。<br><br>道具招式：力量強化 2/2<br>分類：變化<br>對象：自己<br>大幅提高自己的攻擊。<br><br>寶可夢招式：水流裂破 ▭▭▭<br>屬性：水<br>分類：物理<br>威力：99<br>命中：100<br>對象：對手１對拍組<br>少數情況下會降低對手的防禦。<br><br>訓練家招式：來一決勝負吧 1/1<br>分類：變化<br>對象：自己<br>解除自己的異常狀態。<br>極大幅提高自己的閃避率和擊中要害率。<br>會受到自己所剩ＨＰ的９０％的傷害。<br>當巨牙鯊已經變成超級巨牙鯊時，還會爆發式提高自己的攻擊。<br><br>寶可夢出招後速度↑２<br>在寶可夢使出招式時，<br>偶爾會提高自己的速度。<br><br>威力隨招式計量槽提升５<br>招式計量槽的剩餘量越多，招式的威力就提高得越多。<br><br>拍組招式效果絕佳時威力↑５<br>當拍組招式的效果絕佳時，會提高該招式的威力。<br></div><div class="content2" id="content2">————————10048100000————————<br>拍组搜寻★5 美極套裝越橘♂&超級巨牙鯊♂<br>體系：物理攻擊型 | 弱點：妖精<br>攻擊 110% | 速度 130%<br>拍組招式：賭運高漲之水流裂破<br>屬性：水<br>分類：物理<br>威力：160<br>對象：對手１對拍組<br>變成超級巨牙鯊直到對戰結束。<br><br>寶可夢招式：水流裂破 ▭▭▭<br>屬性：水<br>分類：物理<br>威力：99<br>命中：100<br>對象：對手１對拍組<br>少數情況下會降低對手的防禦。<br><br>道具招式：力量強化 2/2<br>分類：變化<br>對象：自己<br>大幅提高自己的攻擊。<br><br>寶可夢招式：水流噴射 3/3<br>屬性：水<br>分類：物理<br>威力：75<br>命中：100<br>對象：對手１對拍組<br>沒有追加效果。<br><br>訓練家招式：來一決勝負吧 1/1<br>分類：變化<br>對象：自己<br>解除自己的異常狀態。<br>極大幅提高自己的閃避率和擊中要害率。<br>會受到自己所剩ＨＰ的９０％的傷害。<br>當巨牙鯊已經變成超級巨牙鯊時，還會爆發式提高自己的攻擊。<br><br>寶可夢出招後速度↑２<br>在寶可夢使出招式時，<br>偶爾會提高自己的速度。<br><br>威力隨招式計量槽提升５<br>招式計量槽的剩餘量越多，招式的威力就提高得越多。<br><br>拍組招式效果絕佳時威力↑５<br>當拍組招式的效果絕佳時，會提高該招式的威力。<br></div></div></div>

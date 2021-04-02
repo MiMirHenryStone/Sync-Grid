@@ -57,23 +57,23 @@
 
 <body>
 	<div align="center">
-		<select style="font-size:12pt;" id="ms" onchange=changeSet()>
+		<select style="font-size:16pt;" id="ms" onchange=changeSet()>
 			<option value="0">No.1</option>
 			<option value="1">No.2</option>
 			<option value="2">No.3</option>
 			<option value="3">No.4</option>
 		</select>
-		<button style="font-size:12pt;" onclick=rename()>重命名</button>
-		<button style="font-size:12pt;" onclick=reset()>全部重設</button>
+		<button style="font-size:16pt;" onclick=rename()>重命名</button>
+		<button style="font-size:16pt;" onclick=reset()>全部重設</button>
 		<label>　</label>
-		<label style="font-size:12pt;" id="energy">剩餘力量：60</label>
+		<label style="font-size:16pt;" id="energy">剩餘力量：60</label>
 		<label>　</label>
-		<label style="font-size:12pt;" id="orb">拍檔滴晶：0</label>
+		<label style="font-size:16pt;" id="orb">拍檔滴晶：0</label>
 	</div>
-	<div style="font-size:12pt;" id="skill">技能名稱：</div>
-	<div style="font-size:12pt;" id="effect">效果：</div>
+	<div style="font-size:16pt;" id="skill">技能名稱：</div>
+	<div style="font-size:16pt;" id="effect">效果：</div>
 	<svg id="grid" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
-	<div id="sg" style="font-size:12pt; width: 33%; float: right;">石盤技能：<br></div>
+	<div id="sg" style="font-size:16pt; width: 33%; float: right;">石盤技能：<br></div>
 	<div class="box" style="width: 66%;">
 		<ul class="tab"><li><a href="#content1">木木梟</a></li><li><a href="#content2">投羽梟</a></li><li><a href="#content3">狙射樹梟</a></li></ul>
 		<div class="content"><div class="content1" id="content1">————————10123000000————————<br>拍组搜寻★5 美月♀&木木梟♂<br>體系：物理攻擊型 | 弱點：冰<br>Lv.1：ＨＰ 100 | 攻擊 20 | 防禦 10 | 特攻 15 | 特防 16 | 速度 11<br>Lv.100：ＨＰ 450 | 攻擊 255 | 防禦 108 | 特攻 262 | 特防 118 | 速度 178<br>Lv.110：ＨＰ 474 | 攻擊 271 | 防禦 114 | 特攻 280 | 特防 124 | 速度 190<br>Lv.120：ＨＰ 498 | 攻擊 287 | 防禦 120 | 特攻 298 | 特防 130 | 速度 202<br>Lv.125：ＨＰ 510 | 攻擊 295 | 防禦 123 | 特攻 307 | 特防 133 | 速度 208<br>Lv.130：ＨＰ 522 | 攻擊 303 | 防禦 126 | 特攻 316 | 特防 136 | 速度 214<br>拍組招式：拍組草之衝擊<br>屬性：草<br>分類：物理<br>威力：200<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：撞擊 ▭<br>屬性：一般<br>分類：物理<br>威力：25<br>命中：100<br>對象：對手１對拍組<br>沒有追加效果。<br><br>道具招式：力量強化 2/2<br>分類：變化<br>對象：自己<br>大幅提高自己的攻擊。<br><br>寶可夢招式：葉刃 ▭▭▭<br>屬性：草<br>分類：物理<br>威力：80<br>命中：100<br>對象：對手１對拍組<br>容易擊中要害。<br><br>訓練家招式：緊緊鎖定目標！ 1/1<br>分類：變化<br>對象：自己<br>大幅提高自己的防禦、特防和擊中要害率。<br>讓自己變成附帶回復狀態。<br><br>對手禁止替換時威力提升５<br>當對手陷入禁止替換狀態時，會提高招式的威力。<br><br>攻擊禁止替換中的對手時招式計量槽↑５<br>當對手陷入禁止替換狀態時，若使出招式攻擊成功，<br>經常會幫自己增加１條招式計量槽。<br><br>招式擊中要害時速度提升５<br>招式擊中對手要害時，<br>經常會提高自己的速度。<br></div><div class="content2" id="content2">————————10123000000————————<br>拍组搜寻★5 美月♀&投羽梟♂<br>體系：物理攻擊型 | 弱點：冰<br>Lv.1：ＨＰ 116 | 攻擊 26 | 防禦 12 | 特攻 20 | 特防 19 | 速度 15<br>Lv.100：ＨＰ 466 | 攻擊 273 | 防禦 110 | 特攻 267 | 特防 121 | 速度 197<br>Lv.110：ＨＰ 490 | 攻擊 291 | 防禦 116 | 特攻 285 | 特防 127 | 速度 209<br>Lv.120：ＨＰ 514 | 攻擊 309 | 防禦 122 | 特攻 303 | 特防 133 | 速度 221<br>Lv.125：ＨＰ 526 | 攻擊 318 | 防禦 125 | 特攻 312 | 特防 136 | 速度 227<br>Lv.130：ＨＰ 538 | 攻擊 327 | 防禦 128 | 特攻 321 | 特防 139 | 速度 233<br>拍組招式：拍組草之衝擊<br>屬性：草<br>分類：物理<br>威力：200<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：撞擊 ▭<br>屬性：一般<br>分類：物理<br>威力：25<br>命中：100<br>對象：對手１對拍組<br>沒有追加效果。<br><br>道具招式：力量強化 2/2<br>分類：變化<br>對象：自己<br>大幅提高自己的攻擊。<br><br>寶可夢招式：葉刃 ▭▭▭<br>屬性：草<br>分類：物理<br>威力：80<br>命中：100<br>對象：對手１對拍組<br>容易擊中要害。<br><br>訓練家招式：緊緊鎖定目標！ 1/1<br>分類：變化<br>對象：自己<br>大幅提高自己的防禦、特防和擊中要害率。<br>讓自己變成附帶回復狀態。<br><br>對手禁止替換時威力提升５<br>當對手陷入禁止替換狀態時，會提高招式的威力。<br><br>攻擊禁止替換中的對手時招式計量槽↑５<br>當對手陷入禁止替換狀態時，若使出招式攻擊成功，<br>經常會幫自己增加１條招式計量槽。<br><br>招式擊中要害時速度提升５<br>招式擊中對手要害時，<br>經常會提高自己的速度。<br></div><div class="content3" id="content3">————————10123000000————————<br>拍组搜寻★5 美月♀&狙射樹梟♂<br>體系：物理攻擊型 | 弱點：冰<br>Lv.1：ＨＰ 139 | 攻擊 36 | 防禦 16 | 特攻 30 | 特防 24 | 速度 22<br>Lv.100：ＨＰ 489 | 攻擊 287 | 防禦 114 | 特攻 277 | 特防 126 | 速度 206<br>Lv.110：ＨＰ 513 | 攻擊 305 | 防禦 120 | 特攻 295 | 特防 132 | 速度 218<br>Lv.120：ＨＰ 537 | 攻擊 323 | 防禦 126 | 特攻 313 | 特防 138 | 速度 230<br>Lv.125：ＨＰ 549 | 攻擊 332 | 防禦 129 | 特攻 322 | 特防 141 | 速度 236<br>Lv.130：ＨＰ 561 | 攻擊 341 | 防禦 132 | 特攻 331 | 特防 144 | 速度 242<br>拍組招式：閃亮的笑容之葉刃<br>屬性：草<br>分類：物理<br>威力：200<br>對象：對手１對拍組<br>容易擊中要害。<br><br>寶可夢招式：縫影 ▭▭▭<br>屬性：幽靈<br>分類：物理<br>威力：80<br>命中：100<br>對象：對手１對拍組<br>讓對手陷入禁止替換狀態。<br><br>道具招式：力量強化 2/2<br>分類：變化<br>對象：自己<br>大幅提高自己的攻擊。<br><br>寶可夢招式：葉刃 ▭▭▭<br>屬性：草<br>分類：物理<br>威力：80<br>命中：100<br>對象：對手１對拍組<br>容易擊中要害。<br><br>訓練家招式：緊緊鎖定目標！ 1/1<br>分類：變化<br>對象：自己<br>大幅提高自己的防禦、特防和擊中要害率。<br>讓自己變成附帶回復狀態。<br><br>對手禁止替換時威力提升５<br>當對手陷入禁止替換狀態時，會提高招式的威力。<br><br>攻擊禁止替換中的對手時招式計量槽↑５<br>當對手陷入禁止替換狀態時，若使出招式攻擊成功，<br>經常會幫自己增加１條招式計量槽。<br><br>招式擊中要害時速度提升５<br>招式擊中對手要害時，<br>經常會提高自己的速度。<br></div></div></div>
