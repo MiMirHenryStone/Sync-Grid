@@ -57,23 +57,23 @@
 
 <body>
 	<div align="center">
-		<select style="font-size:22px;" id="ms" onchange=changeSet()>
+		<select style="font-size:12pt;" id="ms" onchange=changeSet()>
 			<option value="0">No.1</option>
 			<option value="1">No.2</option>
 			<option value="2">No.3</option>
 			<option value="3">No.4</option>
 		</select>
-		<button style="font-size:22px;" onclick=rename()>重命名</button>
-		<button style="font-size:22px;" onclick=reset()>全部重設</button>
+		<button style="font-size:12pt;" onclick=rename()>重命名</button>
+		<button style="font-size:12pt;" onclick=reset()>全部重設</button>
 		<label>　</label>
-		<label style="font-size:22px;" id="energy">剩餘力量：60</label>
+		<label style="font-size:12pt;" id="energy">剩餘力量：60</label>
 		<label>　</label>
-		<label style="font-size:22px;" id="orb">拍檔滴晶：0</label>
+		<label style="font-size:12pt;" id="orb">拍檔滴晶：0</label>
 	</div>
-	<div style="font-size:22px;" id="skill">技能名稱：</div>
-	<div style="font-size:22px;" id="effect">效果：</div>
+	<div style="font-size:12pt;" id="skill">技能名稱：</div>
+	<div style="font-size:12pt;" id="effect">效果：</div>
 	<svg id="grid" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
-	<div id="sg" style="font-size:22px; width: 33%; float: right;">石盤技能：<br></div>
+	<div id="sg" style="font-size:12pt; width: 33%; float: right;">石盤技能：<br></div>
 	<div class="box" style="width: 66%;">
 		<ul class="tab"><li><a href="#content1">大鋼蛇</a></li><li><a href="#content2">超級大鋼蛇</a></li></ul>
 		<div class="content"><div class="content1" id="content1">————————10113000000————————<br>拍组搜寻★5 阿蜜♀&大鋼蛇♀<br>體系：輔助型 | 弱點：水<br>Lv.1：ＨＰ 140 | 攻擊 8 | 防禦 17 | 特攻 10 | 特防 16 | 速度 9<br>Lv.100：ＨＰ 472 | 攻擊 124 | 防禦 264 | 特攻 108 | 特防 165 | 速度 124<br>Lv.110：ＨＰ 496 | 攻擊 132 | 防禦 282 | 特攻 114 | 特防 175 | 速度 132<br>Lv.120：ＨＰ 520 | 攻擊 140 | 防禦 300 | 特攻 120 | 特防 185 | 速度 140<br>Lv.125：ＨＰ 532 | 攻擊 144 | 防禦 309 | 特攻 123 | 特防 190 | 速度 144<br>Lv.130：ＨＰ 544 | 攻擊 148 | 防禦 318 | 特攻 126 | 特防 195 | 速度 148<br>拍組招式：銅牆鐵壁之鐵尾<br>屬性：鋼<br>分類：物理<br>威力：160<br>對象：對手１對拍組<br>變成超級大鋼蛇直到對戰結束。<br>自己的防禦提高得越多，威力就越大。<br><br>寶可夢招式：陀螺球 ▭▭<br>屬性：鋼<br>分類：物理<br>威力：44<br>命中：100<br>對象：對手１對拍組<br>對手的速度處於提高狀態時，威力會變成２倍。<br><br>道具招式：防禦強化Ｇ 2/2<br>分類：變化<br>對象：我方全體拍組<br>大幅提高我方全體拍組的防禦。<br><br>訓練家招式：金厲害～！ 2/2<br>分類：變化<br>對象：我方場地<br>讓我方場地變成要害防禦狀態。<br>讓我方場地變成能力下降防禦狀態。<br><br>寶可夢招式：鐵尾 ▭▭▭<br>屬性：鋼<br>分類：物理<br>威力：132<br>命中：75<br>對象：對手１對拍組<br>偶爾會降低對手的防禦。<br><br>無傷時挺住<br>在ＨＰ全滿的狀態登場時，會讓自己變成挺住狀態。<br></div><div class="content2" id="content2">————————10113000000————————<br>拍组搜寻★5 阿蜜♀&超級大鋼蛇♀<br>體系：輔助型 | 弱點：水<br>攻擊 120% | 防禦 120%<br>拍組招式：銅牆鐵壁之鐵尾<br>屬性：鋼<br>分類：物理<br>威力：160<br>對象：對手１對拍組<br>變成超級大鋼蛇直到對戰結束。<br>自己的防禦提高得越多，威力就越大。<br><br>寶可夢招式：陀螺球 ▭▭<br>屬性：鋼<br>分類：物理<br>威力：44<br>命中：100<br>對象：對手１對拍組<br>對手的速度處於提高狀態時，威力會變成２倍。<br><br>道具招式：防禦強化Ｇ 2/2<br>分類：變化<br>對象：我方全體拍組<br>大幅提高我方全體拍組的防禦。<br><br>訓練家招式：金厲害～！ 2/2<br>分類：變化<br>對象：我方場地<br>讓我方場地變成要害防禦狀態。<br>讓我方場地變成能力下降防禦狀態。<br><br>寶可夢招式：鐵尾 ▭▭▭<br>屬性：鋼<br>分類：物理<br>威力：132<br>命中：75<br>對象：對手１對拍組<br>偶爾會降低對手的防禦。<br><br>無傷時挺住<br>在ＨＰ全滿的狀態登場時，會讓自己變成挺住狀態。<br><br>瀕死時爆炸<br>陷入瀕死狀態前會使出大爆炸。<br></div></div></div>

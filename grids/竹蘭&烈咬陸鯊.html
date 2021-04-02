@@ -57,23 +57,23 @@
 
 <body>
 	<div align="center">
-		<select style="font-size:22px;" id="ms" onchange=changeSet()>
+		<select style="font-size:12pt;" id="ms" onchange=changeSet()>
 			<option value="0">No.1</option>
 			<option value="1">No.2</option>
 			<option value="2">No.3</option>
 			<option value="3">No.4</option>
 		</select>
-		<button style="font-size:22px;" onclick=rename()>重命名</button>
-		<button style="font-size:22px;" onclick=reset()>全部重設</button>
+		<button style="font-size:12pt;" onclick=rename()>重命名</button>
+		<button style="font-size:12pt;" onclick=reset()>全部重設</button>
 		<label>　</label>
-		<label style="font-size:22px;" id="energy">剩餘力量：60</label>
+		<label style="font-size:12pt;" id="energy">剩餘力量：60</label>
 		<label>　</label>
-		<label style="font-size:22px;" id="orb">拍檔滴晶：0</label>
+		<label style="font-size:12pt;" id="orb">拍檔滴晶：0</label>
 	</div>
-	<div style="font-size:22px;" id="skill">技能名稱：</div>
-	<div style="font-size:22px;" id="effect">效果：</div>
+	<div style="font-size:12pt;" id="skill">技能名稱：</div>
+	<div style="font-size:12pt;" id="effect">效果：</div>
 	<svg id="grid" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
-	<div id="sg" style="font-size:22px; width: 33%; float: right;">石盤技能：<br></div>
+	<div id="sg" style="font-size:12pt; width: 33%; float: right;">石盤技能：<br></div>
 	<div class="box" style="width: 66%;">
 		<ul class="tab"><li><a href="#content1">烈咬陸鯊</a></li><li><a href="#content2">超級烈咬陸鯊</a></li></ul>
 		<div class="content"><div class="content1" id="content1">————————10091000000————————<br>群星盛典★5 竹蘭♀&烈咬陸鯊♀<br>體系：物理攻擊型 | 弱點：冰<br>Lv.1：ＨＰ 108 | 攻擊 22 | 防禦 12 | 特攻 13 | 特防 10 | 速度 21<br>Lv.100：ＨＰ 491 | 攻擊 291 | 防禦 128 | 特攻 116 | 特防 125 | 速度 289<br>Lv.110：ＨＰ 519 | 攻擊 311 | 防禦 136 | 特攻 122 | 特防 133 | 速度 307<br>Lv.120：ＨＰ 547 | 攻擊 331 | 防禦 144 | 特攻 128 | 特防 141 | 速度 325<br>Lv.125：ＨＰ 561 | 攻擊 341 | 防禦 148 | 特攻 131 | 特防 145 | 速度 334<br>Lv.130：ＨＰ 575 | 攻擊 351 | 防禦 152 | 特攻 134 | 特防 149 | 速度 343<br>拍組招式：探究神話真相之地震<br>屬性：地面<br>分類：物理<br>威力：160<br>對象：對手１對拍組<br>變成超級烈咬陸鯊直到對戰結束。<br><br>寶可夢招式：跺腳 ▭▭<br>屬性：地面<br>分類：物理<br>威力：44<br>命中：100<br>對象：對手１對拍組<br>當自己上次使出的招式失敗時，威力會變成２倍。<br><br>道具招式：力量強化 2/2<br>分類：變化<br>對象：自己<br>大幅提高自己的攻擊。<br><br>寶可夢招式：地震 ▭▭▭<br>屬性：地面<br>分類：物理<br>威力：100<br>命中：100<br>對象：對手全體拍組<br>沒有追加效果。<br><br>訓練家招式：愉快的對戰！ 2/2<br>分類：變化<br>對象：自己<br>提高自己的速度和擊中要害率。<br>當天氣為沙暴時，效果會大幅提高。<br><br>寶可夢出招後速度↑２<br>在寶可夢使出招式時，<br>偶爾會提高自己的速度。<br><br>沙暴時威力提升５<br>當天氣為沙暴時，會提高招式的威力。<br></div><div class="content2" id="content2">————————10091000000————————<br>群星盛典★5 竹蘭♀&超級烈咬陸鯊♀<br>體系：物理攻擊型 | 弱點：冰<br>攻擊 120% | 防禦 120%<br>拍組招式：探究神話真相之地震<br>屬性：地面<br>分類：物理<br>威力：160<br>對象：對手１對拍組<br>變成超級烈咬陸鯊直到對戰結束。<br><br>寶可夢招式：地震 ▭▭▭<br>屬性：地面<br>分類：物理<br>威力：100<br>命中：100<br>對象：對手全體拍組<br>沒有追加效果。<br><br>道具招式：力量強化 2/2<br>分類：變化<br>對象：自己<br>大幅提高自己的攻擊。<br><br>寶可夢招式：劈開 ▭▭<br>屬性：一般<br>分類：物理<br>威力：50<br>命中：100<br>對象：對手１對拍組<br>容易擊中要害。<br><br>訓練家招式：愉快的對戰！ 2/2<br>分類：變化<br>對象：自己<br>提高自己的速度和擊中要害率。<br>當天氣為沙暴時，效果會大幅提高。<br><br>寶可夢出招後速度↑２<br>在寶可夢使出招式時，<br>偶爾會提高自己的速度。<br><br>沙暴時威力提升５<br>當天氣為沙暴時，會提高招式的威力。<br><br>地面屬性替換<br>一般屬性的招式會變成地面屬性。<br></div></div></div>
