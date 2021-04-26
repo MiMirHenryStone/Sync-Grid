@@ -4,6 +4,9 @@
 ### 2021/04/28
 <p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/奇巴納&鋁鋼龍.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_3040_1W_FesPickup_01.event_3040_1W_FesPickup_01_1.png"><br>奇巴納&鋁鋼龍</a></p>
 
+### 2021/05/04
+<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/魁奇思&酋雷姆.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/image.Dialog.Campaign.event_3040_1W_EventQuest_02_appeal_01.png"><br>魁奇思&酋雷姆</a></p>
+
 ### 2021/05/13
 <p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/露璃娜&暴噬龜.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_3040_3W_Normal_01.event_3040_3W_Normal_01_1.png"><br>露璃娜&暴噬龜</a></p>
 
