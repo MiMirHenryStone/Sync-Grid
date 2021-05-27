@@ -1,0 +1,443 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8' />
+	<title>拍檔石盤</title>
+	<style>
+		html {
+			-ms-text-size-adjust: 100%;
+			-webkit-text-size-adjust: 100%;
+		}
+		.box {
+			position: relative;
+			width: 66%;
+		}
+
+		.tab {
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			list-style-type: none;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+		}
+
+			.tab li {
+				background-color: #ccc;
+				border: 1px solid #fff;
+			}
+
+				.tab li a {
+					text-decoration: none;
+					color: #000;
+					display: inline-block;
+					width: 160px;
+					text-align: center;
+				}
+
+		.content {
+			border: 1px solid #888;
+		}
+
+		.content1, .content2, .content3, .content4 {
+			display: none;
+			word-break: break-word;
+			word-wrap: break-word;
+		}
+
+			.content1:target, .content2:target, .content3:target, .content4:target {
+				display: block;
+			}
+	</style>
+</head>
+
+
+<body>
+	<div align="center">
+		<select style="font-size:16pt;" id="ms" onchange=changeSet()>
+			<option value="0">No.1</option>
+			<option value="1">No.2</option>
+			<option value="2">No.3</option>
+			<option value="3">No.4</option>
+		</select>
+		<button style="font-size:16pt;" onclick=rename()>重命名</button>
+		<button style="font-size:16pt;" onclick=reset()>全部重設</button>
+		<label>　</label>
+		<label style="font-size:16pt;" id="energy">剩餘力量：60</label>
+		<label>　</label>
+		<label style="font-size:16pt;" id="orb">拍檔滴晶：0</label>
+	</div>
+	<div style="font-size:16pt;" id="skill">技能名稱：</div>
+	<div style="font-size:16pt;" id="effect">效果：</div>
+	<svg id="grid" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
+	<div id="sg" style="font-size:16pt; width: 33%; float: right;">石盤技能：<br></div>
+	<div class="box" style="width: 66%;">
+		<ul class="tab"><li><a href="#content1">夢妖魔</a></li></ul>
+		<div class="content"><div class="content1" id="content1">————————10148000001————————<br>★4 松葉♂&夢妖魔♀<br>體系：輔助型 | 弱點：惡<br>Lv.1：ＨＰ 92 | 攻擊 10 | 防禦 15 | 特攻 8 | 特防 15 | 速度 9<br>Lv.100：ＨＰ 424 | 攻擊 209 | 防禦 181 | 特攻 124 | 特防 181 | 速度 176<br>Lv.110：ＨＰ 448 | 攻擊 223 | 防禦 193 | 特攻 132 | 特防 193 | 速度 188<br>Lv.120：ＨＰ 472 | 攻擊 237 | 防禦 205 | 特攻 140 | 特防 205 | 速度 200<br>Lv.125：ＨＰ 484 | 攻擊 244 | 防禦 211 | 特攻 144 | 特防 211 | 速度 206<br>Lv.130：ＨＰ 496 | 攻擊 251 | 防禦 217 | 特攻 148 | 特防 217 | 速度 212<br>Lv.135：ＨＰ 508 | 攻擊 258 | 防禦 223 | 特攻 152 | 特防 223 | 速度 218<br>拍組招式：深信不疑持續修行之幽靈光線<br>屬性：幽靈<br>分類：特殊<br>威力：250<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：驚嚇 ▭<br>屬性：幽靈<br>分類：物理<br>威力：12<br>命中：100<br>對象：對手１對拍組<br>偶爾會讓對手陷入畏縮狀態。<br><br>道具招式：傷藥 2/2<br>分類：變化<br>對象：我方１對拍組<br>少量回復我方的ＨＰ。<br><br>寶可夢招式：奇異之光 ▭▭<br>屬性：幽靈<br>分類：變化<br>命中：100<br>對象：對手１對拍組<br>讓對手陷入混亂狀態。<br><br>訓練家招式：來交個手吧！ 2/2<br>分類：變化<br>對象：我方全體拍組<br>大幅提高我方全體拍組的防禦和特防。<br><br>ＨＰ回復招式回復量↑１<br>當自己使出會回復ＨＰ的招式時，會提高ＨＰ回復量。<br></div></div></div>
+	</div>
+
+	<script>
+json = [[1014890000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [1014890001, '攻擊+5', '攻擊+5', 0, 5, 1, '568dd1', 1, -1], [1014890002, '防禦+5', '防禦+5', 0, 5, 1, '568dd1', 0, -1], [1014890003, '攻擊+5', '攻擊+5', 0, 5, 1, '568dd1', -1, 0], [1014890004, '特防+5', '特防+5', 0, 5, 1, '568dd1', -1, 1], [1014890005, '速度+5', '速度+5', 0, 5, 1, '568dd1', 0, 1], [1014890006, '特防+5', '特防+5', 2, 24, 1, '568dd1', 1, 1], [1014890007, '驚嚇：威力+2', '驚嚇：威力+2', 3, 36, 1, '4ab897', 2, 1], [1014890008, '防禦+5', '防禦+5', 2, 24, 1, '568dd1', 1, 2], [1014890009, '驚嚇：威力+2', '驚嚇：威力+2', 3, 36, 1, '4ab897', 3, 1], [1014890010, '奇異之光：招式後招式計量槽增加１', '招式成功時，少數情況下會\n幫自己增加１條招式計量槽。', 5, 60, 1, 'e1768a', 2, 2], [1014890011, '無傷時附帶回復', '在ＨＰ全滿的狀態登場時，\n會讓自己變成附帶回復狀態。', 8, 96, 2, 'e6ce5e', 1, 3], [1014890012, '驚嚇：威力+2', '驚嚇：威力+2', 3, 36, 1, '4ab897', 3, 2], [1014890013, '奇異之光：招式後招式計量槽增加３', '招式成功時，有些情況下會\n幫自己增加１條招式計量槽。', 6, 72, 2, 'e1768a', 2, 3], [1014890014, '危機時ＨＰ回復４', '對戰中僅限１次，\n在陷入危機時會回復自己的ＨＰ。', 10, 120, 3, 'e6ce5e', 1, 4], [1014890015, '被攻擊時防禦提升１', '受到招式攻擊時，\n少數情況下會提高自己的防禦。', 9, 108, 2, 'e6ce5e', 3, 3], [1014890016, '傷藥：ＨＰ回復招式回復量↑１', '當自己使出會回復ＨＰ的招式時，會提高ＨＰ回復量。', 10, 120, 3, 'e1768a', 2, 4], [1014890017, '速度+5', '速度+5', 2, 24, 1, '568dd1', -2, 0], [1014890018, 'ＨＰ+10', 'ＨＰ+10', 2, 24, 1, '568dd1', -3, 0], [1014890019, 'ＨＰ+10', 'ＨＰ+10', 2, 24, 1, '568dd1', -1, -1], [1014890020, '特防+5', '特防+5', 2, 24, 1, '568dd1', -2, -1], [1014890021, '防禦+10', '防禦+10', 4, 48, 2, '568dd1', -3, -1], [1014890022, '特防下降無效', '特防不會降低。', 8, 96, 2, 'e6ce5e', -1, -2], [1014890023, '傷藥：招式後招式計量槽增加３', '招式成功時，有些情況下會\n幫自己增加１條招式計量槽。', 6, 72, 2, 'e1768a', -2, -2], [1014890024, '傷藥：招式後招式次數回復３', '招式成功時，有些情況下會\n回復該招式的使用次數１次。', 7, 84, 3, 'e1768a', -3, -2], [1014890025, '防禦下降無效', '防禦不會降低。', 8, 96, 3, 'e6ce5e', -1, -3], [1014890026, '防禦+5', '防禦+5', 2, 24, 1, '568dd1', 1, -2], [1014890027, '驚嚇：威力+2', '驚嚇：威力+2', 3, 36, 1, '4ab897', 2, -3], [1014890028, '攻擊+5', '攻擊+5', 2, 24, 1, '568dd1', 1, -3], [1014890029, '驚嚇：威力+2', '驚嚇：威力+2', 3, 36, 1, '4ab897', 3, -4], [1014890030, '特防+5', '特防+5', 2, 24, 1, '568dd1', 2, -4], [1014890031, '速度+10', '速度+10', 4, 48, 2, '568dd1', 1, -4], [1014890032, '驚嚇：威力+2', '驚嚇：威力+2', 3, 36, 1, '4ab897', 3, -5], [1014890033, '驚嚇：招式後招式計量槽增加３', '招式成功時，有些情況下會\n幫自己增加１條招式計量槽。', 6, 72, 2, 'e1768a', 2, -5], [1014890034, '拍組招式後解除異常狀態', '使出拍組招式後，會解除自己的異常狀態。', 8, 96, 3, 'e6ce5e', 1, -5], [1014890035, '被攻擊時特防提升１', '受到招式攻擊時，\n少數情況下會提高自己的特防。', 9, 108, 2, 'e6ce5e', 3, -6], [1014890036, '驚嚇：妨害機率提升１', '當招式的追加效果可使對手陷入畏縮、混亂或束縛狀態時，會提高該追加效果的成功率。', 7, 84, 3, 'e1768a', 2, -6], [1014890037, '速度+5', '速度+5', 2, 24, 1, '568dd1', -2, 2], [1014890038, '防禦+5', '防禦+5', 2, 24, 1, '568dd1', -1, 2], [1014890039, 'ＨＰ+10', 'ＨＰ+10', 2, 24, 1, '568dd1', -3, 3], [1014890040, '攻擊+5', '攻擊+5', 2, 24, 1, '568dd1', -2, 3], [1014890041, '解除妨害', '對戰中僅限１次，當自己陷入\n畏縮、混亂或束縛狀態時會解除該狀態。', 8, 96, 2, 'e6ce5e', -1, 3], [1014890042, '特防+10', '特防+10', 4, 48, 2, '568dd1', -3, 4], [1014890043, '來交個手吧！：招式後招式計量槽增加３', '招式成功時，有些情況下會\n幫自己增加１條招式計量槽。', 6, 72, 2, 'e1768a', -2, 4], [1014890044, '拍組招式後ＨＰ回復Ｇ１', '使出拍組招式後，\n會回復我方全體拍組的ＨＰ。', 10, 120, 3, 'e6ce5e', -1, 4], [1014890045, '來交個手吧！：招式後招式次數回復３', '招式成功時，有些情況下會\n回復該招式的使用次數１次。', 7, 84, 3, 'e1768a', -3, 5], [1014890046, '深信不疑持續修行之幽靈光線：威力+25', '深信不疑持續修行之幽靈光線：威力+25', 5, 60, 3, 'a0739b', 0, 3], [1014890047, '深信不疑持續修行之幽靈光線：威力+25', '深信不疑持續修行之幽靈光線：威力+25', 5, 60, 3, 'a0739b', 0, -3]]
+
+		function setCookie(cookieName, cookieValue, cookieDates) {
+			var d = new Date();
+			d.setDate(d.getDate() + cookieDates);
+			document.cookie = cookieName + "=" + cookieValue + ";expires=" + d.toGMTString();
+		}
+		function getCookie(cookieName) {
+			var cookieStr = unescape(document.cookie);
+			var arr = cookieStr.split("; ");
+			var cookieValue = "";
+			for (var i = 0; i < arr.length; i++) {
+				var temp = arr[i].split("=");
+				if (temp[0] == cookieName) {
+					cookieValue = temp[1];
+					break;
+				}
+			}
+			return cookieValue;
+		}
+		function removeCookie(cookieName) {
+			document.cookie = encodeURIComponent(cookieName) + "=; expires=" + new Date();
+		}
+		
+		function newCookie() {
+			var re = "";
+			for (var i = 0; i < 4; i++) {
+				re = re + checks[i] + ',';
+				re = re + escape(pres[i]) + ',';
+			}
+			re = re + set;
+			return re;
+		}
+
+		class Tile {
+			constructor(id, skill, effect, energy, orb, lv, color, x, y, check) {
+				this.id = id;
+				this.skill = skill;
+				this.effect = effect;
+				this.energy = energy;
+				this.orb = orb;
+				this.lv = lv;
+				this.color = color;
+				this.x = x;
+				this.y = y;
+				this.xy = xyz2xy(this.x, this.y);
+				this.hexagon = hexagon(this.xy);
+				this.check = check;
+			}
+			draw() {
+				var e = document.getElementById('grid');
+
+				var h = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+				var points = "";
+				for (var i = 0; i < this.hexagon.length; i++) {
+					points = points + this.hexagon[i][0] + "," + this.hexagon[i][1] + " ";
+				}
+				h.setAttribute("points", points);
+				if (this.check == 0) {
+					h.setAttribute("style", "fill:#" + this.color + ";opacity:0.25;stroke:black;stroke-width:1");
+				}
+				else {
+					h.setAttribute("style", "fill:#" + this.color + ";opacity:1;stroke:black;stroke-width:1");
+					energy = energy - this.energy;
+					orb = orb + this.orb;
+				}
+				h.setAttribute("id", this.id);
+				e.appendChild(h);
+			}
+			skin() {
+				var e = document.getElementById('grid');
+				
+				if (this.skill.indexOf('：') != -1) {
+					var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+					var line = this.skill.substring(0, this.skill.indexOf('：'));
+					s.innerHTML = line;
+					s.setAttribute("x", this.xy[0] - line.length * f / 2);
+					s.setAttribute("y", this.xy[1]);
+					e.appendChild(s);
+					var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+					var line = this.skill.substring(this.skill.indexOf('：') + 1);
+					s.innerHTML = line;
+					s.setAttribute("x", this.xy[0] - line.length * f / 2);
+					s.setAttribute("y", this.xy[1] + f);
+					e.appendChild(s);
+				}
+				else {
+					var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+					s.innerHTML = this.skill;
+					s.setAttribute("x", this.xy[0] - this.skill.length * f / 2);
+					s.setAttribute("y", this.xy[1] + f / 2);
+					e.appendChild(s);
+				}
+
+
+				var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+				s.innerHTML = '等級' + this.lv;
+				s.setAttribute("x", this.xy[0] - f * 3 / 2);
+				s.setAttribute("y", this.xy[1] - f * 2);
+				e.appendChild(s);
+
+				var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+				s.innerHTML = '能量' + this.energy;
+				s.setAttribute("x", this.xy[0] - f * 3 / 2);
+				s.setAttribute("y", this.xy[1] + f * 3);
+				e.appendChild(s);
+
+				var h = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+				var points = "";
+				for (var i = 0; i < this.hexagon.length; i++) {
+					points = points + this.hexagon[i][0] + "," + this.hexagon[i][1] + " ";
+				}
+				h.setAttribute("points", points);
+				h.setAttribute("style", "fill:#" + this.color + ";opacity:0;stroke:black;stroke-width:1");
+				h.setAttribute("onclick", "c(evt," + this.id + ")");
+				e.appendChild(h);
+			}
+		}
+		function xyz2xy(x, y) {
+			var x1 = x * R * 1.5 + X / 2;
+			var y1 = - x * R * 1.732 / 2 - y * R * 1.732 + Y / 2;
+			return [x1, y1];
+		}
+
+		var svgleft = 540;
+		var svgtop = 960;
+		var svgright = 540;
+		var svgbottom = 960;
+
+		function hexagon(xy) {
+			var x = xy[0];
+			var y = xy[1];
+			var r2 = r / 2;
+			var r3 = r / 2 * 1.732;
+			var re = [[x + r, y],
+			[x + r2, y + r3],
+			[x - r2, y + r3],
+			[x - r, y],
+			[x - r2, y - r3],
+			[x + r2, y - r3]];
+			for (var i = 0; i < 6; i++) {
+				if (re[i][0] < svgleft) svgleft = Math.floor(re[i][0]);
+				if (re[i][0] > svgright) svgright = Math.ceil(re[i][0]);
+				if (re[i][1] < svgtop) svgtop = Math.floor(re[i][1]);
+				if (re[i][1] > svgbottom) svgbottom = Math.ceil(re[i][1]);
+			}
+			return re;
+		}
+
+		function c(evt, id) {
+			for (var i = 0; i < tiles.length; i++) {
+				if (tiles[i].id == id) {
+					var t = tiles[i];
+					break;
+				}
+			}
+			var target = document.getElementById(id);
+			if (target.style.opacity == 0.25) {
+				target.style.opacity = 1;
+				energy = energy - t.energy;
+				orb = orb + t.orb;
+				
+				document.getElementById('skill').innerHTML = '技能名稱：' + t.skill;
+				document.getElementById('effect').innerHTML = '效果：' + t.effect;
+				for (var i = 0; i < json.length; i++) {
+					if (json[i][0] == id) {
+						check[i] = 1;
+						break;
+					}
+				}
+			}
+			else {
+				target.style.opacity = 0.25;
+				energy = energy + t.energy;
+				orb = orb - t.orb;
+				document.getElementById('skill').innerHTML = '技能名稱：';
+				document.getElementById('effect').innerHTML = '效果：';
+				for (var i = 0; i < json.length; i++) {
+					if (json[i][0] == id) {
+						check[i] = 0;
+						break;
+					}
+				}
+			}
+			checks[set] = check.join('');
+			setCookie('syncgrid' + no, newCookie(), 999);
+			update();
+		};
+		
+		function rename() {
+			var pre = prompt("請輸入預設名稱");
+			if (pre != null) {
+				pres[set] = pre;
+				var select = document.getElementById("ms");
+				select.options[set].text = pre;
+				setCookie('syncgrid' + no, newCookie(), 999);
+			}
+		}
+		
+		function reset() {
+			if (confirm("確定要重設所有已開放的格子嗎？")) {
+				checks[set] = "";
+				setCookie('syncgrid' + no, newCookie(), 999);
+				update();
+				newGrid();
+			}
+		}
+		
+		function changeSet() {
+			var select = document.getElementById("ms");
+			set = select.selectedIndex;
+			setCookie('syncgrid' + no, newCookie(), 999);
+			update();
+			newGrid();
+		}
+		
+		function newGrid() {
+			var e = document.getElementById("grid")
+			e.innerHTML = "";
+			
+			energy = 60;
+			orb = 0;
+			
+			var h = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+			var points = "";
+			var hxy = xyz2xy(0, 0);
+			var hh = hexagon(hxy);
+			for (var i = 0; i < hh.length; i++) {
+				points = points + hh[i][0] + "," + hh[i][1] + " ";
+			}
+			h.setAttribute("points", points);
+			h.setAttribute("style", "fill:#" + tcolor + ";opacity:0.5;stroke:black;stroke-width:1");
+			e.appendChild(h);
+			var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+			var line = name.substring(0, name.indexOf('&'));
+			s.innerHTML = line;
+			s.setAttribute("x", hxy[0] - line.length * f / 2);
+			s.setAttribute("y", hxy[1]);
+			e.appendChild(s);
+			var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+			var line = name.substring(name.indexOf('&') + 1);
+			s.innerHTML = line;
+			s.setAttribute("x", hxy[0] - line.length * f / 2);
+			s.setAttribute("y", hxy[1] + f);
+			e.appendChild(s);
+			
+			tiles = new Array();
+			for (var i = 0; i < json.length; i++) {
+				var t = json[i];
+				var tile = new Tile(t[0], t[1], t[2], t[3], t[4], t[5], t[6], t[7], t[8], check[i]);
+				tile.draw();
+				tiles.push(tile);
+			}
+			for (var i = 0; i < tiles.length; i++) {
+				var tile = tiles[i];
+				tile.skin();
+			}
+			document.getElementById('energy').innerHTML = '剩餘力量：' + energy;
+			document.getElementById('orb').innerHTML = '拍檔滴晶：' + orb;
+		}
+
+		function update() {
+			var select = document.getElementById("ms");
+			select.selectedIndex = set;
+			check = checks[set];
+			if (check == "") {
+				check = new Array(json.length);
+				for (var i = 0; i < check.length; i++) check[i] = 0;
+			}
+			else {
+				check = check.split('');
+			}
+			document.getElementById('energy').innerHTML = '剩餘力量：' + energy;
+			document.getElementById('orb').innerHTML = '拍檔滴晶：' + orb;
+			var re = new Array();
+			for (var i = 0; i < check.length; i++) {
+				if (check[i] == 1) {
+					var newline = true;
+					if (json[i][1].indexOf('+') != -1) {
+						for (var j = 0; j < re.length; j++) {
+							if (re[j].indexOf('+') != -1) {
+								if (re[j].slice(0, re[j].indexOf('+')) == json[i][1].slice(0, json[i][1].indexOf('+'))) {
+									re[j] = re[j].slice(0, re[j].indexOf('+') + 1) + (parseInt(re[j].slice(re[j].indexOf('+') + 1, re[j].length)) + parseInt(json[i][1].slice(json[i][1].indexOf('+') + 1, json[i][1].length)));
+									newline = false;
+								}
+							}
+						}
+					}
+					if (newline) {
+						re.push(json[i][1]);
+					}
+				}
+			}
+			document.getElementById('sg').innerHTML = '石盤技能：<br>' + re.join('<br>');
+		}
+
+		var no = "10148000001";
+		var name = "松葉&夢妖魔";
+		var tcolor = "a0739b";
+		var X = 1080;
+		var Y = 1920;
+		var R = 96;
+		var r = 96;
+		var f = 16;
+		var energy = 60;
+		var orb = 0;
+		var checks = ["", "", "", ""];
+		var pres = ["No.1", "No.2", "No.3", "No.4"];
+		var set = 0;
+		var cookie = getCookie('syncgrid' + no);
+		if (cookie.indexOf(',')!=-1) {
+			cookie = cookie.split(',');
+			if (cookie.length == 9) {
+				for (var i = 0; i < 4; i ++) {
+					checks[i] = cookie[2 * i];
+					pres[i] = cookie[2 * i + 1];
+				}
+				set = cookie[8];
+			}
+		}
+		else {
+			checks[0] = cookie;
+			checks[1] = '0'.repeat(json.length);
+			checks[2] = '0'.repeat(json.length);
+			checks[3] = '0'.repeat(json.length);
+		}
+		
+		var select = document.getElementById("ms");
+		select.selectedIndex = set;
+		for (var i = 0; i < 4; i++) {
+			if (pres[i] == '') select.options[i].text = "No." + (i + 1);
+			else select.options[i].text = pres[i];
+		}
+		
+		var check = checks[set];
+		if (check == "") {
+			check = new Array(json.length);
+			for (var i = 0; i < check.length; i++) check[i] = 0;
+		}
+		else {
+			check = check.split('');
+		}
+
+		newGrid();
+		update();
+
+		var svg = document.getElementById("grid");
+		if (svgright - svgleft > 1080 || window.innerHeight < svg.getAttribute('height')) {
+			svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
+			svg.setAttribute('width', Math.ceil(svgright - svgleft));
+			svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		}
+		if (window.innerHeight < svg.getAttribute('height')) {
+			svg.setAttribute('width', Math.ceil(svg.getAttribute('width') / svg.getAttribute('height') * window.innerHeight * 0.9));
+			svg.setAttribute('height', Math.ceil(window.innerHeight * 0.9));
+		}
+
+	</script>
+</body>
+
+</html>
