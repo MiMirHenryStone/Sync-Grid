@@ -18,6 +18,16 @@
 
 ### 2021/06/17
 <p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/皇家蒙面人&熾焰咆哮虎.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_3050_3W_Normal_04.event_3050_3W_Normal_04_1.png"><br>皇家蒙面人&熾焰咆哮虎</a></p>
+
+### 免費拍組
+<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/莉佳&蔓藤怪.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/莉佳&蔓藤怪.png"><br>莉佳&蔓藤怪</a></p>
+<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/馬志士&雷丘.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/馬志士&雷丘.png"><br>馬志士&雷丘</a></p>
+<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/梨花&月亮伊布.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/梨花&月亮伊布.png"><br>梨花&月亮伊布</a></p>
+<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/希嘉娜&暴飛龍.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/希嘉娜&暴飛龍.png"><br>希嘉娜&暴飛龍</a></p>
+<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/松葉&夢妖魔.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/松葉&夢妖魔.png"><br>松葉&夢妖魔</a></p>
+<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/主角&索爾迦雷歐.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/主角&索爾迦雷歐.png"><br>主角&索爾迦雷歐</a></p>
+<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/主角&雷吉洛克.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/主角&雷吉洛克.png"><br>主角&雷吉洛克</a></p>
+<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/主角&勾帕路翁.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/主角&勾帕路翁.png"><br>主角&勾帕路翁</a></p>
 <br>
 
 ## ⭐⭐⭐⭐⭐
