@@ -20,7 +20,7 @@
 <p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/皇家蒙面人&熾焰咆哮虎.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_3050_3W_Normal_04.event_3050_3W_Normal_04_1.png"><br>皇家蒙面人&熾焰咆哮虎</a></p>
 
 ### 免費拍組
-<table align="center"><tr>
+<table align="center" style="display: table"><tr>
 <td align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/莉佳&蔓藤怪.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/莉佳&蔓藤怪.png"><br>莉佳<br>&蔓藤怪</a></td>
 <td align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/馬志士&雷丘.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/馬志士&雷丘.png"><br>馬志士<br>&雷丘</a></td>
 </tr><tr>
