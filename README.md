@@ -1,37 +1,21 @@
 <p align="center">⚠<b>石盤點法只保存在本地cookie</b>⚠<br><br>顯示拍組圖片可能需要科學上網<br><br>BUG反饋請私信bilibili@MiMirHenryStone<br>或發送郵件至MiMirHenryStone@gmail.com</p><br>
 
 ## 新石盤
-### 2021/05/31
-<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/赤焰松&固拉多.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_3050_1W_FesPickup_01.event_3050_1W_FesPickup_01_1.png"><br>赤焰松&固拉多</a></p>
+### 2021/06/30
+<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/北尚&龍頭地鼠.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_3060_1W_FesPickup_01.event_3060_1W_FesPickup_01_1.png"><br>北尚&龍頭地鼠</a></p>
+<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/南廈&始祖大鳥.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_3060_1W_FesPickup_02.event_3060_1W_FesPickup_02_1.png"><br>南廈&始祖大鳥</a></p>
 
-### 2021/06/01
-<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/水梧桐&蓋歐卡.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_3050_1W_FesPickup_02.event_3050_1W_FesPickup_02_1.png"><br>水梧桐&蓋歐卡</a></p>
+### 2021/07/15
+<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/小優（２０２１夏季）&千面避役.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_3060_3W_MasterTicket_01.event_3060_3W_MasterTicket_01_1.png"><br>小優（２０２１夏季）&千面避役</a></p>
 
-### 2021/06/11
-<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/水蓮&滴蛛霸.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_3050_3W_Normal_01.event_3050_3W_Normal_01_1.png"><br>水蓮&滴蛛霸</a></p>
-
-### 2021/06/13
-<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/卡奇&嘎啦嘎啦.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_3050_3W_Normal_02.event_3050_3W_Normal_02_1.png"><br>卡奇&嘎啦嘎啦</a></p>
-
-### 2021/06/15
-<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/哈拉&好勝毛蟹.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_3050_3W_Normal_03.event_3050_3W_Normal_03_1.png"><br>哈拉&好勝毛蟹</a></p>
-
-### 2021/06/17
-<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/皇家蒙面人&熾焰咆哮虎.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_3050_3W_Normal_04.event_3050_3W_Normal_04_1.png"><br>皇家蒙面人&熾焰咆哮虎</a></p>
+### 2021/07/17
+<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/瑪俐（２０２１夏季）&長毛巨魔.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_3060_3W_MasterTicket_02.event_3060_3W_MasterTicket_02_1.png"><br>瑪俐（２０２１夏季）&長毛巨魔</a></p>
 
 ### 免費拍組
-<table align="center" style="display: table"><tr>
-<td align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/莉佳&蔓藤怪.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/莉佳&蔓藤怪.png"><br>莉佳<br>&蔓藤怪</a></td>
-<td align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/馬志士&雷丘.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/馬志士&雷丘.png"><br>馬志士<br>&雷丘</a></td>
+<table align="center"><tr>
+<td align="center" style="display: table"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/阿筆&飛天螳螂.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/阿筆&飛天螳螂.png"><br>阿筆<br>&飛天螳螂</a></td>
+<td align="center" style="display: table"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/阪木&超夢.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/阪木&超夢.png"><br>阪木<br>&超夢</a></td>
 </tr><tr>
-<td align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/梨花&月亮伊布.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/梨花&月亮伊布.png"><br>梨花<br>&月亮伊布</a></td>
-<td align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/希嘉娜&暴飛龍.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/希嘉娜&暴飛龍.png"><br>希嘉娜<br>&暴飛龍</a></td>
-</tr><tr>
-<td align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/松葉&夢妖魔.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/松葉&夢妖魔.png"><br>松葉<br>&夢妖魔</a></td>
-<td align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/主角&索爾迦雷歐.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/主角&索爾迦雷歐.png"><br>主角<br>&索爾迦雷歐</a></td>
-</tr><tr>
-<td align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/主角&雷吉洛克.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/主角&雷吉洛克.png"><br>主角<br>&雷吉洛克</a></td>
-<td align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/主角&勾帕路翁.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/主角&勾帕路翁.png"><br>主角<br>&勾帕路翁</a></td>
 </tr></table>
 <br>
 
@@ -46,6 +30,7 @@
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/克麗絲&大力鱷.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/克麗絲&大力鱷.png" width="64" height="64">克麗絲&大力鱷</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/美極套裝越橘&巨牙鯊.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/美極套裝越橘&巨牙鯊.png" width="64" height="64">美極套裝越橘&巨牙鯊</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/水梧桐&蓋歐卡.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/水梧桐&蓋歐卡.png" width="64" height="64">水梧桐&蓋歐卡</a><br>
+<a href="https://mimirhenrystone.github.io/Sync-Grid/grids/小優（２０２１夏季）&千面避役.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/小優（２０２１夏季）&千面避役.png" width="64" height="64">小優（２０２１夏季）&千面避役</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/Ｎ&捷克羅姆.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/Ｎ&捷克羅姆.png" width="64" height="64">Ｎ&捷克羅姆</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/小菊兒&雷電斑馬.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/小菊兒&雷電斑馬.png" width="64" height="64">小菊兒&雷電斑馬</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/小悠&蜥蜴王.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/小悠&蜥蜴王.png" width="64" height="64">小悠&蜥蜴王</a><br>
@@ -62,11 +47,13 @@
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/阿渡（２０２１新春）&暴鯉龍.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/阿渡（２０２１新春）&暴鯉龍.png" width="64" height="64">阿渡（２０２１新春）&暴鯉龍</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/弗拉達利&伊裴爾塔爾.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/弗拉達利&伊裴爾塔爾.png" width="64" height="64">弗拉達利&伊裴爾塔爾</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/嘉德麗雅&人造細胞卵.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/嘉德麗雅&人造細胞卵.png" width="64" height="64">嘉德麗雅&人造細胞卵</a><br>
+<a href="https://mimirhenrystone.github.io/Sync-Grid/grids/阪木&超夢.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/阪木&超夢.png" width="64" height="64">阪木&超夢</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/露莎米奈&費洛美螂.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/露莎米奈&費洛美螂.png" width="64" height="64">露莎米奈&費洛美螂</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/古茲馬&具甲武者.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/古茲馬&具甲武者.png" width="64" height="64">古茲馬&具甲武者</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/阿戴克&火神蛾.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/阿戴克&火神蛾.png" width="64" height="64">阿戴克&火神蛾</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/亞堤&保母蟲.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/亞堤&保母蟲.png" width="64" height="64">亞堤&保母蟲</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/麗姿&鬃岩狼人.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/麗姿&鬃岩狼人.png" width="64" height="64">麗姿&鬃岩狼人</a><br>
+<a href="https://mimirhenrystone.github.io/Sync-Grid/grids/南廈&始祖大鳥.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/南廈&始祖大鳥.png" width="64" height="64">南廈&始祖大鳥</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/松葉&隨風球.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/松葉&隨風球.png" width="64" height="64">松葉&隨風球</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/梅麗莎&夢妖魔.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/梅麗莎&夢妖魔.png" width="64" height="64">梅麗莎&夢妖魔</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/美極套裝竹蘭&杖尾鱗甲龍.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/美極套裝竹蘭&杖尾鱗甲龍.png" width="64" height="64">美極套裝竹蘭&杖尾鱗甲龍</a><br>
@@ -106,6 +93,7 @@
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/皇家蒙面人&熾焰咆哮虎.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/皇家蒙面人&熾焰咆哮虎.png" width="64" height="64">皇家蒙面人&熾焰咆哮虎</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/小光（２０２１春季）&霜奶仙.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/小光（２０２１春季）&霜奶仙.png" width="64" height="64">小光（２０２１春季）&霜奶仙</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/莎莉娜（２０２１春季）&風妖精.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/莎莉娜（２０２１春季）&風妖精.png" width="64" height="64">莎莉娜（２０２１春季）&風妖精</a><br>
+<a href="https://mimirhenrystone.github.io/Sync-Grid/grids/瑪俐（２０２１夏季）&長毛巨魔.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/瑪俐（２０２１夏季）&長毛巨魔.png" width="64" height="64">瑪俐（２０２１夏季）&長毛巨魔</a><br>
 ### 輔助型
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/葉子&伊布.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/葉子&伊布.png" width="64" height="64">葉子&伊布</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/卡奇&嘎啦嘎啦.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/卡奇&嘎啦嘎啦.png" width="64" height="64">卡奇&嘎啦嘎啦</a><br>
@@ -119,6 +107,7 @@
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/小光&土台龜.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/小光&土台龜.png" width="64" height="64">小光&土台龜</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/波妮&冰鬼護.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/波妮&冰鬼護.png" width="64" height="64">波妮&冰鬼護</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/主角&勾帕路翁.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/主角&勾帕路翁.png" width="64" height="64">主角&勾帕路翁</a><br>
+<a href="https://mimirhenrystone.github.io/Sync-Grid/grids/北尚&龍頭地鼠.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/北尚&龍頭地鼠.png" width="64" height="64">北尚&龍頭地鼠</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/鳴依（２０１９冬季）&信使鳥.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/鳴依（２０１９冬季）&信使鳥.png" width="64" height="64">鳴依（２０１９冬季）&信使鳥</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/娜姿&胡地.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/娜姿&胡地.png" width="64" height="64">娜姿&胡地</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/莉莉艾（２０２１新春）&蝶結萌虻.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/莉莉艾（２０２１新春）&蝶結萌虻.png" width="64" height="64">莉莉艾（２０２１新春）&蝶結萌虻</a><br>
@@ -139,6 +128,7 @@
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/莉佳&蔓藤怪.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/莉佳&蔓藤怪.png" width="64" height="64">莉佳&蔓藤怪</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/阿桔&叉字蝠.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/阿桔&叉字蝠.png" width="64" height="64">阿桔&叉字蝠</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/紫羅蘭&雨翅蛾.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/紫羅蘭&雨翅蛾.png" width="64" height="64">紫羅蘭&雨翅蛾</a><br>
+<a href="https://mimirhenrystone.github.io/Sync-Grid/grids/阿筆&飛天螳螂.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/阿筆&飛天螳螂.png" width="64" height="64">阿筆&飛天螳螂</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/松葉&夢妖魔.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/松葉&夢妖魔.png" width="64" height="64">松葉&夢妖魔</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/小椿&刺龍王.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/小椿&刺龍王.png" width="64" height="64">小椿&刺龍王</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/希嘉娜&暴飛龍.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/希嘉娜&暴飛龍.png" width="64" height="64">希嘉娜&暴飛龍</a><br>
