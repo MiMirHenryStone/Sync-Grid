@@ -12,7 +12,7 @@
 <p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/瑪俐（２０２１夏季）&長毛巨魔.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_3060_3W_MasterTicket_02.event_3060_3W_MasterTicket_02_1.png"><br>瑪俐（２０２１夏季）&長毛巨魔</a></p>
 
 ### 免費拍組
-<table align="center" style="text-align: center"><tr>
+<table align="center" style="display: table"><tr>
 <td align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/阿筆&飛天螳螂.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/阿筆&飛天螳螂.png"><br>阿筆<br>&飛天螳螂</a></td>
 <td align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/阪木&超夢.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/阪木&超夢.png"><br>阪木<br>&超夢</a></td>
 </tr></table>
