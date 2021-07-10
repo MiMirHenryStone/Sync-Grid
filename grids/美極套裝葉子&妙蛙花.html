@@ -5,9 +5,35 @@
 	<meta charset='utf-8' />
 	<title>拍檔石盤</title>
 	<style>
-		html {
-			-ms-text-size-adjust: 100%;
-			-webkit-text-size-adjust: 100%;
+		div {
+			margin: 1%;
+		}
+
+		.title {
+			font-size: 1.5rem;
+			margin: 0 1rem;
+		}
+
+		.text {
+			font-size: 1rem;
+		}
+
+		svg {
+			font-size: 1rem;
+			margin: 1rem 5%;
+		}
+
+		table {
+			width: 100%;
+			margin: 0.25rem 0;
+		}
+
+		.move td:first-child {
+			width: 20%;
+		}
+
+		.team td {
+			width: 33%;
 		}
 
 		.box {
@@ -35,12 +61,13 @@
 			text-decoration: none;
 			color: #000;
 			display: inline-block;
-			width: 160px;
+			width: 12.5rem;
 			text-align: center;
 		}
 
 		.content {
 			border: 1px solid #888;
+			margin-top: 0;
 		}
 
 		.content1,
@@ -64,26 +91,24 @@
 
 <body>
 	<div align="center">
-		<select style="font-size:16pt;" id="ms" onchange=changeSet()>
+		<select class="title" id="ms" onchange=changeSet()>
 			<option value="0">No.1</option>
 			<option value="1">No.2</option>
 			<option value="2">No.3</option>
 			<option value="3">No.4</option>
 		</select>
-		<button style="font-size:16pt;" onclick=rename()>重命名</button>
-		<button style="font-size:16pt;" onclick=reset()>全部重設</button>
-		<label>　</label>
-		<label style="font-size:16pt;" id="energy">剩餘力量：60</label>
-		<label>　</label>
-		<label style="font-size:16pt;" id="orb">拍檔滴晶：0</label>
+		<input class="title" type="button" onclick=rename() value="重命名">
+		<input class="title" type="button" onclick=reset() value="全部重設">
+		<span class="title" id="energy">剩餘力量：60</span>
+		<span class="title" id="orb">拍檔滴晶：0</span>
 	</div>
-	<div style="font-size:16pt;" id="skill">技能名稱：</div>
-	<div style="font-size:16pt;" id="effect">效果：</div>
-	<svg id="grid" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
-	<div id="sg" style="font-size:16pt; width: 33%; float: right;">石盤技能：<br></div>
-	<div class="box" style="width: 66%;">
+	<div class="text" id="skill" style="margin-bottom: 0;">技能名稱：</div>
+	<div class="text" id="effect" style="margin-top: 0;">效果：</div>
+	<svg id="grid" align="center" width="9" height="16" viewBox="0 0 1080 1920"></svg>
+	<div class="text" id="sg" style="width: 32%; float: right;">石盤技能：<br></div>
+	<div class="text" class="box" style="width: 64%;">
 		<ul class="tab"><li><a href="#content1">妙蛙花</a></li><li><a href="#content2">超級妙蛙花</a></li></ul>
-		<div class="content"><div class="content1" id="content1">————————10017100000————————<br>拍组搜寻★5 美極套裝葉子♀&妙蛙花♀<br>體系：技術型 | 弱點：超能力<br>Lv.1：ＨＰ 111 | 攻擊 11 | 防禦 14 | 特攻 11 | 特防 14 | 速度 14<br>Lv.100：ＨＰ 592 | 攻擊 212 | 防禦 196 | 特攻 212 | 特防 196 | 速度 134<br>Lv.110：ＨＰ 626 | 攻擊 226 | 防禦 208 | 特攻 226 | 特防 208 | 速度 142<br>Lv.120：ＨＰ 660 | 攻擊 240 | 防禦 220 | 特攻 240 | 特防 220 | 速度 150<br>Lv.125：ＨＰ 677 | 攻擊 247 | 防禦 226 | 特攻 247 | 特防 226 | 速度 154<br>Lv.130：ＨＰ 694 | 攻擊 254 | 防禦 232 | 特攻 254 | 特防 232 | 速度 158<br>Lv.135：ＨＰ 711 | 攻擊 261 | 防禦 238 | 特攻 261 | 特防 238 | 速度 162<br>拍組招式：治癒與戰鬥之瘋狂植物<br>屬性：草<br>分類：特殊<br>威力：160<br>對象：對手１對拍組<br>變成超級妙蛙花直到對戰結束。<br>當對手陷入中毒或劇毒狀態時，威力會提高。<br><br>寶可夢招式：飛葉快刀 ▭▭<br>屬性：草<br>分類：物理<br>威力：43<br>命中：95<br>對象：對手全體拍組<br>容易擊中要害。<br><br>道具招式：傷藥 2/2<br>分類：變化<br>對象：我方１對拍組<br>回復我方的ＨＰ，約為最大ＨＰ的４０％。<br><br>訓練家招式：我來保護大家！ 1/1<br>分類：變化<br>對象：我方全體拍組<br>自己發動拍組招式所需的行動數會減少１次。<br>當妙蛙花已經變成超級妙蛙花時會減少２次。<br>（多隊模式時，會讓我方全體玩家發動拍組招式所需的行動數減少。）<br>讓我方全體拍組變成附帶回復狀態。<br><br>寶可夢招式：瘋狂植物 ▭▭▭▭<br>屬性：草<br>分類：特殊<br>威力：178<br>命中：90<br>對象：對手１對拍組<br>沒有追加效果。<br><br>對手中招後賦予劇毒４<br>當以對手為對象的招式成功時，有５０％的機率<br>會讓對手陷入劇毒狀態。<br><br>對手中招後防禦特防↓９<br>當以對手為對象的招式成功時，<br>會降低對手的防禦或特防１階段，或是兩種皆會降低１階段。<br><br>拍組招式後計數加速２<br>首次使出拍組招式時，<br>會讓發動拍組招式所需的行動數減少２次。<br><br>草屬性／技術<br>關都／技術<br>美極套裝／技術<br>真新鎮／技術<br></div><div class="content2" id="content2">————————10017100000————————<br>拍组搜寻★5 美極套裝葉子♀&超級妙蛙花♀<br>體系：技術型 | 弱點：超能力<br>特攻 120% | 特防 120%<br>拍組招式：治癒與戰鬥之瘋狂植物<br>屬性：草<br>分類：特殊<br>威力：160<br>對象：對手１對拍組<br>變成超級妙蛙花直到對戰結束。<br>當對手陷入中毒或劇毒狀態時，威力會提高。<br><br>寶可夢招式：飛葉快刀 ▭▭<br>屬性：草<br>分類：物理<br>威力：43<br>命中：95<br>對象：對手全體拍組<br>容易擊中要害。<br><br>道具招式：傷藥 2/2<br>分類：變化<br>對象：我方１對拍組<br>回復我方的ＨＰ，約為最大ＨＰ的４０％。<br><br>訓練家招式：我來保護大家！ 1/1<br>分類：變化<br>對象：我方全體拍組<br>自己發動拍組招式所需的行動數會減少１次。<br>當妙蛙花已經變成超級妙蛙花時會減少２次。<br>（多隊模式時，會讓我方全體玩家發動拍組招式所需的行動數減少。）<br>讓我方全體拍組變成附帶回復狀態。<br><br>寶可夢招式：瘋狂植物 ▭▭▭▭<br>屬性：草<br>分類：特殊<br>威力：178<br>命中：90<br>對象：對手１對拍組<br>沒有追加效果。<br><br>對手中毒傷害增加２<br>增加對手受到的<br>中毒及劇毒傷害。<br><br>對手中招後防禦特防↓９<br>當以對手為對象的招式成功時，<br>會降低對手的防禦或特防１階段，或是兩種皆會降低１階段。<br><br>拍組招式後計數加速２<br>首次使出拍組招式時，<br>會讓發動拍組招式所需的行動數減少２次。<br><br>草屬性／技術<br>關都／技術<br>美極套裝／技術<br>真新鎮／技術<br></div></div></div>
+		<div class="content"><div class="content1" id="content1"><table><tr><th colspan="2">拍組搜尋★5 美極套裝葉子♀&妙蛙花♀</th></tr><tr><td style="width:50%%;text-align:center">體系</td><td style="width:50%%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">技術型</td><td style="width:50%;text-align:center">超能力</td></tr><tr><table><tr style="background:#bededd"><td>Lv.</td><td>1</td><td>100</td><td>110</td><td>120</td><td>125</td><td>130</td><td>135</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td><td>111</td><td>592</td><td>626</td><td>660</td><td>677</td><td>694</td><td>711</td></tr><tr style="background:#efeccd"><td>攻擊</td><td>11</td><td>212</td><td>226</td><td>240</td><td>247</td><td>254</td><td>261</td></tr><tr style="background:#f2deb9"><td>防禦</td><td>14</td><td>196</td><td>208</td><td>220</td><td>226</td><td>232</td><td>238</td></tr><tr style="background:#d3f0f4"><td>特攻</td><td>11</td><td>212</td><td>226</td><td>240</td><td>247</td><td>254</td><td>261</td></tr><tr style="background:#bed3f0"><td>特防</td><td>14</td><td>196</td><td>208</td><td>220</td><td>226</td><td>232</td><td>238</td></tr><tr style="background:#dbcde7"><td>速度</td><td>14</td><td>134</td><td>142</td><td>150</td><td>154</td><td>158</td><td>162</td></tr></table></tr><tr><table class="move" style="background-color:#459e4e80;background-opacity:0.5"><tr><td>拍組招式</td><td>治癒與戰鬥之瘋狂植物</td></tr><tr><td>屬性</td><td>草</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>160</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>變成超級妙蛙花直到對戰結束。<br>當對手陷入中毒或劇毒狀態時，威力會提高。</td></tr></tr><tr><table class="move" style="background-color:#459e4e80;background-opacity:0.5"><tr><td>寶可夢招式</td><td>飛葉快刀 ▭▭</td></tr><tr><td>屬性</td><td>草</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>43</td></tr><tr><td>命中</td><td>95</td></tr><tr><td>對象</td><td>對手全體拍組</td></tr><tr><td></td><td>容易擊中要害。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>道具招式</td><td>傷藥 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>我方１對拍組</td></tr><tr><td></td><td>回復我方的ＨＰ，約為最大ＨＰ的４０％。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>訓練家招式</td><td>我來保護大家！ 1/1</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>我方全體拍組</td></tr><tr><td></td><td>自己發動拍組招式所需的行動數會減少１次。<br>當妙蛙花已經變成超級妙蛙花時會減少２次。<br>（多隊模式時，會讓我方全體玩家發動拍組招式所需的行動數減少。）<br>讓我方全體拍組變成附帶回復狀態。</td></tr></tr><tr><table class="move" style="background-color:#459e4e80;background-opacity:0.5"><tr><td>寶可夢招式</td><td>瘋狂植物 ▭▭▭▭</td></tr><tr><td>屬性</td><td>草</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>178</td></tr><tr><td>命中</td><td>90</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></tr><tr><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>對手中招後賦予劇毒４<br>當以對手為對象的招式成功時，有５０％的機率<br>會讓對手陷入劇毒狀態。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>對手中招後防禦特防↓９<br>當以對手為對象的招式成功時，<br>會降低對手的防禦或特防１階段，或是兩種皆會降低１階段。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>拍組招式後計數加速２<br>首次使出拍組招式時，<br>會讓發動拍組招式所需的行動數減少２次。</td></tr></table></tr><tr><table class="team"><tr><td style="background-color:#459e4e80;background-opacity:0.5">草屬性<br>／技術</td><td style="background-color:#6dbfb180;background-opacity:0.5">關都<br>／技術</td><td style="background-color:#6dbfb180;background-opacity:0.5">美極套裝<br>／技術</td></tr><tr><td style="background-color:#6dbfb180;background-opacity:0.5">真新鎮<br>／技術</td></tr></table></tr><table></div><div class="content2" id="content2"><table><tr><th colspan="2">拍組搜尋★5 美極套裝葉子♀&超級妙蛙花♀</th></tr><tr><td style="width:50%%;text-align:center">體系</td><td style="width:50%%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">技術型</td><td style="width:50%;text-align:center">超能力</td></tr><tr><table><tr style="background:#bededd"><td>Lv.</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td></tr><tr style="background:#efeccd"><td>攻擊</td></tr><tr style="background:#f2deb9"><td>防禦</td></tr><tr style="background:#d3f0f4"><td>特攻</td></tr><tr style="background:#bed3f0"><td>特防</td></tr><tr style="background:#dbcde7"><td>速度</td></tr></table></tr><tr><table class="move" style="background-color:#459e4e80;background-opacity:0.5"><tr><td>拍組招式</td><td>治癒與戰鬥之瘋狂植物</td></tr><tr><td>屬性</td><td>草</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>160</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>變成超級妙蛙花直到對戰結束。<br>當對手陷入中毒或劇毒狀態時，威力會提高。</td></tr></tr><tr><table class="move" style="background-color:#459e4e80;background-opacity:0.5"><tr><td>寶可夢招式</td><td>飛葉快刀 ▭▭</td></tr><tr><td>屬性</td><td>草</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>43</td></tr><tr><td>命中</td><td>95</td></tr><tr><td>對象</td><td>對手全體拍組</td></tr><tr><td></td><td>容易擊中要害。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>道具招式</td><td>傷藥 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>我方１對拍組</td></tr><tr><td></td><td>回復我方的ＨＰ，約為最大ＨＰ的４０％。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>訓練家招式</td><td>我來保護大家！ 1/1</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>我方全體拍組</td></tr><tr><td></td><td>自己發動拍組招式所需的行動數會減少１次。<br>當妙蛙花已經變成超級妙蛙花時會減少２次。<br>（多隊模式時，會讓我方全體玩家發動拍組招式所需的行動數減少。）<br>讓我方全體拍組變成附帶回復狀態。</td></tr></tr><tr><table class="move" style="background-color:#459e4e80;background-opacity:0.5"><tr><td>寶可夢招式</td><td>瘋狂植物 ▭▭▭▭</td></tr><tr><td>屬性</td><td>草</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>178</td></tr><tr><td>命中</td><td>90</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></tr><tr><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>對手中毒傷害增加２<br>增加對手受到的<br>中毒及劇毒傷害。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>對手中招後防禦特防↓９<br>當以對手為對象的招式成功時，<br>會降低對手的防禦或特防１階段，或是兩種皆會降低１階段。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>拍組招式後計數加速２<br>首次使出拍組招式時，<br>會讓發動拍組招式所需的行動數減少２次。</td></tr></table></tr><tr><table class="team"><tr><td style="background-color:#459e4e80;background-opacity:0.5">草屬性<br>／技術</td><td style="background-color:#6dbfb180;background-opacity:0.5">關都<br>／技術</td><td style="background-color:#6dbfb180;background-opacity:0.5">美極套裝<br>／技術</td></tr><tr><td style="background-color:#6dbfb180;background-opacity:0.5">真新鎮<br>／技術</td></tr></table></tr><table></div></div></div>
 	</div>
 
 	<script>
@@ -434,18 +459,18 @@ json = [[1001710000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100171
 		update();
 
 		var svg = document.getElementById("grid");
-		if (svgright - svgleft > 1080 || window.innerHeight < svg.getAttribute('height')) {
-			svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
-			svg.setAttribute('width', Math.ceil(svgright - svgleft));
-			svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
+		var svgW = svgright - svgleft;
+		var svgH = svgbottom - svgtop;
+		// svg.setAttribute('width', Math.ceil(svgright - svgleft));
+		// svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		if (document.documentElement.clientWidth / document.documentElement.clientHeight > svgW / svgH) {
+			svg.setAttribute('width', Math.ceil(svgW / svgH * document.documentElement.clientHeight * 0.9));
+			svg.setAttribute('height', Math.ceil(document.documentElement.clientHeight * 0.9));
 		}
-		if (window.innerHeight < svg.getAttribute('height')) {
-			svg.setAttribute('width', Math.ceil(svg.getAttribute('width') / svg.getAttribute('height') * window.innerHeight * 0.9));
-			svg.setAttribute('height', Math.ceil(window.innerHeight * 0.9));
-		}
-		if (window.innerWidth < svg.getAttribute('width')) {
-			svg.setAttribute('height', Math.ceil(svg.getAttribute('height') / svg.getAttribute('width') * window.innerWidth * 0.9));
-			svg.setAttribute('width', Math.ceil(window.innerWidth * 0.9));
+		else {
+			svg.setAttribute('height', Math.ceil(svgH / svgW * document.documentElement.clientWidth * 0.9));
+			svg.setAttribute('width', Math.ceil(document.documentElement.clientWidth * 0.9));
 		}
 
 	</script>

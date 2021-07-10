@@ -5,9 +5,35 @@
 	<meta charset='utf-8' />
 	<title>拍檔石盤</title>
 	<style>
-		html {
-			-ms-text-size-adjust: 100%;
-			-webkit-text-size-adjust: 100%;
+		div {
+			margin: 1%;
+		}
+
+		.title {
+			font-size: 1.5rem;
+			margin: 0 1rem;
+		}
+
+		.text {
+			font-size: 1rem;
+		}
+
+		svg {
+			font-size: 1rem;
+			margin: 1rem 5%;
+		}
+
+		table {
+			width: 100%;
+			margin: 0.25rem 0;
+		}
+
+		.move td:first-child {
+			width: 20%;
+		}
+
+		.team td {
+			width: 33%;
 		}
 
 		.box {
@@ -35,12 +61,13 @@
 			text-decoration: none;
 			color: #000;
 			display: inline-block;
-			width: 160px;
+			width: 12.5rem;
 			text-align: center;
 		}
 
 		.content {
 			border: 1px solid #888;
+			margin-top: 0;
 		}
 
 		.content1,
@@ -64,26 +91,24 @@
 
 <body>
 	<div align="center">
-		<select style="font-size:16pt;" id="ms" onchange=changeSet()>
+		<select class="title" id="ms" onchange=changeSet()>
 			<option value="0">No.1</option>
 			<option value="1">No.2</option>
 			<option value="2">No.3</option>
 			<option value="3">No.4</option>
 		</select>
-		<button style="font-size:16pt;" onclick=rename()>重命名</button>
-		<button style="font-size:16pt;" onclick=reset()>全部重設</button>
-		<label>　</label>
-		<label style="font-size:16pt;" id="energy">剩餘力量：60</label>
-		<label>　</label>
-		<label style="font-size:16pt;" id="orb">拍檔滴晶：0</label>
+		<input class="title" type="button" onclick=rename() value="重命名">
+		<input class="title" type="button" onclick=reset() value="全部重設">
+		<span class="title" id="energy">剩餘力量：60</span>
+		<span class="title" id="orb">拍檔滴晶：0</span>
 	</div>
-	<div style="font-size:16pt;" id="skill">技能名稱：</div>
-	<div style="font-size:16pt;" id="effect">效果：</div>
-	<svg id="grid" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
-	<div id="sg" style="font-size:16pt; width: 33%; float: right;">石盤技能：<br></div>
-	<div class="box" style="width: 66%;">
+	<div class="text" id="skill" style="margin-bottom: 0;">技能名稱：</div>
+	<div class="text" id="effect" style="margin-top: 0;">效果：</div>
+	<svg id="grid" align="center" width="9" height="16" viewBox="0 0 1080 1920"></svg>
+	<div class="text" id="sg" style="width: 32%; float: right;">石盤技能：<br></div>
+	<div class="text" class="box" style="width: 64%;">
 		<ul class="tab"><li><a href="#content1">固拉多</a></li></ul>
-		<div class="content"><div class="content1" id="content1">————————10192000000————————<br>拍组搜寻★5 赤焰松♂&固拉多<br>體系：物理攻擊型 | 弱點：冰<br>Lv.1：ＨＰ 111 | 攻擊 24 | 防禦 15 | 特攻 13 | 特防 10 | 速度 15<br>Lv.100：ＨＰ 561 | 攻擊 326 | 防禦 100 | 特攻 264 | 特防 91 | 速度 233<br>Lv.110：ＨＰ 593 | 攻擊 348 | 防禦 106 | 特攻 282 | 特防 97 | 速度 249<br>Lv.120：ＨＰ 625 | 攻擊 370 | 防禦 112 | 特攻 300 | 特防 103 | 速度 265<br>Lv.125：ＨＰ 641 | 攻擊 381 | 防禦 115 | 特攻 309 | 特防 106 | 速度 273<br>Lv.130：ＨＰ 657 | 攻擊 392 | 防禦 118 | 特攻 318 | 特防 109 | 速度 281<br>Lv.135：ＨＰ 673 | 攻擊 403 | 防禦 121 | 特攻 327 | 特防 112 | 速度 289<br>拍組招式：為了人類而進化之斷崖之劍<br>屬性：地面<br>分類：物理<br>威力：250<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：斷崖之劍 ▭▭▭▭<br>屬性：地面<br>分類：物理<br>威力：189<br>命中：85<br>對象：對手全體拍組<br>沒有追加效果。<br><br>道具招式：要害攻擊＋ 2/2<br>分類：變化<br>對象：自己<br>提高自己的擊中要害率２階段。<br><br>寶可夢招式：日光束 ▭▭<br>屬性：草<br>分類：特殊<br>威力：125<br>命中：100<br>對象：對手１對拍組<br>變成等待攻擊狀態。<br>再次使用此招式時，將會解除等待攻擊狀態並且攻擊對手。<br>在等待攻擊狀態時，無法做出其他行動。<br>當天氣為日照強烈時，會跳過等待攻擊狀態直接使出攻擊。<br><br>訓練家招式：拓展新的大地！ 2/2<br>分類：變化<br>對象：自己<br>提高自己的攻擊和特攻２階段。<br>降低自己的防禦和特防１階段。<br>當天氣為日照強烈時，還會再提高自己的攻擊和命中率１階段。<br>當天氣為日照強烈時，會讓自己變成下次效果絕佳威力提升狀態。<br><br>豐緣的鬥志<br>提高我方全體拍組的物理招式威力２０％。<br>減輕我方全體拍組<br>受到物理招式攻擊時的傷害２５％。<br>當我方隊伍中擁有豐緣標籤的拍組越多，<br>此效果還會提升得越多。<br>（每增加１對拍組，<br>威力提升＋１５％，傷害減輕＋３％。）<br>（威力最多可提升５０％，傷害最多可減輕３１％。）<br><br>首次上場時變成晴天<br>首次上場時，<br>會將天氣變成日照強烈的狀態。<br><br>晴天時招式計量槽加速威力提升３<br>當天氣為日照強烈時，<br>招式計量槽會累積得較快。<br>當天氣為日照強烈時，會提高招式的威力。<br><br>晴天時間延長５<br>天氣變成日照強烈的瞬間在場上時，<br>會延長日照強烈的狀態的持續時間。<br><br>地面屬性／攻擊<br>豐緣／攻擊<br>反派組織／攻擊<br>眼鏡／攻擊<br>研究者／攻擊<br></div></div></div>
+		<div class="content"><div class="content1" id="content1"><table><tr><th colspan="2">拍組搜尋★5 赤焰松♂&固拉多</th></tr><tr><td style="width:50%%;text-align:center">體系</td><td style="width:50%%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">物理攻擊型</td><td style="width:50%;text-align:center">冰</td></tr><tr><table><tr style="background:#bededd"><td>Lv.</td><td>1</td><td>100</td><td>110</td><td>120</td><td>125</td><td>130</td><td>135</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td><td>111</td><td>561</td><td>593</td><td>625</td><td>641</td><td>657</td><td>673</td></tr><tr style="background:#efeccd"><td>攻擊</td><td>24</td><td>326</td><td>348</td><td>370</td><td>381</td><td>392</td><td>403</td></tr><tr style="background:#f2deb9"><td>防禦</td><td>15</td><td>100</td><td>106</td><td>112</td><td>115</td><td>118</td><td>121</td></tr><tr style="background:#d3f0f4"><td>特攻</td><td>13</td><td>264</td><td>282</td><td>300</td><td>309</td><td>318</td><td>327</td></tr><tr style="background:#bed3f0"><td>特防</td><td>10</td><td>91</td><td>97</td><td>103</td><td>106</td><td>109</td><td>112</td></tr><tr style="background:#dbcde7"><td>速度</td><td>15</td><td>233</td><td>249</td><td>265</td><td>273</td><td>281</td><td>289</td></tr></table></tr><tr><table class="move" style="background-color:#9b5f4180;background-opacity:0.5"><tr><td>拍組招式</td><td>為了人類而進化之斷崖之劍</td></tr><tr><td>屬性</td><td>地面</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>250</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></tr><tr><table class="move" style="background-color:#9b5f4180;background-opacity:0.5"><tr><td>寶可夢招式</td><td>斷崖之劍 ▭▭▭▭</td></tr><tr><td>屬性</td><td>地面</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>189</td></tr><tr><td>命中</td><td>85</td></tr><tr><td>對象</td><td>對手全體拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>道具招式</td><td>要害攻擊＋ 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>提高自己的擊中要害率２階段。</td></tr></tr><tr><table class="move" style="background-color:#459e4e80;background-opacity:0.5"><tr><td>寶可夢招式</td><td>日光束 ▭▭</td></tr><tr><td>屬性</td><td>草</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>125</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>變成等待攻擊狀態。<br>再次使用此招式時，將會解除等待攻擊狀態並且攻擊對手。<br>在等待攻擊狀態時，無法做出其他行動。<br>當天氣為日照強烈時，會跳過等待攻擊狀態直接使出攻擊。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>訓練家招式</td><td>拓展新的大地！ 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>提高自己的攻擊和特攻２階段。<br>降低自己的防禦和特防１階段。<br>當天氣為日照強烈時，還會再提高自己的攻擊和命中率１階段。<br>當天氣為日照強烈時，會讓自己變成下次效果絕佳威力提升狀態。</td></tr></tr><tr><table class="passive" style="background-color:#d18eff80;background-opacity:0.5"><tr><td>豐緣的鬥志<br>提高我方全體拍組的物理招式威力２０％。<br>減輕我方全體拍組<br>受到物理招式攻擊時的傷害２５％。<br>當我方隊伍中擁有豐緣標籤的拍組越多，<br>此效果還會提升得越多。<br>（每增加１對拍組，<br>威力提升＋１５％，傷害減輕＋３％。）<br>（威力最多可提升５０％，傷害最多可減輕３１％。）</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>首次上場時變成晴天<br>首次上場時，<br>會將天氣變成日照強烈的狀態。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>晴天時招式計量槽加速威力提升３<br>當天氣為日照強烈時，<br>招式計量槽會累積得較快。<br>當天氣為日照強烈時，會提高招式的威力。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>晴天時間延長５<br>天氣變成日照強烈的瞬間在場上時，<br>會延長日照強烈的狀態的持續時間。</td></tr></table></tr><tr><table class="team"><tr><td style="background-color:#9b5f4180;background-opacity:0.5">地面屬性<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">豐緣<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">反派組織<br>／攻擊</td></tr><tr><td style="background-color:#6dbfb180;background-opacity:0.5">眼鏡<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">研究者<br>／攻擊</td></tr></table></tr><table></div></div></div>
 	</div>
 
 	<script>
@@ -434,18 +459,18 @@ json = [[1019200000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101920
 		update();
 
 		var svg = document.getElementById("grid");
-		if (svgright - svgleft > 1080 || window.innerHeight < svg.getAttribute('height')) {
-			svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
-			svg.setAttribute('width', Math.ceil(svgright - svgleft));
-			svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
+		var svgW = svgright - svgleft;
+		var svgH = svgbottom - svgtop;
+		// svg.setAttribute('width', Math.ceil(svgright - svgleft));
+		// svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		if (document.documentElement.clientWidth / document.documentElement.clientHeight > svgW / svgH) {
+			svg.setAttribute('width', Math.ceil(svgW / svgH * document.documentElement.clientHeight * 0.9));
+			svg.setAttribute('height', Math.ceil(document.documentElement.clientHeight * 0.9));
 		}
-		if (window.innerHeight < svg.getAttribute('height')) {
-			svg.setAttribute('width', Math.ceil(svg.getAttribute('width') / svg.getAttribute('height') * window.innerHeight * 0.9));
-			svg.setAttribute('height', Math.ceil(window.innerHeight * 0.9));
-		}
-		if (window.innerWidth < svg.getAttribute('width')) {
-			svg.setAttribute('height', Math.ceil(svg.getAttribute('height') / svg.getAttribute('width') * window.innerWidth * 0.9));
-			svg.setAttribute('width', Math.ceil(window.innerWidth * 0.9));
+		else {
+			svg.setAttribute('height', Math.ceil(svgH / svgW * document.documentElement.clientWidth * 0.9));
+			svg.setAttribute('width', Math.ceil(document.documentElement.clientWidth * 0.9));
 		}
 
 	</script>

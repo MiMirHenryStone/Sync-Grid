@@ -5,9 +5,35 @@
 	<meta charset='utf-8' />
 	<title>拍檔石盤</title>
 	<style>
-		html {
-			-ms-text-size-adjust: 100%;
-			-webkit-text-size-adjust: 100%;
+		div {
+			margin: 1%;
+		}
+
+		.title {
+			font-size: 1.5rem;
+			margin: 0 1rem;
+		}
+
+		.text {
+			font-size: 1rem;
+		}
+
+		svg {
+			font-size: 1rem;
+			margin: 1rem 5%;
+		}
+
+		table {
+			width: 100%;
+			margin: 0.25rem 0;
+		}
+
+		.move td:first-child {
+			width: 20%;
+		}
+
+		.team td {
+			width: 33%;
 		}
 
 		.box {
@@ -35,12 +61,13 @@
 			text-decoration: none;
 			color: #000;
 			display: inline-block;
-			width: 160px;
+			width: 12.5rem;
 			text-align: center;
 		}
 
 		.content {
 			border: 1px solid #888;
+			margin-top: 0;
 		}
 
 		.content1,
@@ -64,26 +91,24 @@
 
 <body>
 	<div align="center">
-		<select style="font-size:16pt;" id="ms" onchange=changeSet()>
+		<select class="title" id="ms" onchange=changeSet()>
 			<option value="0">No.1</option>
 			<option value="1">No.2</option>
 			<option value="2">No.3</option>
 			<option value="3">No.4</option>
 		</select>
-		<button style="font-size:16pt;" onclick=rename()>重命名</button>
-		<button style="font-size:16pt;" onclick=reset()>全部重設</button>
-		<label>　</label>
-		<label style="font-size:16pt;" id="energy">剩餘力量：60</label>
-		<label>　</label>
-		<label style="font-size:16pt;" id="orb">拍檔滴晶：0</label>
+		<input class="title" type="button" onclick=rename() value="重命名">
+		<input class="title" type="button" onclick=reset() value="全部重設">
+		<span class="title" id="energy">剩餘力量：60</span>
+		<span class="title" id="orb">拍檔滴晶：0</span>
 	</div>
-	<div style="font-size:16pt;" id="skill">技能名稱：</div>
-	<div style="font-size:16pt;" id="effect">效果：</div>
-	<svg id="grid" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
-	<div id="sg" style="font-size:16pt; width: 33%; float: right;">石盤技能：<br></div>
-	<div class="box" style="width: 66%;">
+	<div class="text" id="skill" style="margin-bottom: 0;">技能名稱：</div>
+	<div class="text" id="effect" style="margin-top: 0;">效果：</div>
+	<svg id="grid" align="center" width="9" height="16" viewBox="0 0 1080 1920"></svg>
+	<div class="text" id="sg" style="width: 32%; float: right;">石盤技能：<br></div>
+	<div class="text" class="box" style="width: 64%;">
 		<ul class="tab"><li><a href="#content1">花療環環</a></li></ul>
-		<div class="content"><div class="content1" id="content1">————————10008400000————————<br>拍组搜寻★5 莉佳（２０２０冬季）♀&花療環環♀<br>體系：輔助型 | 弱點：鋼<br>Lv.1：ＨＰ 124 | 攻擊 15 | 防禦 16 | 特攻 15 | 特防 16 | 速度 9<br>Lv.100：ＨＰ 540 | 攻擊 248 | 防禦 232 | 特攻 248 | 特防 198 | 速度 225<br>Lv.110：ＨＰ 570 | 攻擊 264 | 防禦 246 | 特攻 264 | 特防 210 | 速度 239<br>Lv.120：ＨＰ 600 | 攻擊 280 | 防禦 260 | 特攻 280 | 特防 222 | 速度 253<br>Lv.125：ＨＰ 615 | 攻擊 288 | 防禦 267 | 特攻 288 | 特防 228 | 速度 260<br>Lv.130：ＨＰ 630 | 攻擊 296 | 防禦 274 | 特攻 296 | 特防 234 | 速度 267<br>Lv.135：ＨＰ 645 | 攻擊 304 | 防禦 281 | 特攻 304 | 特防 240 | 速度 274<br>拍組招式：綻放幸福花朵之魔法閃耀<br>屬性：妖精<br>分類：特殊<br>威力：250<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：藤鞭 ▭<br>屬性：草<br>分類：物理<br>威力：20<br>命中：100<br>對象：對手１對拍組<br>沒有追加效果。<br><br>道具招式：慢性回復Ｇ 2/2<br>分類：變化<br>對象：我方全體拍組<br>讓我方全體拍組變成附帶回復狀態。<br><br>寶可夢招式：吸取之吻 ▭▭<br>屬性：妖精<br>分類：特殊<br>威力：46<br>命中：100<br>對象：對手１對拍組<br>給予對手的傷害越多，自己的ＨＰ就回復得越多。<br><br>訓練家招式：一起來插花吧 1/1<br>分類：變化<br>對象：我方全體拍組<br>回復我方全體拍組的ＨＰ，約為最大ＨＰ的４０％。<br>讓我方全體拍組降低的能力回到初始狀態。<br>提高我方全體拍組的防禦１階段。<br><br>寶可夢出招後解除異常狀態Ｇ２<br>在寶可夢使出招式時，有３０％的機率<br>會解除我方全體拍組的異常狀態。<br><br>危機時招式計量槽增加６<br>首次陷入危機時，<br>會幫自己增加６條招式計量槽。<br><br>解除妨害狀態<br>當自己首次陷入畏縮、混亂或<br>束縛狀態時，會解除該狀態。<br><br>妖精屬性／輔助<br>關都／輔助<br>季節服裝／輔助<br>我行我素／輔助<br>大小姐／輔助<br></div></div></div>
+		<div class="content"><div class="content1" id="content1"><table><tr><th colspan="2">拍組搜尋★5 莉佳（２０２０冬季）♀&花療環環♀</th></tr><tr><td style="width:50%%;text-align:center">體系</td><td style="width:50%%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">輔助型</td><td style="width:50%;text-align:center">鋼</td></tr><tr><table><tr style="background:#bededd"><td>Lv.</td><td>1</td><td>100</td><td>110</td><td>120</td><td>125</td><td>130</td><td>135</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td><td>124</td><td>540</td><td>570</td><td>600</td><td>615</td><td>630</td><td>645</td></tr><tr style="background:#efeccd"><td>攻擊</td><td>15</td><td>248</td><td>264</td><td>280</td><td>288</td><td>296</td><td>304</td></tr><tr style="background:#f2deb9"><td>防禦</td><td>16</td><td>232</td><td>246</td><td>260</td><td>267</td><td>274</td><td>281</td></tr><tr style="background:#d3f0f4"><td>特攻</td><td>15</td><td>248</td><td>264</td><td>280</td><td>288</td><td>296</td><td>304</td></tr><tr style="background:#bed3f0"><td>特防</td><td>16</td><td>198</td><td>210</td><td>222</td><td>228</td><td>234</td><td>240</td></tr><tr style="background:#dbcde7"><td>速度</td><td>9</td><td>225</td><td>239</td><td>253</td><td>260</td><td>267</td><td>274</td></tr></table></tr><tr><table class="move" style="background-color:#ed9bb880;background-opacity:0.5"><tr><td>拍組招式</td><td>綻放幸福花朵之魔法閃耀</td></tr><tr><td>屬性</td><td>妖精</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>250</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></tr><tr><table class="move" style="background-color:#459e4e80;background-opacity:0.5"><tr><td>寶可夢招式</td><td>藤鞭 ▭</td></tr><tr><td>屬性</td><td>草</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>20</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>道具招式</td><td>慢性回復Ｇ 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>我方全體拍組</td></tr><tr><td></td><td>讓我方全體拍組變成附帶回復狀態。</td></tr></tr><tr><table class="move" style="background-color:#ed9bb880;background-opacity:0.5"><tr><td>寶可夢招式</td><td>吸取之吻 ▭▭</td></tr><tr><td>屬性</td><td>妖精</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>46</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>給予對手的傷害越多，自己的ＨＰ就回復得越多。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>訓練家招式</td><td>一起來插花吧 1/1</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>我方全體拍組</td></tr><tr><td></td><td>回復我方全體拍組的ＨＰ，約為最大ＨＰ的４０％。<br>讓我方全體拍組降低的能力回到初始狀態。<br>提高我方全體拍組的防禦１階段。</td></tr></tr><tr><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>寶可夢出招後解除異常狀態Ｇ２<br>在寶可夢使出招式時，有３０％的機率<br>會解除我方全體拍組的異常狀態。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>危機時招式計量槽增加６<br>首次陷入危機時，<br>會幫自己增加６條招式計量槽。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>解除妨害狀態<br>當自己首次陷入畏縮、混亂或<br>束縛狀態時，會解除該狀態。</td></tr></table></tr><tr><table class="team"><tr><td style="background-color:#ed9bb880;background-opacity:0.5">妖精屬性<br>／輔助</td><td style="background-color:#6dbfb180;background-opacity:0.5">關都<br>／輔助</td><td style="background-color:#6dbfb180;background-opacity:0.5">季節服裝<br>／輔助</td></tr><tr><td style="background-color:#6dbfb180;background-opacity:0.5">我行我素<br>／輔助</td><td style="background-color:#6dbfb180;background-opacity:0.5">大小姐<br>／輔助</td></tr></table></tr><table></div></div></div>
 	</div>
 
 	<script>
@@ -434,18 +459,18 @@ json = [[1000840000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100084
 		update();
 
 		var svg = document.getElementById("grid");
-		if (svgright - svgleft > 1080 || window.innerHeight < svg.getAttribute('height')) {
-			svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
-			svg.setAttribute('width', Math.ceil(svgright - svgleft));
-			svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
+		var svgW = svgright - svgleft;
+		var svgH = svgbottom - svgtop;
+		// svg.setAttribute('width', Math.ceil(svgright - svgleft));
+		// svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		if (document.documentElement.clientWidth / document.documentElement.clientHeight > svgW / svgH) {
+			svg.setAttribute('width', Math.ceil(svgW / svgH * document.documentElement.clientHeight * 0.9));
+			svg.setAttribute('height', Math.ceil(document.documentElement.clientHeight * 0.9));
 		}
-		if (window.innerHeight < svg.getAttribute('height')) {
-			svg.setAttribute('width', Math.ceil(svg.getAttribute('width') / svg.getAttribute('height') * window.innerHeight * 0.9));
-			svg.setAttribute('height', Math.ceil(window.innerHeight * 0.9));
-		}
-		if (window.innerWidth < svg.getAttribute('width')) {
-			svg.setAttribute('height', Math.ceil(svg.getAttribute('height') / svg.getAttribute('width') * window.innerWidth * 0.9));
-			svg.setAttribute('width', Math.ceil(window.innerWidth * 0.9));
+		else {
+			svg.setAttribute('height', Math.ceil(svgH / svgW * document.documentElement.clientWidth * 0.9));
+			svg.setAttribute('width', Math.ceil(document.documentElement.clientWidth * 0.9));
 		}
 
 	</script>

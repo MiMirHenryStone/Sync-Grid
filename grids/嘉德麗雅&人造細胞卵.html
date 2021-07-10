@@ -5,9 +5,35 @@
 	<meta charset='utf-8' />
 	<title>拍檔石盤</title>
 	<style>
-		html {
-			-ms-text-size-adjust: 100%;
-			-webkit-text-size-adjust: 100%;
+		div {
+			margin: 1%;
+		}
+
+		.title {
+			font-size: 1.5rem;
+			margin: 0 1rem;
+		}
+
+		.text {
+			font-size: 1rem;
+		}
+
+		svg {
+			font-size: 1rem;
+			margin: 1rem 5%;
+		}
+
+		table {
+			width: 100%;
+			margin: 0.25rem 0;
+		}
+
+		.move td:first-child {
+			width: 20%;
+		}
+
+		.team td {
+			width: 33%;
 		}
 
 		.box {
@@ -35,12 +61,13 @@
 			text-decoration: none;
 			color: #000;
 			display: inline-block;
-			width: 160px;
+			width: 12.5rem;
 			text-align: center;
 		}
 
 		.content {
 			border: 1px solid #888;
+			margin-top: 0;
 		}
 
 		.content1,
@@ -64,26 +91,24 @@
 
 <body>
 	<div align="center">
-		<select style="font-size:16pt;" id="ms" onchange=changeSet()>
+		<select class="title" id="ms" onchange=changeSet()>
 			<option value="0">No.1</option>
 			<option value="1">No.2</option>
 			<option value="2">No.3</option>
 			<option value="3">No.4</option>
 		</select>
-		<button style="font-size:16pt;" onclick=rename()>重命名</button>
-		<button style="font-size:16pt;" onclick=reset()>全部重設</button>
-		<label>　</label>
-		<label style="font-size:16pt;" id="energy">剩餘力量：60</label>
-		<label>　</label>
-		<label style="font-size:16pt;" id="orb">拍檔滴晶：0</label>
+		<input class="title" type="button" onclick=rename() value="重命名">
+		<input class="title" type="button" onclick=reset() value="全部重設">
+		<span class="title" id="energy">剩餘力量：60</span>
+		<span class="title" id="orb">拍檔滴晶：0</span>
 	</div>
-	<div style="font-size:16pt;" id="skill">技能名稱：</div>
-	<div style="font-size:16pt;" id="effect">效果：</div>
-	<svg id="grid" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
-	<div id="sg" style="font-size:16pt; width: 33%; float: right;">石盤技能：<br></div>
-	<div class="box" style="width: 66%;">
+	<div class="text" id="skill" style="margin-bottom: 0;">技能名稱：</div>
+	<div class="text" id="effect" style="margin-top: 0;">效果：</div>
+	<svg id="grid" align="center" width="9" height="16" viewBox="0 0 1080 1920"></svg>
+	<div class="text" id="sg" style="width: 32%; float: right;">石盤技能：<br></div>
+	<div class="text" class="box" style="width: 64%;">
 		<ul class="tab"><li><a href="#content1">人造細胞卵</a></li></ul>
-		<div class="content"><div class="content1" id="content1">————————10095000000————————<br>拍组搜寻★5 嘉德麗雅♀&人造細胞卵♀<br>體系：特殊攻擊型 | 弱點：幽靈<br>Lv.1：ＨＰ 99 | 攻擊 9 | 防禦 10 | 特攻 18 | 特防 11 | 速度 9<br>Lv.100：ＨＰ 453 | 攻擊 125 | 防禦 131 | 特攻 333 | 特防 132 | 速度 175<br>Lv.110：ＨＰ 479 | 攻擊 133 | 防禦 139 | 特攻 355 | 特防 140 | 速度 187<br>Lv.120：ＨＰ 505 | 攻擊 141 | 防禦 147 | 特攻 377 | 特防 148 | 速度 199<br>Lv.125：ＨＰ 518 | 攻擊 145 | 防禦 151 | 特攻 388 | 特防 152 | 速度 205<br>Lv.130：ＨＰ 531 | 攻擊 149 | 防禦 155 | 特攻 399 | 特防 156 | 速度 211<br>Lv.135：ＨＰ 544 | 攻擊 153 | 防禦 159 | 特攻 410 | 特防 160 | 速度 217<br>拍組招式：睡得好好被吵醒之精神強念<br>屬性：超能力<br>分類：特殊<br>威力：250<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：覺醒力量 ▭▭<br>屬性：超能力<br>分類：特殊<br>威力：50<br>命中：100<br>對象：對手１對拍組<br>沒有追加效果。<br><br>道具招式：招式計量槽填充 2/2<br>分類：變化<br>對象：自己<br>幫自己增加３條招式計量槽。<br><br>寶可夢招式：精神強念 ▭▭▭<br>屬性：超能力<br>分類：特殊<br>威力：99<br>命中：100<br>對象：對手１對拍組<br>有１０％的機率會降低對手的特防１階段。<br><br>訓練家招式：別讓我無聊 2/2<br>分類：變化<br>對象：自己<br>提高自己的特攻２階段。<br>提高自己的防禦和特防１階段。<br><br>中毒無效<br>不會陷入中毒狀態和劇毒狀態。<br><br>灼傷無效<br>不會陷入灼傷狀態。<br><br>束縛無效<br>不會陷入束縛狀態。<br><br>超能力屬性／攻擊<br>合眾／攻擊<br>四天王／攻擊<br>大小姐／攻擊<br>漣漪鎮／攻擊<br></div></div></div>
+		<div class="content"><div class="content1" id="content1"><table><tr><th colspan="2">拍組搜尋★5 嘉德麗雅♀&人造細胞卵♀</th></tr><tr><td style="width:50%%;text-align:center">體系</td><td style="width:50%%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">特殊攻擊型</td><td style="width:50%;text-align:center">幽靈</td></tr><tr><table><tr style="background:#bededd"><td>Lv.</td><td>1</td><td>100</td><td>110</td><td>120</td><td>125</td><td>130</td><td>135</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td><td>99</td><td>453</td><td>479</td><td>505</td><td>518</td><td>531</td><td>544</td></tr><tr style="background:#efeccd"><td>攻擊</td><td>9</td><td>125</td><td>133</td><td>141</td><td>145</td><td>149</td><td>153</td></tr><tr style="background:#f2deb9"><td>防禦</td><td>10</td><td>131</td><td>139</td><td>147</td><td>151</td><td>155</td><td>159</td></tr><tr style="background:#d3f0f4"><td>特攻</td><td>18</td><td>333</td><td>355</td><td>377</td><td>388</td><td>399</td><td>410</td></tr><tr style="background:#bed3f0"><td>特防</td><td>11</td><td>132</td><td>140</td><td>148</td><td>152</td><td>156</td><td>160</td></tr><tr style="background:#dbcde7"><td>速度</td><td>9</td><td>175</td><td>187</td><td>199</td><td>205</td><td>211</td><td>217</td></tr></table></tr><tr><table class="move" style="background-color:#e66e9b80;background-opacity:0.5"><tr><td>拍組招式</td><td>睡得好好被吵醒之精神強念</td></tr><tr><td>屬性</td><td>超能力</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>250</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></tr><tr><table class="move" style="background-color:#e66e9b80;background-opacity:0.5"><tr><td>寶可夢招式</td><td>覺醒力量 ▭▭</td></tr><tr><td>屬性</td><td>超能力</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>50</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>道具招式</td><td>招式計量槽填充 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>幫自己增加３條招式計量槽。</td></tr></tr><tr><table class="move" style="background-color:#e66e9b80;background-opacity:0.5"><tr><td>寶可夢招式</td><td>精神強念 ▭▭▭</td></tr><tr><td>屬性</td><td>超能力</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>99</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>有１０％的機率會降低對手的特防１階段。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>訓練家招式</td><td>別讓我無聊 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>提高自己的特攻２階段。<br>提高自己的防禦和特防１階段。</td></tr></tr><tr><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>中毒無效<br>不會陷入中毒狀態和劇毒狀態。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>灼傷無效<br>不會陷入灼傷狀態。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>束縛無效<br>不會陷入束縛狀態。</td></tr></table></tr><tr><table class="team"><tr><td style="background-color:#e66e9b80;background-opacity:0.5">超能力屬性<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">合眾<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">四天王<br>／攻擊</td></tr><tr><td style="background-color:#6dbfb180;background-opacity:0.5">大小姐<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">漣漪鎮<br>／攻擊</td></tr></table></tr><table></div></div></div>
 	</div>
 
 	<script>
@@ -434,18 +459,18 @@ json = [[1009500000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100950
 		update();
 
 		var svg = document.getElementById("grid");
-		if (svgright - svgleft > 1080 || window.innerHeight < svg.getAttribute('height')) {
-			svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
-			svg.setAttribute('width', Math.ceil(svgright - svgleft));
-			svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
+		var svgW = svgright - svgleft;
+		var svgH = svgbottom - svgtop;
+		// svg.setAttribute('width', Math.ceil(svgright - svgleft));
+		// svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		if (document.documentElement.clientWidth / document.documentElement.clientHeight > svgW / svgH) {
+			svg.setAttribute('width', Math.ceil(svgW / svgH * document.documentElement.clientHeight * 0.9));
+			svg.setAttribute('height', Math.ceil(document.documentElement.clientHeight * 0.9));
 		}
-		if (window.innerHeight < svg.getAttribute('height')) {
-			svg.setAttribute('width', Math.ceil(svg.getAttribute('width') / svg.getAttribute('height') * window.innerHeight * 0.9));
-			svg.setAttribute('height', Math.ceil(window.innerHeight * 0.9));
-		}
-		if (window.innerWidth < svg.getAttribute('width')) {
-			svg.setAttribute('height', Math.ceil(svg.getAttribute('height') / svg.getAttribute('width') * window.innerWidth * 0.9));
-			svg.setAttribute('width', Math.ceil(window.innerWidth * 0.9));
+		else {
+			svg.setAttribute('height', Math.ceil(svgH / svgW * document.documentElement.clientWidth * 0.9));
+			svg.setAttribute('width', Math.ceil(document.documentElement.clientWidth * 0.9));
 		}
 
 	</script>

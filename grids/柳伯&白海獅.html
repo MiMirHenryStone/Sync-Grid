@@ -5,9 +5,35 @@
 	<meta charset='utf-8' />
 	<title>拍檔石盤</title>
 	<style>
-		html {
-			-ms-text-size-adjust: 100%;
-			-webkit-text-size-adjust: 100%;
+		div {
+			margin: 1%;
+		}
+
+		.title {
+			font-size: 1.5rem;
+			margin: 0 1rem;
+		}
+
+		.text {
+			font-size: 1rem;
+		}
+
+		svg {
+			font-size: 1rem;
+			margin: 1rem 5%;
+		}
+
+		table {
+			width: 100%;
+			margin: 0.25rem 0;
+		}
+
+		.move td:first-child {
+			width: 20%;
+		}
+
+		.team td {
+			width: 33%;
 		}
 
 		.box {
@@ -35,12 +61,13 @@
 			text-decoration: none;
 			color: #000;
 			display: inline-block;
-			width: 160px;
+			width: 12.5rem;
 			text-align: center;
 		}
 
 		.content {
 			border: 1px solid #888;
+			margin-top: 0;
 		}
 
 		.content1,
@@ -64,26 +91,24 @@
 
 <body>
 	<div align="center">
-		<select style="font-size:16pt;" id="ms" onchange=changeSet()>
+		<select class="title" id="ms" onchange=changeSet()>
 			<option value="0">No.1</option>
 			<option value="1">No.2</option>
 			<option value="2">No.3</option>
 			<option value="3">No.4</option>
 		</select>
-		<button style="font-size:16pt;" onclick=rename()>重命名</button>
-		<button style="font-size:16pt;" onclick=reset()>全部重設</button>
-		<label>　</label>
-		<label style="font-size:16pt;" id="energy">剩餘力量：60</label>
-		<label>　</label>
-		<label style="font-size:16pt;" id="orb">拍檔滴晶：0</label>
+		<input class="title" type="button" onclick=rename() value="重命名">
+		<input class="title" type="button" onclick=reset() value="全部重設">
+		<span class="title" id="energy">剩餘力量：60</span>
+		<span class="title" id="orb">拍檔滴晶：0</span>
 	</div>
-	<div style="font-size:16pt;" id="skill">技能名稱：</div>
-	<div style="font-size:16pt;" id="effect">效果：</div>
-	<svg id="grid" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
-	<div id="sg" style="font-size:16pt; width: 33%; float: right;">石盤技能：<br></div>
-	<div class="box" style="width: 66%;">
+	<div class="text" id="skill" style="margin-bottom: 0;">技能名稱：</div>
+	<div class="text" id="effect" style="margin-top: 0;">效果：</div>
+	<svg id="grid" align="center" width="9" height="16" viewBox="0 0 1080 1920"></svg>
+	<div class="text" id="sg" style="width: 32%; float: right;">石盤技能：<br></div>
+	<div class="text" class="box" style="width: 64%;">
 		<ul class="tab"><li><a href="#content1">小海獅</a></li><li><a href="#content2">白海獅</a></li></ul>
-		<div class="content"><div class="content1" id="content1">————————10032000000————————<br>★3 柳伯♂&小海獅♂<br>體系：特殊攻擊型 | 弱點：電<br>Lv.1：ＨＰ 67 | 攻擊 10 | 防禦 8 | 特攻 10 | 特防 8 | 速度 7<br>Lv.100：ＨＰ 542 | 攻擊 218 | 防禦 64 | 特攻 218 | 特防 126 | 速度 144<br>Lv.110：ＨＰ 574 | 攻擊 232 | 防禦 68 | 特攻 232 | 特防 134 | 速度 152<br>Lv.120：ＨＰ 606 | 攻擊 246 | 防禦 72 | 特攻 246 | 特防 142 | 速度 160<br>Lv.125：ＨＰ 622 | 攻擊 253 | 防禦 74 | 特攻 253 | 特防 146 | 速度 164<br>Lv.130：ＨＰ 638 | 攻擊 260 | 防禦 76 | 特攻 260 | 特防 150 | 速度 168<br>Lv.135：ＨＰ 654 | 攻擊 267 | 防禦 78 | 特攻 267 | 特防 154 | 速度 172<br>拍組招式：拍組冰之光線<br>屬性：冰<br>分類：特殊<br>威力：200<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：冰凍光束 ▭▭<br>屬性：冰<br>分類：特殊<br>威力：46<br>命中：100<br>對象：對手１對拍組<br>有１０％的機率會讓對手陷入冰凍狀態。<br><br>道具招式：要害攻擊 2/2<br>分類：變化<br>對象：自己<br>提高自己的擊中要害率１階段。<br><br>寶可夢招式：冰凍之風 ▭▭▭<br>屬性：冰<br>分類：特殊<br>威力：92<br>命中：95<br>對象：對手全體拍組<br>降低對手的速度１階段。<br><br>訓練家招式：不夠嚴格！ 2/2<br>分類：變化<br>對象：自己<br>提高自己的特攻和特防２階段。<br><br>效果絕佳時威力提升２<br>當招式的效果絕佳時，會提高該招式的威力。<br><br>冰屬性／攻擊<br>城都／攻擊<br>道館館主／攻擊<br>圍巾／攻擊<br>老手／攻擊<br></div><div class="content2" id="content2">————————10032000000————————<br>★3 柳伯♂&白海獅♂<br>體系：特殊攻擊型 | 弱點：電<br>Lv.1：ＨＰ 85 | 攻擊 15 | 防禦 11 | 特攻 15 | 特防 11 | 速度 11<br>Lv.100：ＨＰ 560 | 攻擊 223 | 防禦 67 | 特攻 236 | 特防 134 | 速度 148<br>Lv.110：ＨＰ 592 | 攻擊 237 | 防禦 71 | 特攻 250 | 特防 142 | 速度 156<br>Lv.120：ＨＰ 624 | 攻擊 251 | 防禦 75 | 特攻 264 | 特防 150 | 速度 164<br>Lv.125：ＨＰ 640 | 攻擊 258 | 防禦 77 | 特攻 271 | 特防 154 | 速度 168<br>Lv.130：ＨＰ 656 | 攻擊 265 | 防禦 79 | 特攻 278 | 特防 158 | 速度 172<br>Lv.135：ＨＰ 672 | 攻擊 272 | 防禦 81 | 特攻 285 | 特防 162 | 速度 176<br>拍組招式：領會寒冬嚴酷之極光束<br>屬性：冰<br>分類：特殊<br>威力：250<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：冰凍光束 ▭▭<br>屬性：冰<br>分類：特殊<br>威力：46<br>命中：100<br>對象：對手１對拍組<br>有１０％的機率會讓對手陷入冰凍狀態。<br><br>道具招式：要害攻擊 2/2<br>分類：變化<br>對象：自己<br>提高自己的擊中要害率１階段。<br><br>寶可夢招式：冰凍之風 ▭▭▭<br>屬性：冰<br>分類：特殊<br>威力：92<br>命中：95<br>對象：對手全體拍組<br>降低對手的速度１階段。<br><br>訓練家招式：不夠嚴格！ 2/2<br>分類：變化<br>對象：自己<br>提高自己的特攻和特防２階段。<br><br>效果絕佳時威力提升２<br>當招式的效果絕佳時，會提高該招式的威力。<br><br>冰屬性／攻擊<br>城都／攻擊<br>道館館主／攻擊<br>圍巾／攻擊<br>老手／攻擊<br></div></div></div>
+		<div class="content"><div class="content1" id="content1"><table><tr><th colspan="2">★3 柳伯♂&小海獅♂</th></tr><tr><td style="width:50%%;text-align:center">體系</td><td style="width:50%%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">特殊攻擊型</td><td style="width:50%;text-align:center">電</td></tr><tr><table><tr style="background:#bededd"><td>Lv.</td><td>1</td><td>100</td><td>110</td><td>120</td><td>125</td><td>130</td><td>135</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td><td>67</td><td>542</td><td>574</td><td>606</td><td>622</td><td>638</td><td>654</td></tr><tr style="background:#efeccd"><td>攻擊</td><td>10</td><td>218</td><td>232</td><td>246</td><td>253</td><td>260</td><td>267</td></tr><tr style="background:#f2deb9"><td>防禦</td><td>8</td><td>64</td><td>68</td><td>72</td><td>74</td><td>76</td><td>78</td></tr><tr style="background:#d3f0f4"><td>特攻</td><td>10</td><td>218</td><td>232</td><td>246</td><td>253</td><td>260</td><td>267</td></tr><tr style="background:#bed3f0"><td>特防</td><td>8</td><td>126</td><td>134</td><td>142</td><td>146</td><td>150</td><td>154</td></tr><tr style="background:#dbcde7"><td>速度</td><td>7</td><td>144</td><td>152</td><td>160</td><td>164</td><td>168</td><td>172</td></tr></table></tr><tr><table class="move" style="background-color:#6eb4b980;background-opacity:0.5"><tr><td>拍組招式</td><td>拍組冰之光線</td></tr><tr><td>屬性</td><td>冰</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>200</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></tr><tr><table class="move" style="background-color:#6eb4b980;background-opacity:0.5"><tr><td>寶可夢招式</td><td>冰凍光束 ▭▭</td></tr><tr><td>屬性</td><td>冰</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>46</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>有１０％的機率會讓對手陷入冰凍狀態。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>道具招式</td><td>要害攻擊 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>提高自己的擊中要害率１階段。</td></tr></tr><tr><table class="move" style="background-color:#6eb4b980;background-opacity:0.5"><tr><td>寶可夢招式</td><td>冰凍之風 ▭▭▭</td></tr><tr><td>屬性</td><td>冰</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>92</td></tr><tr><td>命中</td><td>95</td></tr><tr><td>對象</td><td>對手全體拍組</td></tr><tr><td></td><td>降低對手的速度１階段。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>訓練家招式</td><td>不夠嚴格！ 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>提高自己的特攻和特防２階段。</td></tr></tr><tr><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>效果絕佳時威力提升２<br>當招式的效果絕佳時，會提高該招式的威力。</td></tr></table></tr><tr><table class="team"><tr><td style="background-color:#6eb4b980;background-opacity:0.5">冰屬性<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">城都<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">道館館主<br>／攻擊</td></tr><tr><td style="background-color:#6dbfb180;background-opacity:0.5">圍巾<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">老手<br>／攻擊</td></tr></table></tr><table></div><div class="content2" id="content2"><table><tr><th colspan="2">★3 柳伯♂&白海獅♂</th></tr><tr><td style="width:50%%;text-align:center">體系</td><td style="width:50%%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">特殊攻擊型</td><td style="width:50%;text-align:center">電</td></tr><tr><table><tr style="background:#bededd"><td>Lv.</td><td>1</td><td>100</td><td>110</td><td>120</td><td>125</td><td>130</td><td>135</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td><td>85</td><td>560</td><td>592</td><td>624</td><td>640</td><td>656</td><td>672</td></tr><tr style="background:#efeccd"><td>攻擊</td><td>15</td><td>223</td><td>237</td><td>251</td><td>258</td><td>265</td><td>272</td></tr><tr style="background:#f2deb9"><td>防禦</td><td>11</td><td>67</td><td>71</td><td>75</td><td>77</td><td>79</td><td>81</td></tr><tr style="background:#d3f0f4"><td>特攻</td><td>15</td><td>236</td><td>250</td><td>264</td><td>271</td><td>278</td><td>285</td></tr><tr style="background:#bed3f0"><td>特防</td><td>11</td><td>134</td><td>142</td><td>150</td><td>154</td><td>158</td><td>162</td></tr><tr style="background:#dbcde7"><td>速度</td><td>11</td><td>148</td><td>156</td><td>164</td><td>168</td><td>172</td><td>176</td></tr></table></tr><tr><table class="move" style="background-color:#6eb4b980;background-opacity:0.5"><tr><td>拍組招式</td><td>領會寒冬嚴酷之極光束</td></tr><tr><td>屬性</td><td>冰</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>250</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></tr><tr><table class="move" style="background-color:#6eb4b980;background-opacity:0.5"><tr><td>寶可夢招式</td><td>冰凍光束 ▭▭</td></tr><tr><td>屬性</td><td>冰</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>46</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>有１０％的機率會讓對手陷入冰凍狀態。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>道具招式</td><td>要害攻擊 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>提高自己的擊中要害率１階段。</td></tr></tr><tr><table class="move" style="background-color:#6eb4b980;background-opacity:0.5"><tr><td>寶可夢招式</td><td>冰凍之風 ▭▭▭</td></tr><tr><td>屬性</td><td>冰</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>92</td></tr><tr><td>命中</td><td>95</td></tr><tr><td>對象</td><td>對手全體拍組</td></tr><tr><td></td><td>降低對手的速度１階段。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>訓練家招式</td><td>不夠嚴格！ 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>提高自己的特攻和特防２階段。</td></tr></tr><tr><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>效果絕佳時威力提升２<br>當招式的效果絕佳時，會提高該招式的威力。</td></tr></table></tr><tr><table class="team"><tr><td style="background-color:#6eb4b980;background-opacity:0.5">冰屬性<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">城都<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">道館館主<br>／攻擊</td></tr><tr><td style="background-color:#6dbfb180;background-opacity:0.5">圍巾<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">老手<br>／攻擊</td></tr></table></tr><table></div></div></div>
 	</div>
 
 	<script>
@@ -434,18 +459,18 @@ json = [[1003200000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100320
 		update();
 
 		var svg = document.getElementById("grid");
-		if (svgright - svgleft > 1080 || window.innerHeight < svg.getAttribute('height')) {
-			svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
-			svg.setAttribute('width', Math.ceil(svgright - svgleft));
-			svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
+		var svgW = svgright - svgleft;
+		var svgH = svgbottom - svgtop;
+		// svg.setAttribute('width', Math.ceil(svgright - svgleft));
+		// svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		if (document.documentElement.clientWidth / document.documentElement.clientHeight > svgW / svgH) {
+			svg.setAttribute('width', Math.ceil(svgW / svgH * document.documentElement.clientHeight * 0.9));
+			svg.setAttribute('height', Math.ceil(document.documentElement.clientHeight * 0.9));
 		}
-		if (window.innerHeight < svg.getAttribute('height')) {
-			svg.setAttribute('width', Math.ceil(svg.getAttribute('width') / svg.getAttribute('height') * window.innerHeight * 0.9));
-			svg.setAttribute('height', Math.ceil(window.innerHeight * 0.9));
-		}
-		if (window.innerWidth < svg.getAttribute('width')) {
-			svg.setAttribute('height', Math.ceil(svg.getAttribute('height') / svg.getAttribute('width') * window.innerWidth * 0.9));
-			svg.setAttribute('width', Math.ceil(window.innerWidth * 0.9));
+		else {
+			svg.setAttribute('height', Math.ceil(svgH / svgW * document.documentElement.clientWidth * 0.9));
+			svg.setAttribute('width', Math.ceil(document.documentElement.clientWidth * 0.9));
 		}
 
 	</script>

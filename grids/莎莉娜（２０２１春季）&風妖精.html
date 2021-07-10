@@ -5,9 +5,35 @@
 	<meta charset='utf-8' />
 	<title>拍檔石盤</title>
 	<style>
-		html {
-			-ms-text-size-adjust: 100%;
-			-webkit-text-size-adjust: 100%;
+		div {
+			margin: 1%;
+		}
+
+		.title {
+			font-size: 1.5rem;
+			margin: 0 1rem;
+		}
+
+		.text {
+			font-size: 1rem;
+		}
+
+		svg {
+			font-size: 1rem;
+			margin: 1rem 5%;
+		}
+
+		table {
+			width: 100%;
+			margin: 0.25rem 0;
+		}
+
+		.move td:first-child {
+			width: 20%;
+		}
+
+		.team td {
+			width: 33%;
 		}
 
 		.box {
@@ -35,12 +61,13 @@
 			text-decoration: none;
 			color: #000;
 			display: inline-block;
-			width: 160px;
+			width: 12.5rem;
 			text-align: center;
 		}
 
 		.content {
 			border: 1px solid #888;
+			margin-top: 0;
 		}
 
 		.content1,
@@ -64,26 +91,24 @@
 
 <body>
 	<div align="center">
-		<select style="font-size:16pt;" id="ms" onchange=changeSet()>
+		<select class="title" id="ms" onchange=changeSet()>
 			<option value="0">No.1</option>
 			<option value="1">No.2</option>
 			<option value="2">No.3</option>
 			<option value="3">No.4</option>
 		</select>
-		<button style="font-size:16pt;" onclick=rename()>重命名</button>
-		<button style="font-size:16pt;" onclick=reset()>全部重設</button>
-		<label>　</label>
-		<label style="font-size:16pt;" id="energy">剩餘力量：60</label>
-		<label>　</label>
-		<label style="font-size:16pt;" id="orb">拍檔滴晶：0</label>
+		<input class="title" type="button" onclick=rename() value="重命名">
+		<input class="title" type="button" onclick=reset() value="全部重設">
+		<span class="title" id="energy">剩餘力量：60</span>
+		<span class="title" id="orb">拍檔滴晶：0</span>
 	</div>
-	<div style="font-size:16pt;" id="skill">技能名稱：</div>
-	<div style="font-size:16pt;" id="effect">效果：</div>
-	<svg id="grid" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
-	<div id="sg" style="font-size:16pt; width: 33%; float: right;">石盤技能：<br></div>
-	<div class="box" style="width: 66%;">
+	<div class="text" id="skill" style="margin-bottom: 0;">技能名稱：</div>
+	<div class="text" id="effect" style="margin-top: 0;">效果：</div>
+	<svg id="grid" align="center" width="9" height="16" viewBox="0 0 1080 1920"></svg>
+	<div class="text" id="sg" style="width: 32%; float: right;">石盤技能：<br></div>
+	<div class="text" class="box" style="width: 64%;">
 		<ul class="tab"><li><a href="#content1">風妖精</a></li></ul>
-		<div class="content"><div class="content1" id="content1">————————10130400000————————<br>拍组搜寻★5 莎莉娜（２０２１春季）♀&風妖精♀<br>體系：技術型 | 弱點：毒<br>Lv.1：ＨＰ 104 | 攻擊 12 | 防禦 11 | 特攻 19 | 特防 11 | 速度 22<br>Lv.100：ＨＰ 503 | 攻擊 245 | 防禦 160 | 特攻 300 | 特防 143 | 速度 303<br>Lv.110：ＨＰ 531 | 攻擊 261 | 防禦 170 | 特攻 320 | 特防 151 | 速度 323<br>Lv.120：ＨＰ 559 | 攻擊 277 | 防禦 180 | 特攻 340 | 特防 159 | 速度 343<br>Lv.125：ＨＰ 573 | 攻擊 285 | 防禦 185 | 特攻 350 | 特防 163 | 速度 353<br>Lv.130：ＨＰ 587 | 攻擊 293 | 防禦 190 | 特攻 360 | 特防 167 | 速度 363<br>Lv.135：ＨＰ 601 | 攻擊 301 | 防禦 195 | 特攻 370 | 特防 171 | 速度 373<br>拍組招式：微苦香甜之妖精光線<br>屬性：妖精<br>分類：特殊<br>威力：200<br>對象：對手１對拍組<br>當對手陷入麻痺狀態時，威力會提高。<br><br>寶可夢招式：月亮之力 ▭▭▭<br>屬性：妖精<br>分類：特殊<br>威力：98<br>命中：100<br>對象：對手１對拍組<br>有３０％的機率會降低對手的特攻１階段。<br><br>寶可夢招式：麻痺粉 ▭▭<br>屬性：草<br>分類：變化<br>命中：90<br>對象：對手１對拍組<br>讓對手陷入麻痺狀態。<br><br>寶可夢招式：棉孢子 ▭▭<br>屬性：草<br>分類：變化<br>命中：100<br>對象：對手全體拍組<br>降低對手的速度２階段。<br><br>訓練家招式：敬請享用！ 2/2<br>分類：變化<br>對象：我方全體拍組<br>提高自己的特攻１階段。<br>提高我方全體拍組的速度２階段。<br>讓自己變成下次計量槽消耗０狀態。<br><br>依對手速度降幅威力提升<br>對手的速度降低得越多，自己的招式的威力就提高得越多。<br><br>依速度升幅威力提升<br>自己的速度提高得越多，招式的威力就提高得越多。<br><br>變化招式賦予異常狀態Ｇ９<br>使出變化招式讓對手陷入異常狀態時，<br>會讓對手全體拍組陷入相同的異常狀態。<br><br>妖精屬性／技術<br>卡洛斯／技術<br>季節服裝／技術<br>甜點愛好者／技術<br>烹飪／技術<br></div></div></div>
+		<div class="content"><div class="content1" id="content1"><table><tr><th colspan="2">拍組搜尋★5 莎莉娜（２０２１春季）♀&風妖精♀</th></tr><tr><td style="width:50%%;text-align:center">體系</td><td style="width:50%%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">技術型</td><td style="width:50%;text-align:center">毒</td></tr><tr><table><tr style="background:#bededd"><td>Lv.</td><td>1</td><td>100</td><td>110</td><td>120</td><td>125</td><td>130</td><td>135</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td><td>104</td><td>503</td><td>531</td><td>559</td><td>573</td><td>587</td><td>601</td></tr><tr style="background:#efeccd"><td>攻擊</td><td>12</td><td>245</td><td>261</td><td>277</td><td>285</td><td>293</td><td>301</td></tr><tr style="background:#f2deb9"><td>防禦</td><td>11</td><td>160</td><td>170</td><td>180</td><td>185</td><td>190</td><td>195</td></tr><tr style="background:#d3f0f4"><td>特攻</td><td>19</td><td>300</td><td>320</td><td>340</td><td>350</td><td>360</td><td>370</td></tr><tr style="background:#bed3f0"><td>特防</td><td>11</td><td>143</td><td>151</td><td>159</td><td>163</td><td>167</td><td>171</td></tr><tr style="background:#dbcde7"><td>速度</td><td>22</td><td>303</td><td>323</td><td>343</td><td>353</td><td>363</td><td>373</td></tr></table></tr><tr><table class="move" style="background-color:#ed9bb880;background-opacity:0.5"><tr><td>拍組招式</td><td>微苦香甜之妖精光線</td></tr><tr><td>屬性</td><td>妖精</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>200</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>當對手陷入麻痺狀態時，威力會提高。</td></tr></tr><tr><table class="move" style="background-color:#ed9bb880;background-opacity:0.5"><tr><td>寶可夢招式</td><td>月亮之力 ▭▭▭</td></tr><tr><td>屬性</td><td>妖精</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>98</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>有３０％的機率會降低對手的特攻１階段。</td></tr></tr><tr><table class="move" style="background-color:#459e4e80;background-opacity:0.5"><tr><td>寶可夢招式</td><td>麻痺粉 ▭▭</td></tr><tr><td>屬性</td><td>草</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>命中</td><td>90</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>讓對手陷入麻痺狀態。</td></tr></tr><tr><table class="move" style="background-color:#459e4e80;background-opacity:0.5"><tr><td>寶可夢招式</td><td>棉孢子 ▭▭</td></tr><tr><td>屬性</td><td>草</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手全體拍組</td></tr><tr><td></td><td>降低對手的速度２階段。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>訓練家招式</td><td>敬請享用！ 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>我方全體拍組</td></tr><tr><td></td><td>提高自己的特攻１階段。<br>提高我方全體拍組的速度２階段。<br>讓自己變成下次計量槽消耗０狀態。</td></tr></tr><tr><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>依對手速度降幅威力提升<br>對手的速度降低得越多，自己的招式的威力就提高得越多。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>依速度升幅威力提升<br>自己的速度提高得越多，招式的威力就提高得越多。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>變化招式賦予異常狀態Ｇ９<br>使出變化招式讓對手陷入異常狀態時，<br>會讓對手全體拍組陷入相同的異常狀態。</td></tr></table></tr><tr><table class="team"><tr><td style="background-color:#ed9bb880;background-opacity:0.5">妖精屬性<br>／技術</td><td style="background-color:#6dbfb180;background-opacity:0.5">卡洛斯<br>／技術</td><td style="background-color:#6dbfb180;background-opacity:0.5">季節服裝<br>／技術</td></tr><tr><td style="background-color:#6dbfb180;background-opacity:0.5">甜點愛好者<br>／技術</td><td style="background-color:#6dbfb180;background-opacity:0.5">烹飪<br>／技術</td></tr></table></tr><table></div></div></div>
 	</div>
 
 	<script>
@@ -434,18 +459,18 @@ json = [[1013040000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101304
 		update();
 
 		var svg = document.getElementById("grid");
-		if (svgright - svgleft > 1080 || window.innerHeight < svg.getAttribute('height')) {
-			svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
-			svg.setAttribute('width', Math.ceil(svgright - svgleft));
-			svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
+		var svgW = svgright - svgleft;
+		var svgH = svgbottom - svgtop;
+		// svg.setAttribute('width', Math.ceil(svgright - svgleft));
+		// svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		if (document.documentElement.clientWidth / document.documentElement.clientHeight > svgW / svgH) {
+			svg.setAttribute('width', Math.ceil(svgW / svgH * document.documentElement.clientHeight * 0.9));
+			svg.setAttribute('height', Math.ceil(document.documentElement.clientHeight * 0.9));
 		}
-		if (window.innerHeight < svg.getAttribute('height')) {
-			svg.setAttribute('width', Math.ceil(svg.getAttribute('width') / svg.getAttribute('height') * window.innerHeight * 0.9));
-			svg.setAttribute('height', Math.ceil(window.innerHeight * 0.9));
-		}
-		if (window.innerWidth < svg.getAttribute('width')) {
-			svg.setAttribute('height', Math.ceil(svg.getAttribute('height') / svg.getAttribute('width') * window.innerWidth * 0.9));
-			svg.setAttribute('width', Math.ceil(window.innerWidth * 0.9));
+		else {
+			svg.setAttribute('height', Math.ceil(svgH / svgW * document.documentElement.clientWidth * 0.9));
+			svg.setAttribute('width', Math.ceil(document.documentElement.clientWidth * 0.9));
 		}
 
 	</script>

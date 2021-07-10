@@ -5,9 +5,35 @@
 	<meta charset='utf-8' />
 	<title>拍檔石盤</title>
 	<style>
-		html {
-			-ms-text-size-adjust: 100%;
-			-webkit-text-size-adjust: 100%;
+		div {
+			margin: 1%;
+		}
+
+		.title {
+			font-size: 1.5rem;
+			margin: 0 1rem;
+		}
+
+		.text {
+			font-size: 1rem;
+		}
+
+		svg {
+			font-size: 1rem;
+			margin: 1rem 5%;
+		}
+
+		table {
+			width: 100%;
+			margin: 0.25rem 0;
+		}
+
+		.move td:first-child {
+			width: 20%;
+		}
+
+		.team td {
+			width: 33%;
 		}
 
 		.box {
@@ -35,12 +61,13 @@
 			text-decoration: none;
 			color: #000;
 			display: inline-block;
-			width: 160px;
+			width: 12.5rem;
 			text-align: center;
 		}
 
 		.content {
 			border: 1px solid #888;
+			margin-top: 0;
 		}
 
 		.content1,
@@ -64,26 +91,24 @@
 
 <body>
 	<div align="center">
-		<select style="font-size:16pt;" id="ms" onchange=changeSet()>
+		<select class="title" id="ms" onchange=changeSet()>
 			<option value="0">No.1</option>
 			<option value="1">No.2</option>
 			<option value="2">No.3</option>
 			<option value="3">No.4</option>
 		</select>
-		<button style="font-size:16pt;" onclick=rename()>重命名</button>
-		<button style="font-size:16pt;" onclick=reset()>全部重設</button>
-		<label>　</label>
-		<label style="font-size:16pt;" id="energy">剩餘力量：60</label>
-		<label>　</label>
-		<label style="font-size:16pt;" id="orb">拍檔滴晶：0</label>
+		<input class="title" type="button" onclick=rename() value="重命名">
+		<input class="title" type="button" onclick=reset() value="全部重設">
+		<span class="title" id="energy">剩餘力量：60</span>
+		<span class="title" id="orb">拍檔滴晶：0</span>
 	</div>
-	<div style="font-size:16pt;" id="skill">技能名稱：</div>
-	<div style="font-size:16pt;" id="effect">效果：</div>
-	<svg id="grid" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
-	<div id="sg" style="font-size:16pt; width: 33%; float: right;">石盤技能：<br></div>
-	<div class="box" style="width: 66%;">
+	<div class="text" id="skill" style="margin-bottom: 0;">技能名稱：</div>
+	<div class="text" id="effect" style="margin-top: 0;">效果：</div>
+	<svg id="grid" align="center" width="9" height="16" viewBox="0 0 1080 1920"></svg>
+	<div class="text" id="sg" style="width: 32%; float: right;">石盤技能：<br></div>
+	<div class="text" class="box" style="width: 64%;">
 		<ul class="tab"><li><a href="#content1">嘎啦嘎啦<br>（阿羅拉的樣子）</a></li></ul>
-		<div class="content"><div class="content1" id="content1">————————10149000000————————<br>拍组搜寻★5 卡奇♂&嘎啦嘎啦（阿羅拉的樣子）♂<br>體系：輔助型 | 弱點：水<br>Lv.1：ＨＰ 92 | 攻擊 16 | 防禦 16 | 特攻 12 | 特防 15 | 速度 13<br>Lv.100：ＨＰ 491 | 攻擊 217 | 防禦 217 | 特攻 145 | 特防 181 | 速度 179<br>Lv.110：ＨＰ 519 | 攻擊 231 | 防禦 231 | 特攻 155 | 特防 193 | 速度 191<br>Lv.120：ＨＰ 547 | 攻擊 245 | 防禦 245 | 特攻 165 | 特防 205 | 速度 203<br>Lv.125：ＨＰ 561 | 攻擊 252 | 防禦 252 | 特攻 170 | 特防 211 | 速度 209<br>Lv.130：ＨＰ 575 | 攻擊 259 | 防禦 259 | 特攻 175 | 特防 217 | 速度 215<br>Lv.135：ＨＰ 589 | 攻擊 266 | 防禦 266 | 特攻 180 | 特防 223 | 速度 221<br>拍組招式：寡言舞者之超強極限爆焰彈<br>屬性：火<br>分類：物理<br>威力：250<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：蓄能焰襲 ▭▭<br>屬性：火<br>分類：物理<br>威力：30<br>命中：100<br>對象：對手１對拍組<br>提高自己的速度１階段。<br><br>道具招式：傷藥 2/2<br>分類：變化<br>對象：我方１對拍組<br>回復我方的ＨＰ，約為最大ＨＰ的４０％。<br><br>寶可夢招式：暗影之骨 ▭▭<br>屬性：幽靈<br>分類：物理<br>威力：49<br>命中：100<br>對象：對手１對拍組<br>有２０％的機率會降低對手的防禦１階段。<br><br>訓練家招式：一直跳舞吧！ 2/2<br>分類：變化<br>對象：我方全體拍組<br>提高我方全體拍組的攻擊、特攻和擊中要害率１階段。<br><br>攻擊時速度提升Ｇ５<br>使出招式攻擊成功時，有６０％的機率<br>會提高我方全體拍組的速度１階段。<br><br>下降機率提升４<br>當招式的追加效果可降低對手能力值時，會提高該追加效果的成功率。<br><br>首次上場時場地招式計量槽加速<br>首次上場時，<br>會讓我方場地變成招式計量槽加速狀態。<br><br>火屬性／輔助<br>阿羅拉／輔助<br>給予考驗之人／輔助<br>鍛鍊精壯的身體／輔助<br>表演家／輔助<br></div></div></div>
+		<div class="content"><div class="content1" id="content1"><table><tr><th colspan="2">拍組搜尋★5 卡奇♂&嘎啦嘎啦（阿羅拉的樣子）♂</th></tr><tr><td style="width:50%%;text-align:center">體系</td><td style="width:50%%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">輔助型</td><td style="width:50%;text-align:center">水</td></tr><tr><table><tr style="background:#bededd"><td>Lv.</td><td>1</td><td>100</td><td>110</td><td>120</td><td>125</td><td>130</td><td>135</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td><td>92</td><td>491</td><td>519</td><td>547</td><td>561</td><td>575</td><td>589</td></tr><tr style="background:#efeccd"><td>攻擊</td><td>16</td><td>217</td><td>231</td><td>245</td><td>252</td><td>259</td><td>266</td></tr><tr style="background:#f2deb9"><td>防禦</td><td>16</td><td>217</td><td>231</td><td>245</td><td>252</td><td>259</td><td>266</td></tr><tr style="background:#d3f0f4"><td>特攻</td><td>12</td><td>145</td><td>155</td><td>165</td><td>170</td><td>175</td><td>180</td></tr><tr style="background:#bed3f0"><td>特防</td><td>15</td><td>181</td><td>193</td><td>205</td><td>211</td><td>217</td><td>223</td></tr><tr style="background:#dbcde7"><td>速度</td><td>13</td><td>179</td><td>191</td><td>203</td><td>209</td><td>215</td><td>221</td></tr></table></tr><tr><table class="move" style="background-color:#db434780;background-opacity:0.5"><tr><td>拍組招式</td><td>寡言舞者之超強極限爆焰彈</td></tr><tr><td>屬性</td><td>火</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>250</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></tr><tr><table class="move" style="background-color:#db434780;background-opacity:0.5"><tr><td>寶可夢招式</td><td>蓄能焰襲 ▭▭</td></tr><tr><td>屬性</td><td>火</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>30</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>提高自己的速度１階段。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>道具招式</td><td>傷藥 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>我方１對拍組</td></tr><tr><td></td><td>回復我方的ＨＰ，約為最大ＨＰ的４０％。</td></tr></tr><tr><table class="move" style="background-color:#a0739b80;background-opacity:0.5"><tr><td>寶可夢招式</td><td>暗影之骨 ▭▭</td></tr><tr><td>屬性</td><td>幽靈</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>49</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>有２０％的機率會降低對手的防禦１階段。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>訓練家招式</td><td>一直跳舞吧！ 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>我方全體拍組</td></tr><tr><td></td><td>提高我方全體拍組的攻擊、特攻和擊中要害率１階段。</td></tr></tr><tr><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>攻擊時速度提升Ｇ５<br>使出招式攻擊成功時，有６０％的機率<br>會提高我方全體拍組的速度１階段。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>下降機率提升４<br>當招式的追加效果可降低對手能力值時，會提高該追加效果的成功率。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>首次上場時場地招式計量槽加速<br>首次上場時，<br>會讓我方場地變成招式計量槽加速狀態。</td></tr></table></tr><tr><table class="team"><tr><td style="background-color:#db434780;background-opacity:0.5">火屬性<br>／輔助</td><td style="background-color:#6dbfb180;background-opacity:0.5">阿羅拉<br>／輔助</td><td style="background-color:#6dbfb180;background-opacity:0.5">給予考驗之人<br>／輔助</td></tr><tr><td style="background-color:#6dbfb180;background-opacity:0.5">鍛鍊精壯的身體<br>／輔助</td><td style="background-color:#6dbfb180;background-opacity:0.5">表演家<br>／輔助</td></tr></table></tr><table></div></div></div>
 	</div>
 
 	<script>
@@ -434,18 +459,18 @@ json = [[1014900000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101490
 		update();
 
 		var svg = document.getElementById("grid");
-		if (svgright - svgleft > 1080 || window.innerHeight < svg.getAttribute('height')) {
-			svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
-			svg.setAttribute('width', Math.ceil(svgright - svgleft));
-			svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
+		var svgW = svgright - svgleft;
+		var svgH = svgbottom - svgtop;
+		// svg.setAttribute('width', Math.ceil(svgright - svgleft));
+		// svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		if (document.documentElement.clientWidth / document.documentElement.clientHeight > svgW / svgH) {
+			svg.setAttribute('width', Math.ceil(svgW / svgH * document.documentElement.clientHeight * 0.9));
+			svg.setAttribute('height', Math.ceil(document.documentElement.clientHeight * 0.9));
 		}
-		if (window.innerHeight < svg.getAttribute('height')) {
-			svg.setAttribute('width', Math.ceil(svg.getAttribute('width') / svg.getAttribute('height') * window.innerHeight * 0.9));
-			svg.setAttribute('height', Math.ceil(window.innerHeight * 0.9));
-		}
-		if (window.innerWidth < svg.getAttribute('width')) {
-			svg.setAttribute('height', Math.ceil(svg.getAttribute('height') / svg.getAttribute('width') * window.innerWidth * 0.9));
-			svg.setAttribute('width', Math.ceil(window.innerWidth * 0.9));
+		else {
+			svg.setAttribute('height', Math.ceil(svgH / svgW * document.documentElement.clientWidth * 0.9));
+			svg.setAttribute('width', Math.ceil(document.documentElement.clientWidth * 0.9));
 		}
 
 	</script>

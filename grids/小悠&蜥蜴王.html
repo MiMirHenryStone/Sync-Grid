@@ -5,9 +5,35 @@
 	<meta charset='utf-8' />
 	<title>拍檔石盤</title>
 	<style>
-		html {
-			-ms-text-size-adjust: 100%;
-			-webkit-text-size-adjust: 100%;
+		div {
+			margin: 1%;
+		}
+
+		.title {
+			font-size: 1.5rem;
+			margin: 0 1rem;
+		}
+
+		.text {
+			font-size: 1rem;
+		}
+
+		svg {
+			font-size: 1rem;
+			margin: 1rem 5%;
+		}
+
+		table {
+			width: 100%;
+			margin: 0.25rem 0;
+		}
+
+		.move td:first-child {
+			width: 20%;
+		}
+
+		.team td {
+			width: 33%;
 		}
 
 		.box {
@@ -35,12 +61,13 @@
 			text-decoration: none;
 			color: #000;
 			display: inline-block;
-			width: 160px;
+			width: 12.5rem;
 			text-align: center;
 		}
 
 		.content {
 			border: 1px solid #888;
+			margin-top: 0;
 		}
 
 		.content1,
@@ -64,26 +91,24 @@
 
 <body>
 	<div align="center">
-		<select style="font-size:16pt;" id="ms" onchange=changeSet()>
+		<select class="title" id="ms" onchange=changeSet()>
 			<option value="0">No.1</option>
 			<option value="1">No.2</option>
 			<option value="2">No.3</option>
 			<option value="3">No.4</option>
 		</select>
-		<button style="font-size:16pt;" onclick=rename()>重命名</button>
-		<button style="font-size:16pt;" onclick=reset()>全部重設</button>
-		<label>　</label>
-		<label style="font-size:16pt;" id="energy">剩餘力量：60</label>
-		<label>　</label>
-		<label style="font-size:16pt;" id="orb">拍檔滴晶：0</label>
+		<input class="title" type="button" onclick=rename() value="重命名">
+		<input class="title" type="button" onclick=reset() value="全部重設">
+		<span class="title" id="energy">剩餘力量：60</span>
+		<span class="title" id="orb">拍檔滴晶：0</span>
 	</div>
-	<div style="font-size:16pt;" id="skill">技能名稱：</div>
-	<div style="font-size:16pt;" id="effect">效果：</div>
-	<svg id="grid" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
-	<div id="sg" style="font-size:16pt; width: 33%; float: right;">石盤技能：<br></div>
-	<div class="box" style="width: 66%;">
+	<div class="text" id="skill" style="margin-bottom: 0;">技能名稱：</div>
+	<div class="text" id="effect" style="margin-top: 0;">效果：</div>
+	<svg id="grid" align="center" width="9" height="16" viewBox="0 0 1080 1920"></svg>
+	<div class="text" id="sg" style="width: 32%; float: right;">石盤技能：<br></div>
+	<div class="text" class="box" style="width: 64%;">
 		<ul class="tab"><li><a href="#content1">木守宮</a></li><li><a href="#content2">森林蜥蜴</a></li><li><a href="#content3">蜥蜴王</a></li></ul>
-		<div class="content"><div class="content1" id="content1">————————10019000000————————<br>拍组搜寻★5 小悠♂&木守宮♂<br>體系：物理攻擊型 | 弱點：毒<br>Lv.1：ＨＰ 90 | 攻擊 20 | 防禦 8 | 特攻 20 | 特防 8 | 速度 20<br>Lv.100：ＨＰ 430 | 攻擊 306 | 防禦 123 | 特攻 306 | 特防 123 | 速度 340<br>Lv.110：ＨＰ 454 | 攻擊 324 | 防禦 131 | 特攻 324 | 特防 131 | 速度 362<br>Lv.120：ＨＰ 478 | 攻擊 342 | 防禦 139 | 特攻 342 | 特防 139 | 速度 384<br>Lv.125：ＨＰ 490 | 攻擊 351 | 防禦 143 | 特攻 351 | 特防 143 | 速度 395<br>Lv.130：ＨＰ 502 | 攻擊 360 | 防禦 147 | 特攻 360 | 特防 147 | 速度 406<br>Lv.135：ＨＰ 514 | 攻擊 369 | 防禦 151 | 特攻 369 | 特防 151 | 速度 417<br>拍組招式：拍組草之衝擊<br>屬性：草<br>分類：物理<br>威力：200<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：種子機關槍 ▭▭<br>屬性：草<br>分類：物理<br>威力：15<br>命中：100<br>對象：對手１對拍組<br>連續攻擊對手２～５次。<br><br>道具招式：要害攻擊＋ 2/2<br>分類：變化<br>對象：自己<br>提高自己的擊中要害率２階段。<br><br>寶可夢招式：飛葉風暴 ▭▭▭<br>屬性：草<br>分類：特殊<br>威力：136<br>命中：90<br>對象：對手１對拍組<br>降低自己的特攻２階段。<br><br>訓練家招式：開拓勝利之路！ 2/2<br>分類：變化<br>對象：自己<br>使用最多３條自己的招式計量槽。<br>使用的量越多，自己的攻擊和特攻就提高得越多。最多可提高６階段。<br><br>速度下降無效<br>速度不會降低。<br><br>麻痺無效<br>不會陷入麻痺狀態。<br><br>草屬性／攻擊<br>豐緣／攻擊<br>主角／攻擊<br>豐緣的最強父子／攻擊<br>宇宙中心／攻擊<br></div><div class="content2" id="content2">————————10019000000————————<br>拍组搜寻★5 小悠♂&森林蜥蜴♂<br>體系：物理攻擊型 | 弱點：毒<br>Lv.1：ＨＰ 105 | 攻擊 27 | 防禦 10 | 特攻 27 | 特防 10 | 速度 27<br>Lv.100：ＨＰ 445 | 攻擊 313 | 防禦 125 | 特攻 325 | 特防 125 | 速度 359<br>Lv.110：ＨＰ 469 | 攻擊 331 | 防禦 133 | 特攻 343 | 特防 133 | 速度 383<br>Lv.120：ＨＰ 493 | 攻擊 349 | 防禦 141 | 特攻 361 | 特防 141 | 速度 407<br>Lv.125：ＨＰ 505 | 攻擊 358 | 防禦 145 | 特攻 370 | 特防 145 | 速度 419<br>Lv.130：ＨＰ 517 | 攻擊 367 | 防禦 149 | 特攻 379 | 特防 149 | 速度 431<br>Lv.135：ＨＰ 529 | 攻擊 376 | 防禦 153 | 特攻 388 | 特防 153 | 速度 443<br>拍組招式：拍組草之衝擊<br>屬性：草<br>分類：物理<br>威力：200<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：種子機關槍 ▭▭<br>屬性：草<br>分類：物理<br>威力：15<br>命中：100<br>對象：對手１對拍組<br>連續攻擊對手２～５次。<br><br>道具招式：要害攻擊＋ 2/2<br>分類：變化<br>對象：自己<br>提高自己的擊中要害率２階段。<br><br>寶可夢招式：飛葉風暴 ▭▭▭<br>屬性：草<br>分類：特殊<br>威力：136<br>命中：90<br>對象：對手１對拍組<br>降低自己的特攻２階段。<br><br>訓練家招式：開拓勝利之路！ 2/2<br>分類：變化<br>對象：自己<br>使用最多３條自己的招式計量槽。<br>使用的量越多，自己的攻擊和特攻就提高得越多。最多可提高６階段。<br><br>速度下降無效<br>速度不會降低。<br><br>麻痺無效<br>不會陷入麻痺狀態。<br><br>草屬性／攻擊<br>豐緣／攻擊<br>主角／攻擊<br>豐緣的最強父子／攻擊<br>宇宙中心／攻擊<br></div><div class="content3" id="content3">————————10019000000————————<br>拍组搜寻★5 小悠♂&蜥蜴王♂<br>體系：物理攻擊型 | 弱點：毒<br>Lv.1：ＨＰ 125 | 攻擊 36 | 防禦 14 | 特攻 36 | 特防 14 | 速度 36<br>Lv.100：ＨＰ 465 | 攻擊 322 | 防禦 129 | 特攻 339 | 特防 129 | 速度 373<br>Lv.110：ＨＰ 489 | 攻擊 340 | 防禦 137 | 特攻 359 | 特防 137 | 速度 397<br>Lv.120：ＨＰ 513 | 攻擊 358 | 防禦 145 | 特攻 379 | 特防 145 | 速度 421<br>Lv.125：ＨＰ 525 | 攻擊 367 | 防禦 149 | 特攻 389 | 特防 149 | 速度 433<br>Lv.130：ＨＰ 537 | 攻擊 376 | 防禦 153 | 特攻 399 | 特防 153 | 速度 445<br>Lv.135：ＨＰ 549 | 攻擊 385 | 防禦 157 | 特攻 409 | 特防 157 | 速度 457<br>拍組招式：一網打盡之葉刃<br>屬性：草<br>分類：物理<br>威力：250<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：種子機關槍 ▭▭<br>屬性：草<br>分類：物理<br>威力：15<br>命中：100<br>對象：對手１對拍組<br>連續攻擊對手２～５次。<br><br>道具招式：要害攻擊＋ 2/2<br>分類：變化<br>對象：自己<br>提高自己的擊中要害率２階段。<br><br>寶可夢招式：飛葉風暴 ▭▭▭<br>屬性：草<br>分類：特殊<br>威力：136<br>命中：90<br>對象：對手１對拍組<br>降低自己的特攻２階段。<br><br>訓練家招式：開拓勝利之路！ 2/2<br>分類：變化<br>對象：自己<br>使用最多３條自己的招式計量槽。<br>使用的量越多，自己的攻擊和特攻就提高得越多。最多可提高６階段。<br><br>速度下降無效<br>速度不會降低。<br><br>麻痺無效<br>不會陷入麻痺狀態。<br><br>草屬性／攻擊<br>豐緣／攻擊<br>主角／攻擊<br>豐緣的最強父子／攻擊<br>宇宙中心／攻擊<br></div></div></div>
+		<div class="content"><div class="content1" id="content1"><table><tr><th colspan="2">拍組搜尋★5 小悠♂&木守宮♂</th></tr><tr><td style="width:50%%;text-align:center">體系</td><td style="width:50%%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">物理攻擊型</td><td style="width:50%;text-align:center">毒</td></tr><tr><table><tr style="background:#bededd"><td>Lv.</td><td>1</td><td>100</td><td>110</td><td>120</td><td>125</td><td>130</td><td>135</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td><td>90</td><td>430</td><td>454</td><td>478</td><td>490</td><td>502</td><td>514</td></tr><tr style="background:#efeccd"><td>攻擊</td><td>20</td><td>306</td><td>324</td><td>342</td><td>351</td><td>360</td><td>369</td></tr><tr style="background:#f2deb9"><td>防禦</td><td>8</td><td>123</td><td>131</td><td>139</td><td>143</td><td>147</td><td>151</td></tr><tr style="background:#d3f0f4"><td>特攻</td><td>20</td><td>306</td><td>324</td><td>342</td><td>351</td><td>360</td><td>369</td></tr><tr style="background:#bed3f0"><td>特防</td><td>8</td><td>123</td><td>131</td><td>139</td><td>143</td><td>147</td><td>151</td></tr><tr style="background:#dbcde7"><td>速度</td><td>20</td><td>340</td><td>362</td><td>384</td><td>395</td><td>406</td><td>417</td></tr></table></tr><tr><table class="move" style="background-color:#459e4e80;background-opacity:0.5"><tr><td>拍組招式</td><td>拍組草之衝擊</td></tr><tr><td>屬性</td><td>草</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>200</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></tr><tr><table class="move" style="background-color:#459e4e80;background-opacity:0.5"><tr><td>寶可夢招式</td><td>種子機關槍 ▭▭</td></tr><tr><td>屬性</td><td>草</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>15</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>連續攻擊對手２～５次。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>道具招式</td><td>要害攻擊＋ 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>提高自己的擊中要害率２階段。</td></tr></tr><tr><table class="move" style="background-color:#459e4e80;background-opacity:0.5"><tr><td>寶可夢招式</td><td>飛葉風暴 ▭▭▭</td></tr><tr><td>屬性</td><td>草</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>136</td></tr><tr><td>命中</td><td>90</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>降低自己的特攻２階段。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>訓練家招式</td><td>開拓勝利之路！ 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>使用最多３條自己的招式計量槽。<br>使用的量越多，自己的攻擊和特攻就提高得越多。最多可提高６階段。</td></tr></tr><tr><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>速度下降無效<br>速度不會降低。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>麻痺無效<br>不會陷入麻痺狀態。</td></tr></table></tr><tr><table class="team"><tr><td style="background-color:#459e4e80;background-opacity:0.5">草屬性<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">豐緣<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">主角<br>／攻擊</td></tr><tr><td style="background-color:#6dbfb180;background-opacity:0.5">豐緣的最強父子<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">宇宙中心<br>／攻擊</td></tr></table></tr><table></div><div class="content2" id="content2"><table><tr><th colspan="2">拍組搜尋★5 小悠♂&森林蜥蜴♂</th></tr><tr><td style="width:50%%;text-align:center">體系</td><td style="width:50%%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">物理攻擊型</td><td style="width:50%;text-align:center">毒</td></tr><tr><table><tr style="background:#bededd"><td>Lv.</td><td>1</td><td>100</td><td>110</td><td>120</td><td>125</td><td>130</td><td>135</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td><td>105</td><td>445</td><td>469</td><td>493</td><td>505</td><td>517</td><td>529</td></tr><tr style="background:#efeccd"><td>攻擊</td><td>27</td><td>313</td><td>331</td><td>349</td><td>358</td><td>367</td><td>376</td></tr><tr style="background:#f2deb9"><td>防禦</td><td>10</td><td>125</td><td>133</td><td>141</td><td>145</td><td>149</td><td>153</td></tr><tr style="background:#d3f0f4"><td>特攻</td><td>27</td><td>325</td><td>343</td><td>361</td><td>370</td><td>379</td><td>388</td></tr><tr style="background:#bed3f0"><td>特防</td><td>10</td><td>125</td><td>133</td><td>141</td><td>145</td><td>149</td><td>153</td></tr><tr style="background:#dbcde7"><td>速度</td><td>27</td><td>359</td><td>383</td><td>407</td><td>419</td><td>431</td><td>443</td></tr></table></tr><tr><table class="move" style="background-color:#459e4e80;background-opacity:0.5"><tr><td>拍組招式</td><td>拍組草之衝擊</td></tr><tr><td>屬性</td><td>草</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>200</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></tr><tr><table class="move" style="background-color:#459e4e80;background-opacity:0.5"><tr><td>寶可夢招式</td><td>種子機關槍 ▭▭</td></tr><tr><td>屬性</td><td>草</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>15</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>連續攻擊對手２～５次。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>道具招式</td><td>要害攻擊＋ 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>提高自己的擊中要害率２階段。</td></tr></tr><tr><table class="move" style="background-color:#459e4e80;background-opacity:0.5"><tr><td>寶可夢招式</td><td>飛葉風暴 ▭▭▭</td></tr><tr><td>屬性</td><td>草</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>136</td></tr><tr><td>命中</td><td>90</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>降低自己的特攻２階段。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>訓練家招式</td><td>開拓勝利之路！ 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>使用最多３條自己的招式計量槽。<br>使用的量越多，自己的攻擊和特攻就提高得越多。最多可提高６階段。</td></tr></tr><tr><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>速度下降無效<br>速度不會降低。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>麻痺無效<br>不會陷入麻痺狀態。</td></tr></table></tr><tr><table class="team"><tr><td style="background-color:#459e4e80;background-opacity:0.5">草屬性<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">豐緣<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">主角<br>／攻擊</td></tr><tr><td style="background-color:#6dbfb180;background-opacity:0.5">豐緣的最強父子<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">宇宙中心<br>／攻擊</td></tr></table></tr><table></div><div class="content3" id="content3"><table><tr><th colspan="2">拍組搜尋★5 小悠♂&蜥蜴王♂</th></tr><tr><td style="width:50%%;text-align:center">體系</td><td style="width:50%%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">物理攻擊型</td><td style="width:50%;text-align:center">毒</td></tr><tr><table><tr style="background:#bededd"><td>Lv.</td><td>1</td><td>100</td><td>110</td><td>120</td><td>125</td><td>130</td><td>135</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td><td>125</td><td>465</td><td>489</td><td>513</td><td>525</td><td>537</td><td>549</td></tr><tr style="background:#efeccd"><td>攻擊</td><td>36</td><td>322</td><td>340</td><td>358</td><td>367</td><td>376</td><td>385</td></tr><tr style="background:#f2deb9"><td>防禦</td><td>14</td><td>129</td><td>137</td><td>145</td><td>149</td><td>153</td><td>157</td></tr><tr style="background:#d3f0f4"><td>特攻</td><td>36</td><td>339</td><td>359</td><td>379</td><td>389</td><td>399</td><td>409</td></tr><tr style="background:#bed3f0"><td>特防</td><td>14</td><td>129</td><td>137</td><td>145</td><td>149</td><td>153</td><td>157</td></tr><tr style="background:#dbcde7"><td>速度</td><td>36</td><td>373</td><td>397</td><td>421</td><td>433</td><td>445</td><td>457</td></tr></table></tr><tr><table class="move" style="background-color:#459e4e80;background-opacity:0.5"><tr><td>拍組招式</td><td>一網打盡之葉刃</td></tr><tr><td>屬性</td><td>草</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>250</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></tr><tr><table class="move" style="background-color:#459e4e80;background-opacity:0.5"><tr><td>寶可夢招式</td><td>種子機關槍 ▭▭</td></tr><tr><td>屬性</td><td>草</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>15</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>連續攻擊對手２～５次。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>道具招式</td><td>要害攻擊＋ 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>提高自己的擊中要害率２階段。</td></tr></tr><tr><table class="move" style="background-color:#459e4e80;background-opacity:0.5"><tr><td>寶可夢招式</td><td>飛葉風暴 ▭▭▭</td></tr><tr><td>屬性</td><td>草</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>136</td></tr><tr><td>命中</td><td>90</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>降低自己的特攻２階段。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>訓練家招式</td><td>開拓勝利之路！ 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>使用最多３條自己的招式計量槽。<br>使用的量越多，自己的攻擊和特攻就提高得越多。最多可提高６階段。</td></tr></tr><tr><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>速度下降無效<br>速度不會降低。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>麻痺無效<br>不會陷入麻痺狀態。</td></tr></table></tr><tr><table class="team"><tr><td style="background-color:#459e4e80;background-opacity:0.5">草屬性<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">豐緣<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">主角<br>／攻擊</td></tr><tr><td style="background-color:#6dbfb180;background-opacity:0.5">豐緣的最強父子<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">宇宙中心<br>／攻擊</td></tr></table></tr><table></div></div></div>
 	</div>
 
 	<script>
@@ -434,18 +459,18 @@ json = [[1001900000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100190
 		update();
 
 		var svg = document.getElementById("grid");
-		if (svgright - svgleft > 1080 || window.innerHeight < svg.getAttribute('height')) {
-			svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
-			svg.setAttribute('width', Math.ceil(svgright - svgleft));
-			svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
+		var svgW = svgright - svgleft;
+		var svgH = svgbottom - svgtop;
+		// svg.setAttribute('width', Math.ceil(svgright - svgleft));
+		// svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		if (document.documentElement.clientWidth / document.documentElement.clientHeight > svgW / svgH) {
+			svg.setAttribute('width', Math.ceil(svgW / svgH * document.documentElement.clientHeight * 0.9));
+			svg.setAttribute('height', Math.ceil(document.documentElement.clientHeight * 0.9));
 		}
-		if (window.innerHeight < svg.getAttribute('height')) {
-			svg.setAttribute('width', Math.ceil(svg.getAttribute('width') / svg.getAttribute('height') * window.innerHeight * 0.9));
-			svg.setAttribute('height', Math.ceil(window.innerHeight * 0.9));
-		}
-		if (window.innerWidth < svg.getAttribute('width')) {
-			svg.setAttribute('height', Math.ceil(svg.getAttribute('height') / svg.getAttribute('width') * window.innerWidth * 0.9));
-			svg.setAttribute('width', Math.ceil(window.innerWidth * 0.9));
+		else {
+			svg.setAttribute('height', Math.ceil(svgH / svgW * document.documentElement.clientWidth * 0.9));
+			svg.setAttribute('width', Math.ceil(document.documentElement.clientWidth * 0.9));
 		}
 
 	</script>

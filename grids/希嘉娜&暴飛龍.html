@@ -5,9 +5,35 @@
 	<meta charset='utf-8' />
 	<title>拍檔石盤</title>
 	<style>
-		html {
-			-ms-text-size-adjust: 100%;
-			-webkit-text-size-adjust: 100%;
+		div {
+			margin: 1%;
+		}
+
+		.title {
+			font-size: 1.5rem;
+			margin: 0 1rem;
+		}
+
+		.text {
+			font-size: 1rem;
+		}
+
+		svg {
+			font-size: 1rem;
+			margin: 1rem 5%;
+		}
+
+		table {
+			width: 100%;
+			margin: 0.25rem 0;
+		}
+
+		.move td:first-child {
+			width: 20%;
+		}
+
+		.team td {
+			width: 33%;
 		}
 
 		.box {
@@ -35,12 +61,13 @@
 			text-decoration: none;
 			color: #000;
 			display: inline-block;
-			width: 160px;
+			width: 12.5rem;
 			text-align: center;
 		}
 
 		.content {
 			border: 1px solid #888;
+			margin-top: 0;
 		}
 
 		.content1,
@@ -64,26 +91,24 @@
 
 <body>
 	<div align="center">
-		<select style="font-size:16pt;" id="ms" onchange=changeSet()>
+		<select class="title" id="ms" onchange=changeSet()>
 			<option value="0">No.1</option>
 			<option value="1">No.2</option>
 			<option value="2">No.3</option>
 			<option value="3">No.4</option>
 		</select>
-		<button style="font-size:16pt;" onclick=rename()>重命名</button>
-		<button style="font-size:16pt;" onclick=reset()>全部重設</button>
-		<label>　</label>
-		<label style="font-size:16pt;" id="energy">剩餘力量：60</label>
-		<label>　</label>
-		<label style="font-size:16pt;" id="orb">拍檔滴晶：0</label>
+		<input class="title" type="button" onclick=rename() value="重命名">
+		<input class="title" type="button" onclick=reset() value="全部重設">
+		<span class="title" id="energy">剩餘力量：60</span>
+		<span class="title" id="orb">拍檔滴晶：0</span>
 	</div>
-	<div style="font-size:16pt;" id="skill">技能名稱：</div>
-	<div style="font-size:16pt;" id="effect">效果：</div>
-	<svg id="grid" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
-	<div id="sg" style="font-size:16pt; width: 33%; float: right;">石盤技能：<br></div>
-	<div class="box" style="width: 66%;">
+	<div class="text" id="skill" style="margin-bottom: 0;">技能名稱：</div>
+	<div class="text" id="effect" style="margin-top: 0;">效果：</div>
+	<svg id="grid" align="center" width="9" height="16" viewBox="0 0 1080 1920"></svg>
+	<div class="text" id="sg" style="width: 32%; float: right;">石盤技能：<br></div>
+	<div class="text" class="box" style="width: 64%;">
 		<ul class="tab"><li><a href="#content1">暴飛龍</a></li></ul>
-		<div class="content"><div class="content1" id="content1">————————10129000001————————<br>★4 希嘉娜♀&暴飛龍♂<br>體系：技術型 | 弱點：岩石<br>Lv.1：ＨＰ 95 | 攻擊 19 | 防禦 13 | 特攻 9 | 特防 13 | 速度 12<br>Lv.100：ＨＰ 479 | 攻擊 287 | 防禦 128 | 特攻 125 | 特防 128 | 速度 228<br>Lv.110：ＨＰ 507 | 攻擊 305 | 防禦 136 | 特攻 133 | 特防 136 | 速度 242<br>Lv.120：ＨＰ 535 | 攻擊 323 | 防禦 144 | 特攻 141 | 特防 144 | 速度 256<br>Lv.125：ＨＰ 549 | 攻擊 332 | 防禦 148 | 特攻 145 | 特防 148 | 速度 263<br>Lv.130：ＨＰ 563 | 攻擊 341 | 防禦 152 | 特攻 149 | 特防 152 | 速度 270<br>Lv.135：ＨＰ 577 | 攻擊 350 | 防禦 156 | 特攻 153 | 特防 156 | 速度 277<br>拍組招式：開始下一個故事之龍之衝擊<br>屬性：龍<br>分類：物理<br>威力：200<br>對象：對手１對拍組<br>當對手陷入畏縮狀態時，威力會提高。<br><br>寶可夢招式：龍爪 ▭▭<br>屬性：龍<br>分類：物理<br>威力：50<br>命中：100<br>對象：對手１對拍組<br>沒有追加效果。<br><br>道具招式：變化防守 1/1<br>分類：變化<br>對象：我方場地<br>讓我方場地變成變化招式防禦狀態。<br><br>寶可夢招式：龍之俯衝 ▭▭▭<br>屬性：龍<br>分類：物理<br>威力：130<br>命中：75<br>對象：對手１對拍組<br>有２０％的機率會讓對手陷入畏縮狀態。<br><br>訓練家招式：那我們上吧！ 2/2<br>分類：變化<br>對象：自己<br>提高自己的防禦、特防和速度１階段。<br>提高自己的命中率２階段。<br><br>上場時攻擊下降Ｇ１<br>上場時，<br>會降低對手全體拍組的攻擊１階段。<br><br>攻擊時攻擊提升９<br>使出招式攻擊成功時，<br>會提高自己的攻擊１階段。<br><br>妨害機率提升１<br>當招式的追加效果可使對手陷入畏縮、混亂或束縛狀態時，會提高該追加效果的成功率。<br><br>龍屬性／技術<br>豐緣／技術<br>披風／技術<br>宇宙中心／技術<br></div></div></div>
+		<div class="content"><div class="content1" id="content1"><table><tr><th colspan="2">★4 希嘉娜♀&暴飛龍♂</th></tr><tr><td style="width:50%%;text-align:center">體系</td><td style="width:50%%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">技術型</td><td style="width:50%;text-align:center">岩石</td></tr><tr><table><tr style="background:#bededd"><td>Lv.</td><td>1</td><td>100</td><td>110</td><td>120</td><td>125</td><td>130</td><td>135</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td><td>95</td><td>479</td><td>507</td><td>535</td><td>549</td><td>563</td><td>577</td></tr><tr style="background:#efeccd"><td>攻擊</td><td>19</td><td>287</td><td>305</td><td>323</td><td>332</td><td>341</td><td>350</td></tr><tr style="background:#f2deb9"><td>防禦</td><td>13</td><td>128</td><td>136</td><td>144</td><td>148</td><td>152</td><td>156</td></tr><tr style="background:#d3f0f4"><td>特攻</td><td>9</td><td>125</td><td>133</td><td>141</td><td>145</td><td>149</td><td>153</td></tr><tr style="background:#bed3f0"><td>特防</td><td>13</td><td>128</td><td>136</td><td>144</td><td>148</td><td>152</td><td>156</td></tr><tr style="background:#dbcde7"><td>速度</td><td>12</td><td>228</td><td>242</td><td>256</td><td>263</td><td>270</td><td>277</td></tr></table></tr><tr><table class="move" style="background-color:#1284a180;background-opacity:0.5"><tr><td>拍組招式</td><td>開始下一個故事之龍之衝擊</td></tr><tr><td>屬性</td><td>龍</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>200</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>當對手陷入畏縮狀態時，威力會提高。</td></tr></tr><tr><table class="move" style="background-color:#1284a180;background-opacity:0.5"><tr><td>寶可夢招式</td><td>龍爪 ▭▭</td></tr><tr><td>屬性</td><td>龍</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>50</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>道具招式</td><td>變化防守 1/1</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>我方場地</td></tr><tr><td></td><td>讓我方場地變成變化招式防禦狀態。</td></tr></tr><tr><table class="move" style="background-color:#1284a180;background-opacity:0.5"><tr><td>寶可夢招式</td><td>龍之俯衝 ▭▭▭</td></tr><tr><td>屬性</td><td>龍</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>130</td></tr><tr><td>命中</td><td>75</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>有２０％的機率會讓對手陷入畏縮狀態。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>訓練家招式</td><td>那我們上吧！ 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>提高自己的防禦、特防和速度１階段。<br>提高自己的命中率２階段。</td></tr></tr><tr><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>上場時攻擊下降Ｇ１<br>上場時，<br>會降低對手全體拍組的攻擊１階段。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>攻擊時攻擊提升９<br>使出招式攻擊成功時，<br>會提高自己的攻擊１階段。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>妨害機率提升１<br>當招式的追加效果可使對手陷入畏縮、混亂或束縛狀態時，會提高該追加效果的成功率。</td></tr></table></tr><tr><table class="team"><tr><td style="background-color:#1284a180;background-opacity:0.5">龍屬性<br>／技術</td><td style="background-color:#6dbfb180;background-opacity:0.5">豐緣<br>／技術</td><td style="background-color:#6dbfb180;background-opacity:0.5">披風<br>／技術</td></tr><tr><td style="background-color:#6dbfb180;background-opacity:0.5">宇宙中心<br>／技術</td></tr></table></tr><table></div></div></div>
 	</div>
 
 	<script>
@@ -434,18 +459,18 @@ json = [[1012990000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101299
 		update();
 
 		var svg = document.getElementById("grid");
-		if (svgright - svgleft > 1080 || window.innerHeight < svg.getAttribute('height')) {
-			svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
-			svg.setAttribute('width', Math.ceil(svgright - svgleft));
-			svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
+		var svgW = svgright - svgleft;
+		var svgH = svgbottom - svgtop;
+		// svg.setAttribute('width', Math.ceil(svgright - svgleft));
+		// svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		if (document.documentElement.clientWidth / document.documentElement.clientHeight > svgW / svgH) {
+			svg.setAttribute('width', Math.ceil(svgW / svgH * document.documentElement.clientHeight * 0.9));
+			svg.setAttribute('height', Math.ceil(document.documentElement.clientHeight * 0.9));
 		}
-		if (window.innerHeight < svg.getAttribute('height')) {
-			svg.setAttribute('width', Math.ceil(svg.getAttribute('width') / svg.getAttribute('height') * window.innerHeight * 0.9));
-			svg.setAttribute('height', Math.ceil(window.innerHeight * 0.9));
-		}
-		if (window.innerWidth < svg.getAttribute('width')) {
-			svg.setAttribute('height', Math.ceil(svg.getAttribute('height') / svg.getAttribute('width') * window.innerWidth * 0.9));
-			svg.setAttribute('width', Math.ceil(window.innerWidth * 0.9));
+		else {
+			svg.setAttribute('height', Math.ceil(svgH / svgW * document.documentElement.clientWidth * 0.9));
+			svg.setAttribute('width', Math.ceil(document.documentElement.clientWidth * 0.9));
 		}
 
 	</script>

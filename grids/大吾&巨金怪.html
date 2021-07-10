@@ -5,9 +5,35 @@
 	<meta charset='utf-8' />
 	<title>拍檔石盤</title>
 	<style>
-		html {
-			-ms-text-size-adjust: 100%;
-			-webkit-text-size-adjust: 100%;
+		div {
+			margin: 1%;
+		}
+
+		.title {
+			font-size: 1.5rem;
+			margin: 0 1rem;
+		}
+
+		.text {
+			font-size: 1rem;
+		}
+
+		svg {
+			font-size: 1rem;
+			margin: 1rem 5%;
+		}
+
+		table {
+			width: 100%;
+			margin: 0.25rem 0;
+		}
+
+		.move td:first-child {
+			width: 20%;
+		}
+
+		.team td {
+			width: 33%;
 		}
 
 		.box {
@@ -35,12 +61,13 @@
 			text-decoration: none;
 			color: #000;
 			display: inline-block;
-			width: 160px;
+			width: 12.5rem;
 			text-align: center;
 		}
 
 		.content {
 			border: 1px solid #888;
+			margin-top: 0;
 		}
 
 		.content1,
@@ -64,26 +91,24 @@
 
 <body>
 	<div align="center">
-		<select style="font-size:16pt;" id="ms" onchange=changeSet()>
+		<select class="title" id="ms" onchange=changeSet()>
 			<option value="0">No.1</option>
 			<option value="1">No.2</option>
 			<option value="2">No.3</option>
 			<option value="3">No.4</option>
 		</select>
-		<button style="font-size:16pt;" onclick=rename()>重命名</button>
-		<button style="font-size:16pt;" onclick=reset()>全部重設</button>
-		<label>　</label>
-		<label style="font-size:16pt;" id="energy">剩餘力量：60</label>
-		<label>　</label>
-		<label style="font-size:16pt;" id="orb">拍檔滴晶：0</label>
+		<input class="title" type="button" onclick=rename() value="重命名">
+		<input class="title" type="button" onclick=reset() value="全部重設">
+		<span class="title" id="energy">剩餘力量：60</span>
+		<span class="title" id="orb">拍檔滴晶：0</span>
 	</div>
-	<div style="font-size:16pt;" id="skill">技能名稱：</div>
-	<div style="font-size:16pt;" id="effect">效果：</div>
-	<svg id="grid" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
-	<div id="sg" style="font-size:16pt; width: 33%; float: right;">石盤技能：<br></div>
-	<div class="box" style="width: 66%;">
+	<div class="text" id="skill" style="margin-bottom: 0;">技能名稱：</div>
+	<div class="text" id="effect" style="margin-top: 0;">效果：</div>
+	<svg id="grid" align="center" width="9" height="16" viewBox="0 0 1080 1920"></svg>
+	<div class="text" id="sg" style="width: 32%; float: right;">石盤技能：<br></div>
+	<div class="text" class="box" style="width: 64%;">
 		<ul class="tab"><li><a href="#content1">巨金怪</a></li><li><a href="#content2">超級巨金怪</a></li></ul>
-		<div class="content"><div class="content1" id="content1">————————10090000000————————<br>拍组搜寻★5 大吾♂&巨金怪<br>體系：物理攻擊型 | 弱點：幽靈<br>Lv.1：ＨＰ 80 | 攻擊 25 | 防禦 17 | 特攻 10 | 特防 13 | 速度 14<br>Lv.100：ＨＰ 399 | 攻擊 340 | 防禦 150 | 特攻 113 | 特防 146 | 速度 198<br>Lv.110：ＨＰ 421 | 攻擊 362 | 防禦 160 | 特攻 119 | 特防 156 | 速度 210<br>Lv.120：ＨＰ 443 | 攻擊 384 | 防禦 170 | 特攻 125 | 特防 166 | 速度 222<br>Lv.125：ＨＰ 454 | 攻擊 395 | 防禦 175 | 特攻 128 | 特防 171 | 速度 228<br>Lv.130：ＨＰ 465 | 攻擊 406 | 防禦 180 | 特攻 131 | 特防 176 | 速度 234<br>Lv.135：ＨＰ 476 | 攻擊 417 | 防禦 185 | 特攻 134 | 特防 181 | 速度 240<br>拍組招式：漂泊藏石家之彗星拳<br>屬性：鋼<br>分類：物理<br>威力：160<br>對象：對手１對拍組<br>變成超級巨金怪直到對戰結束。<br><br>寶可夢招式：彗星拳 ▭▭<br>屬性：鋼<br>分類：物理<br>威力：55<br>命中：90<br>對象：對手１對拍組<br>有２０％的機率會提高自己的攻擊１階段。<br><br>道具招式：力量強化 2/2<br>分類：變化<br>對象：自己<br>提高自己的攻擊２階段。<br><br>寶可夢招式：鐵頭 ▭▭▭<br>屬性：鋼<br>分類：物理<br>威力：92<br>命中：100<br>對象：對手１對拍組<br>有３０％的機率會讓對手陷入畏縮狀態。<br><br>訓練家招式：誰叫我是第一呢 2/2<br>分類：變化<br>對象：自己<br>提高自己的防禦１階段。<br>讓自己變成下次必中要害狀態。<br>當巨金怪已經變成超級巨金怪時，還會讓自己變成挺住狀態。<br><br>一齊機會時威力提升３<br>一齊機會時，會提高招式的威力。<br><br>全種類下降無效<br>所有的能力都不會降低。<br><br>鋼屬性／攻擊<br>豐緣／攻擊<br>冠軍／攻擊<br>石頭愛好者／攻擊<br>宇宙中心／攻擊<br></div><div class="content2" id="content2">————————10090000000————————<br>拍组搜寻★5 大吾♂&超級巨金怪<br>體系：物理攻擊型 | 弱點：幽靈<br>攻擊 120% | 防禦 110% | 特防 110%<br>拍組招式：漂泊藏石家之彗星拳<br>屬性：鋼<br>分類：物理<br>威力：160<br>對象：對手１對拍組<br>變成超級巨金怪直到對戰結束。<br><br>寶可夢招式：鐵頭 ▭▭▭<br>屬性：鋼<br>分類：物理<br>威力：92<br>命中：100<br>對象：對手１對拍組<br>有３０％的機率會讓對手陷入畏縮狀態。<br><br>道具招式：力量強化 2/2<br>分類：變化<br>對象：自己<br>提高自己的攻擊２階段。<br><br>寶可夢招式：子彈拳 3/3<br>屬性：鋼<br>分類：物理<br>威力：75<br>命中：100<br>對象：對手１對拍組<br>沒有追加效果。<br><br>訓練家招式：誰叫我是第一呢 2/2<br>分類：變化<br>對象：自己<br>提高自己的防禦１階段。<br>讓自己變成下次必中要害狀態。<br>當巨金怪已經變成超級巨金怪時，還會讓自己變成挺住狀態。<br><br>一齊機會時威力提升３<br>一齊機會時，會提高招式的威力。<br><br>全種類下降無效<br>所有的能力都不會降低。<br><br>鋼屬性／攻擊<br>豐緣／攻擊<br>冠軍／攻擊<br>石頭愛好者／攻擊<br>宇宙中心／攻擊<br></div></div></div>
+		<div class="content"><div class="content1" id="content1"><table><tr><th colspan="2">拍組搜尋★5 大吾♂&巨金怪</th></tr><tr><td style="width:50%%;text-align:center">體系</td><td style="width:50%%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">物理攻擊型</td><td style="width:50%;text-align:center">幽靈</td></tr><tr><table><tr style="background:#bededd"><td>Lv.</td><td>1</td><td>100</td><td>110</td><td>120</td><td>125</td><td>130</td><td>135</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td><td>80</td><td>399</td><td>421</td><td>443</td><td>454</td><td>465</td><td>476</td></tr><tr style="background:#efeccd"><td>攻擊</td><td>25</td><td>340</td><td>362</td><td>384</td><td>395</td><td>406</td><td>417</td></tr><tr style="background:#f2deb9"><td>防禦</td><td>17</td><td>150</td><td>160</td><td>170</td><td>175</td><td>180</td><td>185</td></tr><tr style="background:#d3f0f4"><td>特攻</td><td>10</td><td>113</td><td>119</td><td>125</td><td>128</td><td>131</td><td>134</td></tr><tr style="background:#bed3f0"><td>特防</td><td>13</td><td>146</td><td>156</td><td>166</td><td>171</td><td>176</td><td>181</td></tr><tr style="background:#dbcde7"><td>速度</td><td>14</td><td>198</td><td>210</td><td>222</td><td>228</td><td>234</td><td>240</td></tr></table></tr><tr><table class="move" style="background-color:#7d879b80;background-opacity:0.5"><tr><td>拍組招式</td><td>漂泊藏石家之彗星拳</td></tr><tr><td>屬性</td><td>鋼</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>160</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>變成超級巨金怪直到對戰結束。</td></tr></tr><tr><table class="move" style="background-color:#7d879b80;background-opacity:0.5"><tr><td>寶可夢招式</td><td>彗星拳 ▭▭</td></tr><tr><td>屬性</td><td>鋼</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>55</td></tr><tr><td>命中</td><td>90</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>有２０％的機率會提高自己的攻擊１階段。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>道具招式</td><td>力量強化 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>提高自己的攻擊２階段。</td></tr></tr><tr><table class="move" style="background-color:#7d879b80;background-opacity:0.5"><tr><td>寶可夢招式</td><td>鐵頭 ▭▭▭</td></tr><tr><td>屬性</td><td>鋼</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>92</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>有３０％的機率會讓對手陷入畏縮狀態。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>訓練家招式</td><td>誰叫我是第一呢 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>提高自己的防禦１階段。<br>讓自己變成下次必中要害狀態。<br>當巨金怪已經變成超級巨金怪時，還會讓自己變成挺住狀態。</td></tr></tr><tr><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>一齊機會時威力提升３<br>一齊機會時，會提高招式的威力。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>全種類下降無效<br>所有的能力都不會降低。</td></tr></table></tr><tr><table class="team"><tr><td style="background-color:#7d879b80;background-opacity:0.5">鋼屬性<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">豐緣<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">冠軍<br>／攻擊</td></tr><tr><td style="background-color:#6dbfb180;background-opacity:0.5">石頭愛好者<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">宇宙中心<br>／攻擊</td></tr></table></tr><table></div><div class="content2" id="content2"><table><tr><th colspan="2">拍組搜尋★5 大吾♂&超級巨金怪</th></tr><tr><td style="width:50%%;text-align:center">體系</td><td style="width:50%%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">物理攻擊型</td><td style="width:50%;text-align:center">幽靈</td></tr><tr><table><tr style="background:#bededd"><td>Lv.</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td></tr><tr style="background:#efeccd"><td>攻擊</td></tr><tr style="background:#f2deb9"><td>防禦</td></tr><tr style="background:#d3f0f4"><td>特攻</td></tr><tr style="background:#bed3f0"><td>特防</td></tr><tr style="background:#dbcde7"><td>速度</td></tr></table></tr><tr><table class="move" style="background-color:#7d879b80;background-opacity:0.5"><tr><td>拍組招式</td><td>漂泊藏石家之彗星拳</td></tr><tr><td>屬性</td><td>鋼</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>160</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>變成超級巨金怪直到對戰結束。</td></tr></tr><tr><table class="move" style="background-color:#7d879b80;background-opacity:0.5"><tr><td>寶可夢招式</td><td>鐵頭 ▭▭▭</td></tr><tr><td>屬性</td><td>鋼</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>92</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>有３０％的機率會讓對手陷入畏縮狀態。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>道具招式</td><td>力量強化 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>提高自己的攻擊２階段。</td></tr></tr><tr><table class="move" style="background-color:#7d879b80;background-opacity:0.5"><tr><td>寶可夢招式</td><td>子彈拳 3/3</td></tr><tr><td>屬性</td><td>鋼</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>75</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>訓練家招式</td><td>誰叫我是第一呢 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>提高自己的防禦１階段。<br>讓自己變成下次必中要害狀態。<br>當巨金怪已經變成超級巨金怪時，還會讓自己變成挺住狀態。</td></tr></tr><tr><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>一齊機會時威力提升３<br>一齊機會時，會提高招式的威力。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>全種類下降無效<br>所有的能力都不會降低。</td></tr></table></tr><tr><table class="team"><tr><td style="background-color:#7d879b80;background-opacity:0.5">鋼屬性<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">豐緣<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">冠軍<br>／攻擊</td></tr><tr><td style="background-color:#6dbfb180;background-opacity:0.5">石頭愛好者<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">宇宙中心<br>／攻擊</td></tr></table></tr><table></div></div></div>
 	</div>
 
 	<script>
@@ -434,18 +459,18 @@ json = [[1009000000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100900
 		update();
 
 		var svg = document.getElementById("grid");
-		if (svgright - svgleft > 1080 || window.innerHeight < svg.getAttribute('height')) {
-			svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
-			svg.setAttribute('width', Math.ceil(svgright - svgleft));
-			svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
+		var svgW = svgright - svgleft;
+		var svgH = svgbottom - svgtop;
+		// svg.setAttribute('width', Math.ceil(svgright - svgleft));
+		// svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		if (document.documentElement.clientWidth / document.documentElement.clientHeight > svgW / svgH) {
+			svg.setAttribute('width', Math.ceil(svgW / svgH * document.documentElement.clientHeight * 0.9));
+			svg.setAttribute('height', Math.ceil(document.documentElement.clientHeight * 0.9));
 		}
-		if (window.innerHeight < svg.getAttribute('height')) {
-			svg.setAttribute('width', Math.ceil(svg.getAttribute('width') / svg.getAttribute('height') * window.innerHeight * 0.9));
-			svg.setAttribute('height', Math.ceil(window.innerHeight * 0.9));
-		}
-		if (window.innerWidth < svg.getAttribute('width')) {
-			svg.setAttribute('height', Math.ceil(svg.getAttribute('height') / svg.getAttribute('width') * window.innerWidth * 0.9));
-			svg.setAttribute('width', Math.ceil(window.innerWidth * 0.9));
+		else {
+			svg.setAttribute('height', Math.ceil(svgH / svgW * document.documentElement.clientWidth * 0.9));
+			svg.setAttribute('width', Math.ceil(document.documentElement.clientWidth * 0.9));
 		}
 
 	</script>

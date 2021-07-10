@@ -5,9 +5,35 @@
 	<meta charset='utf-8' />
 	<title>拍檔石盤</title>
 	<style>
-		html {
-			-ms-text-size-adjust: 100%;
-			-webkit-text-size-adjust: 100%;
+		div {
+			margin: 1%;
+		}
+
+		.title {
+			font-size: 1.5rem;
+			margin: 0 1rem;
+		}
+
+		.text {
+			font-size: 1rem;
+		}
+
+		svg {
+			font-size: 1rem;
+			margin: 1rem 5%;
+		}
+
+		table {
+			width: 100%;
+			margin: 0.25rem 0;
+		}
+
+		.move td:first-child {
+			width: 20%;
+		}
+
+		.team td {
+			width: 33%;
 		}
 
 		.box {
@@ -35,12 +61,13 @@
 			text-decoration: none;
 			color: #000;
 			display: inline-block;
-			width: 160px;
+			width: 12.5rem;
 			text-align: center;
 		}
 
 		.content {
 			border: 1px solid #888;
+			margin-top: 0;
 		}
 
 		.content1,
@@ -64,26 +91,24 @@
 
 <body>
 	<div align="center">
-		<select style="font-size:16pt;" id="ms" onchange=changeSet()>
+		<select class="title" id="ms" onchange=changeSet()>
 			<option value="0">No.1</option>
 			<option value="1">No.2</option>
 			<option value="2">No.3</option>
 			<option value="3">No.4</option>
 		</select>
-		<button style="font-size:16pt;" onclick=rename()>重命名</button>
-		<button style="font-size:16pt;" onclick=reset()>全部重設</button>
-		<label>　</label>
-		<label style="font-size:16pt;" id="energy">剩餘力量：60</label>
-		<label>　</label>
-		<label style="font-size:16pt;" id="orb">拍檔滴晶：0</label>
+		<input class="title" type="button" onclick=rename() value="重命名">
+		<input class="title" type="button" onclick=reset() value="全部重設">
+		<span class="title" id="energy">剩餘力量：60</span>
+		<span class="title" id="orb">拍檔滴晶：0</span>
 	</div>
-	<div style="font-size:16pt;" id="skill">技能名稱：</div>
-	<div style="font-size:16pt;" id="effect">效果：</div>
-	<svg id="grid" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
-	<div id="sg" style="font-size:16pt; width: 33%; float: right;">石盤技能：<br></div>
-	<div class="box" style="width: 66%;">
+	<div class="text" id="skill" style="margin-bottom: 0;">技能名稱：</div>
+	<div class="text" id="effect" style="margin-top: 0;">效果：</div>
+	<svg id="grid" align="center" width="9" height="16" viewBox="0 0 1080 1920"></svg>
+	<div class="text" id="sg" style="width: 32%; float: right;">石盤技能：<br></div>
+	<div class="text" class="box" style="width: 64%;">
 		<ul class="tab"><li><a href="#content1">焰后蜥</a></li></ul>
-		<div class="content"><div class="content1" id="content1">————————10121000000————————<br>拍组搜寻★5 布爾美麗♀&焰后蜥♀<br>體系：特殊攻擊型 | 弱點：水<br>Lv.1：ＨＰ 80 | 攻擊 7 | 防禦 9 | 特攻 22 | 特防 9 | 速度 20<br>Lv.100：ＨＰ 428 | 攻擊 88 | 防禦 125 | 特攻 240 | 特防 125 | 速度 356<br>Lv.110：ＨＰ 452 | 攻擊 94 | 防禦 133 | 特攻 256 | 特防 133 | 速度 380<br>Lv.120：ＨＰ 476 | 攻擊 100 | 防禦 141 | 特攻 272 | 特防 141 | 速度 404<br>Lv.125：ＨＰ 488 | 攻擊 103 | 防禦 145 | 特攻 280 | 特防 145 | 速度 416<br>Lv.130：ＨＰ 500 | 攻擊 106 | 防禦 149 | 特攻 288 | 特防 149 | 速度 428<br>Lv.135：ＨＰ 512 | 攻擊 109 | 防禦 153 | 特攻 296 | 特防 153 | 速度 440<br>拍組招式：可靠的大姐大之強酸劇毒滅絕雨<br>屬性：毒<br>分類：特殊<br>威力：250<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：濁霧 ▭<br>屬性：毒<br>分類：特殊<br>威力：21<br>命中：70<br>對象：對手１對拍組<br>有４０％的機率會讓對手陷入中毒狀態。<br><br>道具招式：招式計量槽填充 2/2<br>分類：變化<br>對象：自己<br>幫自己增加３條招式計量槽。<br><br>寶可夢招式：污泥波 ▭▭▭<br>屬性：毒<br>分類：特殊<br>威力：97<br>命中：100<br>對象：對手全體拍組<br>有１０％的機率會讓對手陷入中毒狀態。<br><br>訓練家招式：皮給我繃緊一點！ 2/2<br>分類：變化<br>對象：自己<br>選擇此招式時，自己的招式計量槽的剩餘量越多，自己的特攻和速度就提高得越多。最多可提高３階段。<br><br>效果絕佳時威力提升２<br>當招式的效果絕佳時，會提高該招式的威力。<br><br>中毒無效<br>不會陷入中毒狀態和劇毒狀態。<br><br>灼傷無效<br>不會陷入灼傷狀態。<br><br>毒屬性／攻擊<br>阿羅拉／攻擊<br>反派組織／攻擊<br>大姐姐／攻擊<br></div></div></div>
+		<div class="content"><div class="content1" id="content1"><table><tr><th colspan="2">拍組搜尋★5 布爾美麗♀&焰后蜥♀</th></tr><tr><td style="width:50%%;text-align:center">體系</td><td style="width:50%%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">特殊攻擊型</td><td style="width:50%;text-align:center">水</td></tr><tr><table><tr style="background:#bededd"><td>Lv.</td><td>1</td><td>100</td><td>110</td><td>120</td><td>125</td><td>130</td><td>135</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td><td>80</td><td>428</td><td>452</td><td>476</td><td>488</td><td>500</td><td>512</td></tr><tr style="background:#efeccd"><td>攻擊</td><td>7</td><td>88</td><td>94</td><td>100</td><td>103</td><td>106</td><td>109</td></tr><tr style="background:#f2deb9"><td>防禦</td><td>9</td><td>125</td><td>133</td><td>141</td><td>145</td><td>149</td><td>153</td></tr><tr style="background:#d3f0f4"><td>特攻</td><td>22</td><td>240</td><td>256</td><td>272</td><td>280</td><td>288</td><td>296</td></tr><tr style="background:#bed3f0"><td>特防</td><td>9</td><td>125</td><td>133</td><td>141</td><td>145</td><td>149</td><td>153</td></tr><tr style="background:#dbcde7"><td>速度</td><td>20</td><td>356</td><td>380</td><td>404</td><td>416</td><td>428</td><td>440</td></tr></table></tr><tr><table class="move" style="background-color:#81549980;background-opacity:0.5"><tr><td>拍組招式</td><td>可靠的大姐大之強酸劇毒滅絕雨</td></tr><tr><td>屬性</td><td>毒</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>250</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></tr><tr><table class="move" style="background-color:#81549980;background-opacity:0.5"><tr><td>寶可夢招式</td><td>濁霧 ▭</td></tr><tr><td>屬性</td><td>毒</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>21</td></tr><tr><td>命中</td><td>70</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>有４０％的機率會讓對手陷入中毒狀態。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>道具招式</td><td>招式計量槽填充 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>幫自己增加３條招式計量槽。</td></tr></tr><tr><table class="move" style="background-color:#81549980;background-opacity:0.5"><tr><td>寶可夢招式</td><td>污泥波 ▭▭▭</td></tr><tr><td>屬性</td><td>毒</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>97</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手全體拍組</td></tr><tr><td></td><td>有１０％的機率會讓對手陷入中毒狀態。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>訓練家招式</td><td>皮給我繃緊一點！ 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>選擇此招式時，自己的招式計量槽的剩餘量越多，自己的特攻和速度就提高得越多。最多可提高３階段。</td></tr></tr><tr><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>效果絕佳時威力提升２<br>當招式的效果絕佳時，會提高該招式的威力。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>中毒無效<br>不會陷入中毒狀態和劇毒狀態。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>灼傷無效<br>不會陷入灼傷狀態。</td></tr></table></tr><tr><table class="team"><tr><td style="background-color:#81549980;background-opacity:0.5">毒屬性<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">阿羅拉<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">反派組織<br>／攻擊</td></tr><tr><td style="background-color:#6dbfb180;background-opacity:0.5">大姐姐<br>／攻擊</td></tr></table></tr><table></div></div></div>
 	</div>
 
 	<script>
@@ -434,18 +459,18 @@ json = [[1012100000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101210
 		update();
 
 		var svg = document.getElementById("grid");
-		if (svgright - svgleft > 1080 || window.innerHeight < svg.getAttribute('height')) {
-			svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
-			svg.setAttribute('width', Math.ceil(svgright - svgleft));
-			svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
+		var svgW = svgright - svgleft;
+		var svgH = svgbottom - svgtop;
+		// svg.setAttribute('width', Math.ceil(svgright - svgleft));
+		// svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		if (document.documentElement.clientWidth / document.documentElement.clientHeight > svgW / svgH) {
+			svg.setAttribute('width', Math.ceil(svgW / svgH * document.documentElement.clientHeight * 0.9));
+			svg.setAttribute('height', Math.ceil(document.documentElement.clientHeight * 0.9));
 		}
-		if (window.innerHeight < svg.getAttribute('height')) {
-			svg.setAttribute('width', Math.ceil(svg.getAttribute('width') / svg.getAttribute('height') * window.innerHeight * 0.9));
-			svg.setAttribute('height', Math.ceil(window.innerHeight * 0.9));
-		}
-		if (window.innerWidth < svg.getAttribute('width')) {
-			svg.setAttribute('height', Math.ceil(svg.getAttribute('height') / svg.getAttribute('width') * window.innerWidth * 0.9));
-			svg.setAttribute('width', Math.ceil(window.innerWidth * 0.9));
+		else {
+			svg.setAttribute('height', Math.ceil(svgH / svgW * document.documentElement.clientWidth * 0.9));
+			svg.setAttribute('width', Math.ceil(document.documentElement.clientWidth * 0.9));
 		}
 
 	</script>

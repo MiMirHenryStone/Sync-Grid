@@ -5,9 +5,35 @@
 	<meta charset='utf-8' />
 	<title>拍檔石盤</title>
 	<style>
-		html {
-			-ms-text-size-adjust: 100%;
-			-webkit-text-size-adjust: 100%;
+		div {
+			margin: 1%;
+		}
+
+		.title {
+			font-size: 1.5rem;
+			margin: 0 1rem;
+		}
+
+		.text {
+			font-size: 1rem;
+		}
+
+		svg {
+			font-size: 1rem;
+			margin: 1rem 5%;
+		}
+
+		table {
+			width: 100%;
+			margin: 0.25rem 0;
+		}
+
+		.move td:first-child {
+			width: 20%;
+		}
+
+		.team td {
+			width: 33%;
 		}
 
 		.box {
@@ -35,12 +61,13 @@
 			text-decoration: none;
 			color: #000;
 			display: inline-block;
-			width: 160px;
+			width: 12.5rem;
 			text-align: center;
 		}
 
 		.content {
 			border: 1px solid #888;
+			margin-top: 0;
 		}
 
 		.content1,
@@ -64,26 +91,24 @@
 
 <body>
 	<div align="center">
-		<select style="font-size:16pt;" id="ms" onchange=changeSet()>
+		<select class="title" id="ms" onchange=changeSet()>
 			<option value="0">No.1</option>
 			<option value="1">No.2</option>
 			<option value="2">No.3</option>
 			<option value="3">No.4</option>
 		</select>
-		<button style="font-size:16pt;" onclick=rename()>重命名</button>
-		<button style="font-size:16pt;" onclick=reset()>全部重設</button>
-		<label>　</label>
-		<label style="font-size:16pt;" id="energy">剩餘力量：60</label>
-		<label>　</label>
-		<label style="font-size:16pt;" id="orb">拍檔滴晶：0</label>
+		<input class="title" type="button" onclick=rename() value="重命名">
+		<input class="title" type="button" onclick=reset() value="全部重設">
+		<span class="title" id="energy">剩餘力量：60</span>
+		<span class="title" id="orb">拍檔滴晶：0</span>
 	</div>
-	<div style="font-size:16pt;" id="skill">技能名稱：</div>
-	<div style="font-size:16pt;" id="effect">效果：</div>
-	<svg id="grid" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
-	<div id="sg" style="font-size:16pt; width: 33%; float: right;">石盤技能：<br></div>
-	<div class="box" style="width: 66%;">
+	<div class="text" id="skill" style="margin-bottom: 0;">技能名稱：</div>
+	<div class="text" id="effect" style="margin-top: 0;">效果：</div>
+	<svg id="grid" align="center" width="9" height="16" viewBox="0 0 1080 1920"></svg>
+	<div class="text" id="sg" style="width: 32%; float: right;">石盤技能：<br></div>
+	<div class="text" class="box" style="width: 64%;">
 		<ul class="tab"><li><a href="#content1">火球鼠</a></li><li><a href="#content2">火岩鼠</a></li><li><a href="#content3">火爆獸</a></li></ul>
-		<div class="content"><div class="content1" id="content1">————————10112000000————————<br>拍组搜寻★5 阿響♂&火球鼠♂<br>體系：特殊攻擊型 | 弱點：岩石<br>Lv.1：ＨＰ 88 | 攻擊 13 | 防禦 8 | 特攻 14 | 特防 9 | 速度 16<br>Lv.100：ＨＰ 472 | 攻擊 111 | 防禦 111 | 特攻 214 | 特防 113 | 速度 285<br>Lv.110：ＨＰ 500 | 攻擊 117 | 防禦 119 | 特攻 228 | 特防 121 | 速度 305<br>Lv.120：ＨＰ 528 | 攻擊 123 | 防禦 127 | 特攻 242 | 特防 129 | 速度 325<br>Lv.125：ＨＰ 542 | 攻擊 126 | 防禦 131 | 特攻 249 | 特防 133 | 速度 335<br>Lv.130：ＨＰ 556 | 攻擊 129 | 防禦 135 | 特攻 256 | 特防 137 | 速度 345<br>Lv.135：ＨＰ 570 | 攻擊 132 | 防禦 139 | 特攻 263 | 特防 141 | 速度 355<br>拍組招式：拍組火之光線<br>屬性：火<br>分類：特殊<br>威力：200<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：噴射火焰 ▭▭<br>屬性：火<br>分類：特殊<br>威力：47<br>命中：100<br>對象：對手１對拍組<br>有１０％的機率會讓對手陷入灼傷狀態。<br><br>道具招式：特攻強化 2/2<br>分類：變化<br>對象：自己<br>提高自己的特攻２階段。<br><br>寶可夢招式：噴火 ▭▭▭<br>屬性：火<br>分類：特殊<br>威力：135<br>命中：100<br>對象：對手全體拍組<br>自己所剩ＨＰ的比例越低，威力就降低得越多。<br><br>訓練家招式：我絕不放棄！ 2/2<br>分類：變化<br>對象：自己<br>回復自己的ＨＰ，約為自己最大ＨＰ的４０％。<br>提高自己的速度和閃避率１階段。<br><br>晴天時招式計量槽加速２<br>當天氣為日照強烈時，<br>招式計量槽會累積得較快。<br><br>火屬性／攻擊<br>城都／攻擊<br>主角／攻擊<br>寶可全能競技賽／攻擊<br></div><div class="content2" id="content2">————————10112000000————————<br>拍组搜寻★5 阿響♂&火岩鼠♂<br>體系：特殊攻擊型 | 弱點：岩石<br>Lv.1：ＨＰ 103 | 攻擊 16 | 防禦 10 | 特攻 20 | 特防 11 | 速度 22<br>Lv.100：ＨＰ 487 | 攻擊 114 | 防禦 113 | 特攻 221 | 特防 115 | 速度 307<br>Lv.110：ＨＰ 515 | 攻擊 120 | 防禦 121 | 特攻 235 | 特防 123 | 速度 327<br>Lv.120：ＨＰ 543 | 攻擊 126 | 防禦 129 | 特攻 249 | 特防 131 | 速度 347<br>Lv.125：ＨＰ 557 | 攻擊 129 | 防禦 133 | 特攻 256 | 特防 135 | 速度 357<br>Lv.130：ＨＰ 571 | 攻擊 132 | 防禦 137 | 特攻 263 | 特防 139 | 速度 367<br>Lv.135：ＨＰ 585 | 攻擊 135 | 防禦 141 | 特攻 270 | 特防 143 | 速度 377<br>拍組招式：拍組火之光線<br>屬性：火<br>分類：特殊<br>威力：200<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：噴射火焰 ▭▭<br>屬性：火<br>分類：特殊<br>威力：47<br>命中：100<br>對象：對手１對拍組<br>有１０％的機率會讓對手陷入灼傷狀態。<br><br>道具招式：特攻強化 2/2<br>分類：變化<br>對象：自己<br>提高自己的特攻２階段。<br><br>寶可夢招式：噴火 ▭▭▭<br>屬性：火<br>分類：特殊<br>威力：135<br>命中：100<br>對象：對手全體拍組<br>自己所剩ＨＰ的比例越低，威力就降低得越多。<br><br>訓練家招式：我絕不放棄！ 2/2<br>分類：變化<br>對象：自己<br>回復自己的ＨＰ，約為自己最大ＨＰ的４０％。<br>提高自己的速度和閃避率１階段。<br><br>晴天時招式計量槽加速２<br>當天氣為日照強烈時，<br>招式計量槽會累積得較快。<br><br>火屬性／攻擊<br>城都／攻擊<br>主角／攻擊<br>寶可全能競技賽／攻擊<br></div><div class="content3" id="content3">————————10112000000————————<br>拍组搜寻★5 阿響♂&火爆獸♂<br>體系：特殊攻擊型 | 弱點：岩石<br>Lv.1：ＨＰ 125 | 攻擊 21 | 防禦 15 | 特攻 29 | 特防 16 | 速度 31<br>Lv.100：ＨＰ 509 | 攻擊 119 | 防禦 118 | 特攻 246 | 特防 120 | 速度 317<br>Lv.110：ＨＰ 537 | 攻擊 125 | 防禦 126 | 特攻 260 | 特防 128 | 速度 337<br>Lv.120：ＨＰ 565 | 攻擊 131 | 防禦 134 | 特攻 274 | 特防 136 | 速度 357<br>Lv.125：ＨＰ 579 | 攻擊 134 | 防禦 138 | 特攻 281 | 特防 140 | 速度 367<br>Lv.130：ＨＰ 593 | 攻擊 137 | 防禦 142 | 特攻 288 | 特防 144 | 速度 377<br>Lv.135：ＨＰ 607 | 攻擊 140 | 防禦 146 | 特攻 295 | 特防 148 | 速度 387<br>拍組招式：熱情奔放之噴火<br>屬性：火<br>分類：特殊<br>威力：250<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：噴射火焰 ▭▭<br>屬性：火<br>分類：特殊<br>威力：47<br>命中：100<br>對象：對手１對拍組<br>有１０％的機率會讓對手陷入灼傷狀態。<br><br>道具招式：特攻強化 2/2<br>分類：變化<br>對象：自己<br>提高自己的特攻２階段。<br><br>寶可夢招式：噴火 ▭▭▭<br>屬性：火<br>分類：特殊<br>威力：135<br>命中：100<br>對象：對手全體拍組<br>自己所剩ＨＰ的比例越低，威力就降低得越多。<br><br>訓練家招式：我絕不放棄！ 2/2<br>分類：變化<br>對象：自己<br>回復自己的ＨＰ，約為自己最大ＨＰ的４０％。<br>提高自己的速度和閃避率１階段。<br><br>晴天時招式計量槽加速２<br>當天氣為日照強烈時，<br>招式計量槽會累積得較快。<br><br>火屬性／攻擊<br>城都／攻擊<br>主角／攻擊<br>寶可全能競技賽／攻擊<br></div></div></div>
+		<div class="content"><div class="content1" id="content1"><table><tr><th colspan="2">拍組搜尋★5 阿響♂&火球鼠♂</th></tr><tr><td style="width:50%%;text-align:center">體系</td><td style="width:50%%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">特殊攻擊型</td><td style="width:50%;text-align:center">岩石</td></tr><tr><table><tr style="background:#bededd"><td>Lv.</td><td>1</td><td>100</td><td>110</td><td>120</td><td>125</td><td>130</td><td>135</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td><td>88</td><td>472</td><td>500</td><td>528</td><td>542</td><td>556</td><td>570</td></tr><tr style="background:#efeccd"><td>攻擊</td><td>13</td><td>111</td><td>117</td><td>123</td><td>126</td><td>129</td><td>132</td></tr><tr style="background:#f2deb9"><td>防禦</td><td>8</td><td>111</td><td>119</td><td>127</td><td>131</td><td>135</td><td>139</td></tr><tr style="background:#d3f0f4"><td>特攻</td><td>14</td><td>214</td><td>228</td><td>242</td><td>249</td><td>256</td><td>263</td></tr><tr style="background:#bed3f0"><td>特防</td><td>9</td><td>113</td><td>121</td><td>129</td><td>133</td><td>137</td><td>141</td></tr><tr style="background:#dbcde7"><td>速度</td><td>16</td><td>285</td><td>305</td><td>325</td><td>335</td><td>345</td><td>355</td></tr></table></tr><tr><table class="move" style="background-color:#db434780;background-opacity:0.5"><tr><td>拍組招式</td><td>拍組火之光線</td></tr><tr><td>屬性</td><td>火</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>200</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></tr><tr><table class="move" style="background-color:#db434780;background-opacity:0.5"><tr><td>寶可夢招式</td><td>噴射火焰 ▭▭</td></tr><tr><td>屬性</td><td>火</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>47</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>有１０％的機率會讓對手陷入灼傷狀態。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>道具招式</td><td>特攻強化 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>提高自己的特攻２階段。</td></tr></tr><tr><table class="move" style="background-color:#db434780;background-opacity:0.5"><tr><td>寶可夢招式</td><td>噴火 ▭▭▭</td></tr><tr><td>屬性</td><td>火</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>135</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手全體拍組</td></tr><tr><td></td><td>自己所剩ＨＰ的比例越低，威力就降低得越多。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>訓練家招式</td><td>我絕不放棄！ 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>回復自己的ＨＰ，約為自己最大ＨＰ的４０％。<br>提高自己的速度和閃避率１階段。</td></tr></tr><tr><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>晴天時招式計量槽加速２<br>當天氣為日照強烈時，<br>招式計量槽會累積得較快。</td></tr></table></tr><tr><table class="team"><tr><td style="background-color:#db434780;background-opacity:0.5">火屬性<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">城都<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">主角<br>／攻擊</td></tr><tr><td style="background-color:#6dbfb180;background-opacity:0.5">寶可全能競技賽<br>／攻擊</td></tr></table></tr><table></div><div class="content2" id="content2"><table><tr><th colspan="2">拍組搜尋★5 阿響♂&火岩鼠♂</th></tr><tr><td style="width:50%%;text-align:center">體系</td><td style="width:50%%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">特殊攻擊型</td><td style="width:50%;text-align:center">岩石</td></tr><tr><table><tr style="background:#bededd"><td>Lv.</td><td>1</td><td>100</td><td>110</td><td>120</td><td>125</td><td>130</td><td>135</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td><td>103</td><td>487</td><td>515</td><td>543</td><td>557</td><td>571</td><td>585</td></tr><tr style="background:#efeccd"><td>攻擊</td><td>16</td><td>114</td><td>120</td><td>126</td><td>129</td><td>132</td><td>135</td></tr><tr style="background:#f2deb9"><td>防禦</td><td>10</td><td>113</td><td>121</td><td>129</td><td>133</td><td>137</td><td>141</td></tr><tr style="background:#d3f0f4"><td>特攻</td><td>20</td><td>221</td><td>235</td><td>249</td><td>256</td><td>263</td><td>270</td></tr><tr style="background:#bed3f0"><td>特防</td><td>11</td><td>115</td><td>123</td><td>131</td><td>135</td><td>139</td><td>143</td></tr><tr style="background:#dbcde7"><td>速度</td><td>22</td><td>307</td><td>327</td><td>347</td><td>357</td><td>367</td><td>377</td></tr></table></tr><tr><table class="move" style="background-color:#db434780;background-opacity:0.5"><tr><td>拍組招式</td><td>拍組火之光線</td></tr><tr><td>屬性</td><td>火</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>200</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></tr><tr><table class="move" style="background-color:#db434780;background-opacity:0.5"><tr><td>寶可夢招式</td><td>噴射火焰 ▭▭</td></tr><tr><td>屬性</td><td>火</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>47</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>有１０％的機率會讓對手陷入灼傷狀態。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>道具招式</td><td>特攻強化 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>提高自己的特攻２階段。</td></tr></tr><tr><table class="move" style="background-color:#db434780;background-opacity:0.5"><tr><td>寶可夢招式</td><td>噴火 ▭▭▭</td></tr><tr><td>屬性</td><td>火</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>135</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手全體拍組</td></tr><tr><td></td><td>自己所剩ＨＰ的比例越低，威力就降低得越多。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>訓練家招式</td><td>我絕不放棄！ 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>回復自己的ＨＰ，約為自己最大ＨＰ的４０％。<br>提高自己的速度和閃避率１階段。</td></tr></tr><tr><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>晴天時招式計量槽加速２<br>當天氣為日照強烈時，<br>招式計量槽會累積得較快。</td></tr></table></tr><tr><table class="team"><tr><td style="background-color:#db434780;background-opacity:0.5">火屬性<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">城都<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">主角<br>／攻擊</td></tr><tr><td style="background-color:#6dbfb180;background-opacity:0.5">寶可全能競技賽<br>／攻擊</td></tr></table></tr><table></div><div class="content3" id="content3"><table><tr><th colspan="2">拍組搜尋★5 阿響♂&火爆獸♂</th></tr><tr><td style="width:50%%;text-align:center">體系</td><td style="width:50%%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">特殊攻擊型</td><td style="width:50%;text-align:center">岩石</td></tr><tr><table><tr style="background:#bededd"><td>Lv.</td><td>1</td><td>100</td><td>110</td><td>120</td><td>125</td><td>130</td><td>135</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td><td>125</td><td>509</td><td>537</td><td>565</td><td>579</td><td>593</td><td>607</td></tr><tr style="background:#efeccd"><td>攻擊</td><td>21</td><td>119</td><td>125</td><td>131</td><td>134</td><td>137</td><td>140</td></tr><tr style="background:#f2deb9"><td>防禦</td><td>15</td><td>118</td><td>126</td><td>134</td><td>138</td><td>142</td><td>146</td></tr><tr style="background:#d3f0f4"><td>特攻</td><td>29</td><td>246</td><td>260</td><td>274</td><td>281</td><td>288</td><td>295</td></tr><tr style="background:#bed3f0"><td>特防</td><td>16</td><td>120</td><td>128</td><td>136</td><td>140</td><td>144</td><td>148</td></tr><tr style="background:#dbcde7"><td>速度</td><td>31</td><td>317</td><td>337</td><td>357</td><td>367</td><td>377</td><td>387</td></tr></table></tr><tr><table class="move" style="background-color:#db434780;background-opacity:0.5"><tr><td>拍組招式</td><td>熱情奔放之噴火</td></tr><tr><td>屬性</td><td>火</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>250</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></tr><tr><table class="move" style="background-color:#db434780;background-opacity:0.5"><tr><td>寶可夢招式</td><td>噴射火焰 ▭▭</td></tr><tr><td>屬性</td><td>火</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>47</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>有１０％的機率會讓對手陷入灼傷狀態。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>道具招式</td><td>特攻強化 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>提高自己的特攻２階段。</td></tr></tr><tr><table class="move" style="background-color:#db434780;background-opacity:0.5"><tr><td>寶可夢招式</td><td>噴火 ▭▭▭</td></tr><tr><td>屬性</td><td>火</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>135</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手全體拍組</td></tr><tr><td></td><td>自己所剩ＨＰ的比例越低，威力就降低得越多。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>訓練家招式</td><td>我絕不放棄！ 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>回復自己的ＨＰ，約為自己最大ＨＰ的４０％。<br>提高自己的速度和閃避率１階段。</td></tr></tr><tr><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>晴天時招式計量槽加速２<br>當天氣為日照強烈時，<br>招式計量槽會累積得較快。</td></tr></table></tr><tr><table class="team"><tr><td style="background-color:#db434780;background-opacity:0.5">火屬性<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">城都<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">主角<br>／攻擊</td></tr><tr><td style="background-color:#6dbfb180;background-opacity:0.5">寶可全能競技賽<br>／攻擊</td></tr></table></tr><table></div></div></div>
 	</div>
 
 	<script>
@@ -434,18 +459,18 @@ json = [[1011200000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101120
 		update();
 
 		var svg = document.getElementById("grid");
-		if (svgright - svgleft > 1080 || window.innerHeight < svg.getAttribute('height')) {
-			svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
-			svg.setAttribute('width', Math.ceil(svgright - svgleft));
-			svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
+		var svgW = svgright - svgleft;
+		var svgH = svgbottom - svgtop;
+		// svg.setAttribute('width', Math.ceil(svgright - svgleft));
+		// svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		if (document.documentElement.clientWidth / document.documentElement.clientHeight > svgW / svgH) {
+			svg.setAttribute('width', Math.ceil(svgW / svgH * document.documentElement.clientHeight * 0.9));
+			svg.setAttribute('height', Math.ceil(document.documentElement.clientHeight * 0.9));
 		}
-		if (window.innerHeight < svg.getAttribute('height')) {
-			svg.setAttribute('width', Math.ceil(svg.getAttribute('width') / svg.getAttribute('height') * window.innerHeight * 0.9));
-			svg.setAttribute('height', Math.ceil(window.innerHeight * 0.9));
-		}
-		if (window.innerWidth < svg.getAttribute('width')) {
-			svg.setAttribute('height', Math.ceil(svg.getAttribute('height') / svg.getAttribute('width') * window.innerWidth * 0.9));
-			svg.setAttribute('width', Math.ceil(window.innerWidth * 0.9));
+		else {
+			svg.setAttribute('height', Math.ceil(svgH / svgW * document.documentElement.clientWidth * 0.9));
+			svg.setAttribute('width', Math.ceil(document.documentElement.clientWidth * 0.9));
 		}
 
 	</script>

@@ -5,9 +5,35 @@
 	<meta charset='utf-8' />
 	<title>拍檔石盤</title>
 	<style>
-		html {
-			-ms-text-size-adjust: 100%;
-			-webkit-text-size-adjust: 100%;
+		div {
+			margin: 1%;
+		}
+
+		.title {
+			font-size: 1.5rem;
+			margin: 0 1rem;
+		}
+
+		.text {
+			font-size: 1rem;
+		}
+
+		svg {
+			font-size: 1rem;
+			margin: 1rem 5%;
+		}
+
+		table {
+			width: 100%;
+			margin: 0.25rem 0;
+		}
+
+		.move td:first-child {
+			width: 20%;
+		}
+
+		.team td {
+			width: 33%;
 		}
 
 		.box {
@@ -35,12 +61,13 @@
 			text-decoration: none;
 			color: #000;
 			display: inline-block;
-			width: 160px;
+			width: 12.5rem;
 			text-align: center;
 		}
 
 		.content {
 			border: 1px solid #888;
+			margin-top: 0;
 		}
 
 		.content1,
@@ -64,26 +91,24 @@
 
 <body>
 	<div align="center">
-		<select style="font-size:16pt;" id="ms" onchange=changeSet()>
+		<select class="title" id="ms" onchange=changeSet()>
 			<option value="0">No.1</option>
 			<option value="1">No.2</option>
 			<option value="2">No.3</option>
 			<option value="3">No.4</option>
 		</select>
-		<button style="font-size:16pt;" onclick=rename()>重命名</button>
-		<button style="font-size:16pt;" onclick=reset()>全部重設</button>
-		<label>　</label>
-		<label style="font-size:16pt;" id="energy">剩餘力量：60</label>
-		<label>　</label>
-		<label style="font-size:16pt;" id="orb">拍檔滴晶：0</label>
+		<input class="title" type="button" onclick=rename() value="重命名">
+		<input class="title" type="button" onclick=reset() value="全部重設">
+		<span class="title" id="energy">剩餘力量：60</span>
+		<span class="title" id="orb">拍檔滴晶：0</span>
 	</div>
-	<div style="font-size:16pt;" id="skill">技能名稱：</div>
-	<div style="font-size:16pt;" id="effect">效果：</div>
-	<svg id="grid" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
-	<div id="sg" style="font-size:16pt; width: 33%; float: right;">石盤技能：<br></div>
-	<div class="box" style="width: 66%;">
+	<div class="text" id="skill" style="margin-bottom: 0;">技能名稱：</div>
+	<div class="text" id="effect" style="margin-top: 0;">效果：</div>
+	<svg id="grid" align="center" width="9" height="16" viewBox="0 0 1080 1920"></svg>
+	<div class="text" id="sg" style="width: 32%; float: right;">石盤技能：<br></div>
+	<div class="text" class="box" style="width: 64%;">
 		<ul class="tab"><li><a href="#content1">勾帕路翁</a></li></ul>
-		<div class="content"><div class="content1" id="content1">————————18000020531————————<br>★5 主角&勾帕路翁<br>體系：輔助型 | 弱點：火<br>Lv.1：ＨＰ 96 | 攻擊 13 | 防禦 19 | 特攻 7 | 特防 17 | 速度 12<br>Lv.100：ＨＰ 513 | 攻擊 162 | 防禦 203 | 特攻 105 | 特防 184 | 速度 213<br>Lv.110：ＨＰ 543 | 攻擊 172 | 防禦 215 | 特攻 111 | 特防 196 | 速度 227<br>Lv.120：ＨＰ 573 | 攻擊 182 | 防禦 227 | 特攻 117 | 特防 208 | 速度 241<br>Lv.125：ＨＰ 588 | 攻擊 187 | 防禦 233 | 特攻 120 | 特防 214 | 速度 248<br>Lv.130：ＨＰ 603 | 攻擊 192 | 防禦 239 | 特攻 123 | 特防 220 | 速度 255<br>Lv.135：ＨＰ 618 | 攻擊 197 | 防禦 245 | 特攻 126 | 特防 226 | 速度 262<br>拍組招式：用鋼鐵正義貫徹之格鬥衝擊<br>屬性：格鬥<br>分類：物理<br>威力：250<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：碎岩 ▭▭<br>屬性：格鬥<br>分類：物理<br>威力：46<br>命中：100<br>對象：對手１對拍組<br>有５０％的機率會降低對手的防禦１階段。<br><br>道具招式：要害攻擊Ｇ＋ 2/2<br>分類：變化<br>對象：我方全體拍組<br>提高我方全體拍組的擊中要害率２階段。<br><br>寶可夢招式：聖劍 ▭▭▭<br>屬性：格鬥<br>分類：物理<br>威力：90<br>命中：100<br>對象：對手１對拍組<br>就算對手的能力處於提高狀態，也不影響此攻擊的威力。<br><br>訓練家招式：鐵紺色正義 2/2<br>分類：變化<br>對象：我方場地<br>讓我方場地變成招式計量槽加速狀態。<br>提高我方全體拍組的防禦２階段。<br><br>格鬥領袖<br>提高我方全體拍組的招式威力１０％。<br>減輕我方全體拍組<br>受到招式攻擊時的傷害１０％。<br>當我方隊伍中擁有格鬥標籤的拍組越多，<br>此效果還會提升得越多。<br>（每增加１對拍組，<br>威力提升＋５％，傷害減輕＋２％。）<br>（威力最多可提升２０％，傷害最多可減輕１４％。）<br><br>寶可夢出招後速度↑Ｇ４<br>在寶可夢使出招式時，有５０％的機率<br>會提高我方全體拍組的速度１階段。<br><br>危機時ＨＰ回復４<br>首次陷入危機時，<br>會回復自己的ＨＰ，約為自己最大ＨＰ的４０％。<br><br>下降機率提升１<br>當招式的追加效果可降低對手能力值時，會提高該追加效果的成功率。<br><br>格鬥屬性／輔助<br>主角／輔助<br></div></div></div>
+		<div class="content"><div class="content1" id="content1"><table><tr><th colspan="2">★5 主角&勾帕路翁</th></tr><tr><td style="width:50%%;text-align:center">體系</td><td style="width:50%%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">輔助型</td><td style="width:50%;text-align:center">火</td></tr><tr><table><tr style="background:#bededd"><td>Lv.</td><td>1</td><td>100</td><td>110</td><td>120</td><td>125</td><td>130</td><td>135</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td><td>96</td><td>513</td><td>543</td><td>573</td><td>588</td><td>603</td><td>618</td></tr><tr style="background:#efeccd"><td>攻擊</td><td>13</td><td>162</td><td>172</td><td>182</td><td>187</td><td>192</td><td>197</td></tr><tr style="background:#f2deb9"><td>防禦</td><td>19</td><td>203</td><td>215</td><td>227</td><td>233</td><td>239</td><td>245</td></tr><tr style="background:#d3f0f4"><td>特攻</td><td>7</td><td>105</td><td>111</td><td>117</td><td>120</td><td>123</td><td>126</td></tr><tr style="background:#bed3f0"><td>特防</td><td>17</td><td>184</td><td>196</td><td>208</td><td>214</td><td>220</td><td>226</td></tr><tr style="background:#dbcde7"><td>速度</td><td>12</td><td>213</td><td>227</td><td>241</td><td>248</td><td>255</td><td>262</td></tr></table></tr><tr><table class="move" style="background-color:#d67b4780;background-opacity:0.5"><tr><td>拍組招式</td><td>用鋼鐵正義貫徹之格鬥衝擊</td></tr><tr><td>屬性</td><td>格鬥</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>250</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></tr><tr><table class="move" style="background-color:#d67b4780;background-opacity:0.5"><tr><td>寶可夢招式</td><td>碎岩 ▭▭</td></tr><tr><td>屬性</td><td>格鬥</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>46</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>有５０％的機率會降低對手的防禦１階段。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>道具招式</td><td>要害攻擊Ｇ＋ 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>我方全體拍組</td></tr><tr><td></td><td>提高我方全體拍組的擊中要害率２階段。</td></tr></tr><tr><table class="move" style="background-color:#d67b4780;background-opacity:0.5"><tr><td>寶可夢招式</td><td>聖劍 ▭▭▭</td></tr><tr><td>屬性</td><td>格鬥</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>90</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>就算對手的能力處於提高狀態，也不影響此攻擊的威力。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>訓練家招式</td><td>鐵紺色正義 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>我方場地</td></tr><tr><td></td><td>讓我方場地變成招式計量槽加速狀態。<br>提高我方全體拍組的防禦２階段。</td></tr></tr><tr><table class="passive" style="background-color:#d18eff80;background-opacity:0.5"><tr><td>格鬥領袖<br>提高我方全體拍組的招式威力１０％。<br>減輕我方全體拍組<br>受到招式攻擊時的傷害１０％。<br>當我方隊伍中擁有格鬥標籤的拍組越多，<br>此效果還會提升得越多。<br>（每增加１對拍組，<br>威力提升＋５％，傷害減輕＋２％。）<br>（威力最多可提升２０％，傷害最多可減輕１４％。）</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>寶可夢出招後速度↑Ｇ４<br>在寶可夢使出招式時，有５０％的機率<br>會提高我方全體拍組的速度１階段。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>危機時ＨＰ回復４<br>首次陷入危機時，<br>會回復自己的ＨＰ，約為自己最大ＨＰ的４０％。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>下降機率提升１<br>當招式的追加效果可降低對手能力值時，會提高該追加效果的成功率。</td></tr></table></tr><tr><table class="team"><tr><td style="background-color:#d67b4780;background-opacity:0.5">格鬥屬性<br>／輔助</td><td style="background-color:#6dbfb180;background-opacity:0.5">主角<br>／輔助</td></tr></table></tr><table></div></div></div>
 	</div>
 
 	<script>
@@ -434,18 +459,18 @@ json = [[1800091000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [180009
 		update();
 
 		var svg = document.getElementById("grid");
-		if (svgright - svgleft > 1080 || window.innerHeight < svg.getAttribute('height')) {
-			svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
-			svg.setAttribute('width', Math.ceil(svgright - svgleft));
-			svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
+		var svgW = svgright - svgleft;
+		var svgH = svgbottom - svgtop;
+		// svg.setAttribute('width', Math.ceil(svgright - svgleft));
+		// svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		if (document.documentElement.clientWidth / document.documentElement.clientHeight > svgW / svgH) {
+			svg.setAttribute('width', Math.ceil(svgW / svgH * document.documentElement.clientHeight * 0.9));
+			svg.setAttribute('height', Math.ceil(document.documentElement.clientHeight * 0.9));
 		}
-		if (window.innerHeight < svg.getAttribute('height')) {
-			svg.setAttribute('width', Math.ceil(svg.getAttribute('width') / svg.getAttribute('height') * window.innerHeight * 0.9));
-			svg.setAttribute('height', Math.ceil(window.innerHeight * 0.9));
-		}
-		if (window.innerWidth < svg.getAttribute('width')) {
-			svg.setAttribute('height', Math.ceil(svg.getAttribute('height') / svg.getAttribute('width') * window.innerWidth * 0.9));
-			svg.setAttribute('width', Math.ceil(window.innerWidth * 0.9));
+		else {
+			svg.setAttribute('height', Math.ceil(svgH / svgW * document.documentElement.clientWidth * 0.9));
+			svg.setAttribute('width', Math.ceil(document.documentElement.clientWidth * 0.9));
 		}
 
 	</script>

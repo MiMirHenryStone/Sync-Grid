@@ -5,9 +5,35 @@
 	<meta charset='utf-8' />
 	<title>拍檔石盤</title>
 	<style>
-		html {
-			-ms-text-size-adjust: 100%;
-			-webkit-text-size-adjust: 100%;
+		div {
+			margin: 1%;
+		}
+
+		.title {
+			font-size: 1.5rem;
+			margin: 0 1rem;
+		}
+
+		.text {
+			font-size: 1rem;
+		}
+
+		svg {
+			font-size: 1rem;
+			margin: 1rem 5%;
+		}
+
+		table {
+			width: 100%;
+			margin: 0.25rem 0;
+		}
+
+		.move td:first-child {
+			width: 20%;
+		}
+
+		.team td {
+			width: 33%;
 		}
 
 		.box {
@@ -35,12 +61,13 @@
 			text-decoration: none;
 			color: #000;
 			display: inline-block;
-			width: 160px;
+			width: 12.5rem;
 			text-align: center;
 		}
 
 		.content {
 			border: 1px solid #888;
+			margin-top: 0;
 		}
 
 		.content1,
@@ -64,26 +91,24 @@
 
 <body>
 	<div align="center">
-		<select style="font-size:16pt;" id="ms" onchange=changeSet()>
+		<select class="title" id="ms" onchange=changeSet()>
 			<option value="0">No.1</option>
 			<option value="1">No.2</option>
 			<option value="2">No.3</option>
 			<option value="3">No.4</option>
 		</select>
-		<button style="font-size:16pt;" onclick=rename()>重命名</button>
-		<button style="font-size:16pt;" onclick=reset()>全部重設</button>
-		<label>　</label>
-		<label style="font-size:16pt;" id="energy">剩餘力量：60</label>
-		<label>　</label>
-		<label style="font-size:16pt;" id="orb">拍檔滴晶：0</label>
+		<input class="title" type="button" onclick=rename() value="重命名">
+		<input class="title" type="button" onclick=reset() value="全部重設">
+		<span class="title" id="energy">剩餘力量：60</span>
+		<span class="title" id="orb">拍檔滴晶：0</span>
 	</div>
-	<div style="font-size:16pt;" id="skill">技能名稱：</div>
-	<div style="font-size:16pt;" id="effect">效果：</div>
-	<svg id="grid" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
-	<div id="sg" style="font-size:16pt; width: 33%; float: right;">石盤技能：<br></div>
-	<div class="box" style="width: 66%;">
+	<div class="text" id="skill" style="margin-bottom: 0;">技能名稱：</div>
+	<div class="text" id="effect" style="margin-top: 0;">效果：</div>
+	<svg id="grid" align="center" width="9" height="16" viewBox="0 0 1080 1920"></svg>
+	<div class="text" id="sg" style="width: 32%; float: right;">石盤技能：<br></div>
+	<div class="text" class="box" style="width: 64%;">
 		<ul class="tab"><li><a href="#content1">火狐狸</a></li><li><a href="#content2">長尾火狐</a></li><li><a href="#content3">妖火紅狐</a></li></ul>
-		<div class="content"><div class="content1" id="content1">————————10130000000————————<br>拍组搜寻★5 莎莉娜♀&火狐狸♂<br>體系：技術型 | 弱點：地面<br>Lv.1：ＨＰ 106 | 攻擊 9 | 防禦 12 | 特攻 13 | 特防 14 | 速度 19<br>Lv.100：ＨＰ 522 | 攻擊 108 | 防禦 114 | 特攻 212 | 特防 130 | 速度 270<br>Lv.110：ＨＰ 552 | 攻擊 114 | 防禦 120 | 特攻 226 | 特防 138 | 速度 288<br>Lv.120：ＨＰ 582 | 攻擊 120 | 防禦 126 | 特攻 240 | 特防 146 | 速度 306<br>Lv.125：ＨＰ 597 | 攻擊 123 | 防禦 129 | 特攻 247 | 特防 150 | 速度 315<br>Lv.130：ＨＰ 612 | 攻擊 126 | 防禦 132 | 特攻 254 | 特防 154 | 速度 324<br>Lv.135：ＨＰ 627 | 攻擊 129 | 防禦 135 | 特攻 261 | 特防 158 | 速度 333<br>拍組招式：拍組火之光線<br>屬性：火<br>分類：特殊<br>威力：200<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：火焰旋渦 ▭▭<br>屬性：火<br>分類：特殊<br>威力：38<br>命中：85<br>對象：對手１對拍組<br>讓對手陷入束縛狀態。<br><br>寶可夢招式：催眠術 ▭▭<br>屬性：超能力<br>分類：變化<br>命中：75<br>對象：對手１對拍組<br>讓對手陷入睡眠狀態。<br><br>訓練家招式：我才不會輸 2/2<br>分類：變化<br>對象：自己<br>解除自己的異常狀態。<br>提高自己的特攻２階段。<br>提高自己的命中率１階段。<br><br>寶可夢招式：過熱 ▭▭▭<br>屬性：火<br>分類：特殊<br>威力：136<br>命中：90<br>對象：對手１對拍組<br>降低自己的特攻２階段。<br><br>攻擊時能力吸收４<br>使出招式攻擊成功時，有５０％的機率<br>會降低對手的攻擊、防禦、特攻、特防、速度、<br>命中率、閃避率中的一種能力１階段，<br>並且等量提高自己的能力。<br><br>對手睡眠時威力提升５<br>當對手陷入睡眠狀態時，會提高自己的招式的威力。<br><br>變化招式賦予異常狀態Ｇ９<br>使出變化招式讓對手陷入異常狀態時，<br>會讓對手全體拍組陷入相同的異常狀態。<br><br>火屬性／技術<br>卡洛斯／技術<br>主角／技術<br>太陽眼鏡／技術<br>卡洛斯的鄰居／技術<br></div><div class="content2" id="content2">————————10130000000————————<br>拍组搜寻★5 莎莉娜♀&長尾火狐♂<br>體系：技術型 | 弱點：地面<br>Lv.1：ＨＰ 123 | 攻擊 11 | 防禦 15 | 特攻 17 | 特防 17 | 速度 25<br>Lv.100：ＨＰ 539 | 攻擊 110 | 防禦 117 | 特攻 218 | 特防 133 | 速度 289<br>Lv.110：ＨＰ 569 | 攻擊 116 | 防禦 123 | 特攻 232 | 特防 141 | 速度 307<br>Lv.120：ＨＰ 599 | 攻擊 122 | 防禦 129 | 特攻 246 | 特防 149 | 速度 325<br>Lv.125：ＨＰ 614 | 攻擊 125 | 防禦 132 | 特攻 253 | 特防 153 | 速度 334<br>Lv.130：ＨＰ 629 | 攻擊 128 | 防禦 135 | 特攻 260 | 特防 157 | 速度 343<br>Lv.135：ＨＰ 644 | 攻擊 131 | 防禦 138 | 特攻 267 | 特防 161 | 速度 352<br>拍組招式：拍組火之光線<br>屬性：火<br>分類：特殊<br>威力：200<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：火焰旋渦 ▭▭<br>屬性：火<br>分類：特殊<br>威力：38<br>命中：85<br>對象：對手１對拍組<br>讓對手陷入束縛狀態。<br><br>寶可夢招式：催眠術 ▭▭<br>屬性：超能力<br>分類：變化<br>命中：75<br>對象：對手１對拍組<br>讓對手陷入睡眠狀態。<br><br>訓練家招式：我才不會輸 2/2<br>分類：變化<br>對象：自己<br>解除自己的異常狀態。<br>提高自己的特攻２階段。<br>提高自己的命中率１階段。<br><br>寶可夢招式：過熱 ▭▭▭<br>屬性：火<br>分類：特殊<br>威力：136<br>命中：90<br>對象：對手１對拍組<br>降低自己的特攻２階段。<br><br>攻擊時能力吸收４<br>使出招式攻擊成功時，有５０％的機率<br>會降低對手的攻擊、防禦、特攻、特防、速度、<br>命中率、閃避率中的一種能力１階段，<br>並且等量提高自己的能力。<br><br>對手睡眠時威力提升５<br>當對手陷入睡眠狀態時，會提高自己的招式的威力。<br><br>變化招式賦予異常狀態Ｇ９<br>使出變化招式讓對手陷入異常狀態時，<br>會讓對手全體拍組陷入相同的異常狀態。<br><br>火屬性／技術<br>卡洛斯／技術<br>主角／技術<br>太陽眼鏡／技術<br>卡洛斯的鄰居／技術<br></div><div class="content3" id="content3">————————10130000000————————<br>拍组搜寻★5 莎莉娜♀&妖火紅狐♂<br>體系：技術型 | 弱點：地面<br>Lv.1：ＨＰ 149 | 攻擊 15 | 防禦 20 | 特攻 25 | 特防 22 | 速度 36<br>Lv.100：ＨＰ 565 | 攻擊 114 | 防禦 122 | 特攻 241 | 特防 138 | 速度 304<br>Lv.110：ＨＰ 595 | 攻擊 120 | 防禦 128 | 特攻 255 | 特防 146 | 速度 322<br>Lv.120：ＨＰ 625 | 攻擊 126 | 防禦 134 | 特攻 269 | 特防 154 | 速度 340<br>Lv.125：ＨＰ 640 | 攻擊 129 | 防禦 137 | 特攻 276 | 特防 158 | 速度 349<br>Lv.130：ＨＰ 655 | 攻擊 132 | 防禦 140 | 特攻 283 | 特防 162 | 速度 358<br>Lv.135：ＨＰ 670 | 攻擊 135 | 防禦 143 | 特攻 290 | 特防 166 | 速度 367<br>拍組招式：連繫明日之魔法火焰<br>屬性：火<br>分類：特殊<br>威力：200<br>對象：對手１對拍組<br>當對手陷入睡眠狀態時，威力會提高。<br><br>寶可夢招式：火焰旋渦 ▭▭<br>屬性：火<br>分類：特殊<br>威力：38<br>命中：85<br>對象：對手１對拍組<br>讓對手陷入束縛狀態。<br><br>寶可夢招式：催眠術 ▭▭<br>屬性：超能力<br>分類：變化<br>命中：75<br>對象：對手１對拍組<br>讓對手陷入睡眠狀態。<br><br>訓練家招式：我才不會輸 2/2<br>分類：變化<br>對象：自己<br>解除自己的異常狀態。<br>提高自己的特攻２階段。<br>提高自己的命中率１階段。<br><br>寶可夢招式：過熱 ▭▭▭<br>屬性：火<br>分類：特殊<br>威力：136<br>命中：90<br>對象：對手１對拍組<br>降低自己的特攻２階段。<br><br>攻擊時能力吸收４<br>使出招式攻擊成功時，有５０％的機率<br>會降低對手的攻擊、防禦、特攻、特防、速度、<br>命中率、閃避率中的一種能力１階段，<br>並且等量提高自己的能力。<br><br>對手睡眠時威力提升５<br>當對手陷入睡眠狀態時，會提高自己的招式的威力。<br><br>變化招式賦予異常狀態Ｇ９<br>使出變化招式讓對手陷入異常狀態時，<br>會讓對手全體拍組陷入相同的異常狀態。<br><br>火屬性／技術<br>卡洛斯／技術<br>主角／技術<br>太陽眼鏡／技術<br>卡洛斯的鄰居／技術<br></div></div></div>
+		<div class="content"><div class="content1" id="content1"><table><tr><th colspan="2">拍組搜尋★5 莎莉娜♀&火狐狸♂</th></tr><tr><td style="width:50%%;text-align:center">體系</td><td style="width:50%%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">技術型</td><td style="width:50%;text-align:center">地面</td></tr><tr><table><tr style="background:#bededd"><td>Lv.</td><td>1</td><td>100</td><td>110</td><td>120</td><td>125</td><td>130</td><td>135</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td><td>106</td><td>522</td><td>552</td><td>582</td><td>597</td><td>612</td><td>627</td></tr><tr style="background:#efeccd"><td>攻擊</td><td>9</td><td>108</td><td>114</td><td>120</td><td>123</td><td>126</td><td>129</td></tr><tr style="background:#f2deb9"><td>防禦</td><td>12</td><td>114</td><td>120</td><td>126</td><td>129</td><td>132</td><td>135</td></tr><tr style="background:#d3f0f4"><td>特攻</td><td>13</td><td>212</td><td>226</td><td>240</td><td>247</td><td>254</td><td>261</td></tr><tr style="background:#bed3f0"><td>特防</td><td>14</td><td>130</td><td>138</td><td>146</td><td>150</td><td>154</td><td>158</td></tr><tr style="background:#dbcde7"><td>速度</td><td>19</td><td>270</td><td>288</td><td>306</td><td>315</td><td>324</td><td>333</td></tr></table></tr><tr><table class="move" style="background-color:#db434780;background-opacity:0.5"><tr><td>拍組招式</td><td>拍組火之光線</td></tr><tr><td>屬性</td><td>火</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>200</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></tr><tr><table class="move" style="background-color:#db434780;background-opacity:0.5"><tr><td>寶可夢招式</td><td>火焰旋渦 ▭▭</td></tr><tr><td>屬性</td><td>火</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>38</td></tr><tr><td>命中</td><td>85</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>讓對手陷入束縛狀態。</td></tr></tr><tr><table class="move" style="background-color:#e66e9b80;background-opacity:0.5"><tr><td>寶可夢招式</td><td>催眠術 ▭▭</td></tr><tr><td>屬性</td><td>超能力</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>命中</td><td>75</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>讓對手陷入睡眠狀態。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>訓練家招式</td><td>我才不會輸 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>解除自己的異常狀態。<br>提高自己的特攻２階段。<br>提高自己的命中率１階段。</td></tr></tr><tr><table class="move" style="background-color:#db434780;background-opacity:0.5"><tr><td>寶可夢招式</td><td>過熱 ▭▭▭</td></tr><tr><td>屬性</td><td>火</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>136</td></tr><tr><td>命中</td><td>90</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>降低自己的特攻２階段。</td></tr></tr><tr><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>攻擊時能力吸收４<br>使出招式攻擊成功時，有５０％的機率<br>會降低對手的攻擊、防禦、特攻、特防、速度、<br>命中率、閃避率中的一種能力１階段，<br>並且等量提高自己的能力。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>對手睡眠時威力提升５<br>當對手陷入睡眠狀態時，會提高自己的招式的威力。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>變化招式賦予異常狀態Ｇ９<br>使出變化招式讓對手陷入異常狀態時，<br>會讓對手全體拍組陷入相同的異常狀態。</td></tr></table></tr><tr><table class="team"><tr><td style="background-color:#db434780;background-opacity:0.5">火屬性<br>／技術</td><td style="background-color:#6dbfb180;background-opacity:0.5">卡洛斯<br>／技術</td><td style="background-color:#6dbfb180;background-opacity:0.5">主角<br>／技術</td></tr><tr><td style="background-color:#6dbfb180;background-opacity:0.5">太陽眼鏡<br>／技術</td><td style="background-color:#6dbfb180;background-opacity:0.5">卡洛斯的鄰居<br>／技術</td></tr></table></tr><table></div><div class="content2" id="content2"><table><tr><th colspan="2">拍組搜尋★5 莎莉娜♀&長尾火狐♂</th></tr><tr><td style="width:50%%;text-align:center">體系</td><td style="width:50%%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">技術型</td><td style="width:50%;text-align:center">地面</td></tr><tr><table><tr style="background:#bededd"><td>Lv.</td><td>1</td><td>100</td><td>110</td><td>120</td><td>125</td><td>130</td><td>135</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td><td>123</td><td>539</td><td>569</td><td>599</td><td>614</td><td>629</td><td>644</td></tr><tr style="background:#efeccd"><td>攻擊</td><td>11</td><td>110</td><td>116</td><td>122</td><td>125</td><td>128</td><td>131</td></tr><tr style="background:#f2deb9"><td>防禦</td><td>15</td><td>117</td><td>123</td><td>129</td><td>132</td><td>135</td><td>138</td></tr><tr style="background:#d3f0f4"><td>特攻</td><td>17</td><td>218</td><td>232</td><td>246</td><td>253</td><td>260</td><td>267</td></tr><tr style="background:#bed3f0"><td>特防</td><td>17</td><td>133</td><td>141</td><td>149</td><td>153</td><td>157</td><td>161</td></tr><tr style="background:#dbcde7"><td>速度</td><td>25</td><td>289</td><td>307</td><td>325</td><td>334</td><td>343</td><td>352</td></tr></table></tr><tr><table class="move" style="background-color:#db434780;background-opacity:0.5"><tr><td>拍組招式</td><td>拍組火之光線</td></tr><tr><td>屬性</td><td>火</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>200</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></tr><tr><table class="move" style="background-color:#db434780;background-opacity:0.5"><tr><td>寶可夢招式</td><td>火焰旋渦 ▭▭</td></tr><tr><td>屬性</td><td>火</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>38</td></tr><tr><td>命中</td><td>85</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>讓對手陷入束縛狀態。</td></tr></tr><tr><table class="move" style="background-color:#e66e9b80;background-opacity:0.5"><tr><td>寶可夢招式</td><td>催眠術 ▭▭</td></tr><tr><td>屬性</td><td>超能力</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>命中</td><td>75</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>讓對手陷入睡眠狀態。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>訓練家招式</td><td>我才不會輸 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>解除自己的異常狀態。<br>提高自己的特攻２階段。<br>提高自己的命中率１階段。</td></tr></tr><tr><table class="move" style="background-color:#db434780;background-opacity:0.5"><tr><td>寶可夢招式</td><td>過熱 ▭▭▭</td></tr><tr><td>屬性</td><td>火</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>136</td></tr><tr><td>命中</td><td>90</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>降低自己的特攻２階段。</td></tr></tr><tr><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>攻擊時能力吸收４<br>使出招式攻擊成功時，有５０％的機率<br>會降低對手的攻擊、防禦、特攻、特防、速度、<br>命中率、閃避率中的一種能力１階段，<br>並且等量提高自己的能力。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>對手睡眠時威力提升５<br>當對手陷入睡眠狀態時，會提高自己的招式的威力。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>變化招式賦予異常狀態Ｇ９<br>使出變化招式讓對手陷入異常狀態時，<br>會讓對手全體拍組陷入相同的異常狀態。</td></tr></table></tr><tr><table class="team"><tr><td style="background-color:#db434780;background-opacity:0.5">火屬性<br>／技術</td><td style="background-color:#6dbfb180;background-opacity:0.5">卡洛斯<br>／技術</td><td style="background-color:#6dbfb180;background-opacity:0.5">主角<br>／技術</td></tr><tr><td style="background-color:#6dbfb180;background-opacity:0.5">太陽眼鏡<br>／技術</td><td style="background-color:#6dbfb180;background-opacity:0.5">卡洛斯的鄰居<br>／技術</td></tr></table></tr><table></div><div class="content3" id="content3"><table><tr><th colspan="2">拍組搜尋★5 莎莉娜♀&妖火紅狐♂</th></tr><tr><td style="width:50%%;text-align:center">體系</td><td style="width:50%%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">技術型</td><td style="width:50%;text-align:center">地面</td></tr><tr><table><tr style="background:#bededd"><td>Lv.</td><td>1</td><td>100</td><td>110</td><td>120</td><td>125</td><td>130</td><td>135</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td><td>149</td><td>565</td><td>595</td><td>625</td><td>640</td><td>655</td><td>670</td></tr><tr style="background:#efeccd"><td>攻擊</td><td>15</td><td>114</td><td>120</td><td>126</td><td>129</td><td>132</td><td>135</td></tr><tr style="background:#f2deb9"><td>防禦</td><td>20</td><td>122</td><td>128</td><td>134</td><td>137</td><td>140</td><td>143</td></tr><tr style="background:#d3f0f4"><td>特攻</td><td>25</td><td>241</td><td>255</td><td>269</td><td>276</td><td>283</td><td>290</td></tr><tr style="background:#bed3f0"><td>特防</td><td>22</td><td>138</td><td>146</td><td>154</td><td>158</td><td>162</td><td>166</td></tr><tr style="background:#dbcde7"><td>速度</td><td>36</td><td>304</td><td>322</td><td>340</td><td>349</td><td>358</td><td>367</td></tr></table></tr><tr><table class="move" style="background-color:#db434780;background-opacity:0.5"><tr><td>拍組招式</td><td>連繫明日之魔法火焰</td></tr><tr><td>屬性</td><td>火</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>200</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>當對手陷入睡眠狀態時，威力會提高。</td></tr></tr><tr><table class="move" style="background-color:#db434780;background-opacity:0.5"><tr><td>寶可夢招式</td><td>火焰旋渦 ▭▭</td></tr><tr><td>屬性</td><td>火</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>38</td></tr><tr><td>命中</td><td>85</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>讓對手陷入束縛狀態。</td></tr></tr><tr><table class="move" style="background-color:#e66e9b80;background-opacity:0.5"><tr><td>寶可夢招式</td><td>催眠術 ▭▭</td></tr><tr><td>屬性</td><td>超能力</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>命中</td><td>75</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>讓對手陷入睡眠狀態。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>訓練家招式</td><td>我才不會輸 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>解除自己的異常狀態。<br>提高自己的特攻２階段。<br>提高自己的命中率１階段。</td></tr></tr><tr><table class="move" style="background-color:#db434780;background-opacity:0.5"><tr><td>寶可夢招式</td><td>過熱 ▭▭▭</td></tr><tr><td>屬性</td><td>火</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>136</td></tr><tr><td>命中</td><td>90</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>降低自己的特攻２階段。</td></tr></tr><tr><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>攻擊時能力吸收４<br>使出招式攻擊成功時，有５０％的機率<br>會降低對手的攻擊、防禦、特攻、特防、速度、<br>命中率、閃避率中的一種能力１階段，<br>並且等量提高自己的能力。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>對手睡眠時威力提升５<br>當對手陷入睡眠狀態時，會提高自己的招式的威力。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>變化招式賦予異常狀態Ｇ９<br>使出變化招式讓對手陷入異常狀態時，<br>會讓對手全體拍組陷入相同的異常狀態。</td></tr></table></tr><tr><table class="team"><tr><td style="background-color:#db434780;background-opacity:0.5">火屬性<br>／技術</td><td style="background-color:#6dbfb180;background-opacity:0.5">卡洛斯<br>／技術</td><td style="background-color:#6dbfb180;background-opacity:0.5">主角<br>／技術</td></tr><tr><td style="background-color:#6dbfb180;background-opacity:0.5">太陽眼鏡<br>／技術</td><td style="background-color:#6dbfb180;background-opacity:0.5">卡洛斯的鄰居<br>／技術</td></tr></table></tr><table></div></div></div>
 	</div>
 
 	<script>
@@ -434,18 +459,18 @@ json = [[1013000000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101300
 		update();
 
 		var svg = document.getElementById("grid");
-		if (svgright - svgleft > 1080 || window.innerHeight < svg.getAttribute('height')) {
-			svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
-			svg.setAttribute('width', Math.ceil(svgright - svgleft));
-			svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
+		var svgW = svgright - svgleft;
+		var svgH = svgbottom - svgtop;
+		// svg.setAttribute('width', Math.ceil(svgright - svgleft));
+		// svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		if (document.documentElement.clientWidth / document.documentElement.clientHeight > svgW / svgH) {
+			svg.setAttribute('width', Math.ceil(svgW / svgH * document.documentElement.clientHeight * 0.9));
+			svg.setAttribute('height', Math.ceil(document.documentElement.clientHeight * 0.9));
 		}
-		if (window.innerHeight < svg.getAttribute('height')) {
-			svg.setAttribute('width', Math.ceil(svg.getAttribute('width') / svg.getAttribute('height') * window.innerHeight * 0.9));
-			svg.setAttribute('height', Math.ceil(window.innerHeight * 0.9));
-		}
-		if (window.innerWidth < svg.getAttribute('width')) {
-			svg.setAttribute('height', Math.ceil(svg.getAttribute('height') / svg.getAttribute('width') * window.innerWidth * 0.9));
-			svg.setAttribute('width', Math.ceil(window.innerWidth * 0.9));
+		else {
+			svg.setAttribute('height', Math.ceil(svgH / svgW * document.documentElement.clientWidth * 0.9));
+			svg.setAttribute('width', Math.ceil(document.documentElement.clientWidth * 0.9));
 		}
 
 	</script>

@@ -5,9 +5,35 @@
 	<meta charset='utf-8' />
 	<title>拍檔石盤</title>
 	<style>
-		html {
-			-ms-text-size-adjust: 100%;
-			-webkit-text-size-adjust: 100%;
+		div {
+			margin: 1%;
+		}
+
+		.title {
+			font-size: 1.5rem;
+			margin: 0 1rem;
+		}
+
+		.text {
+			font-size: 1rem;
+		}
+
+		svg {
+			font-size: 1rem;
+			margin: 1rem 5%;
+		}
+
+		table {
+			width: 100%;
+			margin: 0.25rem 0;
+		}
+
+		.move td:first-child {
+			width: 20%;
+		}
+
+		.team td {
+			width: 33%;
 		}
 
 		.box {
@@ -35,12 +61,13 @@
 			text-decoration: none;
 			color: #000;
 			display: inline-block;
-			width: 160px;
+			width: 12.5rem;
 			text-align: center;
 		}
 
 		.content {
 			border: 1px solid #888;
+			margin-top: 0;
 		}
 
 		.content1,
@@ -64,26 +91,24 @@
 
 <body>
 	<div align="center">
-		<select style="font-size:16pt;" id="ms" onchange=changeSet()>
+		<select class="title" id="ms" onchange=changeSet()>
 			<option value="0">No.1</option>
 			<option value="1">No.2</option>
 			<option value="2">No.3</option>
 			<option value="3">No.4</option>
 		</select>
-		<button style="font-size:16pt;" onclick=rename()>重命名</button>
-		<button style="font-size:16pt;" onclick=reset()>全部重設</button>
-		<label>　</label>
-		<label style="font-size:16pt;" id="energy">剩餘力量：60</label>
-		<label>　</label>
-		<label style="font-size:16pt;" id="orb">拍檔滴晶：0</label>
+		<input class="title" type="button" onclick=rename() value="重命名">
+		<input class="title" type="button" onclick=reset() value="全部重設">
+		<span class="title" id="energy">剩餘力量：60</span>
+		<span class="title" id="orb">拍檔滴晶：0</span>
 	</div>
-	<div style="font-size:16pt;" id="skill">技能名稱：</div>
-	<div style="font-size:16pt;" id="effect">效果：</div>
-	<svg id="grid" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
-	<div id="sg" style="font-size:16pt; width: 33%; float: right;">石盤技能：<br></div>
-	<div class="box" style="width: 66%;">
+	<div class="text" id="skill" style="margin-bottom: 0;">技能名稱：</div>
+	<div class="text" id="effect" style="margin-top: 0;">效果：</div>
+	<svg id="grid" align="center" width="9" height="16" viewBox="0 0 1080 1920"></svg>
+	<div class="text" id="sg" style="width: 32%; float: right;">石盤技能：<br></div>
+	<div class="text" class="box" style="width: 64%;">
 		<ul class="tab"><li><a href="#content1">噴火龍</a></li></ul>
-		<div class="content"><div class="content1" id="content1">————————10247000000————————<br>拍组搜寻★5 丹帝♂&噴火龍♂<br>體系：特殊攻擊型 | 弱點：電<br>Lv.1：ＨＰ 101 | 攻擊 20 | 防禦 16 | 特攻 20 | 特防 16 | 速度 17<br>Lv.100：ＨＰ 582 | 攻擊 352 | 防禦 119 | 特攻 352 | 特防 119 | 速度 264<br>Lv.110：ＨＰ 616 | 攻擊 376 | 防禦 127 | 特攻 376 | 特防 127 | 速度 282<br>Lv.120：ＨＰ 650 | 攻擊 400 | 防禦 135 | 特攻 400 | 特防 135 | 速度 300<br>Lv.125：ＨＰ 667 | 攻擊 412 | 防禦 139 | 特攻 412 | 特防 139 | 速度 309<br>Lv.130：ＨＰ 684 | 攻擊 424 | 防禦 143 | 特攻 424 | 特防 143 | 速度 318<br>Lv.135：ＨＰ 701 | 攻擊 436 | 防禦 147 | 特攻 436 | 特防 147 | 速度 327<br>拍組招式：不敗王者的絕招之大字爆炎<br>屬性：火<br>分類：特殊<br>威力：250<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：暴風 ▭▭▭<br>屬性：飛行<br>分類：特殊<br>威力：126<br>命中：70<br>對象：對手１對拍組<br>當天氣為下雨時，攻擊必定會命中。<br>有３０％的機率會讓對手陷入混亂狀態。<br><br>寶可夢招式：地震 ▭▭▭<br>屬性：地面<br>分類：物理<br>威力：100<br>命中：100<br>對象：對手全體拍組<br>沒有追加效果。<br><br>寶可夢招式：煉獄 ▭▭▭▭<br>屬性：火<br>分類：特殊<br>威力：183<br>命中：50<br>對象：對手１對拍組<br>讓對手陷入灼傷狀態。<br><br>訓練家招式：見識我們的實力！ 1/1<br>分類：變化<br>對象：自己<br>自己發動拍組招式所需的行動數會減少１次。<br>提高自己的攻擊和特攻２階段。<br>提高自己的擊中要害率１階段。<br>讓自己變成下次計量槽消耗０狀態。<br>降低自己的防禦和特防１階段。<br><br>伽勒爾的先驅<br>提高我方全體拍組的招式的威力１０％。<br>減輕我方全體拍組<br>受到招式攻擊時的傷害２０％。<br>當我方隊伍中擁有伽勒爾標籤的拍組越多，<br>此效果還會提升得越多。<br>（每增加１對拍組，<br>威力提升＋１０％，傷害減輕＋３％。）<br>（威力最多可提升３０％，傷害最多可減輕２６％。）<br><br>必中化<br>招式必定會命中。<br><br>寶可夢出招後招式次數回復２<br>在寶可夢使出招式時，有３０％的機率<br>會幫自己的招式的使用次數回復１次。<br><br>招式後下次效果絕佳威力提升４<br>招式成功時，有５０％的機率<br>會讓自己變成下次效果絕佳威力提升狀態。<br><br>火屬性／攻擊<br>伽勒爾／攻擊<br>冠軍／攻擊<br>對戰設施的強者／攻擊<br>我行我素／攻擊<br></div></div></div>
+		<div class="content"><div class="content1" id="content1"><table><tr><th colspan="2">拍組搜尋★5 丹帝♂&噴火龍♂</th></tr><tr><td style="width:50%%;text-align:center">體系</td><td style="width:50%%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">特殊攻擊型</td><td style="width:50%;text-align:center">電</td></tr><tr><table><tr style="background:#bededd"><td>Lv.</td><td>1</td><td>100</td><td>110</td><td>120</td><td>125</td><td>130</td><td>135</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td><td>101</td><td>582</td><td>616</td><td>650</td><td>667</td><td>684</td><td>701</td></tr><tr style="background:#efeccd"><td>攻擊</td><td>20</td><td>352</td><td>376</td><td>400</td><td>412</td><td>424</td><td>436</td></tr><tr style="background:#f2deb9"><td>防禦</td><td>16</td><td>119</td><td>127</td><td>135</td><td>139</td><td>143</td><td>147</td></tr><tr style="background:#d3f0f4"><td>特攻</td><td>20</td><td>352</td><td>376</td><td>400</td><td>412</td><td>424</td><td>436</td></tr><tr style="background:#bed3f0"><td>特防</td><td>16</td><td>119</td><td>127</td><td>135</td><td>139</td><td>143</td><td>147</td></tr><tr style="background:#dbcde7"><td>速度</td><td>17</td><td>264</td><td>282</td><td>300</td><td>309</td><td>318</td><td>327</td></tr></table></tr><tr><table class="move" style="background-color:#db434780;background-opacity:0.5"><tr><td>拍組招式</td><td>不敗王者的絕招之大字爆炎</td></tr><tr><td>屬性</td><td>火</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>250</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></tr><tr><table class="move" style="background-color:#5a82f080;background-opacity:0.5"><tr><td>寶可夢招式</td><td>暴風 ▭▭▭</td></tr><tr><td>屬性</td><td>飛行</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>126</td></tr><tr><td>命中</td><td>70</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>當天氣為下雨時，攻擊必定會命中。<br>有３０％的機率會讓對手陷入混亂狀態。</td></tr></tr><tr><table class="move" style="background-color:#9b5f4180;background-opacity:0.5"><tr><td>寶可夢招式</td><td>地震 ▭▭▭</td></tr><tr><td>屬性</td><td>地面</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>100</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手全體拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></tr><tr><table class="move" style="background-color:#db434780;background-opacity:0.5"><tr><td>寶可夢招式</td><td>煉獄 ▭▭▭▭</td></tr><tr><td>屬性</td><td>火</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>183</td></tr><tr><td>命中</td><td>50</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>讓對手陷入灼傷狀態。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>訓練家招式</td><td>見識我們的實力！ 1/1</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>自己發動拍組招式所需的行動數會減少１次。<br>提高自己的攻擊和特攻２階段。<br>提高自己的擊中要害率１階段。<br>讓自己變成下次計量槽消耗０狀態。<br>降低自己的防禦和特防１階段。</td></tr></tr><tr><table class="passive" style="background-color:#d18eff80;background-opacity:0.5"><tr><td>伽勒爾的先驅<br>提高我方全體拍組的招式的威力１０％。<br>減輕我方全體拍組<br>受到招式攻擊時的傷害２０％。<br>當我方隊伍中擁有伽勒爾標籤的拍組越多，<br>此效果還會提升得越多。<br>（每增加１對拍組，<br>威力提升＋１０％，傷害減輕＋３％。）<br>（威力最多可提升３０％，傷害最多可減輕２６％。）</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>必中化<br>招式必定會命中。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>寶可夢出招後招式次數回復２<br>在寶可夢使出招式時，有３０％的機率<br>會幫自己的招式的使用次數回復１次。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>招式後下次效果絕佳威力提升４<br>招式成功時，有５０％的機率<br>會讓自己變成下次效果絕佳威力提升狀態。</td></tr></table></tr><tr><table class="team"><tr><td style="background-color:#db434780;background-opacity:0.5">火屬性<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">伽勒爾<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">冠軍<br>／攻擊</td></tr><tr><td style="background-color:#6dbfb180;background-opacity:0.5">對戰設施的強者<br>／攻擊</td><td style="background-color:#6dbfb180;background-opacity:0.5">我行我素<br>／攻擊</td></tr></table></tr><table></div></div></div>
 	</div>
 
 	<script>
@@ -434,18 +459,18 @@ json = [[1024700000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [102470
 		update();
 
 		var svg = document.getElementById("grid");
-		if (svgright - svgleft > 1080 || window.innerHeight < svg.getAttribute('height')) {
-			svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
-			svg.setAttribute('width', Math.ceil(svgright - svgleft));
-			svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
+		var svgW = svgright - svgleft;
+		var svgH = svgbottom - svgtop;
+		// svg.setAttribute('width', Math.ceil(svgright - svgleft));
+		// svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		if (document.documentElement.clientWidth / document.documentElement.clientHeight > svgW / svgH) {
+			svg.setAttribute('width', Math.ceil(svgW / svgH * document.documentElement.clientHeight * 0.9));
+			svg.setAttribute('height', Math.ceil(document.documentElement.clientHeight * 0.9));
 		}
-		if (window.innerHeight < svg.getAttribute('height')) {
-			svg.setAttribute('width', Math.ceil(svg.getAttribute('width') / svg.getAttribute('height') * window.innerHeight * 0.9));
-			svg.setAttribute('height', Math.ceil(window.innerHeight * 0.9));
-		}
-		if (window.innerWidth < svg.getAttribute('width')) {
-			svg.setAttribute('height', Math.ceil(svg.getAttribute('height') / svg.getAttribute('width') * window.innerWidth * 0.9));
-			svg.setAttribute('width', Math.ceil(window.innerWidth * 0.9));
+		else {
+			svg.setAttribute('height', Math.ceil(svgH / svgW * document.documentElement.clientWidth * 0.9));
+			svg.setAttribute('width', Math.ceil(document.documentElement.clientWidth * 0.9));
 		}
 
 	</script>

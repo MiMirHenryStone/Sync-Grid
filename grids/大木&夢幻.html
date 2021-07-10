@@ -5,9 +5,35 @@
 	<meta charset='utf-8' />
 	<title>拍檔石盤</title>
 	<style>
-		html {
-			-ms-text-size-adjust: 100%;
-			-webkit-text-size-adjust: 100%;
+		div {
+			margin: 1%;
+		}
+
+		.title {
+			font-size: 1.5rem;
+			margin: 0 1rem;
+		}
+
+		.text {
+			font-size: 1rem;
+		}
+
+		svg {
+			font-size: 1rem;
+			margin: 1rem 5%;
+		}
+
+		table {
+			width: 100%;
+			margin: 0.25rem 0;
+		}
+
+		.move td:first-child {
+			width: 20%;
+		}
+
+		.team td {
+			width: 33%;
 		}
 
 		.box {
@@ -35,12 +61,13 @@
 			text-decoration: none;
 			color: #000;
 			display: inline-block;
-			width: 160px;
+			width: 12.5rem;
 			text-align: center;
 		}
 
 		.content {
 			border: 1px solid #888;
+			margin-top: 0;
 		}
 
 		.content1,
@@ -64,26 +91,24 @@
 
 <body>
 	<div align="center">
-		<select style="font-size:16pt;" id="ms" onchange=changeSet()>
+		<select class="title" id="ms" onchange=changeSet()>
 			<option value="0">No.1</option>
 			<option value="1">No.2</option>
 			<option value="2">No.3</option>
 			<option value="3">No.4</option>
 		</select>
-		<button style="font-size:16pt;" onclick=rename()>重命名</button>
-		<button style="font-size:16pt;" onclick=reset()>全部重設</button>
-		<label>　</label>
-		<label style="font-size:16pt;" id="energy">剩餘力量：60</label>
-		<label>　</label>
-		<label style="font-size:16pt;" id="orb">拍檔滴晶：0</label>
+		<input class="title" type="button" onclick=rename() value="重命名">
+		<input class="title" type="button" onclick=reset() value="全部重設">
+		<span class="title" id="energy">剩餘力量：60</span>
+		<span class="title" id="orb">拍檔滴晶：0</span>
 	</div>
-	<div style="font-size:16pt;" id="skill">技能名稱：</div>
-	<div style="font-size:16pt;" id="effect">效果：</div>
-	<svg id="grid" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
-	<div id="sg" style="font-size:16pt; width: 33%; float: right;">石盤技能：<br></div>
-	<div class="box" style="width: 66%;">
+	<div class="text" id="skill" style="margin-bottom: 0;">技能名稱：</div>
+	<div class="text" id="effect" style="margin-top: 0;">效果：</div>
+	<svg id="grid" align="center" width="9" height="16" viewBox="0 0 1080 1920"></svg>
+	<div class="text" id="sg" style="width: 32%; float: right;">石盤技能：<br></div>
+	<div class="text" class="box" style="width: 64%;">
 		<ul class="tab"><li><a href="#content1">夢幻<br>（使用拍組招式前）</a></li><li><a href="#content2">夢幻<br>（使用拍組招式後）</a></li></ul>
-		<div class="content"><div class="content1" id="content1">————————10137000000————————<br>★3 大木♂&夢幻（使用拍組招式前）<br>體系：技術型 | 弱點：蟲<br>Lv.1：ＨＰ 100 | 攻擊 10 | 防禦 10 | 特攻 10 | 特防 10 | 速度 10<br>Lv.100：ＨＰ 302 | 攻擊 200 | 防禦 200 | 特攻 200 | 特防 200 | 速度 200<br>Lv.110：ＨＰ 321 | 攻擊 220 | 防禦 220 | 特攻 220 | 特防 220 | 速度 220<br>Lv.120：ＨＰ 340 | 攻擊 240 | 防禦 240 | 特攻 240 | 特防 240 | 速度 240<br>Lv.125：ＨＰ 347 | 攻擊 247 | 防禦 247 | 特攻 247 | 特防 247 | 速度 247<br>Lv.130：ＨＰ 354 | 攻擊 254 | 防禦 254 | 特攻 254 | 特防 254 | 速度 254<br>Lv.135：ＨＰ 361 | 攻擊 261 | 防禦 261 | 特攻 261 | 特防 261 | 速度 261<br>拍組招式：偉大的寶可夢博士之精神強念<br>屬性：超能力<br>分類：特殊<br>威力：250<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：高速星星 ▭▭<br>屬性：一般<br>分類：特殊<br>威力：57<br>對象：對手全體拍組<br>攻擊必定會命中。<br><br>道具招式：速度強化 2/2<br>分類：變化<br>對象：自己<br>提高自己的速度２階段。<br><br>寶可夢招式：精神強念 ▭▭▭<br>屬性：超能力<br>分類：特殊<br>威力：99<br>命中：100<br>對象：對手１對拍組<br>有１０％的機率會降低對手的特防１階段。<br><br>訓練家招式：Let's Go! 2/2<br>分類：變化<br>對象：自己<br>提高自己的特攻２階段。<br>提高自己的攻擊、防禦、特防、速度、命中率、閃避率中的一種能力３階段。<br><br>大木的研究成果<br>使出拍組招式後，<br>會讓自己的部分招式變化成其他招式。<br><br>效果絕佳時威力提升１<br>當招式的效果絕佳時，會提高該招式的威力。<br><br>攻擊時能力下降９<br>使出招式攻擊成功時，<br>會降低對手的攻擊、防禦、特攻、特防、速度、<br>命中率、閃避率中的一種能力１階段。<br><br>超能力屬性／技術<br>關都／技術<br>研究者／技術<br>往事／技術<br></div><div class="content2" id="content2">————————10137000000————————<br>★3 大木♂&夢幻（使用拍組招式後）<br>體系：技術型 | 弱點：蟲<br>拍組招式：偉大的寶可夢博士之精神強念<br>屬性：超能力<br>分類：特殊<br>威力：250<br>對象：對手１對拍組<br>沒有追加效果。<br><br>寶可夢招式：大字爆炎 ▭▭▭<br>屬性：火<br>分類：特殊<br>威力：116<br>命中：85<br>對象：對手１對拍組<br>有１０％的機率會讓對手陷入灼傷狀態。<br><br>寶可夢招式：打雷 ▭▭▭<br>屬性：電<br>分類：特殊<br>威力：124<br>命中：70<br>對象：對手１對拍組<br>當天氣為下雨時，攻擊必定會命中。<br>有３０％的機率會讓對手陷入麻痺狀態。<br><br>寶可夢招式：精神強念 ▭▭▭<br>屬性：超能力<br>分類：特殊<br>威力：99<br>命中：100<br>對象：對手１對拍組<br>有１０％的機率會降低對手的特防１階段。<br><br>寶可夢招式：暴風雪 ▭▭▭<br>屬性：冰<br>分類：特殊<br>威力：126<br>命中：70<br>對象：對手全體拍組<br>當天氣為冰雹時，攻擊必定會命中。<br>有１０％的機率會讓對手陷入冰凍狀態。<br><br>大木的研究成果<br>使出拍組招式後，<br>會讓自己的部分招式變化成其他招式。<br><br>效果絕佳時威力提升１<br>當招式的效果絕佳時，會提高該招式的威力。<br><br>攻擊時能力下降９<br>使出招式攻擊成功時，<br>會降低對手的攻擊、防禦、特攻、特防、速度、<br>命中率、閃避率中的一種能力１階段。<br><br>超能力屬性／技術<br>關都／技術<br>研究者／技術<br>往事／技術<br></div></div></div>
+		<div class="content"><div class="content1" id="content1"><table><tr><th colspan="2">★3 大木♂&夢幻（使用拍組招式前）</th></tr><tr><td style="width:50%%;text-align:center">體系</td><td style="width:50%%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">技術型</td><td style="width:50%;text-align:center">蟲</td></tr><tr><table><tr style="background:#bededd"><td>Lv.</td><td>1</td><td>100</td><td>110</td><td>120</td><td>125</td><td>130</td><td>135</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td><td>100</td><td>302</td><td>321</td><td>340</td><td>347</td><td>354</td><td>361</td></tr><tr style="background:#efeccd"><td>攻擊</td><td>10</td><td>200</td><td>220</td><td>240</td><td>247</td><td>254</td><td>261</td></tr><tr style="background:#f2deb9"><td>防禦</td><td>10</td><td>200</td><td>220</td><td>240</td><td>247</td><td>254</td><td>261</td></tr><tr style="background:#d3f0f4"><td>特攻</td><td>10</td><td>200</td><td>220</td><td>240</td><td>247</td><td>254</td><td>261</td></tr><tr style="background:#bed3f0"><td>特防</td><td>10</td><td>200</td><td>220</td><td>240</td><td>247</td><td>254</td><td>261</td></tr><tr style="background:#dbcde7"><td>速度</td><td>10</td><td>200</td><td>220</td><td>240</td><td>247</td><td>254</td><td>261</td></tr></table></tr><tr><table class="move" style="background-color:#e66e9b80;background-opacity:0.5"><tr><td>拍組招式</td><td>偉大的寶可夢博士之精神強念</td></tr><tr><td>屬性</td><td>超能力</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>250</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></tr><tr><table class="move" style="background-color:#96949380;background-opacity:0.5"><tr><td>寶可夢招式</td><td>高速星星 ▭▭</td></tr><tr><td>屬性</td><td>一般</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>57</td></tr><tr><td>對象</td><td>對手全體拍組</td></tr><tr><td></td><td>攻擊必定會命中。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>道具招式</td><td>速度強化 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>提高自己的速度２階段。</td></tr></tr><tr><table class="move" style="background-color:#e66e9b80;background-opacity:0.5"><tr><td>寶可夢招式</td><td>精神強念 ▭▭▭</td></tr><tr><td>屬性</td><td>超能力</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>99</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>有１０％的機率會降低對手的特防１階段。</td></tr></tr><tr><table class="move" style="background-color:#6dbfb180;background-opacity:0.5"><tr><td>訓練家招式</td><td>Let's Go! 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>提高自己的特攻２階段。<br>提高自己的攻擊、防禦、特防、速度、命中率、閃避率中的一種能力３階段。</td></tr></tr><tr><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>大木的研究成果<br>使出拍組招式後，<br>會讓自己的部分招式變化成其他招式。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>效果絕佳時威力提升１<br>當招式的效果絕佳時，會提高該招式的威力。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>攻擊時能力下降９<br>使出招式攻擊成功時，<br>會降低對手的攻擊、防禦、特攻、特防、速度、<br>命中率、閃避率中的一種能力１階段。</td></tr></table></tr><tr><table class="team"><tr><td style="background-color:#e66e9b80;background-opacity:0.5">超能力屬性<br>／技術</td><td style="background-color:#6dbfb180;background-opacity:0.5">關都<br>／技術</td><td style="background-color:#6dbfb180;background-opacity:0.5">研究者<br>／技術</td></tr><tr><td style="background-color:#6dbfb180;background-opacity:0.5">往事<br>／技術</td></tr></table></tr><table></div><div class="content2" id="content2"><table><tr><th colspan="2">★3 大木♂&夢幻（使用拍組招式後）</th></tr><tr><td style="width:50%%;text-align:center">體系</td><td style="width:50%%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">技術型</td><td style="width:50%;text-align:center">蟲</td></tr><tr><table><tr style="background:#bededd"><td>Lv.</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td></tr><tr style="background:#efeccd"><td>攻擊</td></tr><tr style="background:#f2deb9"><td>防禦</td></tr><tr style="background:#d3f0f4"><td>特攻</td></tr><tr style="background:#bed3f0"><td>特防</td></tr><tr style="background:#dbcde7"><td>速度</td></tr></table></tr><tr><table class="move" style="background-color:#e66e9b80;background-opacity:0.5"><tr><td>拍組招式</td><td>偉大的寶可夢博士之精神強念</td></tr><tr><td>屬性</td><td>超能力</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>250</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></tr><tr><table class="move" style="background-color:#db434780;background-opacity:0.5"><tr><td>寶可夢招式</td><td>大字爆炎 ▭▭▭</td></tr><tr><td>屬性</td><td>火</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>116</td></tr><tr><td>命中</td><td>85</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>有１０％的機率會讓對手陷入灼傷狀態。</td></tr></tr><tr><table class="move" style="background-color:#dcb40a80;background-opacity:0.5"><tr><td>寶可夢招式</td><td>打雷 ▭▭▭</td></tr><tr><td>屬性</td><td>電</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>124</td></tr><tr><td>命中</td><td>70</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>當天氣為下雨時，攻擊必定會命中。<br>有３０％的機率會讓對手陷入麻痺狀態。</td></tr></tr><tr><table class="move" style="background-color:#e66e9b80;background-opacity:0.5"><tr><td>寶可夢招式</td><td>精神強念 ▭▭▭</td></tr><tr><td>屬性</td><td>超能力</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>99</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>有１０％的機率會降低對手的特防１階段。</td></tr></tr><tr><table class="move" style="background-color:#6eb4b980;background-opacity:0.5"><tr><td>寶可夢招式</td><td>暴風雪 ▭▭▭</td></tr><tr><td>屬性</td><td>冰</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>126</td></tr><tr><td>命中</td><td>70</td></tr><tr><td>對象</td><td>對手全體拍組</td></tr><tr><td></td><td>當天氣為冰雹時，攻擊必定會命中。<br>有１０％的機率會讓對手陷入冰凍狀態。</td></tr></tr><tr><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>大木的研究成果<br>使出拍組招式後，<br>會讓自己的部分招式變化成其他招式。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>效果絕佳時威力提升１<br>當招式的效果絕佳時，會提高該招式的威力。</td></tr></table><table class="passive" style="background-color:#4ce1f780;background-opacity:0.5"><tr><td>攻擊時能力下降９<br>使出招式攻擊成功時，<br>會降低對手的攻擊、防禦、特攻、特防、速度、<br>命中率、閃避率中的一種能力１階段。</td></tr></table></tr><tr><table class="team"><tr><td style="background-color:#e66e9b80;background-opacity:0.5">超能力屬性<br>／技術</td><td style="background-color:#6dbfb180;background-opacity:0.5">關都<br>／技術</td><td style="background-color:#6dbfb180;background-opacity:0.5">研究者<br>／技術</td></tr><tr><td style="background-color:#6dbfb180;background-opacity:0.5">往事<br>／技術</td></tr></table></tr><table></div></div></div>
 	</div>
 
 	<script>
@@ -434,18 +459,18 @@ json = [[1013700000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101370
 		update();
 
 		var svg = document.getElementById("grid");
-		if (svgright - svgleft > 1080 || window.innerHeight < svg.getAttribute('height')) {
-			svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
-			svg.setAttribute('width', Math.ceil(svgright - svgleft));
-			svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
+		var svgW = svgright - svgleft;
+		var svgH = svgbottom - svgtop;
+		// svg.setAttribute('width', Math.ceil(svgright - svgleft));
+		// svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		if (document.documentElement.clientWidth / document.documentElement.clientHeight > svgW / svgH) {
+			svg.setAttribute('width', Math.ceil(svgW / svgH * document.documentElement.clientHeight * 0.9));
+			svg.setAttribute('height', Math.ceil(document.documentElement.clientHeight * 0.9));
 		}
-		if (window.innerHeight < svg.getAttribute('height')) {
-			svg.setAttribute('width', Math.ceil(svg.getAttribute('width') / svg.getAttribute('height') * window.innerHeight * 0.9));
-			svg.setAttribute('height', Math.ceil(window.innerHeight * 0.9));
-		}
-		if (window.innerWidth < svg.getAttribute('width')) {
-			svg.setAttribute('height', Math.ceil(svg.getAttribute('height') / svg.getAttribute('width') * window.innerWidth * 0.9));
-			svg.setAttribute('width', Math.ceil(window.innerWidth * 0.9));
+		else {
+			svg.setAttribute('height', Math.ceil(svgH / svgW * document.documentElement.clientWidth * 0.9));
+			svg.setAttribute('width', Math.ceil(document.documentElement.clientWidth * 0.9));
 		}
 
 	</script>
