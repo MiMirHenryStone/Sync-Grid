@@ -3,8 +3,8 @@
 ## 新石盤
 ### 2021/07/30
 <p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/鎯琊&胡帕.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_3070_1W_FesPickup_02.00000000000.png"><br>鎯琊&胡帕</a></p>
-<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/棘兒&月亮伊布.html"><br>棘兒&月亮伊布</a></p>
-<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/螺伯&烏鴉頭頭.html"><br>螺伯&烏鴉頭頭</a></p>
+<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/棘兒&月亮伊布.html">棘兒&月亮伊布</a></p>
+<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/螺伯&烏鴉頭頭.html">螺伯&烏鴉頭頭</a></p>
 
 ### 2021/08/05
 <p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/阿速&大王燕.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_3070_2W_Normal_01.event_3070_2W_Normal_01_1.png"><br>阿速&大王燕</a></p>
