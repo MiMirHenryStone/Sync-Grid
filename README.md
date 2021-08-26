@@ -2,13 +2,13 @@
 
 ## 新石盤
 ### 2021/08/28
-<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/莉莉艾（2021週年慶）&露奈雅拉.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/Scout.event_3080_1W_FesPickup_01.event_3080_1W_FesPickup_01_1.png"><br>莉莉艾（2021週年慶）&露奈雅拉</a></p>
+<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/莉莉艾（2021週年慶）&露奈雅拉.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/3080_1W_FesPickup_01.event_3080_1W_FesPickup_01_1.png"><br>莉莉艾（2021週年慶）&露奈雅拉</a></p>
 
 ### 2021/08/30
-<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/N（2021週年慶）&萊希拉姆.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/Scout.event_3080_1W_FesPickup_02.event_3080_1W_FesPickup_02_1.png"><br>N（2021週年慶）&萊希拉姆</a></p>
+<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/N（2021週年慶）&萊希拉姆.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/3080_1W_FesPickup_02.event_3080_1W_FesPickup_02_1.png"><br>N（2021週年慶）&萊希拉姆</a></p>
 
 ### 2021/09/01
-<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/大吾（2021週年慶）&烈空坐.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/Scout.event_3080_1W_FesPickup_03.event_3080_1W_FesPickup_03_1.png"><br>大吾（2021週年慶）&烈空坐</a></p>
+<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/大吾（2021週年慶）&烈空坐.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/3080_1W_FesPickup_03.event_3080_1W_FesPickup_03_1.png"><br>大吾（2021週年慶）&烈空坐</a></p>
 
 ### 免費拍組
 <table align="center" style="display: table"><tr>
