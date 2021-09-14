@@ -149,7 +149,7 @@ json = [[1005100000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100510
 		function stringLength(str) {
 			var length = 0;
 			for (var i = 0; i < str.length; i++) {
-				if (str.match(/[\u0000-\u00ff]/g)) length += 0.5;
+				if (str.slice(i, i + 1).match(/[\u0000-\u00ff]/g)) length += 0.5;
 				else length++;
 			}
 			return length;
