@@ -1,12 +1,6 @@
 <p align="center">⚠<b>石盤點法只保存在本地cookie</b>⚠<br><br>顯示拍組圖片可能需要科學上網<br><br>BUG反饋請私信bilibili@MiMirHenryStone<br>或發送郵件至MiMirHenryStone@gmail.com</p><br>
 
 ## 新石盤
-### 2021/09/16
-<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/赤紅&卡比獸.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_3085_3W_FesPickup_01.event_3085_3W_FesPickup_01_1.png"><br>赤紅&卡比獸</a></p>
-
-### 2021/09/18
-<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/青綠（關都）&化石翼龍.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_3085_3W_FesPickup_02.event_3085_3W_FesPickup_02_1.png"><br>青綠（關都）&化石翼龍</a></p>
-
 ### 2021/09/30
 <p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/美極套裝小霞&水伊布.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_3090_1W_Normal_02.event_3090_1W_Normal_02_1.png"><br>美極套裝小霞&水伊布</a></p>
 
