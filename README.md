@@ -1,6 +1,6 @@
 <p align="center">⚠<b>石盤點法只保存在本地cookie</b>⚠<br><br>顯示拍組圖片可能需要科學上網<br><br>BUG反饋請私信bilibili@MiMirHenryStone<br>或發送郵件至MiMirHenryStone@gmail.com</p><br>
 
-## 新石盤
+## 新拍組
 ### 2021/11/26
 <p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/越橘（便裝）&劈斬司令.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_3110_1W_Normal_01.event_3110_1W_Normal_01_1.png"><br>越橘（便裝）&劈斬司令</a></p>
 
@@ -19,13 +19,10 @@
 ### 2021/12/23
 <p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/索妮亞&來電汪.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_3110_4W_Normal_01.event_3110_4W_Normal_01_1.png"><br>索妮亞&來電汪</a></p>
 
-### 免費／低星拍組
-<table align="center" style="display: table"><tr>
-<td align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/小菘&暴雪王.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/小菘&暴雪王.png"><br>小菘<br>&暴雪王</a></td>
-<td align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/馬瑪內&托戈德瑪爾.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/馬瑪內&托戈德瑪爾.png"><br>馬瑪內<br>&托戈德瑪爾</a></td>
-</tr><tr>
-<td align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/哈奇庫&幾何雪花.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/哈奇庫&幾何雪花.png"><br>哈奇庫<br>&幾何雪花</a></td>
-</tr></table>
+### 2021/12/25
+<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/小菘&暴雪王.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/小菘&暴雪王.png"><br>小菘&暴雪王</a></p>
+<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/馬瑪內&托戈德瑪爾.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/馬瑪內&托戈德瑪爾.png"><br>馬瑪內&托戈德瑪爾</a></p>
+<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/哈奇庫&幾何雪花.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/哈奇庫&幾何雪花.png"><br>哈奇庫&幾何雪花</a></p>
 
 <br>
 
