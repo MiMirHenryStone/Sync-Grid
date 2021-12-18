@@ -1,6 +1,6 @@
 <p align="center">⚠<b>石盤點法只保存在本地cookie</b>⚠<br><br>顯示拍組圖片可能需要科學上網<br><br>BUG反饋請私信bilibili@MiMirHenryStone<br>或發送郵件至MiMirHenryStone@gmail.com</p><br>
 
-## 新拍組
+## 新石盤
 ### 2021/11/26
 <p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/越橘（便裝）&劈斬司令.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_3110_1W_Normal_01.event_3110_1W_Normal_01_1.png"><br>越橘（便裝）&劈斬司令</a></p>
 
