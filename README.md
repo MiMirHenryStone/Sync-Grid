@@ -8,6 +8,7 @@
 <p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/彩豆（２０２２春季）&雙倍多多冰.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_4010_1W_MasterTicket_02.event_4010_1W_MasterTicket_02_1.png"><br>彩豆（２０２２春季）&雙倍多多冰</a></p>
 
 ### 2022/02/10
+<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/赤日&帕路奇亞.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/赤日&帕路奇亞.png"><br>赤日&帕路奇亞</a></p>
 <p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/美極套裝赤日&達克萊伊.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_4010_3W_FesPickup_01.event_4010_3W_FesPickup_01_1.png"><br>美極套裝赤日&達克萊伊</a></p>
 
 ### 2022/02/14
