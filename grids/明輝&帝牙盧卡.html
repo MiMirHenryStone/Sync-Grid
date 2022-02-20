@@ -20,7 +20,7 @@
 
 		svg {
 			font-size: 1rem;
-			margin: 0 5%;
+			/* margin: 0 5%; */
 		}
 
 		table {
@@ -180,10 +180,10 @@ json = [[1016200000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101620
 				}
 				h.setAttribute("points", points);
 				if (this.check == 0) {
-					h.setAttribute("style", "fill:#" + this.color + ";opacity:0.25;stroke:black;stroke-width:1");
+					h.setAttribute("style", `fill:transparent;stroke:#${this.color};stroke-width:4`);
 				}
 				else {
-					h.setAttribute("style", "fill:#" + this.color + ";opacity:1;stroke:black;stroke-width:1");
+					h.setAttribute("style", `fill:#${this.color};stroke:#$929292;stroke-width:4`);
 					energy = energy - this.energy;
 					orb = orb + this.orb;
 				}
@@ -199,12 +199,14 @@ json = [[1016200000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101620
 					s.innerHTML = line;
 					s.setAttribute("x", this.xy[0] - stringLength(line) * f / 2);
 					s.setAttribute("y", this.xy[1]);
+					s.setAttribute("style", `text-shadow:0px 0px 0.5rem #${this.color}`);
 					e.appendChild(s);
 					var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
 					var line = this.skill.substring(this.skill.indexOf('：') + 1);
 					s.innerHTML = line;
 					s.setAttribute("x", this.xy[0] - stringLength(line) * f / 2);
 					s.setAttribute("y", this.xy[1] + f);
+					s.setAttribute("style", `text-shadow:0px 0px 0.5rem #${this.color}`);
 					e.appendChild(s);
 				}
 				else {
@@ -212,6 +214,7 @@ json = [[1016200000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101620
 					s.innerHTML = this.skill;
 					s.setAttribute("x", this.xy[0] - this.skill.length * f / 2);
 					s.setAttribute("y", this.xy[1] + f / 2);
+					s.setAttribute("style", `text-shadow:0px 0px 0.5rem #${this.color}`);
 					e.appendChild(s);
 				}
 
@@ -220,12 +223,14 @@ json = [[1016200000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101620
 				s.innerHTML = '等級' + this.lv;
 				s.setAttribute("x", this.xy[0] - f * 3 / 2);
 				s.setAttribute("y", this.xy[1] - f * 2);
+					s.setAttribute("style", `text-shadow:0px 0px 0.5rem #${this.color}`);
 				e.appendChild(s);
 
 				var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
 				s.innerHTML = '能量' + this.energy;
 				s.setAttribute("x", this.xy[0] - f * 3 / 2);
 				s.setAttribute("y", this.xy[1] + f * 3);
+					s.setAttribute("style", `text-shadow:0px 0px 0.5rem #${this.color}`);
 				e.appendChild(s);
 
 				var h = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
@@ -234,7 +239,7 @@ json = [[1016200000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101620
 					points = points + this.hexagon[i][0] + "," + this.hexagon[i][1] + " ";
 				}
 				h.setAttribute("points", points);
-				h.setAttribute("style", "fill:#" + this.color + ";opacity:0;stroke:black;stroke-width:1");
+				h.setAttribute("style", `fill:transparent;stroke:transparent;stroke-width:4`);
 				h.setAttribute("onclick", "c(evt," + this.id + ")");
 				e.appendChild(h);
 			}
@@ -271,15 +276,13 @@ json = [[1016200000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101620
 		}
 
 		function c(evt, id) {
-			for (var i = 0; i < tiles.length; i++) {
-				if (tiles[i].id == id) {
-					var t = tiles[i];
-					break;
-				}
-			}
+			var t = tiles.find(item => {
+				return item.id == id;
+			});
 			var target = document.getElementById(id);
-			if (target.style.opacity == 0.25) {
-				target.style.opacity = 1;
+			if (target.style.fill == "transparent") {
+				target.style.fill = "#" + t.color;
+				target.style.stroke = "#929292";
 				energy = energy - t.energy;
 				orb = orb + t.orb;
 
@@ -293,7 +296,8 @@ json = [[1016200000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101620
 				}
 			}
 			else {
-				target.style.opacity = 0.25;
+				target.style.fill = "transparent";
+				target.style.stroke = "#" + t.color;
 				energy = energy + t.energy;
 				orb = orb - t.orb;
 				document.getElementById('skill').innerHTML = '技能名稱：';
@@ -352,7 +356,7 @@ json = [[1016200000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101620
 				points = points + hh[i][0] + "," + hh[i][1] + " ";
 			}
 			h.setAttribute("points", points);
-			h.setAttribute("style", "fill:#" + tcolor + ";opacity:0.5;stroke:black;stroke-width:1");
+			h.setAttribute("style", `fill:#${this.tcolor};opacity:0.5;stroke:#929292;stroke-width:4`);
 			e.appendChild(h);
 			var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
 			var line = name.substring(0, name.indexOf('&'));
@@ -423,7 +427,7 @@ json = [[1016200000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101620
 		var X = 1080;
 		var Y = 1920;
 		var R = 96;
-		var r = 96;
+		var r = 92;
 		var f = 16;
 		var energy = 60;
 		var orb = 0;
@@ -466,6 +470,9 @@ json = [[1016200000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [101620
 
 		newGrid();
 		update();
+
+		svgleft -= document.documentElement.clientWidth * 0.05;
+		svgright += document.documentElement.clientWidth * 0.05;
 
 		var svg = document.getElementById("grid");
 		svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
