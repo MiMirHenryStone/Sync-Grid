@@ -20,7 +20,7 @@
 
 		svg {
 			font-size: 1rem;
-			/* margin: 0 5%; */
+			margin: 0 5%;
 		}
 
 		table {
@@ -470,9 +470,6 @@ json = [[1006290000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100629
 
 		newGrid();
 		update();
-
-		svgleft -= document.documentElement.clientWidth * 0.05;
-		svgright += document.documentElement.clientWidth * 0.05;
 
 		var svg = document.getElementById("grid");
 		svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
