@@ -1,0 +1,492 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8' />
+	<title>拍檔石盤</title>
+	<style>
+		div {
+			margin: 0.25rem;
+		}
+
+		.title {
+			font-size: 1.25rem;
+			margin: 0 1rem;
+		}
+
+		.text {
+			font-size: 1rem;
+		}
+
+		svg {
+			font-size: 1rem;
+			margin: 0 5%;
+		}
+
+		table {
+			width: 100%;
+			margin: 0.25rem 0;
+		}
+
+		.move td:first-child {
+			width: 20%;
+		}
+
+		.team td {
+			width: 33%;
+		}
+
+		.box {
+			position: relative;
+			width: 66%;
+		}
+
+		.tab {
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			list-style-type: none;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+		}
+
+		.tab li {
+			background-color: #ccc;
+			border: 1px solid #fff;
+		}
+
+		.tab li a {
+			text-decoration: none;
+			color: #000;
+			display: inline-block;
+			width: 10rem;
+			text-align: center;
+		}
+
+		.content {
+			border: 1px solid #888;
+			margin-top: 0;
+		}
+
+		.content1,
+		.content2,
+		.content3,
+		.content4 {
+			display: none;
+			word-break: break-word;
+			word-wrap: break-word;
+		}
+
+		.content1:target,
+		.content2:target,
+		.content3:target,
+		.content4:target {
+			display: block;
+		}
+	</style>
+</head>
+
+
+<body>
+	<div align="center">
+		<select class="title" id="ms" onchange=changeSet()>
+			<option value="0">No.1</option>
+			<option value="1">No.2</option>
+			<option value="2">No.3</option>
+			<option value="3">No.4</option>
+		</select>
+		<input class="title" type="button" onclick=rename() value="重命名">
+		<input class="title" type="button" onclick=reset() value="全部重設">
+		<span class="title" id="energy">剩餘力量：60</span>
+		<span class="title" id="orb">拍檔滴晶：0</span>
+	</div>
+	<div class="text" id="skill" style="margin: 0 0.25rem;">技能名稱：</div>
+	<div class="text" id="effect" style="margin: 0 0.25rem;">效果：</div>
+	<svg id="grid" align="center" width="9" height="16" viewBox="0 0 1080 1920"></svg>
+	<div class="text" id="sg" style="width: 32%; float: right;">石盤技能：<br></div>
+	<div class="text" class="box" style="width: 64%;">
+		<ul class="tab"><li><a href="#content1">鳳王</a></li></ul>
+		<div class="content"><div class="content1" id="content1"><table><tr><th colspan="2">盛典限定★5 美極套裝松葉♂&鳳王</th></tr><tr><td style="width:50%;text-align:center">體系</td><td style="width:50%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">輔助型</td><td style="width:50%;text-align:center">電</td></tr></table><table><tr style="background:#bededd"><td>Lv.</td><td>1</td><td>100</td><td>110</td><td>120</td><td>125</td><td>130</td><td>135</td><td>140</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td><td>110</td><td>561</td><td>593</td><td>625</td><td>641</td><td>657</td><td>673</td><td>689</td></tr><tr style="background:#efeccd"><td>攻擊</td><td>11</td><td>160</td><td>170</td><td>180</td><td>185</td><td>190</td><td>195</td><td>200</td></tr><tr style="background:#f2deb9"><td>防禦</td><td>25</td><td>258</td><td>274</td><td>290</td><td>298</td><td>306</td><td>314</td><td>322</td></tr><tr style="background:#d3f0f4"><td>特攻</td><td>8</td><td>124</td><td>132</td><td>140</td><td>144</td><td>148</td><td>152</td><td>156</td></tr><tr style="background:#bed3f0"><td>特防</td><td>25</td><td>258</td><td>274</td><td>290</td><td>298</td><td>306</td><td>314</td><td>322</td></tr><tr style="background:#dbcde7"><td>速度</td><td>13</td><td>179</td><td>191</td><td>203</td><td>209</td><td>215</td><td>221</td><td>227</td></tr></table><table class="move" style="background-color:#db434780"><tr><td>拍組招式</td><td>新的未來降臨之神聖之火</td></tr><tr><td>屬性</td><td>火</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>250</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></table><table class="move" style="background-color:#db434780"><tr><td>寶可夢招式</td><td>蓄能焰襲 ▭▭</td></tr><tr><td>屬性</td><td>火</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>30</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>提高自己的速度１階段。</td></tr></table><table class="move" style="background-color:#6dbfb180"><tr><td>道具招式</td><td>傷藥 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>我方１對拍組</td></tr><tr><td></td><td>回復我方的ＨＰ，約為最大ＨＰ的４０％。</td></tr></table><table class="move" style="background-color:#db434780"><tr><td>寶可夢招式</td><td>大晴天 ▭▭ 2/2</td></tr><tr><td>屬性</td><td>火</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>全場地</td></tr><tr><td></td><td>會將天氣變成日照強烈的狀態。</td></tr></table><table class="move" style="background-color:#6dbfb180"><tr><td>訓練家招式</td><td>我深信不疑！ 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>我方場地</td></tr><tr><td></td><td>讓我方場地變成招式計量槽加速狀態。<br>提高我方全體拍組的防禦、特防和速度１階段。<br>當天氣為日照強烈時，還會再提高我方全體拍組的擊中要害率１階段。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>寶可夢首次使出變化招式時５種能力↑Ｇ１<br>在寶可夢首次使出變化招式時，<br>會提高我方全體拍組的<br>攻擊、防禦、特攻、特防和速度１階段。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>晴天時使出招式時ＨＰ回復Ｇ９<br>當天氣為日照強烈且使出招式時，<br>會回復我方全體拍組的ＨＰ。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>首次拍組招式後下次傷害防禦<br>首次使出拍組招式時，<br>會讓自己變成下次傷害防禦狀態。</td></tr></table><table class="team"><tr><td style="background-color:#db434780">火屬性<br>／輔助</td><td style="background-color:#6dbfb180">城都<br>／輔助</td><td style="background-color:#6dbfb180">道館館主<br>／輔助</td></tr><tr><td style="background-color:#6dbfb180">美極套裝<br>／輔助</td><td style="background-color:#6dbfb180">不可思議的力量<br>／輔助</td></tr></table></div></div></div>
+	</div>
+
+	<script>
+json = [[1014810000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [1014810001, '攻擊+5', '攻擊+5', 0, 5, 1, '568dd1', 1, -1], [1014810002, '防禦+5', '防禦+5', 0, 5, 1, '568dd1', 0, -1], [1014810003, '攻擊+5', '攻擊+5', 0, 5, 1, '568dd1', -1, 0], [1014810004, '特防+5', '特防+5', 0, 5, 1, '568dd1', -1, 1], [1014810005, '速度+5', '速度+5', 0, 5, 1, '568dd1', 0, 1], [1014810006, '防禦+5', '防禦+5', 2, 24, 1, '568dd1', 1, 1], [1014810007, '灼傷無效', '不會陷入灼傷狀態。', 5, 60, 1, 'e6ce5e', 2, 1], [1014810008, '特防+5', '特防+5', 2, 24, 1, '568dd1', 1, 2], [1014810009, '速度+5', '速度+5', 2, 24, 1, '568dd1', 3, 1], [1014810010, '蓄能焰襲：威力+4', '蓄能焰襲：威力+4', 3, 36, 1, '4ab897', 2, 2], [1014810011, '蓄能焰襲：威力+4', '蓄能焰襲：威力+4', 3, 36, 2, '4ab897', 1, 3], [1014810012, '蓄能焰襲：威力+4', '蓄能焰襲：威力+4', 3, 36, 1, '4ab897', 3, 2], [1014810013, '蓄能焰襲：招式後招式計量槽增加３', '招式成功時，有４０％的機率\n會幫自己增加１條招式計量槽。', 7, 84, 2, 'e1768a', 2, 3], [1014810014, '首次拍組招式後５種能力提升Ｇ１', '首次使出拍組招式時，\n會提高我方全體拍組的攻擊、防禦、特攻、特防和速度１階段。', 10, 120, 3, 'e6ce5e', 1, 4], [1014810015, '蓄能焰襲：攻擊時速度提升Ｇ９', '使出招式攻擊成功時，\n會提高我方全體拍組的速度１階段。', 9, 108, 2, 'e1768a', 3, 3], [1014810016, '首次拍組招式後計數加速１', '首次使出拍組招式時，\n會讓發動拍組招式所需的行動數減少１次。', 10, 120, 3, 'e6ce5e', 2, 4], [1014810017, '速度+5', '速度+5', 2, 24, 1, '568dd1', -2, 0], [1014810018, '特防+5', '特防+5', 2, 24, 1, '568dd1', -3, 0], [1014810019, '防禦+5', '防禦+5', 2, 24, 1, '568dd1', -1, -1], [1014810020, '蓄能焰襲：威力+4', '蓄能焰襲：威力+4', 3, 36, 1, '4ab897', -2, -1], [1014810021, 'ＨＰ+20', 'ＨＰ+20', 4, 48, 2, '568dd1', -3, -1], [1014810022, '蓄能焰襲：威力+4', '蓄能焰襲：威力+4', 3, 36, 2, '4ab897', -1, -2], [1014810023, '大晴天：招式後招式次數回復３', '招式成功時，有４０％的機率\n會幫該招式的使用次數回復１次。', 7, 84, 2, 'e1768a', -2, -2], [1014810024, '大晴天：寶可夢首次使出變化招式時防禦提升Ｇ２', '在寶可夢首次使出變化招式時，\n會提高我方全體拍組的防禦２階段。', 10, 120, 3, 'e1768a', -3, -2], [1014810025, '大晴天：寶可夢首次使出變化招式時特防提升Ｇ２', '在寶可夢首次使出變化招式時，\n會提高我方全體拍組的特防２階段。', 10, 120, 3, 'e1768a', -1, -3], [1014810026, '速度+5', '速度+5', 2, 24, 1, '568dd1', 1, -2], [1014810027, '畏縮無效', '不會陷入畏縮狀態。', 5, 60, 1, 'e6ce5e', 2, -3], [1014810028, '特防+5', '特防+5', 2, 24, 1, '568dd1', 1, -3], [1014810029, '攻擊+5', '攻擊+5', 2, 24, 1, '568dd1', 3, -4], [1014810030, '防禦+5', '防禦+5', 2, 24, 1, '568dd1', 2, -4], [1014810031, '傷藥：ＨＰ回復招式回復量增加１', '當自己使出會回復ＨＰ的招式時，會提高ＨＰ回復量。', 10, 120, 2, 'e1768a', 1, -4], [1014810032, 'ＨＰ+10', 'ＨＰ+10', 2, 24, 1, '568dd1', 3, -5], [1014810033, '傷藥：我方中招後解除異常狀態９', '以我方拍組為對象的\n招式（不含場地效果）成功時，\n會解除受到該招式效果影響的\n我方拍組的異常狀態。', 8, 96, 2, 'e1768a', 2, -5], [1014810034, '傷藥：招式後招式次數回復３', '招式成功時，有４０％的機率\n會幫該招式的使用次數回復１次。', 7, 84, 3, 'e1768a', 1, -5], [1014810035, '傷藥：我方中招後解除妨害狀態９', '以我方拍組為對象的\n招式（不含場地效果）成功時，\n會解除受到該招式效果影響的我方拍組的畏縮、\n混亂和束縛狀態。', 8, 96, 2, 'e1768a', 3, -6], [1014810036, '傷藥：ＨＰ回復招式回復量增加１', '當自己使出會回復ＨＰ的招式時，會提高ＨＰ回復量。', 10, 120, 3, 'e1768a', 2, -6], [1014810037, 'ＨＰ+10', 'ＨＰ+10', 2, 24, 1, '568dd1', -2, 2], [1014810038, '防禦+5', '防禦+5', 2, 24, 1, '568dd1', -1, 2], [1014810039, '攻擊+5', '攻擊+5', 2, 24, 1, '568dd1', -3, 3], [1014810040, '我深信不疑！：招式後招式次數回復３', '招式成功時，有４０％的機率\n會幫該招式的使用次數回復１次。', 7, 84, 1, 'e1768a', -2, 3], [1014810041, '特防+10', '特防+10', 4, 48, 2, '568dd1', -1, 3], [1014810042, '晴天時全種類下降無效', '當天氣為日照強烈時，\n所有的能力都不會降低。', 8, 96, 2, 'e6ce5e', -3, 4], [1014810043, '晴天時招式計量槽加速２', '當天氣為日照強烈時，\n招式計量槽會累積得較快。', 8, 96, 2, 'e6ce5e', -2, 4], [1014810044, '晴天時使出招式時ＨＰ回復９', '當天氣為日照強烈且使出招式時，\n會回復自己的ＨＰ。', 10, 120, 3, 'e6ce5e', -1, 4], [1014810045, '擊中要害無效', '對手的攻擊不會擊中要害。', 9, 108, 3, 'e6ce5e', -3, 5], [1014810046, '新的未來降臨之神聖之火：威力+25', '新的未來降臨之神聖之火：威力+25', 5, 60, 3, 'db4347', 0, 3], [1014810047, '新的未來降臨之神聖之火：威力+25', '新的未來降臨之神聖之火：威力+25', 5, 60, 3, 'db4347', 0, -3]]
+
+		function setCookie(cookieName, cookieValue, cookieDates) {
+			var d = new Date();
+			d.setDate(d.getDate() + cookieDates);
+			document.cookie = cookieName + "=" + cookieValue + ";expires=" + d.toGMTString();
+		}
+		function getCookie(cookieName) {
+			var cookieStr = unescape(document.cookie);
+			var arr = cookieStr.split("; ");
+			var cookieValue = "";
+			for (var i = 0; i < arr.length; i++) {
+				var temp = arr[i].split("=");
+				if (temp[0] == cookieName) {
+					cookieValue = temp[1];
+					break;
+				}
+			}
+			return cookieValue;
+		}
+		function removeCookie(cookieName) {
+			document.cookie = encodeURIComponent(cookieName) + "=; expires=" + new Date();
+		}
+
+		function newCookie() {
+			var re = "";
+			for (var i = 0; i < 4; i++) {
+				re = re + checks[i] + ',';
+				re = re + escape(pres[i]) + ',';
+			}
+			re = re + set;
+			return re;
+		}
+
+		function stringLength(str) {
+			var length = 0;
+			for (var i = 0; i < str.length; i++) {
+				if (str.slice(i, i + 1).match(/[\u0000-\u00ff]/g)) length += 0.5;
+				else length++;
+			}
+			return length;
+		}
+
+		class Tile {
+			constructor(id, skill, effect, energy, orb, lv, color, x, y, check) {
+				this.id = id;
+				this.skill = skill;
+				this.effect = effect;
+				this.energy = energy;
+				this.orb = orb;
+				this.lv = lv;
+				this.color = color;
+				this.x = x;
+				this.y = y;
+				this.xy = xyz2xy(this.x, this.y);
+				this.hexagon = hexagon(this.xy);
+				this.check = check;
+			}
+			draw() {
+				var e = document.getElementById('grid');
+
+				var h = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+				var points = "";
+				for (var i = 0; i < this.hexagon.length; i++) {
+					points = points + this.hexagon[i][0] + "," + this.hexagon[i][1] + " ";
+				}
+				h.setAttribute("points", points);
+				if (this.check == 0) {
+					h.setAttribute("style", `fill:transparent;stroke:#${this.color};stroke-width:4`);
+				}
+				else {
+					h.setAttribute("style", `fill:#${this.color};stroke:#929292;stroke-width:4`);
+					energy = energy - this.energy;
+					orb = orb + this.orb;
+				}
+				h.setAttribute("id", this.id);
+				e.appendChild(h);
+			}
+			skin() {
+				var e = document.getElementById('grid');
+
+				if (this.skill.indexOf('：') != -1) {
+					var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+					var line = this.skill.substring(0, this.skill.indexOf('：'));
+					s.innerHTML = line;
+					s.setAttribute("x", this.xy[0] - stringLength(line) * f / 2);
+					s.setAttribute("y", this.xy[1]);
+					s.setAttribute("style", `text-shadow:0px 0px 0.5rem #${this.color}`);
+					e.appendChild(s);
+					var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+					var line = this.skill.substring(this.skill.indexOf('：') + 1);
+					s.innerHTML = line;
+					s.setAttribute("x", this.xy[0] - stringLength(line) * f / 2);
+					s.setAttribute("y", this.xy[1] + f);
+					s.setAttribute("style", `text-shadow:0px 0px 0.5rem #${this.color}`);
+					e.appendChild(s);
+				}
+				else {
+					var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+					s.innerHTML = this.skill;
+					s.setAttribute("x", this.xy[0] - this.skill.length * f / 2);
+					s.setAttribute("y", this.xy[1] + f / 2);
+					s.setAttribute("style", `text-shadow:0px 0px 0.5rem #${this.color}`);
+					e.appendChild(s);
+				}
+
+
+				var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+				s.innerHTML = '等級' + this.lv;
+				s.setAttribute("x", this.xy[0] - f * 3 / 2);
+				s.setAttribute("y", this.xy[1] - f * 2);
+					s.setAttribute("style", `text-shadow:0px 0px 0.5rem #${this.color}`);
+				e.appendChild(s);
+
+				var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+				s.innerHTML = '能量' + this.energy;
+				s.setAttribute("x", this.xy[0] - f * 3 / 2);
+				s.setAttribute("y", this.xy[1] + f * 3);
+					s.setAttribute("style", `text-shadow:0px 0px 0.5rem #${this.color}`);
+				e.appendChild(s);
+
+				var h = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+				var points = "";
+				for (var i = 0; i < this.hexagon.length; i++) {
+					points = points + this.hexagon[i][0] + "," + this.hexagon[i][1] + " ";
+				}
+				h.setAttribute("points", points);
+				h.setAttribute("style", `fill:transparent;stroke:transparent;stroke-width:4`);
+				h.setAttribute("onclick", "c(evt," + this.id + ")");
+				e.appendChild(h);
+			}
+		}
+		function xyz2xy(x, y) {
+			var x1 = x * R * 1.5 + X / 2;
+			var y1 = - x * R * 1.732 / 2 - y * R * 1.732 + Y / 2;
+			return [x1, y1];
+		}
+
+		var svgleft = 540;
+		var svgtop = 960;
+		var svgright = 540;
+		var svgbottom = 960;
+
+		function hexagon(xy) {
+			var x = xy[0];
+			var y = xy[1];
+			var r2 = r / 2;
+			var r3 = r / 2 * 1.732;
+			var re = [[x + r, y],
+			[x + r2, y + r3],
+			[x - r2, y + r3],
+			[x - r, y],
+			[x - r2, y - r3],
+			[x + r2, y - r3]];
+			for (var i = 0; i < 6; i++) {
+				if (re[i][0] < svgleft) svgleft = Math.floor(re[i][0]);
+				if (re[i][0] > svgright) svgright = Math.ceil(re[i][0]);
+				if (re[i][1] < svgtop) svgtop = Math.floor(re[i][1]);
+				if (re[i][1] > svgbottom) svgbottom = Math.ceil(re[i][1]);
+			}
+			return re;
+		}
+
+		function c(evt, id) {
+			var t = tiles.find(item => {
+				return item.id == id;
+			});
+			var target = document.getElementById(id);
+			if (target.style.fill == "transparent") {
+				target.style.fill = "#" + t.color;
+				target.style.stroke = "#929292";
+				energy = energy - t.energy;
+				orb = orb + t.orb;
+
+				document.getElementById('skill').innerHTML = '技能名稱：' + t.skill;
+				document.getElementById('effect').innerHTML = '效果：' + t.effect;
+				for (var i = 0; i < json.length; i++) {
+					if (json[i][0] == id) {
+						check[i] = 1;
+						break;
+					}
+				}
+			}
+			else {
+				target.style.fill = "transparent";
+				target.style.stroke = "#" + t.color;
+				energy = energy + t.energy;
+				orb = orb - t.orb;
+				document.getElementById('skill').innerHTML = '技能名稱：';
+				document.getElementById('effect').innerHTML = '效果：';
+				for (var i = 0; i < json.length; i++) {
+					if (json[i][0] == id) {
+						check[i] = 0;
+						break;
+					}
+				}
+			}
+			checks[set] = check.join('');
+			setCookie('syncgrid' + no, newCookie(), 999);
+			update();
+		};
+
+		function rename() {
+			var pre = prompt("請輸入預設名稱");
+			if (pre != null) {
+				pres[set] = pre;
+				var select = document.getElementById("ms");
+				select.options[set].text = pre;
+				setCookie('syncgrid' + no, newCookie(), 999);
+			}
+		}
+
+		function reset() {
+			if (confirm("確定要重設所有已開放的格子嗎？")) {
+				checks[set] = "";
+				setCookie('syncgrid' + no, newCookie(), 999);
+				update();
+				newGrid();
+			}
+		}
+
+		function changeSet() {
+			var select = document.getElementById("ms");
+			set = select.selectedIndex;
+			setCookie('syncgrid' + no, newCookie(), 999);
+			update();
+			newGrid();
+		}
+
+		function newGrid() {
+			var e = document.getElementById("grid")
+			e.innerHTML = "";
+
+			energy = 60;
+			orb = 0;
+
+			var h = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+			var points = "";
+			var hxy = xyz2xy(0, 0);
+			var hh = hexagon(hxy);
+			for (var i = 0; i < hh.length; i++) {
+				points = points + hh[i][0] + "," + hh[i][1] + " ";
+			}
+			h.setAttribute("points", points);
+			h.setAttribute("style", `fill:#${this.tcolor};opacity:0.5;stroke:#929292;stroke-width:4`);
+			e.appendChild(h);
+			var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+			var line = name.substring(0, name.indexOf('&'));
+			s.innerHTML = line;
+			s.setAttribute("x", hxy[0] - stringLength(line) * f / 2);
+			s.setAttribute("y", hxy[1]);
+			e.appendChild(s);
+			var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+			var line = name.substring(name.indexOf('&') + 1);
+			s.innerHTML = line;
+			s.setAttribute("x", hxy[0] - stringLength(line) * f / 2);
+			s.setAttribute("y", hxy[1] + f);
+			e.appendChild(s);
+
+			tiles = new Array();
+			for (var i = 0; i < json.length; i++) {
+				var t = json[i];
+				var tile = new Tile(t[0], t[1], t[2], t[3], t[4], t[5], t[6], t[7], t[8], check[i]);
+				tile.draw();
+				tiles.push(tile);
+			}
+			for (var i = 0; i < tiles.length; i++) {
+				var tile = tiles[i];
+				tile.skin();
+			}
+			document.getElementById('energy').innerHTML = '剩餘力量：' + energy;
+			document.getElementById('orb').innerHTML = '拍檔滴晶：' + orb;
+		}
+
+		function update() {
+			var select = document.getElementById("ms");
+			select.selectedIndex = set;
+			check = checks[set];
+			if (check == "") {
+				check = new Array(json.length);
+				for (var i = 0; i < check.length; i++) check[i] = 0;
+			}
+			else {
+				check = check.split('');
+			}
+			document.getElementById('energy').innerHTML = '剩餘力量：' + energy;
+			document.getElementById('orb').innerHTML = '拍檔滴晶：' + orb;
+			var re = new Array();
+			for (var i = 0; i < check.length; i++) {
+				if (check[i] == 1) {
+					var newline = true;
+					if (json[i][1].indexOf('+') != -1) {
+						for (var j = 0; j < re.length; j++) {
+							if (re[j].indexOf('+') != -1) {
+								if (re[j].slice(0, re[j].indexOf('+')) == json[i][1].slice(0, json[i][1].indexOf('+'))) {
+									re[j] = re[j].slice(0, re[j].indexOf('+') + 1) + (parseInt(re[j].slice(re[j].indexOf('+') + 1, re[j].length)) + parseInt(json[i][1].slice(json[i][1].indexOf('+') + 1, json[i][1].length)));
+									newline = false;
+								}
+							}
+						}
+					}
+					if (newline) {
+						re.push(json[i][1]);
+					}
+				}
+			}
+			document.getElementById('sg').innerHTML = '石盤技能：<br>' + re.join('<br>');
+		}
+
+		var no = "10148100000";
+		var name = "美極套裝松葉&鳳王";
+		var tcolor = "db4347";
+		var X = 1080;
+		var Y = 1920;
+		var R = 96;
+		var r = 92;
+		var f = 16;
+		var energy = 60;
+		var orb = 0;
+		var checks = ["", "", "", ""];
+		var pres = ["No.1", "No.2", "No.3", "No.4"];
+		var set = 0;
+		var cookie = getCookie('syncgrid' + no);
+		if (cookie.indexOf(',') != -1) {
+			cookie = cookie.split(',');
+			if (cookie.length == 9) {
+				for (var i = 0; i < 4; i++) {
+					checks[i] = cookie[2 * i];
+					pres[i] = cookie[2 * i + 1];
+				}
+				set = cookie[8];
+			}
+		}
+		else {
+			checks[0] = cookie;
+			checks[1] = '0'.repeat(json.length);
+			checks[2] = '0'.repeat(json.length);
+			checks[3] = '0'.repeat(json.length);
+		}
+
+		var select = document.getElementById("ms");
+		select.selectedIndex = set;
+		for (var i = 0; i < 4; i++) {
+			if (pres[i] == '') select.options[i].text = "No." + (i + 1);
+			else select.options[i].text = pres[i];
+		}
+
+		var check = checks[set];
+		if (check == "") {
+			check = new Array(json.length);
+			for (var i = 0; i < check.length; i++) check[i] = 0;
+		}
+		else {
+			check = check.split('');
+		}
+
+		newGrid();
+		update();
+
+		var svg = document.getElementById("grid");
+		svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
+		var svgW = svgright - svgleft;
+		var svgH = svgbottom - svgtop;
+		// svg.setAttribute('width', Math.ceil(svgright - svgleft));
+		// svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		if (document.documentElement.clientWidth / document.documentElement.clientHeight > svgW / svgH) {
+			svg.setAttribute('width', Math.ceil(svgW / svgH * document.documentElement.clientHeight * 0.9));
+			svg.setAttribute('height', Math.ceil(document.documentElement.clientHeight * 0.9));
+		}
+		else {
+			svg.setAttribute('height', Math.ceil(svgH / svgW * document.documentElement.clientWidth * 0.9));
+			svg.setAttribute('width', Math.ceil(document.documentElement.clientWidth * 0.9));
+		}
+
+	</script>
+</body>
+
+</html>
