@@ -1,0 +1,492 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8' />
+	<title>拍檔石盤</title>
+	<style>
+		div {
+			margin: 0.25rem;
+		}
+
+		.title {
+			font-size: 1.25rem;
+			margin: 0 1rem;
+		}
+
+		.text {
+			font-size: 1rem;
+		}
+
+		svg {
+			font-size: 1rem;
+			margin: 0 5%;
+		}
+
+		table {
+			width: 100%;
+			margin: 0.25rem 0;
+		}
+
+		.move td:first-child {
+			width: 20%;
+		}
+
+		.team td {
+			width: 33%;
+		}
+
+		.box {
+			position: relative;
+			width: 66%;
+		}
+
+		.tab {
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			list-style-type: none;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+		}
+
+		.tab li {
+			background-color: #ccc;
+			border: 1px solid #fff;
+		}
+
+		.tab li a {
+			text-decoration: none;
+			color: #000;
+			display: inline-block;
+			width: 10rem;
+			text-align: center;
+		}
+
+		.content {
+			border: 1px solid #888;
+			margin-top: 0;
+		}
+
+		.content1,
+		.content2,
+		.content3,
+		.content4 {
+			display: none;
+			word-break: break-word;
+			word-wrap: break-word;
+		}
+
+		.content1:target,
+		.content2:target,
+		.content3:target,
+		.content4:target {
+			display: block;
+		}
+	</style>
+</head>
+
+
+<body>
+	<div align="center">
+		<select class="title" id="ms" onchange=changeSet()>
+			<option value="0">No.1</option>
+			<option value="1">No.2</option>
+			<option value="2">No.3</option>
+			<option value="3">No.4</option>
+		</select>
+		<input class="title" type="button" onclick=rename() value="重命名">
+		<input class="title" type="button" onclick=reset() value="全部重設">
+		<span class="title" id="energy">剩餘力量：60</span>
+		<span class="title" id="orb">拍檔滴晶：0</span>
+	</div>
+	<div class="text" id="skill" style="margin: 0 0.25rem;">技能名稱：</div>
+	<div class="text" id="effect" style="margin: 0 0.25rem;">效果：</div>
+	<svg id="grid" align="center" width="9" height="16" viewBox="0 0 1080 1920"></svg>
+	<div class="text" id="sg" style="width: 32%; float: right;">石盤技能：<br></div>
+	<div class="text" class="box" style="width: 64%;">
+		<ul class="tab"><li><a href="#content1">火焰雞</a></li><li><a href="#content2">超級火焰雞</a></li></ul>
+		<div class="content"><div class="content1" id="content1"><table><tr><th colspan="2">盛典限定★5 美極套裝小遙♀&火焰雞♂</th></tr><tr><td style="width:50%;text-align:center">體系</td><td style="width:50%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">技術型</td><td style="width:50%;text-align:center">飛行</td></tr></table><table><tr style="background:#bededd"><td>Lv.</td><td>1</td><td>100</td><td>110</td><td>120</td><td>125</td><td>130</td><td>135</td><td>140</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td><td>95</td><td>528</td><td>558</td><td>588</td><td>603</td><td>618</td><td>633</td><td>648</td></tr><tr style="background:#efeccd"><td>攻擊</td><td>21</td><td>336</td><td>358</td><td>380</td><td>391</td><td>402</td><td>413</td><td>424</td></tr><tr style="background:#f2deb9"><td>防禦</td><td>12</td><td>144</td><td>152</td><td>160</td><td>164</td><td>168</td><td>172</td><td>176</td></tr><tr style="background:#d3f0f4"><td>特攻</td><td>17</td><td>264</td><td>282</td><td>300</td><td>309</td><td>318</td><td>327</td><td>336</td></tr><tr style="background:#bed3f0"><td>特防</td><td>12</td><td>144</td><td>152</td><td>160</td><td>164</td><td>168</td><td>172</td><td>176</td></tr><tr style="background:#dbcde7"><td>速度</td><td>22</td><td>286</td><td>304</td><td>322</td><td>331</td><td>340</td><td>349</td><td>358</td></tr></table><table class="move" style="background-color:#db434780"><tr><td>拍組招式</td><td>訴說我們的一切之火焰踢</td></tr><tr><td>屬性</td><td>火</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>160</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>變成超級火焰雞直到對戰結束。<br>對手的防禦降低得越多，威力就越大。</td></tr></table><table class="move" style="background-color:#db434780"><tr><td>寶可夢招式</td><td>火焰踢 ▭▭▭▭</td></tr><tr><td>屬性</td><td>火</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>140</td></tr><tr><td>命中</td><td>90</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>容易擊中要害。<br>有１０％的機率會讓對手陷入灼傷狀態。</td></tr></table><table class="move" style="background-color:#6dbfb180"><tr><td>道具招式</td><td>要害攻擊Ｇ＋ 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>我方全體拍組</td></tr><tr><td></td><td>提高我方全體拍組的擊中要害率２階段。</td></tr></table><table class="move" style="background-color:#d67b4780"><tr><td>寶可夢招式</td><td>下盤踢 ▭▭</td></tr><tr><td>屬性</td><td>格鬥</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>30</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>降低對手的速度１階段。</td></tr></table><table class="move" style="background-color:#6dbfb180"><tr><td>訓練家招式</td><td>都準備好囉！ 1/1</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>我方場地</td></tr><tr><td></td><td>讓我方場地變成招式計量槽加速狀態。<br>自己發動拍組招式所需的行動數會減少１次。<br>提高自己的攻擊４階段。<br>提高自己的命中率１階段。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>首次上場時計數加速２<br>首次上場時，<br>發動拍組招式所需的行動數會減少２次。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>首次上場時速度提升Ｇ２<br>首次上場時，<br>會提高我方全體拍組的速度２階段。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>攻擊時防禦下降９<br>使出招式攻擊成功時，<br>會降低對手的防禦１階段。</td></tr></table><table class="team"><tr><td style="background-color:#db434780">火屬性<br>／技術</td><td style="background-color:#6dbfb180">豐緣<br>／技術</td><td style="background-color:#6dbfb180">主角<br>／技術</td></tr><tr><td style="background-color:#6dbfb180">美極套裝<br>／技術</td><td style="background-color:#6dbfb180">雙馬尾<br>／技術</td></tr></table></div><div class="content2" id="content2"><table><tr><th colspan="2">盛典限定★5 美極套裝小遙♀&超級火焰雞♂</th></tr><tr><td style="width:50%;text-align:center">體系</td><td style="width:50%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">技術型</td><td style="width:50%;text-align:center">飛行</td></tr></table><table><tr style="background:#efeccd"><td>攻擊 </td><td>120%</td></tr><tr style="background:#f2deb9"><td>防禦 </td><td>100%</td></tr><tr style="background:#d3f0f4"><td>特攻 </td><td>100%</td></tr><tr style="background:#bed3f0"><td>特防 </td><td>100%</td></tr><tr style="background:#dbcde7"><td>速度 </td><td>120%</td></tr></table><table class="move" style="background-color:#db434780"><tr><td>拍組招式</td><td>訴說我們的一切之火焰踢</td></tr><tr><td>屬性</td><td>火</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>160</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>變成超級火焰雞直到對戰結束。<br>對手的防禦降低得越多，威力就越大。</td></tr></table><table class="move" style="background-color:#db434780"><tr><td>寶可夢招式</td><td>火焰踢 ▭▭▭</td></tr><tr><td>屬性</td><td>火</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>140</td></tr><tr><td>命中</td><td>90</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>容易擊中要害。<br>有１０％的機率會讓對手陷入灼傷狀態。</td></tr></table><table class="move" style="background-color:#6dbfb180"><tr><td>道具招式</td><td>要害攻擊Ｇ＋ 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>我方全體拍組</td></tr><tr><td></td><td>提高我方全體拍組的擊中要害率２階段。</td></tr></table><table class="move" style="background-color:#d67b4780"><tr><td>寶可夢招式</td><td>下盤踢 ▭</td></tr><tr><td>屬性</td><td>格鬥</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>30</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>降低對手的速度１階段。</td></tr></table><table class="move" style="background-color:#6dbfb180"><tr><td>訓練家招式</td><td>都準備好囉！ 1/1</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>我方場地</td></tr><tr><td></td><td>讓我方場地變成招式計量槽加速狀態。<br>自己發動拍組招式所需的行動數會減少１次。<br>提高自己的攻擊４階段。<br>提高自己的命中率１階段。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>寶可夢招式計量槽消耗量減少１<br>使出寶可夢招式時，會減少使用１條招式計量槽。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>招式後計數加速１<br>招式成功時，有２０％的機率<br>會讓自己發動拍組招式所需的行動數<br>減少１次。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>攻擊時防禦下降２階段９<br>使出招式攻擊成功時，<br>會降低對手的防禦２階段。</td></tr></table><table class="team"><tr><td style="background-color:#db434780">火屬性<br>／技術</td><td style="background-color:#6dbfb180">豐緣<br>／技術</td><td style="background-color:#6dbfb180">主角<br>／技術</td></tr><tr><td style="background-color:#6dbfb180">美極套裝<br>／技術</td><td style="background-color:#6dbfb180">雙馬尾<br>／技術</td></tr></table></div></div></div>
+	</div>
+
+	<script>
+json = [[1012610000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [1012610001, '攻擊+5', '攻擊+5', 0, 5, 1, '568dd1', 1, -1], [1012610002, '防禦+5', '防禦+5', 0, 5, 1, '568dd1', 0, -1], [1012610003, '攻擊+5', '攻擊+5', 0, 5, 1, '568dd1', -1, 0], [1012610004, '特防+5', '特防+5', 0, 5, 1, '568dd1', -1, 1], [1012610005, '速度+5', '速度+5', 0, 5, 1, '568dd1', 0, 1], [1012610006, '攻擊+5', '攻擊+5', 2, 24, 1, '568dd1', 1, 1], [1012610007, '防禦+5', '防禦+5', 2, 24, 1, '568dd1', 2, 1], [1012610008, 'ＨＰ+10', 'ＨＰ+10', 2, 24, 1, '568dd1', 1, 2], [1012610009, '特防+5', '特防+5', 2, 24, 1, '568dd1', 3, 1], [1012610010, '火焰踢：威力+2', '火焰踢：威力+2', 3, 36, 1, '4ab897', 2, 2], [1012610011, '火焰踢：威力+2', '火焰踢：威力+2', 3, 36, 2, '4ab897', 1, 3], [1012610012, '火焰踢：威力+2', '火焰踢：威力+2', 3, 36, 1, '4ab897', 3, 2], [1012610013, '火焰踢：招式後招式計量槽增加３', '招式成功時，有４０％的機率\n會幫自己增加１條招式計量槽。', 7, 84, 2, 'e1768a', 2, 3], [1012610014, '依對手防禦降幅威力↑', '對手的防禦降低得越多，自己的招式的威力就提高得越多。', 10, 120, 3, 'e6ce5e', 1, 4], [1012610015, '攻擊+20', '攻擊+20', 7, 84, 2, '568dd1', 3, 3], [1012610016, '上場時攻擊提升２', '上場時，會提高自己的攻擊２階段。', 10, 120, 3, 'e6ce5e', 2, 4], [1012610017, '速度+5', '速度+5', 2, 24, 1, '568dd1', -2, 1], [1012610018, '攻擊+5', '攻擊+5', 2, 24, 1, '568dd1', -3, 1], [1012610019, '下盤踢：招式後招式計量槽增加３', '招式成功時，有４０％的機率\n會幫自己增加１條招式計量槽。', 7, 84, 1, 'e1768a', -2, 0], [1012610020, '下盤踢：威力+3', '下盤踢：威力+3', 3, 36, 2, '4ab897', -3, 0], [1012610021, '下盤踢：威力+3', '下盤踢：威力+3', 3, 36, 1, '4ab897', -1, -1], [1012610022, '下盤踢：威力+3', '下盤踢：威力+3', 3, 36, 2, '4ab897', -2, -1], [1012610023, '速度+20', '速度+20', 7, 84, 2, '568dd1', -3, -1], [1012610024, '攻擊時速度下降９', '使出招式攻擊成功時，\n會降低對手的速度１階段。', 10, 120, 3, 'e6ce5e', -1, -2], [1012610025, '依對手速度降幅拍組招式↑', '對手的速度降低得越多，\n自己的拍組招式的威力就提高得越多。', 10, 120, 3, 'e6ce5e', -2, -2], [1012610026, '速度+5', '速度+5', 2, 24, 1, '568dd1', 2, -1], [1012610027, '灼傷無效', '不會陷入灼傷狀態。', 5, 60, 1, 'e6ce5e', 3, -2], [1012610028, 'ＨＰ+10', 'ＨＰ+10', 2, 24, 1, '568dd1', 2, -2], [1012610029, '下盤踢：威力+3', '下盤踢：威力+3', 3, 36, 1, '4ab897', 1, -2], [1012610030, '下盤踢：威力+3', '下盤踢：威力+3', 3, 36, 2, '4ab897', 3, -3], [1012610031, '都準備好囉！：招式後招式次數回復２', '招式成功時，有３０％的機率\n會幫該招式的使用次數回復１次。', 7, 84, 2, 'e1768a', 2, -3], [1012610032, '首次拍組招式後計數加速１', '首次使出拍組招式時，\n會讓發動拍組招式所需的行動數減少１次。', 10, 120, 3, 'e6ce5e', 1, -3], [1012610033, '都準備好囉！：招式後閃避率提升２', '招式成功時，會提高自己的閃避率２階段。', 9, 108, 2, 'e1768a', 3, -4], [1012610034, '訴說我們的一切之火焰踢：威力+25', '訴說我們的一切之火焰踢：威力+25', 5, 60, 3, 'db4347', 2, -4], [1012610035, '攻擊+5', '攻擊+5', 2, 24, 1, '568dd1', -1, 2], [1012610036, 'ＨＰ+10', 'ＨＰ+10', 2, 24, 1, '568dd1', -2, 3], [1012610037, '速度+5', '速度+5', 2, 24, 1, '568dd1', -1, 3], [1012610038, '火焰踢：命中率+10', '火焰踢：命中率+10', 5, 60, 1, '4ab897', -3, 4], [1012610039, '火焰踢：威力+2', '火焰踢：威力+2', 3, 36, 1, '4ab897', -2, 4], [1012610040, '要害攻擊Ｇ＋：招式後招式次數回復２', '招式成功時，有３０％的機率\n會幫該招式的使用次數回復１次。', 7, 84, 1, 'e1768a', -3, 5], [1012610041, '火焰踢：威力+2', '火焰踢：威力+2', 3, 36, 2, '4ab897', -1, 4], [1012610042, '寶可夢出招後速度↑９', '在寶可夢使出招式時，\n會提高自己的速度１階段。', 9, 108, 2, 'e6ce5e', -2, 5], [1012610043, '晴天時招式計量槽加速２', '當天氣為日照強烈時，\n招式計量槽會累積得較快。', 7, 84, 2, 'e6ce5e', -3, 6], [1012610044, '依速度升幅拍組招式↑', '自己的速度提高得越多，\n拍組招式的威力就提高得越多。', 10, 120, 3, 'e6ce5e', -1, 5], [1012610045, '訴說我們的一切之火焰踢：威力+25', '訴說我們的一切之火焰踢：威力+25', 5, 60, 3, 'db4347', -2, 6], [1012610046, '訴說我們的一切之火焰踢：威力+25', '訴說我們的一切之火焰踢：威力+25', 5, 60, 3, 'db4347', 0, 3], [1012610047, '訴說我們的一切之火焰踢：威力+25', '訴說我們的一切之火焰踢：威力+25', 5, 60, 3, 'db4347', 0, -3]]
+
+		function setCookie(cookieName, cookieValue, cookieDates) {
+			var d = new Date();
+			d.setDate(d.getDate() + cookieDates);
+			document.cookie = cookieName + "=" + cookieValue + ";expires=" + d.toGMTString();
+		}
+		function getCookie(cookieName) {
+			var cookieStr = unescape(document.cookie);
+			var arr = cookieStr.split("; ");
+			var cookieValue = "";
+			for (var i = 0; i < arr.length; i++) {
+				var temp = arr[i].split("=");
+				if (temp[0] == cookieName) {
+					cookieValue = temp[1];
+					break;
+				}
+			}
+			return cookieValue;
+		}
+		function removeCookie(cookieName) {
+			document.cookie = encodeURIComponent(cookieName) + "=; expires=" + new Date();
+		}
+
+		function newCookie() {
+			var re = "";
+			for (var i = 0; i < 4; i++) {
+				re = re + checks[i] + ',';
+				re = re + escape(pres[i]) + ',';
+			}
+			re = re + set;
+			return re;
+		}
+
+		function stringLength(str) {
+			var length = 0;
+			for (var i = 0; i < str.length; i++) {
+				if (str.slice(i, i + 1).match(/[\u0000-\u00ff]/g)) length += 0.5;
+				else length++;
+			}
+			return length;
+		}
+
+		class Tile {
+			constructor(id, skill, effect, energy, orb, lv, color, x, y, check) {
+				this.id = id;
+				this.skill = skill;
+				this.effect = effect;
+				this.energy = energy;
+				this.orb = orb;
+				this.lv = lv;
+				this.color = color;
+				this.x = x;
+				this.y = y;
+				this.xy = xyz2xy(this.x, this.y);
+				this.hexagon = hexagon(this.xy);
+				this.check = check;
+			}
+			draw() {
+				var e = document.getElementById('grid');
+
+				var h = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+				var points = "";
+				for (var i = 0; i < this.hexagon.length; i++) {
+					points = points + this.hexagon[i][0] + "," + this.hexagon[i][1] + " ";
+				}
+				h.setAttribute("points", points);
+				if (this.check == 0) {
+					h.setAttribute("style", `fill:transparent;stroke:#${this.color};stroke-width:4`);
+				}
+				else {
+					h.setAttribute("style", `fill:#${this.color};stroke:#929292;stroke-width:4`);
+					energy = energy - this.energy;
+					orb = orb + this.orb;
+				}
+				h.setAttribute("id", this.id);
+				e.appendChild(h);
+			}
+			skin() {
+				var e = document.getElementById('grid');
+
+				if (this.skill.indexOf('：') != -1) {
+					var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+					var line = this.skill.substring(0, this.skill.indexOf('：'));
+					s.innerHTML = line;
+					s.setAttribute("x", this.xy[0] - stringLength(line) * f / 2);
+					s.setAttribute("y", this.xy[1]);
+					s.setAttribute("style", `text-shadow:0px 0px 0.5rem #${this.color}`);
+					e.appendChild(s);
+					var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+					var line = this.skill.substring(this.skill.indexOf('：') + 1);
+					s.innerHTML = line;
+					s.setAttribute("x", this.xy[0] - stringLength(line) * f / 2);
+					s.setAttribute("y", this.xy[1] + f);
+					s.setAttribute("style", `text-shadow:0px 0px 0.5rem #${this.color}`);
+					e.appendChild(s);
+				}
+				else {
+					var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+					s.innerHTML = this.skill;
+					s.setAttribute("x", this.xy[0] - this.skill.length * f / 2);
+					s.setAttribute("y", this.xy[1] + f / 2);
+					s.setAttribute("style", `text-shadow:0px 0px 0.5rem #${this.color}`);
+					e.appendChild(s);
+				}
+
+
+				var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+				s.innerHTML = '等級' + this.lv;
+				s.setAttribute("x", this.xy[0] - f * 3 / 2);
+				s.setAttribute("y", this.xy[1] - f * 2);
+					s.setAttribute("style", `text-shadow:0px 0px 0.5rem #${this.color}`);
+				e.appendChild(s);
+
+				var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+				s.innerHTML = '能量' + this.energy;
+				s.setAttribute("x", this.xy[0] - f * 3 / 2);
+				s.setAttribute("y", this.xy[1] + f * 3);
+					s.setAttribute("style", `text-shadow:0px 0px 0.5rem #${this.color}`);
+				e.appendChild(s);
+
+				var h = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+				var points = "";
+				for (var i = 0; i < this.hexagon.length; i++) {
+					points = points + this.hexagon[i][0] + "," + this.hexagon[i][1] + " ";
+				}
+				h.setAttribute("points", points);
+				h.setAttribute("style", `fill:transparent;stroke:transparent;stroke-width:4`);
+				h.setAttribute("onclick", "c(evt," + this.id + ")");
+				e.appendChild(h);
+			}
+		}
+		function xyz2xy(x, y) {
+			var x1 = x * R * 1.5 + X / 2;
+			var y1 = - x * R * 1.732 / 2 - y * R * 1.732 + Y / 2;
+			return [x1, y1];
+		}
+
+		var svgleft = 540;
+		var svgtop = 960;
+		var svgright = 540;
+		var svgbottom = 960;
+
+		function hexagon(xy) {
+			var x = xy[0];
+			var y = xy[1];
+			var r2 = r / 2;
+			var r3 = r / 2 * 1.732;
+			var re = [[x + r, y],
+			[x + r2, y + r3],
+			[x - r2, y + r3],
+			[x - r, y],
+			[x - r2, y - r3],
+			[x + r2, y - r3]];
+			for (var i = 0; i < 6; i++) {
+				if (re[i][0] < svgleft) svgleft = Math.floor(re[i][0]);
+				if (re[i][0] > svgright) svgright = Math.ceil(re[i][0]);
+				if (re[i][1] < svgtop) svgtop = Math.floor(re[i][1]);
+				if (re[i][1] > svgbottom) svgbottom = Math.ceil(re[i][1]);
+			}
+			return re;
+		}
+
+		function c(evt, id) {
+			var t = tiles.find(item => {
+				return item.id == id;
+			});
+			var target = document.getElementById(id);
+			if (target.style.fill == "transparent") {
+				target.style.fill = "#" + t.color;
+				target.style.stroke = "#929292";
+				energy = energy - t.energy;
+				orb = orb + t.orb;
+
+				document.getElementById('skill').innerHTML = '技能名稱：' + t.skill;
+				document.getElementById('effect').innerHTML = '效果：' + t.effect;
+				for (var i = 0; i < json.length; i++) {
+					if (json[i][0] == id) {
+						check[i] = 1;
+						break;
+					}
+				}
+			}
+			else {
+				target.style.fill = "transparent";
+				target.style.stroke = "#" + t.color;
+				energy = energy + t.energy;
+				orb = orb - t.orb;
+				document.getElementById('skill').innerHTML = '技能名稱：';
+				document.getElementById('effect').innerHTML = '效果：';
+				for (var i = 0; i < json.length; i++) {
+					if (json[i][0] == id) {
+						check[i] = 0;
+						break;
+					}
+				}
+			}
+			checks[set] = check.join('');
+			setCookie('syncgrid' + no, newCookie(), 999);
+			update();
+		};
+
+		function rename() {
+			var pre = prompt("請輸入預設名稱");
+			if (pre != null) {
+				pres[set] = pre;
+				var select = document.getElementById("ms");
+				select.options[set].text = pre;
+				setCookie('syncgrid' + no, newCookie(), 999);
+			}
+		}
+
+		function reset() {
+			if (confirm("確定要重設所有已開放的格子嗎？")) {
+				checks[set] = "";
+				setCookie('syncgrid' + no, newCookie(), 999);
+				update();
+				newGrid();
+			}
+		}
+
+		function changeSet() {
+			var select = document.getElementById("ms");
+			set = select.selectedIndex;
+			setCookie('syncgrid' + no, newCookie(), 999);
+			update();
+			newGrid();
+		}
+
+		function newGrid() {
+			var e = document.getElementById("grid")
+			e.innerHTML = "";
+
+			energy = 60;
+			orb = 0;
+
+			var h = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+			var points = "";
+			var hxy = xyz2xy(0, 0);
+			var hh = hexagon(hxy);
+			for (var i = 0; i < hh.length; i++) {
+				points = points + hh[i][0] + "," + hh[i][1] + " ";
+			}
+			h.setAttribute("points", points);
+			h.setAttribute("style", `fill:#${this.tcolor};opacity:0.5;stroke:#929292;stroke-width:4`);
+			e.appendChild(h);
+			var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+			var line = name.substring(0, name.indexOf('&'));
+			s.innerHTML = line;
+			s.setAttribute("x", hxy[0] - stringLength(line) * f / 2);
+			s.setAttribute("y", hxy[1]);
+			e.appendChild(s);
+			var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+			var line = name.substring(name.indexOf('&') + 1);
+			s.innerHTML = line;
+			s.setAttribute("x", hxy[0] - stringLength(line) * f / 2);
+			s.setAttribute("y", hxy[1] + f);
+			e.appendChild(s);
+
+			tiles = new Array();
+			for (var i = 0; i < json.length; i++) {
+				var t = json[i];
+				var tile = new Tile(t[0], t[1], t[2], t[3], t[4], t[5], t[6], t[7], t[8], check[i]);
+				tile.draw();
+				tiles.push(tile);
+			}
+			for (var i = 0; i < tiles.length; i++) {
+				var tile = tiles[i];
+				tile.skin();
+			}
+			document.getElementById('energy').innerHTML = '剩餘力量：' + energy;
+			document.getElementById('orb').innerHTML = '拍檔滴晶：' + orb;
+		}
+
+		function update() {
+			var select = document.getElementById("ms");
+			select.selectedIndex = set;
+			check = checks[set];
+			if (check == "") {
+				check = new Array(json.length);
+				for (var i = 0; i < check.length; i++) check[i] = 0;
+			}
+			else {
+				check = check.split('');
+			}
+			document.getElementById('energy').innerHTML = '剩餘力量：' + energy;
+			document.getElementById('orb').innerHTML = '拍檔滴晶：' + orb;
+			var re = new Array();
+			for (var i = 0; i < check.length; i++) {
+				if (check[i] == 1) {
+					var newline = true;
+					if (json[i][1].indexOf('+') != -1) {
+						for (var j = 0; j < re.length; j++) {
+							if (re[j].indexOf('+') != -1) {
+								if (re[j].slice(0, re[j].indexOf('+')) == json[i][1].slice(0, json[i][1].indexOf('+'))) {
+									re[j] = re[j].slice(0, re[j].indexOf('+') + 1) + (parseInt(re[j].slice(re[j].indexOf('+') + 1, re[j].length)) + parseInt(json[i][1].slice(json[i][1].indexOf('+') + 1, json[i][1].length)));
+									newline = false;
+								}
+							}
+						}
+					}
+					if (newline) {
+						re.push(json[i][1]);
+					}
+				}
+			}
+			document.getElementById('sg').innerHTML = '石盤技能：<br>' + re.join('<br>');
+		}
+
+		var no = "10126100000";
+		var name = "美極套裝小遙&火焰雞";
+		var tcolor = "db4347";
+		var X = 1080;
+		var Y = 1920;
+		var R = 96;
+		var r = 92;
+		var f = 16;
+		var energy = 60;
+		var orb = 0;
+		var checks = ["", "", "", ""];
+		var pres = ["No.1", "No.2", "No.3", "No.4"];
+		var set = 0;
+		var cookie = getCookie('syncgrid' + no);
+		if (cookie.indexOf(',') != -1) {
+			cookie = cookie.split(',');
+			if (cookie.length == 9) {
+				for (var i = 0; i < 4; i++) {
+					checks[i] = cookie[2 * i];
+					pres[i] = cookie[2 * i + 1];
+				}
+				set = cookie[8];
+			}
+		}
+		else {
+			checks[0] = cookie;
+			checks[1] = '0'.repeat(json.length);
+			checks[2] = '0'.repeat(json.length);
+			checks[3] = '0'.repeat(json.length);
+		}
+
+		var select = document.getElementById("ms");
+		select.selectedIndex = set;
+		for (var i = 0; i < 4; i++) {
+			if (pres[i] == '') select.options[i].text = "No." + (i + 1);
+			else select.options[i].text = pres[i];
+		}
+
+		var check = checks[set];
+		if (check == "") {
+			check = new Array(json.length);
+			for (var i = 0; i < check.length; i++) check[i] = 0;
+		}
+		else {
+			check = check.split('');
+		}
+
+		newGrid();
+		update();
+
+		var svg = document.getElementById("grid");
+		svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
+		var svgW = svgright - svgleft;
+		var svgH = svgbottom - svgtop;
+		// svg.setAttribute('width', Math.ceil(svgright - svgleft));
+		// svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		if (document.documentElement.clientWidth / document.documentElement.clientHeight > svgW / svgH) {
+			svg.setAttribute('width', Math.ceil(svgW / svgH * document.documentElement.clientHeight * 0.9));
+			svg.setAttribute('height', Math.ceil(document.documentElement.clientHeight * 0.9));
+		}
+		else {
+			svg.setAttribute('height', Math.ceil(svgH / svgW * document.documentElement.clientWidth * 0.9));
+			svg.setAttribute('width', Math.ceil(document.documentElement.clientWidth * 0.9));
+		}
+
+	</script>
+</body>
+
+</html>
