@@ -1,14 +1,12 @@
 <p align="center">⚠<b>石盤點法只保存在本地cookie</b>⚠<br><br>顯示拍組圖片可能需要科學上網<br><br>BUG反饋請私信bilibili@米米尔HenryStone<br>或發送郵件至MiMirHenryStone@gmail.com</p><br>
 
 ## 新石盤
-### 1970/01/01
-<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/阪木（關都）&貓老大.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/阪木（關都）&貓老大.png"><br>阪木（關都）&貓老大</a></p>
-
-### 2021/04/08
-<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/希嘉娜&烈空坐.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/希嘉娜&烈空坐.png"><br>希嘉娜&烈空坐</a></p>
-
 ### 2022/08/10
 <p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/美極套裝大吾&代歐奇希斯.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_4075_3W_FesPickup_01.event_4075_3W_FesPickup_01_1.png"><br>美極套裝大吾&代歐奇希斯</a></p>
+<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/希嘉娜&烈空坐.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/希嘉娜&烈空坐.png"><br>希嘉娜&烈空坐</a></p>
+
+### 2022/08/15
+<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/阪木（關都）&貓老大.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/阪木（關都）&貓老大.png"><br>阪木（關都）&貓老大</a></p>
 
 ### 2022/08/25
 <p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/小南&月石.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/小南&月石.png"><br>小南&月石</a></p>
@@ -184,7 +182,7 @@
 ## ⭐⭐⭐⭐
 ### 攻擊型
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/大葉&烈焰猴.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/大葉&烈焰猴.png" width="64" height="64">大葉&烈焰猴</a><br>
-<a href="https://mimirhenrystone.github.io/Sync-Grid/grids/青綠&風速狗.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/青綠&風速狗.png" width="64" height="64">青綠&風速狗</a><br>
+<a href="https://mimirhenrystone.github.io/Sync-Grid/grids/青綠&風速狗.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/青綠&風速狗.png" width="64" height="64"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/★6ex_青綠&風速狗.png" width="64" height="64">青綠&風速狗</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/志米&鋼炮臂蝦.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/志米&鋼炮臂蝦.png" width="64" height="64"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/★6ex_志米&鋼炮臂蝦.png" width="64" height="64">志米&鋼炮臂蝦</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/哈烏&雷丘.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/哈烏&雷丘.png" width="64" height="64"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/★6ex_哈烏&雷丘.png" width="64" height="64">哈烏&雷丘</a><br>
 <a href="https://mimirhenrystone.github.io/Sync-Grid/grids/菜種&羅絲雷朵.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/菜種&羅絲雷朵.png" width="64" height="64">菜種&羅絲雷朵</a><br>
