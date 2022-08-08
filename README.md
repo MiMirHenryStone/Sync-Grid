@@ -3,7 +3,6 @@
 ## 新石盤
 ### 2022/08/10
 <p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/美極套裝大吾&代歐奇希斯.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_4075_3W_FesPickup_01.event_4075_3W_FesPickup_01_1.png"><br>美極套裝大吾&代歐奇希斯</a></p>
-<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/希嘉娜&烈空坐.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/希嘉娜&烈空坐.png"><br>希嘉娜&烈空坐</a></p>
 
 ### 2022/08/15
 <p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/阪木（關都）&貓老大.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/阪木（關都）&貓老大.png"><br>阪木（關都）&貓老大</a></p>
