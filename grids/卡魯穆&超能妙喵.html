@@ -49,7 +49,7 @@
 			display: flex;
 			flex-direction: row;
 			justify-content: space-around;
-			align-items: center;
+			align-items: flex-end;
 		}
 
 		.tab li {
@@ -61,7 +61,6 @@
 			text-decoration: none;
 			color: #000;
 			display: inline-block;
-			width: 10rem;
 			text-align: center;
 		}
 
@@ -73,7 +72,8 @@
 		.content1,
 		.content2,
 		.content3,
-		.content4 {
+		.content4,
+		.content5 {
 			display: none;
 			word-break: break-word;
 			word-wrap: break-word;
@@ -82,7 +82,8 @@
 		.content1:target,
 		.content2:target,
 		.content3:target,
-		.content4:target {
+		.content4:target,
+		.content5:target {
 			display: block;
 		}
 	</style>
