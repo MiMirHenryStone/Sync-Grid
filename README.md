@@ -13,7 +13,7 @@
 
 ### 2023/01/16
 <p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/莎娜&布里卡隆.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_4120_3W_MasterTicket_01.event_4120_3W_MasterTicket_01_1.png"><br>莎娜&布里卡隆</a></p>
-<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/卡露妮&沙奈朵.html">卡露妮&沙奈朵</a></p>
+<p align="center"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_4120_4W_FesPickup_01.00000000000.png"><br><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/卡露妮&沙奈朵.html">卡露妮&沙奈朵</a></p>
 
 ### 2023/01/23
 <p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/彼特&布莉姆溫.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_4120_4W_FesPickup_02.event_4120_4W_FesPickup_02_1.png"><br>彼特&布莉姆溫</a></p>
