@@ -1,9 +1,6 @@
 <p align="center">⚠<b>石盤點法只保存在本地cookie</b>⚠<br><br>顯示拍組圖片可能需要科學上網<br><br>BUG反饋請私信bilibili@米米尔HenryStone<br>或發送郵件至MiMirHenryStone@gmail.com</p><br>
 
 ## 新石盤
-### 1970/01/01
-<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/小優&啪咚猴.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/小優&啪咚猴.png"><br>小優&啪咚猴</a></p>
-
 ### 2023/01/01
 <p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/小光&結草貴婦.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/小光&結草貴婦.png"><br>小光&結草貴婦</a></p>
 
@@ -12,6 +9,7 @@
 
 ### 2023/03/01
 <p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/小優&蒼響.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_5020_0W_FesPickup_01.event_5020_0W_FesPickup_01_1.png"><br>小優&蒼響</a></p>
+<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/小優&啪咚猴.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/小優&啪咚猴.png"><br>小優&啪咚猴</a></p>
 
 ### 2023/03/02
 <p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/赫普（冠軍）&閃電鳥.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_5020_1W_FesPickup_02.event_5020_1W_FesPickup_02_1.png"><br>赫普（冠軍）&閃電鳥</a></p>
