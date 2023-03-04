@@ -2,34 +2,34 @@
 
 ## 新石盤
 ### 2023/01/01
-<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/小光&結草貴婦.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/小光&結草貴婦.png"><br>小光&結草貴婦</a></p>
+<p align="center"><a href="./grids/小光&結草貴婦.html"><img src="./icons/小光&結草貴婦.png"><br>小光&結草貴婦</a></p>
 
 ### 2023/02/28
-<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/瑪俐（冠軍）&火焰鳥.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_5020_1W_FesPickup_01.event_5020_1W_FesPickup_01_1.png"><br>瑪俐（冠軍）&火焰鳥</a></p>
+<p align="center"><a href="./grids/瑪俐（冠軍）&火焰鳥.html"><img width="256" height="256" src="./scouts/event_5020_1W_FesPickup_01.event_5020_1W_FesPickup_01_1.png"><br>瑪俐（冠軍）&火焰鳥</a></p>
 
 ### 2023/03/01
-<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/小優&蒼響.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_5020_0W_FesPickup_01.event_5020_0W_FesPickup_01_1.png"><br>小優&蒼響</a></p>
-<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/小優&啪咚猴.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/小優&啪咚猴.png"><br>小優&啪咚猴</a></p>
+<p align="center"><a href="./grids/小優&蒼響.html"><img width="256" height="256" src="./scouts/event_5020_0W_FesPickup_01.event_5020_0W_FesPickup_01_1.png"><br>小優&蒼響</a></p>
+<p align="center"><a href="./grids/小優&啪咚猴.html"><img src="./icons/小優&啪咚猴.png"><br>小優&啪咚猴</a></p>
 
 ### 2023/03/02
-<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/赫普（冠軍）&閃電鳥.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_5020_1W_FesPickup_02.event_5020_1W_FesPickup_02_1.png"><br>赫普（冠軍）&閃電鳥</a></p>
+<p align="center"><a href="./grids/赫普（冠軍）&閃電鳥.html"><img width="256" height="256" src="./scouts/event_5020_1W_FesPickup_02.event_5020_1W_FesPickup_02_1.png"><br>赫普（冠軍）&閃電鳥</a></p>
 
 ### 2023/03/04
-<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/彼特（冠軍）&急凍鳥.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_5020_1W_FesPickup_03.event_5020_1W_FesPickup_03_1.png"><br>彼特（冠軍）&急凍鳥</a></p>
+<p align="center"><a href="./grids/彼特（冠軍）&急凍鳥.html"><img width="256" height="256" src="./scouts/event_5020_1W_FesPickup_03.event_5020_1W_FesPickup_03_1.png"><br>彼特（冠軍）&急凍鳥</a></p>
 
 ### 2023/03/14
-<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/奇巴納（2022週年慶）&沙漠蜻蜓.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_5020_3W_FesPickup_01.00000000000.png"><br>奇巴納（2022週年慶）&沙漠蜻蜓</a></p>
+<p align="center"><a href="./grids/奇巴納（2022週年慶）&沙漠蜻蜓.html"><img width="256" height="256" src="./scouts/event_5020_3W_FesPickup_01.00000000000.png"><br>奇巴納（2022週年慶）&沙漠蜻蜓</a></p>
 
 ### 2023/03/21
-<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/阿球&敗露球菇.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_5020_4W_MasterTicket_01.event_5020_4W_MasterTicket_01_1.png"><br>阿球&敗露球菇</a></p>
+<p align="center"><a href="./grids/阿球&敗露球菇.html"><img width="256" height="256" src="./scouts/event_5020_4W_MasterTicket_01.event_5020_4W_MasterTicket_01_1.png"><br>阿球&敗露球菇</a></p>
 
 ### 2023/03/25
-<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/阿渡&快龍.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_5020_4W_FesPickup_01.event_5020_4W_FesPickup_01_1.png"><br>阿渡&快龍</a></p>
-<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/科拿&拉普拉斯.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/科拿&拉普拉斯.png"><br>科拿&拉普拉斯</a></p>
-<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/主角&火稚雞.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/icons/主角&火稚雞.png"><br>主角&火稚雞</a></p>
+<p align="center"><a href="./grids/阿渡&快龍.html"><img width="256" height="256" src="./scouts/event_5020_4W_FesPickup_01.event_5020_4W_FesPickup_01_1.png"><br>阿渡&快龍</a></p>
+<p align="center"><a href="./grids/科拿&拉普拉斯.html"><img src="./icons/科拿&拉普拉斯.png"><br>科拿&拉普拉斯</a></p>
+<p align="center"><a href="./grids/主角&火稚雞.html"><img src="./icons/主角&火稚雞.png"><br>主角&火稚雞</a></p>
 
 ### 2023/03/27
-<p align="center"><a href="https://mimirhenrystone.github.io/Sync-Grid/grids/小遙（2022週年慶）&拉帝亞斯.html"><img src="https://raw.githubusercontent.com/MiMirHenryStone/Sync-Grid/master/scouts/event_5020_5W_FesPickup_01.00000000000.png"><br>小遙（2022週年慶）&拉帝亞斯</a></p>
+<p align="center"><a href="./grids/小遙（2022週年慶）&拉帝亞斯.html"><img width="256" height="256" src="./scouts/event_5020_5W_FesPickup_01.00000000000.png"><br>小遙（2022週年慶）&拉帝亞斯</a></p>
 
 <br>
 
