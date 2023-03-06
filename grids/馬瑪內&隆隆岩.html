@@ -5,8 +5,8 @@
 	<meta charset='utf-8' />
 	<title>拍檔石盤</title>
 	<style>
-		div {
-			margin: 0.25rem;
+		.grid {
+			margin: 1rem 0;
 		}
 
 		.title {
@@ -15,7 +15,8 @@
 		}
 
 		.text {
-			font-size: 1rem;
+			font-size: 1.25rem;
+			margin: 0 0.25rem;
 		}
 
 		svg {
@@ -24,8 +25,8 @@
 		}
 
 		table {
-			width: 100%;
-			margin: 0.25rem 0;
+			width: calc(100% - 0.5rem);
+			margin: 0.25rem;
 		}
 
 		.move td:first-child {
@@ -92,22 +93,24 @@
 
 
 <body>
-	<div align="center">
-		<select class="title" id="ms" onchange=changeSet()>
-			<option value="0">No.1</option>
-			<option value="1">No.2</option>
-			<option value="2">No.3</option>
-			<option value="3">No.4</option>
-		</select>
-		<input class="title" type="button" onclick=rename() value="重命名">
-		<input class="title" type="button" onclick=reset() value="全部重設">
-		<span class="title" id="energy">剩餘力量：60</span>
-		<span class="title" id="orb">拍檔滴晶：0</span>
+	<div class="grid">
+		<div align="center">
+			<select class="title" id="ms" onchange=changeSet()>
+				<option value="0">No.1</option>
+				<option value="1">No.2</option>
+				<option value="2">No.3</option>
+				<option value="3">No.4</option>
+			</select>
+			<input class="title" type="button" onclick=rename() value="重命名">
+			<input class="title" type="button" onclick=reset() value="全部重設">
+			<span class="title" id="energy">剩餘力量：60</span>
+			<span class="title" id="orb">拍檔滴晶：0</span>
+		</div>
+		<div class="text" id="skill">技能名稱：</div>
+		<div class="text" id="effect">效果：</div>
+		<svg id="grid" align="center" width="9" height="16" viewBox="0 0 1080 1920"></svg>
+		<div class="text" id="sg" style="width: 32%; float: right;">石盤技能：<br></div>
 	</div>
-	<div class="text" id="skill" style="margin: 0 0.25rem;">技能名稱：</div>
-	<div class="text" id="effect" style="margin: 0 0.25rem;">效果：</div>
-	<svg id="grid" align="center" width="9" height="16" viewBox="0 0 1080 1920"></svg>
-	<div class="text" id="sg" style="width: 32%; float: right;">石盤技能：<br></div>
 	<div class="text" class="box" style="width: 64%;">
 		<ul class="tab"><li><a href="#content1">隆隆岩<br>（阿羅拉的樣子）</a></li></ul>
 		<div class="content"><div class="content1" id="content1"><table><tr><th colspan="2">★4 馬瑪內♂&隆隆岩（阿羅拉的樣子）♂</th></tr><tr><td style="width:50%;text-align:center">體系</td><td style="width:50%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">物理攻擊型</td><td style="width:50%;text-align:center">地面</td></tr></table><table><tr style="background:#bededd"><td>Lv.</td><td>1</td><td>100</td><td>110</td><td>120</td><td>125</td><td>130</td><td>135</td><td>140</td><td>150</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td><td>120</td><td>618</td><td>654</td><td>690</td><td>708</td><td>726</td><td>744</td><td>762</td><td>798</td></tr><tr style="background:#efeccd"><td>攻擊</td><td>24</td><td>326</td><td>348</td><td>370</td><td>381</td><td>392</td><td>403</td><td>414</td><td>436</td></tr><tr style="background:#f2deb9"><td>防禦</td><td>7</td><td>88</td><td>94</td><td>100</td><td>103</td><td>106</td><td>109</td><td>112</td><td>118</td></tr><tr style="background:#d3f0f4"><td>特攻</td><td>13</td><td>181</td><td>193</td><td>205</td><td>211</td><td>217</td><td>223</td><td>229</td><td>241</td></tr><tr style="background:#bed3f0"><td>特防</td><td>7</td><td>88</td><td>94</td><td>100</td><td>103</td><td>106</td><td>109</td><td>112</td><td>118</td></tr><tr style="background:#dbcde7"><td>速度</td><td>11</td><td>195</td><td>207</td><td>219</td><td>225</td><td>231</td><td>237</td><td>243</td><td>255</td></tr></table><table class="move" style="background-color:#dcb40a80"><tr><td>拍組招式</td><td>電力全開之電之衝擊</td></tr><tr><td>屬性</td><td>電</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>250</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></table><table class="move" style="background-color:#dcb40a80"><tr><td>寶可夢招式</td><td>瘋狂伏特 ▭▭▭</td></tr><tr><td>屬性</td><td>電</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>125</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>給予對手傷害後自己也會受到１／５的傷害。</td></tr></table><table class="move" style="background-color:#6dbfb180"><tr><td>道具招式</td><td>要害攻擊＋ 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>提高自己的擊中要害率２階段。</td></tr></table><table class="move" style="background-color:#7d879b80"><tr><td>寶可夢招式</td><td>鐵壁 ▭▭</td></tr><tr><td>屬性</td><td>鋼</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>提高自己的防禦２階段。</td></tr></table><table class="move" style="background-color:#6dbfb180"><tr><td>訓練家招式</td><td>電源……打開！ 1/1</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>提高自己的攻擊４階段。<br>讓自己變成附帶回復狀態。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>麻痺無效<br>不會陷入麻痺狀態。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>減輕反衝傷害９<br>當使出的招式有反衝效果時，<br>會減輕反衝對自己所造成的傷害。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>瀕死時爆炸<br>陷入瀕死狀態前會使出大爆炸。</td></tr></table><table class="team"><tr><td style="background-color:#dcb40a80">電屬性<br>／攻擊</td><td style="background-color:#6dbfb180">阿羅拉<br>／攻擊</td><td style="background-color:#6dbfb180">給予考驗之人<br>／攻擊</td></tr><tr><td style="background-color:#6dbfb180">機械愛好者<br>／攻擊</td></tr><tr><td colspan="3" style="text-align:center;background-color:#6dbfb180">火辣辣↑３＆心暖暖↓１</td></tr></table></div></div></div>

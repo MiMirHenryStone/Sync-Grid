@@ -5,8 +5,8 @@
 	<meta charset='utf-8' />
 	<title>拍檔石盤</title>
 	<style>
-		div {
-			margin: 0.25rem;
+		.grid {
+			margin: 1rem 0;
 		}
 
 		.title {
@@ -15,7 +15,8 @@
 		}
 
 		.text {
-			font-size: 1rem;
+			font-size: 1.25rem;
+			margin: 0 0.25rem;
 		}
 
 		svg {
@@ -24,8 +25,8 @@
 		}
 
 		table {
-			width: 100%;
-			margin: 0.25rem 0;
+			width: calc(100% - 0.5rem);
+			margin: 0.25rem;
 		}
 
 		.move td:first-child {
@@ -92,22 +93,24 @@
 
 
 <body>
-	<div align="center">
-		<select class="title" id="ms" onchange=changeSet()>
-			<option value="0">No.1</option>
-			<option value="1">No.2</option>
-			<option value="2">No.3</option>
-			<option value="3">No.4</option>
-		</select>
-		<input class="title" type="button" onclick=rename() value="重命名">
-		<input class="title" type="button" onclick=reset() value="全部重設">
-		<span class="title" id="energy">剩餘力量：60</span>
-		<span class="title" id="orb">拍檔滴晶：0</span>
+	<div class="grid">
+		<div align="center">
+			<select class="title" id="ms" onchange=changeSet()>
+				<option value="0">No.1</option>
+				<option value="1">No.2</option>
+				<option value="2">No.3</option>
+				<option value="3">No.4</option>
+			</select>
+			<input class="title" type="button" onclick=rename() value="重命名">
+			<input class="title" type="button" onclick=reset() value="全部重設">
+			<span class="title" id="energy">剩餘力量：60</span>
+			<span class="title" id="orb">拍檔滴晶：0</span>
+		</div>
+		<div class="text" id="skill">技能名稱：</div>
+		<div class="text" id="effect">效果：</div>
+		<svg id="grid" align="center" width="9" height="16" viewBox="0 0 1080 1920"></svg>
+		<div class="text" id="sg" style="width: 32%; float: right;">石盤技能：<br></div>
 	</div>
-	<div class="text" id="skill" style="margin: 0 0.25rem;">技能名稱：</div>
-	<div class="text" id="effect" style="margin: 0 0.25rem;">效果：</div>
-	<svg id="grid" align="center" width="9" height="16" viewBox="0 0 1080 1920"></svg>
-	<div class="text" id="sg" style="width: 32%; float: right;">石盤技能：<br></div>
 	<div class="text" class="box" style="width: 64%;">
 		<ul class="tab"><li><a href="#content1">奈克洛茲瑪<br>（黃昏之鬃）</a></li><li><a href="#content2">奈克洛茲瑪<br>（究極奈克洛茲瑪）</a></li></ul>
 		<div class="content"><div class="content1" id="content1"><table><tr><th colspan="2">盛典限定★5 美極套裝露莎米奈♀&奈克洛茲瑪（黃昏之鬃）</th></tr><tr><td style="width:50%;text-align:center">體系</td><td style="width:50%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">特殊攻擊型</td><td style="width:50%;text-align:center">幽靈</td></tr></table><table><tr style="background:#bededd"><td>Lv.</td><td>1</td><td>100</td><td>110</td><td>120</td><td>125</td><td>130</td><td>135</td><td>140</td><td>150</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td><td>100</td><td>598</td><td>634</td><td>670</td><td>688</td><td>706</td><td>724</td><td>742</td><td>778</td></tr><tr style="background:#efeccd"><td>攻擊</td><td>6</td><td>222</td><td>236</td><td>250</td><td>257</td><td>264</td><td>271</td><td>278</td><td>292</td></tr><tr style="background:#f2deb9"><td>防禦</td><td>8</td><td>106</td><td>112</td><td>118</td><td>121</td><td>124</td><td>127</td><td>130</td><td>136</td></tr><tr style="background:#d3f0f4"><td>特攻</td><td>15</td><td>248</td><td>264</td><td>280</td><td>288</td><td>296</td><td>304</td><td>312</td><td>328</td></tr><tr style="background:#bed3f0"><td>特防</td><td>8</td><td>106</td><td>112</td><td>118</td><td>121</td><td>124</td><td>127</td><td>130</td><td>136</td></tr><tr style="background:#dbcde7"><td>速度</td><td>15</td><td>262</td><td>280</td><td>298</td><td>307</td><td>316</td><td>325</td><td>334</td><td>352</td></tr></table><table class="move" style="background-color:#e66e9b80"><tr><td>拍組招式</td><td>美麗的真實之愛釋放之焚天滅世熾光爆</td></tr><tr><td>屬性</td><td>超能力</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>250</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>變成究極奈克洛茲瑪直到對戰結束。</td></tr></table><table class="move" style="background-color:#7d879b80"><tr><td>寶可夢招式</td><td>鏡光射擊 ▭▭</td></tr><tr><td>屬性</td><td>鋼</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>57</td></tr><tr><td>命中</td><td>85</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>有３０％的機率會降低對手的命中率１階段。</td></tr></table><table class="move" style="background-color:#6dbfb180"><tr><td>道具招式</td><td>要害攻擊＋ 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>提高自己的擊中要害率２階段。</td></tr></table><table class="move" style="background-color:#e66e9b80"><tr><td>寶可夢招式</td><td>稜鏡鐳射 ▭▭▭▭</td></tr><tr><td>屬性</td><td>超能力</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>160</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></table><table class="move" style="background-color:#6dbfb180"><tr><td>訓練家招式</td><td>光輝滿溢的愛 1/1</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>自己發動拍組招式所需的行動數會減少２次。<br>提高自己的特攻６階段。<br>降低自己的速度１階段。</td></tr></table><table class="passive" style="background-color:#d18eff80"><tr><td>阿羅拉的信念<br>提高我方全體拍組的特殊招式威力２０％。<br>減輕我方全體拍組<br>受到特殊招式攻擊時的傷害２５％。<br>當我方隊伍中擁有阿羅拉標籤的拍組越多，<br>此效果還會提升得越多。<br>（每增加１對拍組，<br>威力提升＋１５％，傷害減輕＋３％。）<br>（威力最多可提升５０％，傷害最多可減輕３１％。）</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>無傷上場時下次效果絕佳威力提升<br>在ＨＰ全滿的狀態上場時，<br>會讓自己變成下次效果絕佳威力提升狀態。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>上場時下次計量槽消耗０<br>上場時，會讓自己變成下次計量槽消耗０狀態。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>拍組招式後寶可夢招式全體化<br>使出拍組招式後，<br>當使出對象為自己或１對拍組的寶可夢招式成功時，<br>該招式的對象會變成全體。<br>受到此被動技能效果影響的招式， <br>即使對象為複數， <br>招式的威力與追加效果的成功率也不會降低。</td></tr></table><table class="team"><tr><td style="background-color:#e66e9b80">超能力屬性<br>／攻擊</td><td style="background-color:#6dbfb180">阿羅拉<br>／攻擊</td><td style="background-color:#6dbfb180">邪惡組織<br>／攻擊</td></tr><tr><td style="background-color:#6dbfb180">美極套裝<br>／攻擊</td><td style="background-color:#6dbfb180">大姐姐<br>／攻擊</td></tr><tr><td colspan="3" style="text-align:center;background-color:#6dbfb180">稀有↑３＆心暖暖↓２＆淚閃閃↓２</td></tr></table></div><div class="content2" id="content2"><table><tr><th colspan="2">盛典限定★5 美極套裝露莎米奈♀&奈克洛茲瑪（究極奈克洛茲瑪）</th></tr><tr><td style="width:50%;text-align:center">體系</td><td style="width:50%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">特殊攻擊型</td><td style="width:50%;text-align:center">幽靈</td></tr></table><table><tr style="background:#efeccd"><td>攻擊 </td><td>120%</td></tr><tr style="background:#f2deb9"><td>防禦 </td><td>120%</td></tr><tr style="background:#d3f0f4"><td>特攻 </td><td>120%</td></tr><tr style="background:#bed3f0"><td>特防 </td><td>120%</td></tr><tr style="background:#dbcde7"><td>速度 </td><td>120%</td></tr></table><table class="move" style="background-color:#e66e9b80"><tr><td>拍組招式</td><td>美麗的真實之愛釋放之焚天滅世熾光爆</td></tr><tr><td>屬性</td><td>超能力</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>250</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>變成究極奈克洛茲瑪直到對戰結束。</td></tr></table><table class="move" style="background-color:#7d879b80"><tr><td>寶可夢招式</td><td>鏡光射擊 ▭▭</td></tr><tr><td>屬性</td><td>鋼</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>57</td></tr><tr><td>命中</td><td>85</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>有３０％的機率會降低對手的命中率１階段。</td></tr></table><table class="move" style="background-color:#6dbfb180"><tr><td>道具招式</td><td>要害攻擊＋ 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>提高自己的擊中要害率２階段。</td></tr></table><table class="move" style="background-color:#e66e9b80"><tr><td>寶可夢招式</td><td>稜鏡鐳射 ▭▭▭▭</td></tr><tr><td>屬性</td><td>超能力</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>160</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></table><table class="move" style="background-color:#6dbfb180"><tr><td>訓練家招式</td><td>光輝滿溢的愛 1/1</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>自己發動拍組招式所需的行動數會減少２次。<br>提高自己的特攻６階段。<br>降低自己的速度１階段。</td></tr></table><table class="passive" style="background-color:#d18eff80"><tr><td>阿羅拉的信念<br>提高我方全體拍組的特殊招式威力２０％。<br>減輕我方全體拍組<br>受到特殊招式攻擊時的傷害２５％。<br>當我方隊伍中擁有阿羅拉標籤的拍組越多，<br>此效果還會提升得越多。<br>（每增加１對拍組，<br>威力提升＋１５％，傷害減輕＋３％。）<br>（威力最多可提升５０％，傷害最多可減輕３１％。）</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>效果絕佳時威力提升２<br>當效果絕佳時，會提高該招式的威力。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>招式後招式計量槽增加４<br>招式成功時，有５０％的機率<br>會幫自己增加１條招式計量槽。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>拍組招式後寶可夢招式全體化<br>使出拍組招式後，<br>當使出對象為自己或１對拍組的寶可夢招式成功時，<br>該招式的對象會變成全體。<br>受到此被動技能效果影響的招式， <br>即使對象為複數， <br>招式的威力與追加效果的成功率也不會降低。</td></tr></table><table class="team"><tr><td style="background-color:#e66e9b80">超能力屬性<br>／攻擊</td><td style="background-color:#6dbfb180">阿羅拉<br>／攻擊</td><td style="background-color:#6dbfb180">邪惡組織<br>／攻擊</td></tr><tr><td style="background-color:#6dbfb180">美極套裝<br>／攻擊</td><td style="background-color:#6dbfb180">大姐姐<br>／攻擊</td></tr><tr><td colspan="3" style="text-align:center;background-color:#6dbfb180">稀有↑３＆心暖暖↓２＆淚閃閃↓２</td></tr></table></div></div></div>
