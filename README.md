@@ -3,10 +3,10 @@
 ## 新石盤
 ### 2023/03/31
 <p align="center"><a href="./grids/大吾（偵探）&長毛狗.html"><img width="256" height="256" src="./scouts/event_5030_1W_MasterTicket_01.event_5030_1W_MasterTicket_01_1.png"><br>大吾（偵探）&長毛狗</a></p>
+<p align="center"><a href="./grids/大吾&搖籃百合.html"><img src="./icons/大吾&搖籃百合.png"><br>大吾&搖籃百合</a></p>
 
 ### 2023/04/01
 <p align="center"><a href="./grids/大吾&巨金怪.html"><img width="256" height="256" src="./scouts/event_5030_0W_FesPickup_01.event_5030_0W_FesPickup_01_1.png"><br>大吾&巨金怪</a></p>
-<p align="center"><a href="./grids/大吾&搖籃百合.html"><img src="./icons/大吾&搖籃百合.png"><br>大吾&搖籃百合</a></p>
 
 ### 2023/04/02
 <p align="center"><a href="./grids/莎娜（偵探）&鑰圈兒.html"><img width="256" height="256" src="./scouts/event_5030_1W_MasterTicket_02.event_5030_1W_MasterTicket_02_1.png"><br>莎娜（偵探）&鑰圈兒</a></p>
