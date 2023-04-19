@@ -24,6 +24,17 @@
 			margin: 0 5%;
 		}
 
+		svg .ability {
+			font-size: 1.25rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			text-align: center;
+			height: 100%;
+			padding: 0.25rem;
+			box-sizing: border-box;
+		}
+
 		table {
 			width: calc(100% - 0.5rem);
 			margin: 0.25rem;
@@ -198,45 +209,34 @@ json = [[1006000000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100600
 			skin() {
 				var e = document.getElementById('grid');
 
-				if (this.skill.indexOf('：') != -1) {
-					var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-					var line = this.skill.substring(0, this.skill.indexOf('：'));
-					s.innerHTML = line;
-					s.setAttribute("x", this.xy[0] - stringLength(line) * f / 2);
-					s.setAttribute("y", this.xy[1]);
-					s.setAttribute("style", `text-shadow:0px 0px 0.5rem #${this.color}`);
-					e.appendChild(s);
-					var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-					var line = this.skill.substring(this.skill.indexOf('：') + 1);
-					s.innerHTML = line;
-					s.setAttribute("x", this.xy[0] - stringLength(line) * f / 2);
-					s.setAttribute("y", this.xy[1] + f);
-					s.setAttribute("style", `text-shadow:0px 0px 0.5rem #${this.color}`);
-					e.appendChild(s);
-				}
-				else {
-					var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-					s.innerHTML = this.skill;
-					s.setAttribute("x", this.xy[0] - this.skill.length * f / 2);
-					s.setAttribute("y", this.xy[1] + f / 2);
-					s.setAttribute("style", `text-shadow:0px 0px 0.5rem #${this.color}`);
-					e.appendChild(s);
-				}
+				let hw = r * 2;
+				let hh = r * 1.732;
+				let hl = this.xy[0] - hw / 2
+				let ht = this.xy[1] - hh / 2
+				let fo = document.createElementNS('http://www.w3.org/2000/svg', 'foreignObject')
+				fo.setAttribute('width', hw)
+				fo.setAttribute('height', hh)
+				fo.setAttribute('x', hl)
+				fo.setAttribute('y', ht)
+				let abilityDiv = document.createElement('div')
+				abilityDiv.classList.add('ability')
+				abilityDiv.setAttribute("style", `text-shadow:0px 0px 0.5rem #${this.color}`)
 
+				let levelDiv = document.createElement('div')
+				levelDiv.innerHTML = '等級' + this.lv
+				abilityDiv.appendChild(levelDiv)
 
-				var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-				s.innerHTML = '等級' + this.lv;
-				s.setAttribute("x", this.xy[0] - f * 3 / 2);
-				s.setAttribute("y", this.xy[1] - f * 2);
-					s.setAttribute("style", `text-shadow:0px 0px 0.5rem #${this.color}`);
-				e.appendChild(s);
+				let nameDiv = document.createElement('div')
+				abilityDiv.appendChild(nameDiv)
+				if (this.skill.indexOf('：') != -1) nameDiv.innerHTML = this.skill.replace('：', '<br>')
+				else nameDiv.innerHTML = this.skill
 
-				var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-				s.innerHTML = '能量' + this.energy;
-				s.setAttribute("x", this.xy[0] - f * 3 / 2);
-				s.setAttribute("y", this.xy[1] + f * 3);
-					s.setAttribute("style", `text-shadow:0px 0px 0.5rem #${this.color}`);
-				e.appendChild(s);
+				let energyDiv = document.createElement('div')
+				energyDiv.innerHTML = '能量' + this.energy
+				abilityDiv.appendChild(energyDiv)
+
+				fo.appendChild(abilityDiv)
+				e.appendChild(fo)
 
 				var h = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
 				var points = "";
@@ -356,25 +356,35 @@ json = [[1006000000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100600
 			var h = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
 			var points = "";
 			var hxy = xyz2xy(0, 0);
-			var hh = hexagon(hxy);
-			for (var i = 0; i < hh.length; i++) {
-				points = points + hh[i][0] + "," + hh[i][1] + " ";
+			var hxg = hexagon(hxy);
+			for (var i = 0; i < hxg.length; i++) {
+				points = points + hxg[i][0] + "," + hxg[i][1] + " ";
 			}
 			h.setAttribute("points", points);
 			h.setAttribute("style", `fill:#${this.tcolor};opacity:0.5;stroke:#929292;stroke-width:4`);
 			e.appendChild(h);
-			var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-			var line = name.substring(0, name.indexOf('&'));
-			s.innerHTML = line;
-			s.setAttribute("x", hxy[0] - stringLength(line) * f / 2);
-			s.setAttribute("y", hxy[1]);
-			e.appendChild(s);
-			var s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-			var line = name.substring(name.indexOf('&') + 1);
-			s.innerHTML = line;
-			s.setAttribute("x", hxy[0] - stringLength(line) * f / 2);
-			s.setAttribute("y", hxy[1] + f);
-			e.appendChild(s);
+
+			let hw = r * 2;
+			let hh = r * 1.732;
+			let hl = hxy[0] - hw / 2
+			let ht = hxy[1] - hh / 2
+			let fo = document.createElementNS('http://www.w3.org/2000/svg', 'foreignObject')
+			fo.setAttribute('width', hw)
+			fo.setAttribute('height', hh)
+			fo.setAttribute('x', hl)
+			fo.setAttribute('y', ht)
+			let abilityDiv = document.createElement('div')
+			abilityDiv.classList.add('ability')
+			abilityDiv.setAttribute("style", `text-shadow:0px 0px 0.5rem #${this.color}`)
+			let levelDiv = document.createElement('div')
+			let nameDiv = document.createElement('div')
+			nameDiv.innerHTML = name.replace('&', '<br>')
+			let energyDiv = document.createElement('div')
+			abilityDiv.appendChild(levelDiv)
+			abilityDiv.appendChild(nameDiv)
+			abilityDiv.appendChild(energyDiv)
+			fo.appendChild(abilityDiv)
+			e.appendChild(fo)
 
 			tiles = new Array();
 			for (var i = 0; i < json.length; i++) {
