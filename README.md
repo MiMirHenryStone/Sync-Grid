@@ -3,10 +3,12 @@
 ## 新石盤
 ### 2023/06/28
 <p align="center"><a href="./grids/希巴&大岩蛇.html"><img src="./icons/希巴&大岩蛇.png"><br>希巴&大岩蛇</a></p>
-<p align="center"><a href="./grids/珠貝&火伊布.html"><img src="./icons/珠貝&火伊布.png"><br>珠貝&火伊布</a></p>
 
 ### 2023/06/30
 <p align="center"><a href="./grids/小楓（２０２３夏季）&基拉祈.html"><img width="256" height="256" src="./scouts/event_5060_1W_MasterTicket_01.event_5060_1W_MasterTicket_01_1.png"><br>小楓（２０２３夏季）&基拉祈</a></p>
+
+### 2023/07/01
+<p align="center"><a href="./grids/珠貝&火伊布.html"><img src="./icons/珠貝&火伊布.png"><br>珠貝&火伊布</a></p>
 
 ### 2023/07/02
 <p align="center"><a href="./grids/小南（２０２３夏季）&鐵火輝夜.html"><img width="256" height="256" src="./scouts/event_5060_1W_MasterTicket_02.event_5060_1W_MasterTicket_02_1.png"><br>小南（２０２３夏季）&鐵火輝夜</a></p>
