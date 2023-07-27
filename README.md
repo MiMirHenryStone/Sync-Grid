@@ -8,7 +8,6 @@
 ### 2023/08/02
 <p align="center"><a href="./grids/小優（競技服）&閃焰王牌.html"><img width="256" height="256" src="./scouts/event_5070_1W_FesPickup_02.event_5070_1W_FesPickup_02_1.png"><br>小優（競技服）&閃焰王牌</a></p>
 <p align="center"><a href="./grids/卡魯穆&火狐狸.html"><img src="./icons/卡魯穆&火狐狸.png"><br>卡魯穆&火狐狸</a></p>
-<p align="center"><a href="./grids/小勝&靈幽馬.html"><img src="./icons/小勝&靈幽馬.png"><br>小勝&靈幽馬</a></p>
 
 ### 2023/08/04
 <p align="center"><a href="./grids/葛吉花&象徵鳥.html"><img width="256" height="256" src="./scouts/event_5070_1W_MasterTicket_03.event_5070_1W_MasterTicket_03_1.png"><br>葛吉花&象徵鳥</a></p>
@@ -21,6 +20,9 @@
 
 ### 2023/08/12
 <p align="center"><a href="./grids/北尚&龍頭地鼠.html"><img width="256" height="256" src="./scouts/event_5070_2W_FesPickup_03.00000000000.png"><br>北尚&龍頭地鼠</a></p>
+
+### 2023/08/16
+<p align="center"><a href="./grids/小勝&靈幽馬.html"><img src="./icons/小勝&靈幽馬.png"><br>小勝&靈幽馬</a></p>
 
 ### 2023/08/25
 <p align="center"><a href="./grids/亞堤&保母蟲.html"><img src="./icons/亞堤&保母蟲.png"><br>亞堤&保母蟲</a></p>
