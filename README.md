@@ -5,9 +5,11 @@
 <p align="center"><a href="./grids/丹帝（對戰塔）&多龍巴魯托.html"><img width="256" height="256" src="./scouts/event_5070_1W_FesPickup_01.event_5070_1W_FesPickup_01_1.png"><br>丹帝（對戰塔）&多龍巴魯托</a></p>
 <p align="center"><a href="./grids/赫普&藏瑪然特.html"><img src="./icons/赫普&藏瑪然特.png"><br>赫普&藏瑪然特</a></p>
 
+### 2023/08/01
+<p align="center"><a href="./grids/卡魯穆&火狐狸.html"><img src="./icons/卡魯穆&火狐狸.png"><br>卡魯穆&火狐狸</a></p>
+
 ### 2023/08/02
 <p align="center"><a href="./grids/小優（競技服）&閃焰王牌.html"><img width="256" height="256" src="./scouts/event_5070_1W_FesPickup_02.event_5070_1W_FesPickup_02_1.png"><br>小優（競技服）&閃焰王牌</a></p>
-<p align="center"><a href="./grids/卡魯穆&火狐狸.html"><img src="./icons/卡魯穆&火狐狸.png"><br>卡魯穆&火狐狸</a></p>
 
 ### 2023/08/04
 <p align="center"><a href="./grids/葛吉花&象徵鳥.html"><img width="256" height="256" src="./scouts/event_5070_1W_MasterTicket_03.event_5070_1W_MasterTicket_03_1.png"><br>葛吉花&象徵鳥</a></p>
