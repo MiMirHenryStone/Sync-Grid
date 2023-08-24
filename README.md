@@ -14,14 +14,14 @@
 
 ### 2023/09/04
 <p align="center"><a href="./grids/梧桐&鬃岩狼人.html"><img width="256" height="256" src="./scouts/event_5080_1W_FesPickup_011.00000000000.png"><br>梧桐&鬃岩狼人</a></p>
-<p align="center"><a href="./grids/俐卡&火伊布.html"><br>俐卡&火伊布</a></p>
+<p align="center"><a href="./grids/俐卡&火伊布.html">俐卡&火伊布</a></p>
 
 ### 2023/09/06
 <p align="center"><a href="./grids/阪木&鑽角犀獸.html"><img width="256" height="256" src="./scouts/event_5080_1W_GuaranteeRarity5_014.00000000000.png"><br>阪木&鑽角犀獸</a></p>
-<p align="center"><a href="./grids/阿波羅&黑魯加.html"><br>阿波羅&黑魯加</a></p>
-<p align="center"><a href="./grids/雅典娜&阿柏怪.html"><br>雅典娜&阿柏怪</a></p>
-<p align="center"><a href="./grids/拉姆達&雙彈瓦斯.html"><br>拉姆達&雙彈瓦斯</a></p>
-<p align="center"><a href="./grids/蘭斯&大嘴蝠.html"><br>蘭斯&大嘴蝠</a></p>
+<p align="center"><a href="./grids/阿波羅&黑魯加.html">阿波羅&黑魯加</a></p>
+<p align="center"><a href="./grids/雅典娜&阿柏怪.html">雅典娜&阿柏怪</a></p>
+<p align="center"><a href="./grids/拉姆達&雙彈瓦斯.html">拉姆達&雙彈瓦斯</a></p>
+<p align="center"><a href="./grids/蘭斯&大嘴蝠.html">蘭斯&大嘴蝠</a></p>
 
 ### 2023/09/14
 <p align="center"><a href="./grids/小菊兒（合眾）&電飛鼠.html"><img width="256" height="256" src="./scouts/event_5080_2W_FesPickup_05.event_5080_2W_FesPickup_05_1.png"><br>小菊兒（合眾）&電飛鼠</a></p>
