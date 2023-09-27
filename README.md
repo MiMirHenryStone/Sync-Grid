@@ -1,48 +1,32 @@
 <p align="center">⚠<b>石盤點法只保存在本地cookie</b>⚠<br><br>BUG反饋請私信bilibili@米米尔HenryStone<br>或發送郵件至MiMirHenryStone@gmail.com</p><br>
 
 ## 新石盤
-### 2023/08/28
-<p align="center"><a href="./grids/赤紅（冠軍）&急凍鳥.html"><img width="256" height="256" src="./scouts/event_5080_1W_FesPickup_05.event_5080_1W_FesPickup_05_1.png"><br>赤紅（冠軍）&急凍鳥</a></p>
-<p align="center"><a href="./grids/美極套裝赤紅&噴火龍.html"><img src="./icons/美極套裝赤紅&噴火龍.png"><br>美極套裝赤紅&噴火龍</a></p>
-<p align="center"><a href="./grids/美極套裝青綠&水箭龜.html"><img src="./icons/美極套裝青綠&水箭龜.png"><br>美極套裝青綠&水箭龜</a></p>
+### 2023/09/29
+<p align="center"><a href="./grids/小照&大劍鬼.html"><img width="256" height="256" src="./scouts/event_5090_1W_FesPickup_02.event_5090_1W_FesPickup_02_1.png"><br>小照&大劍鬼</a></p>
 
-### 2023/08/30
-<p align="center"><a href="./grids/葉子（冠軍）&火焰鳥.html"><img width="256" height="256" src="./scouts/event_5080_1W_FesPickup_07.event_5080_1W_FesPickup_07_1.png"><br>葉子（冠軍）&火焰鳥</a></p>
+### 2023/10/01
+<p align="center"><a href="./grids/明耀&狙射樹梟.html"><img width="256" height="256" src="./scouts/event_5090_1W_FesPickup_03.event_5090_1W_FesPickup_03_1.png"><br>明耀&狙射樹梟</a></p>
 
-### 2023/09/01
-<p align="center"><a href="./grids/青綠（冠軍）&閃電鳥.html"><img width="256" height="256" src="./scouts/event_5080_1W_FesPickup_010.event_5080_1W_FesPickup_010_1.png"><br>青綠（冠軍）&閃電鳥</a></p>
+### 2023/10/05
+<p align="center"><a href="./grids/捩木&自爆磁怪.html"><img width="256" height="256" src="./scouts/event_5090_1W_MasterTicket_04.event_5090_1W_MasterTicket_04_1.png"><br>捩木&自爆磁怪</a></p>
 
-### 2023/09/04
-<p align="center"><a href="./grids/梧桐&鬃岩狼人.html"><img width="256" height="256" src="./scouts/event_5080_1W_FesPickup_011.00000000000.png"><br>梧桐&鬃岩狼人</a></p>
-<p align="center"><a href="./grids/俐卡&火伊布.html">俐卡&火伊布</a></p>
+### 2023/10/07
+<p align="center"><a href="./grids/達拉&鐵面忍者.html"><img width="256" height="256" src="./scouts/event_5090_1W_MasterTicket_05.event_5090_1W_MasterTicket_05_1.png"><br>達拉&鐵面忍者</a></p>
 
-### 2023/09/06
-<p align="center"><a href="./grids/阪木&鑽角犀獸.html"><img width="256" height="256" src="./scouts/event_5080_1W_GuaranteeRarity5_014.00000000000.png"><br>阪木&鑽角犀獸</a></p>
-<p align="center"><a href="./grids/阿波羅&黑魯加.html">阿波羅&黑魯加</a></p>
-<p align="center"><a href="./grids/雅典娜&阿柏怪.html">雅典娜&阿柏怪</a></p>
-<p align="center"><a href="./grids/拉姆達&雙彈瓦斯.html">拉姆達&雙彈瓦斯</a></p>
-<p align="center"><a href="./grids/蘭斯&大嘴蝠.html">蘭斯&大嘴蝠</a></p>
+### 2023/10/12
+<p align="center"><a href="./grids/芙蓉（２０２３秋季）&死神棺.html"><img width="256" height="256" src="./scouts/event_5090_2W_MasterTicket_03.event_5090_2W_MasterTicket_03_1.png"><br>芙蓉（２０２３秋季）&死神棺</a></p>
 
-### 2023/09/14
-<p align="center"><a href="./grids/小菊兒（合眾）&電飛鼠.html"><img width="256" height="256" src="./scouts/event_5080_2W_FesPickup_05.event_5080_2W_FesPickup_05_1.png"><br>小菊兒（合眾）&電飛鼠</a></p>
+### 2023/10/14
+<p align="center"><a href="./grids/杜娟（２０２３秋季）&死神板.html"><img width="256" height="256" src="./scouts/event_5090_2W_MasterTicket_04.event_5090_2W_MasterTicket_04_1.png"><br>杜娟（２０２３秋季）&死神板</a></p>
 
-### 2023/09/16
-<p align="center"><a href="./grids/桄榔&雷吉奇卡斯.html"><img width="256" height="256" src="./scouts/event_5080_2W_FesPickup_06.event_5080_2W_FesPickup_06_1.png"><br>桄榔&雷吉奇卡斯</a></p>
+### 2023/10/16
+<p align="center"><a href="./grids/蘆薈&步哨鼠.html"><img width="256" height="256" src="./scouts/event_5090_2W_MasterTicket_05.event_5090_2W_MasterTicket_05_1.png"><br>蘆薈&步哨鼠</a></p>
 
-### 2023/09/18
-<p align="center"><a href="./grids/青葙&盔甲鳥.html"><img width="256" height="256" src="./scouts/event_5080_2W_FesPickup_07.event_5080_2W_FesPickup_07_1.png"><br>青葙&盔甲鳥</a></p>
-
-### 2023/09/25
-<p align="center"><a href="./grids/鬥子&炎武王.html"><img src="./icons/鬥子&炎武王.png"><br>鬥子&炎武王</a></p>
+### 2023/10/25
+<p align="center"><a href="./grids/希特隆&光電傘蜥.html"><img src="./icons/希特隆&光電傘蜥.png"><br>希特隆&光電傘蜥</a></p>
 
 ### 其他
-<p align="center"><a href="./grids/葉子&皮可西.html"><img src="./icons/葉子&皮可西.png"><br>葉子&皮可西</a></p>
-<p align="center"><a href="./grids/麗姿&小碎鑽.html"><img src="./icons/麗姿&小碎鑽.png"><br>麗姿&小碎鑽</a></p>
-<p align="center"><a href="./grids/阿馴&羅絲雷朵.html"><img src="./icons/阿馴&羅絲雷朵.png"><br>阿馴&羅絲雷朵</a></p>
-<p align="center"><a href="./grids/阿速&大比鳥.html"><img src="./icons/阿速&大比鳥.png"><br>阿速&大比鳥</a></p>
-<p align="center"><a href="./grids/瑪綉&大嘴娃.html"><img src="./icons/瑪綉&大嘴娃.png"><br>瑪綉&大嘴娃</a></p>
-<p align="center"><a href="./grids/晝珠&雷吉艾斯.html"><img src="./icons/晝珠&雷吉艾斯.png"><br>晝珠&雷吉艾斯</a></p>
-<p align="center"><a href="./grids/主角&雷吉斯奇魯.html"><img src="./icons/主角&雷吉斯奇魯.png"><br>主角&雷吉斯奇魯</a></p>
+<p align="center"><a href="./grids/阪木&尼多力諾.html"><img src="./icons/阪木&尼多力諾.png"><br>阪木&尼多力諾</a></p>
 
 <br>
 
@@ -170,6 +154,7 @@
 <a href="./grids/艾莉絲（２０２２秋季）&四顎針龍.html"><img src="./icons/艾莉絲（２０２２秋季）&四顎針龍.png" width="64" height="64"><img src="./icons/★6ex_艾莉絲（２０２２秋季）&四顎針龍.png" width="64" height="64">艾莉絲(2022秋季)&四顎針龍</a><br>
 <a href="./grids/雅典娜&阿柏怪.html"><img src="./icons/雅典娜&阿柏怪.png" width="64" height="64"><img src="./icons/★6ex_雅典娜&阿柏怪.png" width="64" height="64">雅典娜&阿柏怪</a><br>
 <a href="./grids/奧利薇&灰塵山.html"><img src="./icons/奧利薇&灰塵山.png" width="64" height="64"><img src="./icons/★6ex_奧利薇&灰塵山.png" width="64" height="64">奧利薇&灰塵山</a><br>
+<a href="./grids/杜娟（２０２３秋季）&死神板.html"><img src="./icons/杜娟（２０２３秋季）&死神板.png" width="64" height="64"><img src="./icons/★6ex_杜娟（２０２３秋季）&死神板.png" width="64" height="64">杜娟(2023秋季)&死神板</a><br>
 <a href="./grids/菊野&河馬獸.html"><img src="./icons/菊野&河馬獸.png" width="64" height="64"><img src="./icons/★6ex_菊野&河馬獸.png" width="64" height="64">菊野&河馬獸</a><br>
 <a href="./grids/火雁&噴火駝.html"><img src="./icons/火雁&噴火駝.png" width="64" height="64"><img src="./icons/★6ex_火雁&噴火駝.png" width="64" height="64">火雁&噴火駝</a><br>
 <a href="./grids/風露（２０２０冬季）&波克基斯.html"><img src="./icons/風露（２０２０冬季）&波克基斯.png" width="64" height="64"><img src="./icons/★6ex_風露（２０２０冬季）&波克基斯.png" width="64" height="64">風露(2020冬季)&波克基斯</a><br>
@@ -219,6 +204,7 @@
 <a href="./grids/赤紅&卡比獸.html"><img src="./icons/赤紅&卡比獸.png" width="64" height="64"><img src="./icons/★6ex_赤紅&卡比獸.png" width="64" height="64">赤紅&卡比獸</a><br>
 <a href="./grids/黑連&長毛狗.html"><img src="./icons/黑連&長毛狗.png" width="64" height="64"><img src="./icons/★6ex_黑連&長毛狗.png" width="64" height="64">黑連&長毛狗</a><br>
 <a href="./grids/葉子&伊布.html"><img src="./icons/葉子&伊布.png" width="64" height="64"><img src="./icons/★6ex_葉子&伊布.png" width="64" height="64">葉子&伊布</a><br>
+<a href="./grids/蘆薈&步哨鼠.html"><img src="./icons/蘆薈&步哨鼠.png" width="64" height="64"><img src="./icons/★6ex_蘆薈&步哨鼠.png" width="64" height="64">蘆薈&步哨鼠</a><br>
 <a href="./grids/莉拉&卡比獸.html"><img src="./icons/莉拉&卡比獸.png" width="64" height="64"><img src="./icons/★6ex_莉拉&卡比獸.png" width="64" height="64">莉拉&卡比獸</a><br>
 <a href="./grids/美極套裝松葉&鳳王.html"><img src="./icons/美極套裝松葉&鳳王.png" width="64" height="64"><img src="./icons/★6ex_美極套裝松葉&鳳王.png" width="64" height="64">美極套裝松葉&鳳王</a><br>
 <a href="./grids/卡奇&嘎啦嘎啦.html"><img src="./icons/卡奇&嘎啦嘎啦.png" width="64" height="64"><img src="./icons/★6ex_卡奇&嘎啦嘎啦.png" width="64" height="64">卡奇&嘎啦嘎啦</a><br>
@@ -264,6 +250,7 @@
 <a href="./grids/希巴&大岩蛇.html"><img src="./icons/希巴&大岩蛇.png" width="64" height="64"><img src="./icons/★6ex_希巴&大岩蛇.png" width="64" height="64">希巴&大岩蛇</a><br>
 <a href="./grids/主角&雷吉洛克.html"><img src="./icons/主角&雷吉洛克.png" width="64" height="64">主角&雷吉洛克</a><br>
 <a href="./grids/芙蓉&黑夜魔靈.html"><img src="./icons/芙蓉&黑夜魔靈.png" width="64" height="64"><img src="./icons/★6ex_芙蓉&黑夜魔靈.png" width="64" height="64">芙蓉&黑夜魔靈</a><br>
+<a href="./grids/芙蓉（２０２３秋季）&死神棺.html"><img src="./icons/芙蓉（２０２３秋季）&死神棺.png" width="64" height="64"><img src="./icons/★6ex_芙蓉（２０２３秋季）&死神棺.png" width="64" height="64">芙蓉(2023秋季)&死神棺</a><br>
 <a href="./grids/莉莉艾（洋裝）&怖思壺.html"><img src="./icons/莉莉艾（洋裝）&怖思壺.png" width="64" height="64"><img src="./icons/★6ex_莉莉艾（洋裝）&怖思壺.png" width="64" height="64">莉莉艾(洋裝)&怖思壺</a><br>
 <a href="./grids/歐尼奧（２０２２秋季）&南瓜怪人.html"><img src="./icons/歐尼奧（２０２２秋季）&南瓜怪人.png" width="64" height="64"><img src="./icons/★6ex_歐尼奧（２０２２秋季）&南瓜怪人.png" width="64" height="64">歐尼奧(2022秋季)&南瓜怪人</a><br>
 <a href="./grids/美極套裝小悠&拉帝歐斯.html"><img src="./icons/美極套裝小悠&拉帝歐斯.png" width="64" height="64"><img src="./icons/★6ex_美極套裝小悠&拉帝歐斯.png" width="64" height="64">美極套裝小悠&拉帝歐斯</a><br>
@@ -284,11 +271,15 @@
 <a href="./grids/亞堤（２０２１春季）&波克比.html"><img src="./icons/亞堤（２０２１春季）&波克比.png" width="64" height="64"><img src="./icons/★6ex_亞堤（２０２１春季）&波克比.png" width="64" height="64">亞堤(2021春季)&波克比</a><br>
 ### 速戰型
 <a href="./grids/妮莫&巴布土撥.html"><img src="./icons/妮莫&巴布土撥.png" width="64" height="64"><img src="./icons/★6ex_妮莫&巴布土撥.png" width="64" height="64">妮莫&巴布土撥</a><br>
+<a href="./grids/明耀&狙射樹梟.html"><img src="./icons/明耀&狙射樹梟.png" width="64" height="64"><img src="./icons/★6ex_明耀&狙射樹梟.png" width="64" height="64">明耀&狙射樹梟</a><br>
+<a href="./grids/達拉&鐵面忍者.html"><img src="./icons/達拉&鐵面忍者.png" width="64" height="64"><img src="./icons/★6ex_達拉&鐵面忍者.png" width="64" height="64">達拉&鐵面忍者</a><br>
 <a href="./grids/梧桐&鬃岩狼人.html"><img src="./icons/梧桐&鬃岩狼人.png" width="64" height="64"><img src="./icons/★6ex_梧桐&鬃岩狼人.png" width="64" height="64">梧桐&鬃岩狼人</a><br>
 <a href="./grids/阿波羅&黑魯加.html"><img src="./icons/阿波羅&黑魯加.png" width="64" height="64"><img src="./icons/★6ex_阿波羅&黑魯加.png" width="64" height="64">阿波羅&黑魯加</a><br>
 ### 場地型
 <a href="./grids/阪木&鑽角犀獸.html"><img src="./icons/阪木&鑽角犀獸.png" width="64" height="64"><img src="./icons/★6ex_阪木&鑽角犀獸.png" width="64" height="64">阪木&鑽角犀獸</a><br>
 <a href="./grids/小勝&靈幽馬.html"><img src="./icons/小勝&靈幽馬.png" width="64" height="64"><img src="./icons/★6ex_小勝&靈幽馬.png" width="64" height="64">小勝&靈幽馬</a><br>
+<a href="./grids/小照&大劍鬼.html"><img src="./icons/小照&大劍鬼.png" width="64" height="64"><img src="./icons/★6ex_小照&大劍鬼.png" width="64" height="64">小照&大劍鬼</a><br>
+<a href="./grids/捩木&自爆磁怪.html"><img src="./icons/捩木&自爆磁怪.png" width="64" height="64"><img src="./icons/★6ex_捩木&自爆磁怪.png" width="64" height="64">捩木&自爆磁怪</a><br>
 <br>
 
 ## ⭐⭐⭐⭐
@@ -309,7 +300,7 @@
 <a href="./grids/霍米加&蜈蚣王.html"><img src="./icons/霍米加&蜈蚣王.png" width="64" height="64"><img src="./icons/★6ex_霍米加&蜈蚣王.png" width="64" height="64">霍米加&蜈蚣王</a><br>
 <a href="./grids/卡希麗&銃嘴大鳥.html"><img src="./icons/卡希麗&銃嘴大鳥.png" width="64" height="64">卡希麗&銃嘴大鳥</a><br>
 <a href="./grids/達拉&凱羅斯.html"><img src="./icons/達拉&凱羅斯.png" width="64" height="64">達拉&凱羅斯</a><br>
-<a href="./grids/婉龍&水晶燈火靈.html"><img src="./icons/婉龍&水晶燈火靈.png" width="64" height="64">婉龍&水晶燈火靈</a><br>
+<a href="./grids/婉龍&水晶燈火靈.html"><img src="./icons/婉龍&水晶燈火靈.png" width="64" height="64"><img src="./icons/★6ex_婉龍&水晶燈火靈.png" width="64" height="64">婉龍&水晶燈火靈</a><br>
 <a href="./grids/小椿&刺龍王.html"><img src="./icons/小椿&刺龍王.png" width="64" height="64"><img src="./icons/★6ex_小椿&刺龍王.png" width="64" height="64">小椿&刺龍王</a><br>
 <a href="./grids/梨花&月亮伊布.html"><img src="./icons/梨花&月亮伊布.png" width="64" height="64"><img src="./icons/★6ex_梨花&月亮伊布.png" width="64" height="64">梨花&月亮伊布</a><br>
 <a href="./grids/馬睿因&三地鼠.html"><img src="./icons/馬睿因&三地鼠.png" width="64" height="64">馬睿因&三地鼠</a><br>
@@ -351,6 +342,7 @@
 <a href="./grids/青綠&椰蛋樹.html"><img src="./icons/青綠&椰蛋樹.png" width="64" height="64"><img src="./icons/★6ex_青綠&椰蛋樹.png" width="64" height="64">青綠&椰蛋樹</a><br>
 <a href="./grids/阿馴&羅絲雷朵.html"><img src="./icons/阿馴&羅絲雷朵.png" width="64" height="64"><img src="./icons/★6ex_阿馴&羅絲雷朵.png" width="64" height="64">阿馴&羅絲雷朵</a><br>
 <a href="./grids/阿杏&叉字蝠.html"><img src="./icons/阿杏&叉字蝠.png" width="64" height="64"><img src="./icons/★6ex_阿杏&叉字蝠.png" width="64" height="64">阿杏&叉字蝠</a><br>
+<a href="./grids/阪木&尼多力諾.html"><img src="./icons/阪木&尼多力諾.png" width="64" height="64"><img src="./icons/★6ex_阪木&尼多力諾.png" width="64" height="64">阪木&尼多力諾</a><br>
 <a href="./grids/竹蘭&海兔獸.html"><img src="./icons/竹蘭&海兔獸.png" width="64" height="64"><img src="./icons/★6ex_竹蘭&海兔獸.png" width="64" height="64">竹蘭&海兔獸</a><br>
 <a href="./grids/阿筆&飛天螳螂.html"><img src="./icons/阿筆&飛天螳螂.png" width="64" height="64"><img src="./icons/★6ex_阿筆&飛天螳螂.png" width="64" height="64">阿筆&飛天螳螂</a><br>
 <a href="./grids/小光&結草貴婦.html"><img src="./icons/小光&結草貴婦.png" width="64" height="64"><img src="./icons/★6ex_小光&結草貴婦.png" width="64" height="64">小光&結草貴婦</a><br>
