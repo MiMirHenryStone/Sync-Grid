@@ -27,7 +27,7 @@
 
 ### 2023/11/21
 <p align="center"><a href="./grids/小陽&太陽伊布.html"><img width="256" height="256" src="./scouts/event_5100_4W_MasterTicket_02.00000000000.png"><br>小陽&太陽伊布</a></p>
-<p align="center"><a href="./grids/美月&月亮伊布.html"><img width="256" height="256" src="./scouts/event_5100_4W_MasterTicket_02.00000000000.png"><br>美月&月亮伊布</a></p>
+<p align="center"><a href="./grids/美月&月亮伊布.html">美月&月亮伊布</a></p>
 
 ### 2023/11/25
 <p align="center"><a href="./grids/葉子&伊布.html"><img src="./icons/葉子&伊布.png"><br>葉子&伊布</a></p>
