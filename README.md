@@ -12,8 +12,8 @@
 
 ### 2024/01/16
 <p align="center"><a href="./grids/美極套裝竹蘭&杖尾鱗甲龍.html"><img width="256" height="256" src="./scouts/event_5120_3W_FesPickup_01.00000000000.png"><br>美極套裝竹蘭&杖尾鱗甲龍</a></p>
-<p align="center"><a href="./grids/明輝&帝牙盧卡.html"><img width="256" height="256" src="./scouts/event_5120_3W_FesPickup_01.00000000000.png"><br>明輝&帝牙盧卡</a></p>
-<p align="center"><a href="./grids/美極套裝丹帝&無極汰那.html"><img width="256" height="256" src="./scouts/event_5120_3W_FesPickup_01.00000000000.png"><br>美極套裝丹帝&無極汰那</a></p>
+<p align="center"><a href="./grids/明輝&帝牙盧卡.html">明輝&帝牙盧卡</a></p>
+<p align="center"><a href="./grids/美極套裝丹帝&無極汰那.html">美極套裝丹帝&無極汰那</a></p>
 
 ### 2024/01/22
 <p align="center"><a href="./grids/古魯夏&浩大鯨.html"><img width="256" height="256" src="./scouts/event_5120_4W_FesPickup_01.event_5120_4W_FesPickup_01_1.png"><br>古魯夏&浩大鯨</a></p>
