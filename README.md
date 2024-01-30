@@ -387,11 +387,6 @@
 <a href="./grids/阿蜜&小磁怪.html"><img src="./icons/阿蜜&小磁怪.png" width="64" height="64">阿蜜&小磁怪</a><br>
 <a href="./grids/葉子&皮可西.html"><img src="./icons/葉子&皮可西.png" width="64" height="64">葉子&皮可西</a><br>
 <a href="./grids/主角&霜奶仙.html"><img src="./icons/主角&霜奶仙.png" width="64" height="64">主角&霜奶仙</a><br>
-<a href="./grids/主角&霜奶仙.html"><img src="./icons/主角&霜奶仙.png" width="64" height="64">主角&霜奶仙</a><br>
-<a href="./grids/主角&霜奶仙.html"><img src="./icons/主角&霜奶仙.png" width="64" height="64">主角&霜奶仙</a><br>
-<a href="./grids/主角&霜奶仙.html"><img src="./icons/主角&霜奶仙.png" width="64" height="64">主角&霜奶仙</a><br>
-<a href="./grids/主角&霜奶仙.html"><img src="./icons/主角&霜奶仙.png" width="64" height="64">主角&霜奶仙</a><br>
-<a href="./grids/主角&霜奶仙.html"><img src="./icons/主角&霜奶仙.png" width="64" height="64">主角&霜奶仙</a><br>
 ### 速戰型
 
 ### 場地型
