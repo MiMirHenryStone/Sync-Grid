@@ -1,37 +1,30 @@
 <p align="center">⚠<b>石盤點法只保存在本地cookie</b>⚠<br><br>BUG反饋請私信bilibili@米米尔HenryStone<br>或發送郵件至MiMirHenryStone@gmail.com</p><br>
 
 ## 新石盤
-### 2024/01/31
-<p align="center"><a href="./grids/小驅&皮卡丘.html"><img width="256" height="256" src="./scouts/event_6010_1W_FesPickup_01.event_6010_1W_FesPickup_01_1.png"><br>小驅&皮卡丘</a></p>
+### 2024/02/28
+<p align="center"><a href="./grids/也慈&晶光花.html"><img width="256" height="256" src="./scouts/event_6020_1W_FesPickup_05.event_6020_1W_FesPickup_05_1.png"><br>也慈&晶光花</a></p>
 
-### 2024/02/01
-<p align="center"><a href="./grids/滿充&優雅貓.html"><img src="./icons/滿充&優雅貓.png"><br>滿充&優雅貓</a></p>
+### 2024/03/01
+<p align="center"><a href="./grids/小銀（冠軍）&班基拉斯.html"><img width="256" height="256" src="./scouts/event_6020_1W_FesPickup_07.event_6020_1W_FesPickup_07_1.png"><br>小銀（冠軍）&班基拉斯</a></p>
 
-### 2024/02/02
-<p align="center"><a href="./grids/丘助（寶可夢小朋友）&皮卡丘.html"><img src="./icons/丘助（寶可夢小朋友）&皮卡丘.png"><br>丘助（寶可夢小朋友）&皮卡丘</a></p>
+### 2024/03/07
+<p align="center"><a href="./grids/美極套裝小光&克雷色利亞.html"><img width="256" height="256" src="./scouts/event_6020_2W_FesPickup_01.00000000000.png"><br>美極套裝小光&克雷色利亞</a></p>
+<p align="center"><a href="./grids/風露&高傲雉雞.html"><img src="./icons/風露&高傲雉雞.png"><br>風露&高傲雉雞</a></p>
 
-### 2024/02/03
-<p align="center"><a href="./grids/美極套裝小悠&拉帝歐斯.html"><img width="256" height="256" src="./scouts/event_6010_1W_FesPickup_03.00000000000.png"><br>美極套裝小悠&拉帝歐斯</a></p>
+### 2024/03/14
+<p align="center"><a href="./grids/剛石（表演服）&月月熊.html"><img width="256" height="256" src="./scouts/event_6020_3W_MasterTicket_01.event_6020_3W_MasterTicket_01_1.png"><br>剛石（表演服）&月月熊</a></p>
 
-### 2024/02/05
-<p align="center"><a href="./grids/阿速&貓頭夜鷹.html"><img width="256" height="256" src="./scouts/event_6010_2W_MasterTicket_01.event_6010_2W_MasterTicket_01_1.png"><br>阿速&貓頭夜鷹</a></p>
+### 2024/03/16
+<p align="center"><a href="./grids/珠貝（表演服）&索羅亞克.html"><img width="256" height="256" src="./scouts/event_6020_3W_MasterTicket_02.event_6020_3W_MasterTicket_02_1.png"><br>珠貝（表演服）&索羅亞克</a></p>
 
-### 2024/02/09
-<p align="center"><a href="./grids/小勝（２０２４春季）&藏飽栗鼠.html"><img width="256" height="256" src="./scouts/event_6010_2W_MasterTicket_02.event_6010_2W_MasterTicket_02_1.png"><br>小勝（２０２４春季）&藏飽栗鼠</a></p>
+### 2024/03/18
+<p align="center"><a href="./grids/提耶魯諾&鐵螯龍蝦.html"><img width="256" height="256" src="./scouts/event_6020_3W_MasterTicket_03.event_6020_3W_MasterTicket_03_1.png"><br>提耶魯諾&鐵螯龍蝦</a></p>
 
-### 2024/02/11
-<p align="center"><a href="./grids/小菘（２０２４春季）&達摩狒狒.html"><img width="256" height="256" src="./scouts/event_6010_2W_MasterTicket_03.event_6010_2W_MasterTicket_03_1.png"><br>小菘（２０２４春季）&達摩狒狒</a></p>
+### 2024/03/22
+<p align="center"><a href="./grids/大麗&樂天河童.html"><img width="256" height="256" src="./scouts/event_6020_3W_FesPickup_04.event_6020_3W_FesPickup_04_1.png"><br>大麗&樂天河童</a></p>
 
-### 2024/02/14
-<p align="center"><a href="./grids/主角&霜奶仙.html"><img src="./icons/主角&霜奶仙.png"><br>主角&霜奶仙</a></p>
-
-### 2024/02/19
-<p align="center"><a href="./grids/美極套裝格拉吉歐&瑪機雅娜.html"><img width="256" height="256" src="./scouts/event_6010_4W_FesPickup_02.event_6010_4W_FesPickup_02_1.png"><br>美極套裝格拉吉歐&瑪機雅娜</a></p>
-<p align="center"><a href="./grids/亞玄&路卡利歐.html"><img src="./icons/亞玄&路卡利歐.png"><br>亞玄&路卡利歐</a></p>
-
-### 2024/02/25
-<p align="center"><a href="./grids/美極套裝大吾&代歐奇希斯.html"><img width="256" height="256" src="./scouts/event_6010_4W_FesPickup_010.event_6010_4W_FesPickup_010_1.png"><br>美極套裝大吾&代歐奇希斯</a></p>
-<p align="center"><a href="./grids/布爾美麗&焰后蜥.html"><img src="./icons/布爾美麗&焰后蜥.png"><br>布爾美麗&焰后蜥</a></p>
+### 2024/03/25
+<p align="center"><a href="./grids/古茲馬&具甲武者.html"><img src="./icons/古茲馬&具甲武者.png"><br>古茲馬&具甲武者</a></p>
 
 <br>
 
