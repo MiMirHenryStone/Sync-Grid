@@ -55,6 +55,7 @@ function autoPanel(key) {
 
   if (k > 12) {
     alert("選中格子過多，請減少選中格子后重試");
+    return;
   }
 
   let dp = new Array();
