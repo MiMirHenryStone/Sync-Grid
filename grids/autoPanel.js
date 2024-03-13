@@ -15,7 +15,11 @@ function json2panel(json) {
 }
 
 function autoPanel(key) {
-  if (!confirm("自動石盤僅供參考\n確定要覆蓋當前石盤嗎？")) return;
+  if (key) {
+    if (!confirm("自動石盤僅供參考\n確定要覆蓋當前石盤嗎？")) return;
+  } else {
+    if (!confirm("自動石盤僅供參考\n選中格子過多可能導致頁面卡死\n確定要覆蓋當前石盤嗎？")) return;
+  }
 
   if (!abilityPanel) abilityPanel = json2panel(json);
 
@@ -48,7 +52,7 @@ function autoPanel(key) {
   else
     include = Array.from(checks[set])
       .map((item, index) => ({ item, index }))
-      .filter((i) => i.item == "1")
+      .filter((i) => i.item == "1" && !(neighbours[0].includes(i.index + 1) && abilityPanel[i.index + 1].energy == 0))
       .map((i) => i.index + 1);
 
   let k = include.length;
