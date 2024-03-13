@@ -40,8 +40,8 @@ function autoPanel(key) {
     include = abilityPanel
       .filter(
         (item) =>
-          item.name.match(/拍組招式(威力)?(提升|↑)/) ||
-          item.name.match(/擊中要害時威力提升/) ||
+          item.name.match(/拍組招式.*(威力)?(隨.+)?(提升|↑)/) ||
+          item.name.match(/^擊中要害時威力提升/) ||
           item.name.match(new RegExp(`${key}：威力\\+\\d+`))
       )
       .map((i) => i.index);
