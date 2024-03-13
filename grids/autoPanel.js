@@ -15,11 +15,7 @@ function json2panel(json) {
 }
 
 function autoPanel(key) {
-  if (key) {
-    if (!confirm("自動石盤僅供參考\n確定要覆蓋當前石盤嗎？")) return;
-  } else {
-    if (!confirm("自動石盤僅供參考\n選中格子過多可能導致頁面卡死\n確定要覆蓋當前石盤嗎？")) return;
-  }
+  if (!confirm("自動石盤僅供參考\n確定要覆蓋當前石盤嗎？")) return;
 
   if (!abilityPanel) abilityPanel = json2panel(json);
 
@@ -56,6 +52,10 @@ function autoPanel(key) {
       .map((i) => i.index + 1);
 
   let k = include.length;
+
+  if (k > 12) {
+    alert("選中格子過多，請減少選中格子后重試");
+  }
 
   let dp = new Array();
   let pre = new Array();
