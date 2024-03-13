@@ -8,22 +8,22 @@
 		.grid {
 			margin: 1rem 0;
 		}
-
+		.title-row {
+			display: flex;
+			justify-content: space-around;
+			white-space: nowrap;
+		}
 		.title {
 			font-size: 1.25rem;
-			margin: 0 1rem;
 		}
-
 		.text {
 			font-size: 1rem;
 			margin: 0 0.25rem;
 		}
-
 		svg {
 			font-size: 1rem;
 			margin: 0 5%;
 		}
-
 		svg .ability {
 			font-size: 1.25rem;
 			display: flex;
@@ -34,25 +34,20 @@
 			padding: 0.25rem;
 			box-sizing: border-box;
 		}
-
 		table {
 			width: calc(100% - 0.5rem);
 			margin: 0.25rem;
 		}
-
 		.move td:first-child {
 			width: 20%;
 		}
-
 		.team td {
 			width: 33%;
 		}
-
 		.box {
 			position: relative;
 			width: 66%;
 		}
-
 		.tab {
 			margin: 0;
 			padding: 0;
@@ -63,25 +58,21 @@
 			justify-content: space-around;
 			align-items: flex-end;
 		}
-
 		.tab li {
 			background-color: #ccc;
 			border: 1px solid #fff;
 			padding: .5rem;
 		}
-
 		.tab li a {
 			text-decoration: none;
 			color: #000;
 			display: inline-block;
 			text-align: center;
 		}
-
 		.content {
 			border: 1px solid #888;
 			margin-top: 0;
 		}
-
 		.content1,
 		.content2,
 		.content3,
@@ -91,7 +82,6 @@
 			word-break: break-word;
 			word-wrap: break-word;
 		}
-
 		.content1:target,
 		.content2:target,
 		.content3:target,
@@ -99,13 +89,17 @@
 		.content5:target {
 			display: block;
 		}
+		.ap-btn {
+			float: right;
+		}
 	</style>
+	<script src="./autoPanel.js"></script>
 </head>
 
 
 <body>
 	<div class="grid">
-		<div align="center">
+		<div class="title-row" align="center">
 			<select class="title" id="ms" onchange=changeSet()>
 				<option value="0">No.1</option>
 				<option value="1">No.2</option>
@@ -116,6 +110,7 @@
 			<input class="title" type="button" onclick=reset() value="全部重設">
 			<span class="title" id="energy">剩餘力量：60</span>
 			<span class="title" id="orb">拍檔滴晶：0</span>
+			<input class="title" type="button" onclick="autoPanel()" value="自動連接选中格子">
 		</div>
 		<div class="text" id="skill">技能名稱：</div>
 		<div class="text" id="effect">效果：</div>
@@ -124,7 +119,7 @@
 	</div>
 	<div class="text" class="box" style="width: 64%;">
 		<ul class="tab"><li><a href="#content1">酷豹</a></li></ul>
-		<div class="content"><div class="content1" id="content1"><table><tr><th colspan="3">拍組搜尋★5 越橘♂&酷豹♀</th></tr><tr><td style="width:50%;text-align:center">體系</td><td style="width:50%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">技術型</td><td style="width:50%;text-align:center">蟲</td></tr></table><table><tr style="background:#bededd"><td>Lv.</td><td>1</td><td>100</td><td>110</td><td>120</td><td>125</td><td>130</td><td>135</td><td>140</td><td>150</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td><td>88</td><td>424</td><td>448</td><td>472</td><td>484</td><td>496</td><td>508</td><td>520</td><td>544</td></tr><tr style="background:#efeccd"><td>攻擊</td><td>15</td><td>198</td><td>210</td><td>222</td><td>228</td><td>234</td><td>240</td><td>246</td><td>258</td></tr><tr style="background:#f2deb9"><td>防禦</td><td>12</td><td>162</td><td>172</td><td>182</td><td>187</td><td>192</td><td>197</td><td>202</td><td>212</td></tr><tr style="background:#d3f0f4"><td>特攻</td><td>12</td><td>116</td><td>124</td><td>132</td><td>136</td><td>140</td><td>144</td><td>148</td><td>156</td></tr><tr style="background:#bed3f0"><td>特防</td><td>12</td><td>162</td><td>172</td><td>182</td><td>187</td><td>192</td><td>197</td><td>202</td><td>212</td></tr><tr style="background:#dbcde7"><td>速度</td><td>24</td><td>360</td><td>384</td><td>408</td><td>420</td><td>432</td><td>444</td><td>456</td><td>480</td></tr></table><table class="move" style="background-color:#56556280"><tr><td>拍組招式</td><td>有什麼牌打什麼牌之暗襲要害</td></tr><tr><td>屬性</td><td>惡</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>200</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>對手的任一能力未提高時，威力會提高。</td></tr></table><table class="move" style="background-color:#56556280"><tr><td>寶可夢招式</td><td>暗襲要害 ▭▭</td></tr><tr><td>屬性</td><td>惡</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>40</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>容易擊中要害。</td></tr></table><table class="move" style="background-color:#56556280"><tr><td>寶可夢招式</td><td>搶奪 ▭▭ 2/2</td></tr><tr><td>屬性</td><td>惡</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>當對手的能力處於提高狀態時，會讓自己的能力也同等提高，並讓對手的能力回到初始狀態。</td></tr></table><table class="move" style="background-color:#6dbfb180"><tr><td>訓練家招式</td><td>對戰就是一切！ 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>提高自己的擊中要害率２階段。<br>提高自己的閃避率３階段。<br>降低自己的防禦３階段。</td></tr></table><table class="move" style="background-color:#56556280"><tr><td>寶可夢招式</td><td>惡之波動 ▭▭▭</td></tr><tr><td>屬性</td><td>惡</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>95</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>有２０％的機率會讓對手陷入畏縮狀態。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>麻痺無效<br>不會陷入麻痺狀態。</td></tr></table><table class="team"><tr><td style="background-color:#56556280">惡屬性<br>／技術</td><td style="background-color:#6dbfb180">合眾<br>／技術</td><td style="background-color:#6dbfb180">四天王<br>／技術</td></tr><tr><td style="background-color:#6dbfb180">圍巾<br>／技術</td></tr><tr><td colspan="3" style="text-align:center;background-color:#6dbfb180">心暖暖↑３＆淚閃閃↓１</td></tr></table></div></div></div>
+		<div class="content"><div class="content1" id="content1"><table><tr><th colspan="3">拍組搜尋★5 越橘♂&酷豹♀</th></tr><tr><td style="width:50%;text-align:center">體系</td><td style="width:50%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">技術型</td><td style="width:50%;text-align:center">蟲</td></tr></table><table><tr style="background:#bededd"><td>Lv.</td><td>1</td><td>100</td><td>110</td><td>120</td><td>125</td><td>130</td><td>135</td><td>140</td><td>150</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td><td>88</td><td>424</td><td>448</td><td>472</td><td>484</td><td>496</td><td>508</td><td>520</td><td>544</td></tr><tr style="background:#efeccd"><td>攻擊</td><td>15</td><td>198</td><td>210</td><td>222</td><td>228</td><td>234</td><td>240</td><td>246</td><td>258</td></tr><tr style="background:#f2deb9"><td>防禦</td><td>12</td><td>162</td><td>172</td><td>182</td><td>187</td><td>192</td><td>197</td><td>202</td><td>212</td></tr><tr style="background:#d3f0f4"><td>特攻</td><td>12</td><td>116</td><td>124</td><td>132</td><td>136</td><td>140</td><td>144</td><td>148</td><td>156</td></tr><tr style="background:#bed3f0"><td>特防</td><td>12</td><td>162</td><td>172</td><td>182</td><td>187</td><td>192</td><td>197</td><td>202</td><td>212</td></tr><tr style="background:#dbcde7"><td>速度</td><td>24</td><td>360</td><td>384</td><td>408</td><td>420</td><td>432</td><td>444</td><td>456</td><td>480</td></tr></table><table class="move" style="background-color:#56556280"><tr><td>拍組招式</td><td>有什麼牌打什麼牌之暗襲要害<input class="ap-btn" type="button" onclick="autoPanel('有什麼牌打什麼牌之暗襲要害')" value="自動核彈石盤"></td></tr><tr><td>屬性</td><td>惡</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>200</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>對手的任一能力未提高時，威力會提高。</td></tr></table><table class="move" style="background-color:#56556280"><tr><td>寶可夢招式</td><td>暗襲要害 ▭▭</td></tr><tr><td>屬性</td><td>惡</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>40</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>容易擊中要害。</td></tr></table><table class="move" style="background-color:#56556280"><tr><td>寶可夢招式</td><td>搶奪 ▭▭ 2/2</td></tr><tr><td>屬性</td><td>惡</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>當對手的能力處於提高狀態時，會讓自己的能力也同等提高，並讓對手的能力回到初始狀態。</td></tr></table><table class="move" style="background-color:#6dbfb180"><tr><td>訓練家招式</td><td>對戰就是一切！ 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>提高自己的擊中要害率２階段。<br>提高自己的閃避率３階段。<br>降低自己的防禦３階段。</td></tr></table><table class="move" style="background-color:#56556280"><tr><td>寶可夢招式</td><td>惡之波動 ▭▭▭</td></tr><tr><td>屬性</td><td>惡</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>95</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>有２０％的機率會讓對手陷入畏縮狀態。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>麻痺無效<br>不會陷入麻痺狀態。</td></tr></table><table class="team"><tr><td style="background-color:#56556280">惡屬性<br>／技術</td><td style="background-color:#6dbfb180">合眾<br>／技術</td><td style="background-color:#6dbfb180">四天王<br>／技術</td></tr><tr><td style="background-color:#6dbfb180">圍巾<br>／技術</td></tr><tr><td colspan="3" style="text-align:center;background-color:#6dbfb180">心暖暖↑３＆淚閃閃↓１</td></tr></table></div></div></div>
 	</div>
 
 	<script>

@@ -8,22 +8,22 @@
 		.grid {
 			margin: 1rem 0;
 		}
-
+		.title-row {
+			display: flex;
+			justify-content: space-around;
+			white-space: nowrap;
+		}
 		.title {
 			font-size: 1.25rem;
-			margin: 0 1rem;
 		}
-
 		.text {
 			font-size: 1rem;
 			margin: 0 0.25rem;
 		}
-
 		svg {
 			font-size: 1rem;
 			margin: 0 5%;
 		}
-
 		svg .ability {
 			font-size: 1.25rem;
 			display: flex;
@@ -34,25 +34,20 @@
 			padding: 0.25rem;
 			box-sizing: border-box;
 		}
-
 		table {
 			width: calc(100% - 0.5rem);
 			margin: 0.25rem;
 		}
-
 		.move td:first-child {
 			width: 20%;
 		}
-
 		.team td {
 			width: 33%;
 		}
-
 		.box {
 			position: relative;
 			width: 66%;
 		}
-
 		.tab {
 			margin: 0;
 			padding: 0;
@@ -63,25 +58,21 @@
 			justify-content: space-around;
 			align-items: flex-end;
 		}
-
 		.tab li {
 			background-color: #ccc;
 			border: 1px solid #fff;
 			padding: .5rem;
 		}
-
 		.tab li a {
 			text-decoration: none;
 			color: #000;
 			display: inline-block;
 			text-align: center;
 		}
-
 		.content {
 			border: 1px solid #888;
 			margin-top: 0;
 		}
-
 		.content1,
 		.content2,
 		.content3,
@@ -91,7 +82,6 @@
 			word-break: break-word;
 			word-wrap: break-word;
 		}
-
 		.content1:target,
 		.content2:target,
 		.content3:target,
@@ -99,13 +89,17 @@
 		.content5:target {
 			display: block;
 		}
+		.ap-btn {
+			float: right;
+		}
 	</style>
+	<script src="./autoPanel.js"></script>
 </head>
 
 
 <body>
 	<div class="grid">
-		<div align="center">
+		<div class="title-row" align="center">
 			<select class="title" id="ms" onchange=changeSet()>
 				<option value="0">No.1</option>
 				<option value="1">No.2</option>
@@ -116,6 +110,7 @@
 			<input class="title" type="button" onclick=reset() value="全部重設">
 			<span class="title" id="energy">剩餘力量：60</span>
 			<span class="title" id="orb">拍檔滴晶：0</span>
+			<input class="title" type="button" onclick="autoPanel()" value="自動連接选中格子">
 		</div>
 		<div class="text" id="skill">技能名稱：</div>
 		<div class="text" id="effect">效果：</div>
@@ -124,7 +119,7 @@
 	</div>
 	<div class="text" class="box" style="width: 64%;">
 		<ul class="tab"><li><a href="#content1">大王燕</a></li></ul>
-		<div class="content"><div class="content1" id="content1"><table><tr><th colspan="3">拍組搜尋★5 阿速♂&大王燕♂</th></tr><tr><td style="width:50%;text-align:center">體系</td><td style="width:50%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">輔助型</td><td style="width:50%;text-align:center">冰</td></tr></table><table><tr style="background:#bededd"><td>Lv.</td><td>1</td><td>100</td><td>110</td><td>120</td><td>125</td><td>130</td><td>135</td><td>140</td><td>150</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td><td>102</td><td>518</td><td>548</td><td>578</td><td>593</td><td>608</td><td>623</td><td>638</td><td>668</td></tr><tr style="background:#efeccd"><td>攻擊</td><td>8</td><td>93</td><td>99</td><td>105</td><td>108</td><td>111</td><td>114</td><td>117</td><td>123</td></tr><tr style="background:#f2deb9"><td>防禦</td><td>17</td><td>184</td><td>196</td><td>208</td><td>214</td><td>220</td><td>226</td><td>232</td><td>244</td></tr><tr style="background:#d3f0f4"><td>特攻</td><td>8</td><td>77</td><td>81</td><td>85</td><td>87</td><td>89</td><td>91</td><td>93</td><td>97</td></tr><tr style="background:#bed3f0"><td>特防</td><td>16</td><td>183</td><td>195</td><td>207</td><td>213</td><td>219</td><td>225</td><td>231</td><td>243</td></tr><tr style="background:#dbcde7"><td>速度</td><td>21</td><td>256</td><td>272</td><td>288</td><td>296</td><td>304</td><td>312</td><td>320</td><td>336</td></tr></table><table class="move" style="background-color:#5a82f080"><tr><td>拍組招式</td><td>空中飛舞華麗燦爛之燕返</td></tr><tr><td>屬性</td><td>飛行</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>250</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></table><table class="move" style="background-color:#5a82f080"><tr><td>寶可夢招式</td><td>空氣斬 ▭▭</td></tr><tr><td>屬性</td><td>飛行</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>45</td></tr><tr><td>命中</td><td>95</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>有３０％的機率會讓對手陷入畏縮狀態。</td></tr></table><table class="move" style="background-color:#6dbfb180"><tr><td>訓練家招式</td><td>要害攻擊Ｇ＋ 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>我方全體拍組</td></tr><tr><td></td><td>提高我方全體拍組的擊中要害率２階段。</td></tr></table><table class="move" style="background-color:#5a82f080"><tr><td>寶可夢招式</td><td>飛翔 3/3</td></tr><tr><td>屬性</td><td>飛行</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>169</td></tr><tr><td>命中</td><td>95</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>變成飛翔狀態。<br>變成飛翔狀態一段時間後，將會解除飛翔狀態並且攻擊對手。<br>在飛翔狀態時，無法做出其他行動。<br>在飛翔狀態時，對手絕大多數的招式不會命中。<br>在飛翔狀態時，若受到拍組招式或拍組極巨化招式攻擊，將會解除飛翔狀態。</td></tr></table><table class="move" style="background-color:#6dbfb180"><tr><td>訓練家招式</td><td>飛得更高！ 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>我方全體拍組</td></tr><tr><td></td><td>提高我方全體拍組的攻擊和特攻２階段。<br>提高自己的速度１階段。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>對手失敗時ＨＰ回復４<br>當對手使出以自己為對象的攻擊招式失敗時，<br>有５０％的機率<br>會回復自己的ＨＰ，約為自己最大ＨＰ的２０％。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>對手失敗時招式計量槽↑１<br>當對手使出以自己為對象的攻擊招式失敗時，<br>會幫自己增加１條招式計量槽。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>對手失敗時速度提升Ｇ９<br>當對手使出以自己為對象的攻擊招式失敗時，<br>會提高我方全體拍組的速度１階段。</td></tr></table><table class="team"><tr><td style="background-color:#5a82f080">飛行屬性<br>／輔助</td><td style="background-color:#6dbfb180">城都<br>／輔助</td><td style="background-color:#6dbfb180">道館館主<br>／輔助</td></tr><tr><td style="background-color:#6dbfb180">寶可全能競技賽<br>／輔助</td></tr><tr><td colspan="3" style="text-align:center;background-color:#6dbfb180">心暖暖↑１＆淚閃閃↑１</td></tr></table></div></div></div>
+		<div class="content"><div class="content1" id="content1"><table><tr><th colspan="3">拍組搜尋★5 阿速♂&大王燕♂</th></tr><tr><td style="width:50%;text-align:center">體系</td><td style="width:50%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">輔助型</td><td style="width:50%;text-align:center">冰</td></tr></table><table><tr style="background:#bededd"><td>Lv.</td><td>1</td><td>100</td><td>110</td><td>120</td><td>125</td><td>130</td><td>135</td><td>140</td><td>150</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td><td>102</td><td>518</td><td>548</td><td>578</td><td>593</td><td>608</td><td>623</td><td>638</td><td>668</td></tr><tr style="background:#efeccd"><td>攻擊</td><td>8</td><td>93</td><td>99</td><td>105</td><td>108</td><td>111</td><td>114</td><td>117</td><td>123</td></tr><tr style="background:#f2deb9"><td>防禦</td><td>17</td><td>184</td><td>196</td><td>208</td><td>214</td><td>220</td><td>226</td><td>232</td><td>244</td></tr><tr style="background:#d3f0f4"><td>特攻</td><td>8</td><td>77</td><td>81</td><td>85</td><td>87</td><td>89</td><td>91</td><td>93</td><td>97</td></tr><tr style="background:#bed3f0"><td>特防</td><td>16</td><td>183</td><td>195</td><td>207</td><td>213</td><td>219</td><td>225</td><td>231</td><td>243</td></tr><tr style="background:#dbcde7"><td>速度</td><td>21</td><td>256</td><td>272</td><td>288</td><td>296</td><td>304</td><td>312</td><td>320</td><td>336</td></tr></table><table class="move" style="background-color:#5a82f080"><tr><td>拍組招式</td><td>空中飛舞華麗燦爛之燕返<input class="ap-btn" type="button" onclick="autoPanel('空中飛舞華麗燦爛之燕返')" value="自動核彈石盤"></td></tr><tr><td>屬性</td><td>飛行</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>250</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></table><table class="move" style="background-color:#5a82f080"><tr><td>寶可夢招式</td><td>空氣斬 ▭▭</td></tr><tr><td>屬性</td><td>飛行</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>45</td></tr><tr><td>命中</td><td>95</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>有３０％的機率會讓對手陷入畏縮狀態。</td></tr></table><table class="move" style="background-color:#6dbfb180"><tr><td>訓練家招式</td><td>要害攻擊Ｇ＋ 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>我方全體拍組</td></tr><tr><td></td><td>提高我方全體拍組的擊中要害率２階段。</td></tr></table><table class="move" style="background-color:#5a82f080"><tr><td>寶可夢招式</td><td>飛翔 3/3</td></tr><tr><td>屬性</td><td>飛行</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>169</td></tr><tr><td>命中</td><td>95</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>變成飛翔狀態。<br>變成飛翔狀態一段時間後，將會解除飛翔狀態並且攻擊對手。<br>在飛翔狀態時，無法做出其他行動。<br>在飛翔狀態時，對手絕大多數的招式不會命中。<br>在飛翔狀態時，若受到拍組招式或拍組極巨化招式攻擊，將會解除飛翔狀態。</td></tr></table><table class="move" style="background-color:#6dbfb180"><tr><td>訓練家招式</td><td>飛得更高！ 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>我方全體拍組</td></tr><tr><td></td><td>提高我方全體拍組的攻擊和特攻２階段。<br>提高自己的速度１階段。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>對手失敗時ＨＰ回復４<br>當對手使出以自己為對象的攻擊招式失敗時，<br>有５０％的機率<br>會回復自己的ＨＰ，約為自己最大ＨＰ的２０％。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>對手失敗時招式計量槽↑１<br>當對手使出以自己為對象的攻擊招式失敗時，<br>會幫自己增加１條招式計量槽。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>對手失敗時速度提升Ｇ９<br>當對手使出以自己為對象的攻擊招式失敗時，<br>會提高我方全體拍組的速度１階段。</td></tr></table><table class="team"><tr><td style="background-color:#5a82f080">飛行屬性<br>／輔助</td><td style="background-color:#6dbfb180">城都<br>／輔助</td><td style="background-color:#6dbfb180">道館館主<br>／輔助</td></tr><tr><td style="background-color:#6dbfb180">寶可全能競技賽<br>／輔助</td></tr><tr><td colspan="3" style="text-align:center;background-color:#6dbfb180">心暖暖↑１＆淚閃閃↑１</td></tr></table></div></div></div>
 	</div>
 
 	<script>

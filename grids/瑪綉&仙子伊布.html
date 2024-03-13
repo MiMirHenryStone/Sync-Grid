@@ -8,22 +8,22 @@
 		.grid {
 			margin: 1rem 0;
 		}
-
+		.title-row {
+			display: flex;
+			justify-content: space-around;
+			white-space: nowrap;
+		}
 		.title {
 			font-size: 1.25rem;
-			margin: 0 1rem;
 		}
-
 		.text {
 			font-size: 1rem;
 			margin: 0 0.25rem;
 		}
-
 		svg {
 			font-size: 1rem;
 			margin: 0 5%;
 		}
-
 		svg .ability {
 			font-size: 1.25rem;
 			display: flex;
@@ -34,25 +34,20 @@
 			padding: 0.25rem;
 			box-sizing: border-box;
 		}
-
 		table {
 			width: calc(100% - 0.5rem);
 			margin: 0.25rem;
 		}
-
 		.move td:first-child {
 			width: 20%;
 		}
-
 		.team td {
 			width: 33%;
 		}
-
 		.box {
 			position: relative;
 			width: 66%;
 		}
-
 		.tab {
 			margin: 0;
 			padding: 0;
@@ -63,25 +58,21 @@
 			justify-content: space-around;
 			align-items: flex-end;
 		}
-
 		.tab li {
 			background-color: #ccc;
 			border: 1px solid #fff;
 			padding: .5rem;
 		}
-
 		.tab li a {
 			text-decoration: none;
 			color: #000;
 			display: inline-block;
 			text-align: center;
 		}
-
 		.content {
 			border: 1px solid #888;
 			margin-top: 0;
 		}
-
 		.content1,
 		.content2,
 		.content3,
@@ -91,7 +82,6 @@
 			word-break: break-word;
 			word-wrap: break-word;
 		}
-
 		.content1:target,
 		.content2:target,
 		.content3:target,
@@ -99,13 +89,17 @@
 		.content5:target {
 			display: block;
 		}
+		.ap-btn {
+			float: right;
+		}
 	</style>
+	<script src="./autoPanel.js"></script>
 </head>
 
 
 <body>
 	<div class="grid">
-		<div align="center">
+		<div class="title-row" align="center">
 			<select class="title" id="ms" onchange=changeSet()>
 				<option value="0">No.1</option>
 				<option value="1">No.2</option>
@@ -116,6 +110,7 @@
 			<input class="title" type="button" onclick=reset() value="全部重設">
 			<span class="title" id="energy">剩餘力量：60</span>
 			<span class="title" id="orb">拍檔滴晶：0</span>
+			<input class="title" type="button" onclick="autoPanel()" value="自動連接选中格子">
 		</div>
 		<div class="text" id="skill">技能名稱：</div>
 		<div class="text" id="effect">效果：</div>
@@ -124,7 +119,7 @@
 	</div>
 	<div class="text" class="box" style="width: 64%;">
 		<ul class="tab"><li><a href="#content1">仙子伊布</a></li></ul>
-		<div class="content"><div class="content1" id="content1"><table><tr><th colspan="3">★4 瑪綉♀&仙子伊布♂</th></tr><tr><td style="width:50%;text-align:center">體系</td><td style="width:50%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">特殊攻擊型</td><td style="width:50%;text-align:center">毒</td></tr></table><table><tr style="background:#bededd"><td>Lv.</td><td>1</td><td>100</td><td>110</td><td>120</td><td>125</td><td>130</td><td>135</td><td>140</td><td>150</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td><td>75</td><td>454</td><td>480</td><td>506</td><td>519</td><td>532</td><td>545</td><td>558</td><td>582</td></tr><tr style="background:#efeccd"><td>攻擊</td><td>8</td><td>113</td><td>119</td><td>125</td><td>128</td><td>131</td><td>134</td><td>137</td><td>143</td></tr><tr style="background:#f2deb9"><td>防禦</td><td>5</td><td>93</td><td>99</td><td>105</td><td>108</td><td>111</td><td>114</td><td>117</td><td>123</td></tr><tr style="background:#d3f0f4"><td>特攻</td><td>13</td><td>289</td><td>307</td><td>325</td><td>334</td><td>343</td><td>352</td><td>361</td><td>379</td></tr><tr style="background:#bed3f0"><td>特防</td><td>9</td><td>132</td><td>140</td><td>148</td><td>152</td><td>156</td><td>160</td><td>164</td><td>172</td></tr><tr style="background:#dbcde7"><td>速度</td><td>5</td><td>141</td><td>149</td><td>157</td><td>161</td><td>165</td><td>169</td><td>173</td><td>181</td></tr></table><table class="move" style="background-color:#ed9bb880"><tr><td>拍組招式</td><td>來自歷史國度之魔法閃耀</td></tr><tr><td>屬性</td><td>妖精</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>250</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></table><table class="move" style="background-color:#ed9bb880"><tr><td>寶可夢招式</td><td>魅惑之聲 ▭▭</td></tr><tr><td>屬性</td><td>妖精</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>45</td></tr><tr><td>對象</td><td>對手全體拍組</td></tr><tr><td></td><td>攻擊必定會命中。</td></tr></table><table class="move" style="background-color:#6dbfb180"><tr><td>訓練家招式</td><td>特攻強化 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>提高自己的特攻２階段。</td></tr></table><table class="move" style="background-color:#ed9bb880"><tr><td>寶可夢招式</td><td>吸取之吻 ▭▭</td></tr><tr><td>屬性</td><td>妖精</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>46</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>給予對手的傷害越多，自己的ＨＰ就回復得越多。</td></tr></table><table class="move" style="background-color:#6dbfb180"><tr><td>訓練家招式</td><td>輕靈閑雅 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>提高自己的特防和速度２階段。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>威力隨ＨＰ提升４<br>自己所剩ＨＰ的比例越高，招式的威力就提高得越多。</td></tr></table><table class="team"><tr><td style="background-color:#ed9bb880">妖精屬性<br>／攻擊</td><td style="background-color:#6dbfb180">卡洛斯<br>／攻擊</td><td style="background-color:#6dbfb180">道館館主<br>／攻擊</td></tr><tr><td style="background-color:#6dbfb180">表演家<br>／攻擊</td><td style="background-color:#6dbfb180">我行我素<br>／攻擊</td></tr><tr><td colspan="3" style="text-align:center;background-color:#6dbfb180">火辣辣↑１＆心暖暖↑１</td></tr></table></div></div></div>
+		<div class="content"><div class="content1" id="content1"><table><tr><th colspan="3">★4 瑪綉♀&仙子伊布♂</th></tr><tr><td style="width:50%;text-align:center">體系</td><td style="width:50%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">特殊攻擊型</td><td style="width:50%;text-align:center">毒</td></tr></table><table><tr style="background:#bededd"><td>Lv.</td><td>1</td><td>100</td><td>110</td><td>120</td><td>125</td><td>130</td><td>135</td><td>140</td><td>150</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td><td>75</td><td>454</td><td>480</td><td>506</td><td>519</td><td>532</td><td>545</td><td>558</td><td>582</td></tr><tr style="background:#efeccd"><td>攻擊</td><td>8</td><td>113</td><td>119</td><td>125</td><td>128</td><td>131</td><td>134</td><td>137</td><td>143</td></tr><tr style="background:#f2deb9"><td>防禦</td><td>5</td><td>93</td><td>99</td><td>105</td><td>108</td><td>111</td><td>114</td><td>117</td><td>123</td></tr><tr style="background:#d3f0f4"><td>特攻</td><td>13</td><td>289</td><td>307</td><td>325</td><td>334</td><td>343</td><td>352</td><td>361</td><td>379</td></tr><tr style="background:#bed3f0"><td>特防</td><td>9</td><td>132</td><td>140</td><td>148</td><td>152</td><td>156</td><td>160</td><td>164</td><td>172</td></tr><tr style="background:#dbcde7"><td>速度</td><td>5</td><td>141</td><td>149</td><td>157</td><td>161</td><td>165</td><td>169</td><td>173</td><td>181</td></tr></table><table class="move" style="background-color:#ed9bb880"><tr><td>拍組招式</td><td>來自歷史國度之魔法閃耀<input class="ap-btn" type="button" onclick="autoPanel('來自歷史國度之魔法閃耀')" value="自動核彈石盤"></td></tr><tr><td>屬性</td><td>妖精</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>250</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></table><table class="move" style="background-color:#ed9bb880"><tr><td>寶可夢招式</td><td>魅惑之聲 ▭▭</td></tr><tr><td>屬性</td><td>妖精</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>45</td></tr><tr><td>對象</td><td>對手全體拍組</td></tr><tr><td></td><td>攻擊必定會命中。</td></tr></table><table class="move" style="background-color:#6dbfb180"><tr><td>訓練家招式</td><td>特攻強化 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>提高自己的特攻２階段。</td></tr></table><table class="move" style="background-color:#ed9bb880"><tr><td>寶可夢招式</td><td>吸取之吻 ▭▭</td></tr><tr><td>屬性</td><td>妖精</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>46</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>給予對手的傷害越多，自己的ＨＰ就回復得越多。</td></tr></table><table class="move" style="background-color:#6dbfb180"><tr><td>訓練家招式</td><td>輕靈閑雅 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>提高自己的特防和速度２階段。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>威力隨ＨＰ提升４<br>自己所剩ＨＰ的比例越高，招式的威力就提高得越多。</td></tr></table><table class="team"><tr><td style="background-color:#ed9bb880">妖精屬性<br>／攻擊</td><td style="background-color:#6dbfb180">卡洛斯<br>／攻擊</td><td style="background-color:#6dbfb180">道館館主<br>／攻擊</td></tr><tr><td style="background-color:#6dbfb180">表演家<br>／攻擊</td><td style="background-color:#6dbfb180">我行我素<br>／攻擊</td></tr><tr><td colspan="3" style="text-align:center;background-color:#6dbfb180">火辣辣↑１＆心暖暖↑１</td></tr></table></div></div></div>
 	</div>
 
 	<script>

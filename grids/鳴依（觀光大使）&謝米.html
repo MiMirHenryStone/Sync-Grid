@@ -8,22 +8,22 @@
 		.grid {
 			margin: 1rem 0;
 		}
-
+		.title-row {
+			display: flex;
+			justify-content: space-around;
+			white-space: nowrap;
+		}
 		.title {
 			font-size: 1.25rem;
-			margin: 0 1rem;
 		}
-
 		.text {
 			font-size: 1rem;
 			margin: 0 0.25rem;
 		}
-
 		svg {
 			font-size: 1rem;
 			margin: 0 5%;
 		}
-
 		svg .ability {
 			font-size: 1.25rem;
 			display: flex;
@@ -34,25 +34,20 @@
 			padding: 0.25rem;
 			box-sizing: border-box;
 		}
-
 		table {
 			width: calc(100% - 0.5rem);
 			margin: 0.25rem;
 		}
-
 		.move td:first-child {
 			width: 20%;
 		}
-
 		.team td {
 			width: 33%;
 		}
-
 		.box {
 			position: relative;
 			width: 66%;
 		}
-
 		.tab {
 			margin: 0;
 			padding: 0;
@@ -63,25 +58,21 @@
 			justify-content: space-around;
 			align-items: flex-end;
 		}
-
 		.tab li {
 			background-color: #ccc;
 			border: 1px solid #fff;
 			padding: .5rem;
 		}
-
 		.tab li a {
 			text-decoration: none;
 			color: #000;
 			display: inline-block;
 			text-align: center;
 		}
-
 		.content {
 			border: 1px solid #888;
 			margin-top: 0;
 		}
-
 		.content1,
 		.content2,
 		.content3,
@@ -91,7 +82,6 @@
 			word-break: break-word;
 			word-wrap: break-word;
 		}
-
 		.content1:target,
 		.content2:target,
 		.content3:target,
@@ -99,13 +89,17 @@
 		.content5:target {
 			display: block;
 		}
+		.ap-btn {
+			float: right;
+		}
 	</style>
+	<script src="./autoPanel.js"></script>
 </head>
 
 
 <body>
 	<div class="grid">
-		<div align="center">
+		<div class="title-row" align="center">
 			<select class="title" id="ms" onchange=changeSet()>
 				<option value="0">No.1</option>
 				<option value="1">No.2</option>
@@ -116,6 +110,7 @@
 			<input class="title" type="button" onclick=reset() value="全部重設">
 			<span class="title" id="energy">剩餘力量：60</span>
 			<span class="title" id="orb">拍檔滴晶：0</span>
+			<input class="title" type="button" onclick="autoPanel()" value="自動連接选中格子">
 		</div>
 		<div class="text" id="skill">技能名稱：</div>
 		<div class="text" id="effect">效果：</div>
@@ -124,7 +119,7 @@
 	</div>
 	<div class="text" class="box" style="width: 64%;">
 		<ul class="tab"><li><a href="#content1">謝米<br>（天空形態）</a></li></ul>
-		<div class="content"><div class="content1" id="content1"><table><tr><th colspan="3">特別套裝★5 鳴依（觀光大使）♀&謝米（天空形態）</th></tr><tr><td style="width:50%;text-align:center">體系</td><td style="width:50%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">技術型</td><td style="width:50%;text-align:center">毒</td></tr></table><table><tr style="background:#bededd"><td>Lv.</td><td>1</td><td>100</td><td>110</td><td>120</td><td>125</td><td>130</td><td>135</td><td>140</td><td>150</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td><td>95</td><td>546</td><td>578</td><td>610</td><td>626</td><td>642</td><td>658</td><td>674</td><td>706</td></tr><tr style="background:#efeccd"><td>攻擊</td><td>10</td><td>176</td><td>188</td><td>200</td><td>206</td><td>212</td><td>218</td><td>224</td><td>236</td></tr><tr style="background:#f2deb9"><td>防禦</td><td>14</td><td>151</td><td>161</td><td>171</td><td>176</td><td>181</td><td>186</td><td>191</td><td>201</td></tr><tr style="background:#d3f0f4"><td>特攻</td><td>15</td><td>248</td><td>264</td><td>280</td><td>288</td><td>296</td><td>304</td><td>312</td><td>328</td></tr><tr style="background:#bed3f0"><td>特防</td><td>14</td><td>151</td><td>161</td><td>171</td><td>176</td><td>181</td><td>186</td><td>191</td><td>201</td></tr><tr style="background:#dbcde7"><td>速度</td><td>30</td><td>380</td><td>404</td><td>428</td><td>440</td><td>452</td><td>464</td><td>476</td><td>500</td></tr></table><table class="move" style="background-color:#459e4e80"><tr><td>拍組招式</td><td>依鳴驚人的感謝之草之光線</td></tr><tr><td>屬性</td><td>草</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>200</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>對手的特防降低得越多，威力就越大。</td></tr></table><table class="move" style="background-color:#96949380"><tr><td>寶可夢招式</td><td>甜甜香氣 ▭▭</td></tr><tr><td>屬性</td><td>一般</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手全體拍組</td></tr><tr><td></td><td>降低對手的閃避率２階段。</td></tr></table><table class="move" style="background-color:#6dbfb180"><tr><td>訓練家招式</td><td>傷藥 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>我方１對拍組</td></tr><tr><td></td><td>回復我方的ＨＰ，約為最大ＨＰ的４０％。</td></tr></table><table class="move" style="background-color:#459e4e80"><tr><td>寶可夢招式</td><td>種子閃光 ▭▭▭▭</td></tr><tr><td>屬性</td><td>草</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>185</td></tr><tr><td>命中</td><td>85</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>有４０％的機率會降低對手的特防２階段。</td></tr></table><table class="move" style="background-color:#6dbfb180"><tr><td>訓練家招式</td><td>這是我的一點謝意！ ▭▭ 1/1</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>我方全體拍組</td></tr><tr><td></td><td>提高自己的特攻４階段。<br>提高自己的命中率和擊中要害率２階段。<br>提高我方全體拍組的擊中要害率１階段。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>下降機率提升１<br>當招式的追加效果可降低對手能力值時，會提高該追加效果的成功率。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>對手中寶可夢招式後特攻下降２階段９<br>在使出以對手為對象的寶可夢招式時，<br>會降低對手的特攻２階段。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>依對手能力降幅威力↑<br>對手的能力降低得越多，自己的招式的威力就提高得越多。</td></tr></table><table class="team"><tr><td style="background-color:#459e4e80">草屬性<br>／技術</td><td style="background-color:#6dbfb180">合眾<br>／技術</td><td style="background-color:#6dbfb180">主角<br>／技術</td></tr><tr><td style="background-color:#6dbfb180">特別服裝<br>／技術</td></tr><tr><td colspan="3" style="text-align:center;background-color:#6dbfb180">心暖暖↑２</td></tr></table></div></div></div>
+		<div class="content"><div class="content1" id="content1"><table><tr><th colspan="3">特別套裝★5 鳴依（觀光大使）♀&謝米（天空形態）</th></tr><tr><td style="width:50%;text-align:center">體系</td><td style="width:50%;text-align:center">弱點</td></tr><tr><td style="width:50%;text-align:center">技術型</td><td style="width:50%;text-align:center">毒</td></tr></table><table><tr style="background:#bededd"><td>Lv.</td><td>1</td><td>100</td><td>110</td><td>120</td><td>125</td><td>130</td><td>135</td><td>140</td><td>150</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td><td>95</td><td>546</td><td>578</td><td>610</td><td>626</td><td>642</td><td>658</td><td>674</td><td>706</td></tr><tr style="background:#efeccd"><td>攻擊</td><td>10</td><td>176</td><td>188</td><td>200</td><td>206</td><td>212</td><td>218</td><td>224</td><td>236</td></tr><tr style="background:#f2deb9"><td>防禦</td><td>14</td><td>151</td><td>161</td><td>171</td><td>176</td><td>181</td><td>186</td><td>191</td><td>201</td></tr><tr style="background:#d3f0f4"><td>特攻</td><td>15</td><td>248</td><td>264</td><td>280</td><td>288</td><td>296</td><td>304</td><td>312</td><td>328</td></tr><tr style="background:#bed3f0"><td>特防</td><td>14</td><td>151</td><td>161</td><td>171</td><td>176</td><td>181</td><td>186</td><td>191</td><td>201</td></tr><tr style="background:#dbcde7"><td>速度</td><td>30</td><td>380</td><td>404</td><td>428</td><td>440</td><td>452</td><td>464</td><td>476</td><td>500</td></tr></table><table class="move" style="background-color:#459e4e80"><tr><td>拍組招式</td><td>依鳴驚人的感謝之草之光線<input class="ap-btn" type="button" onclick="autoPanel('依鳴驚人的感謝之草之光線')" value="自動核彈石盤"></td></tr><tr><td>屬性</td><td>草</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>200</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>對手的特防降低得越多，威力就越大。</td></tr></table><table class="move" style="background-color:#96949380"><tr><td>寶可夢招式</td><td>甜甜香氣 ▭▭</td></tr><tr><td>屬性</td><td>一般</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手全體拍組</td></tr><tr><td></td><td>降低對手的閃避率２階段。</td></tr></table><table class="move" style="background-color:#6dbfb180"><tr><td>訓練家招式</td><td>傷藥 2/2</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>我方１對拍組</td></tr><tr><td></td><td>回復我方的ＨＰ，約為最大ＨＰ的４０％。</td></tr></table><table class="move" style="background-color:#459e4e80"><tr><td>寶可夢招式</td><td>種子閃光 ▭▭▭▭</td></tr><tr><td>屬性</td><td>草</td></tr><tr><td>分類</td><td>特殊</td></tr><tr><td>威力</td><td>185</td></tr><tr><td>命中</td><td>85</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>有４０％的機率會降低對手的特防２階段。</td></tr></table><table class="move" style="background-color:#6dbfb180"><tr><td>訓練家招式</td><td>這是我的一點謝意！ ▭▭ 1/1</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>我方全體拍組</td></tr><tr><td></td><td>提高自己的特攻４階段。<br>提高自己的命中率和擊中要害率２階段。<br>提高我方全體拍組的擊中要害率１階段。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>下降機率提升１<br>當招式的追加效果可降低對手能力值時，會提高該追加效果的成功率。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>對手中寶可夢招式後特攻下降２階段９<br>在使出以對手為對象的寶可夢招式時，<br>會降低對手的特攻２階段。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>依對手能力降幅威力↑<br>對手的能力降低得越多，自己的招式的威力就提高得越多。</td></tr></table><table class="team"><tr><td style="background-color:#459e4e80">草屬性<br>／技術</td><td style="background-color:#6dbfb180">合眾<br>／技術</td><td style="background-color:#6dbfb180">主角<br>／技術</td></tr><tr><td style="background-color:#6dbfb180">特別服裝<br>／技術</td></tr><tr><td colspan="3" style="text-align:center;background-color:#6dbfb180">心暖暖↑２</td></tr></table></div></div></div>
 	</div>
 
 	<script>
