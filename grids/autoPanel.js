@@ -53,7 +53,7 @@ function autoPanel(key) {
 
   let k = include.length;
 
-  if (k > 12) {
+  if (k > 14) {
     alert("選中格子過多，請減少選中格子后重試");
     return;
   }
