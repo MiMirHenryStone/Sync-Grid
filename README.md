@@ -5,14 +5,14 @@
 <p align="center"><a href="./grids/辛俐&土王.html"><img width="256" height="256" src="./scouts/event_6040_1W_PokeFes_01.event_6040_1W_PokeFes_01_01.png"><br>辛俐&土王</a></p>
 
 ### 2024/04/27
-<p align="center"><a href="./grids/風露（2022週年慶）&龍捲雲.html"><img width="256" height="256" src="./scouts/event_6040_1W_PokeFes_02.00000000000.png"><br>風露（2022週年慶）&龍捲雲<br>(拍檔石盤/EX體系: 特殊攻擊型)</a></p>
-<p align="center"><a href="./grids/美極套裝鬥也&蓋諾賽克特.html">美極套裝鬥也&蓋諾賽克特<br>(EX體系: 特殊攻擊型)</a></p>
-<p align="center"><a href="./grids/美極套裝哈烏&卡璞・鳴鳴.html">美極套裝哈烏&卡璞・鳴鳴<br>(EX體系: 特殊攻擊型)</a></p>
-<p align="center"><a href="./grids/青綠（關都）&化石翼龍.html"><img width="256" height="256" src="./scouts/event_6040_1W_PokeFes_03.00000000000.png"><br>青綠（關都）&化石翼龍<br>(拍檔石盤/EX體系: 技術型)</a></p>
-<p align="center"><a href="./grids/美極套裝弗拉達利&波爾凱尼恩.html">美極套裝弗拉達利&波爾凱尼恩<br>(EX體系: 技術型)</a></p>
-<p align="center"><a href="./grids/南廈&始祖大鳥.html"><img width="256" height="256" src="./scouts/event_6040_1W_PokeFes_04.00000000000.png"><br>南廈&始祖大鳥<br>(拍檔石盤/EX體系: 輔助型)</a></p>
-<p align="center"><a href="./grids/美極套裝阪木&尼多王.html">美極套裝阪木&尼多王<br>(拍檔石盤/EX體系: 輔助型)</a></p>
-<p align="center"><a href="./grids/小優（修行套裝）&武道熊師.html">小優（修行套裝）&武道熊師<br>(EX體系: 輔助型)</a></p>
+<p align="center"><a href="./grids/風露（2022週年慶）&龍捲雲.html"><img width="256" height="256" src="./scouts/event_6040_1W_PokeFes_02.00000000000.png"><br>風露（2022週年慶）&龍捲雲<br>（拍檔石盤／EX體系：特殊攻擊型）</a></p>
+<p align="center"><a href="./grids/美極套裝鬥也&蓋諾賽克特.html">美極套裝鬥也&蓋諾賽克特<br>（EX體系：特殊攻擊型）</a></p>
+<p align="center"><a href="./grids/美極套裝哈烏&卡璞・鳴鳴.html">美極套裝哈烏&卡璞・鳴鳴<br>（EX體系：特殊攻擊型）</a></p>
+<p align="center"><a href="./grids/青綠（關都）&化石翼龍.html"><img width="256" height="256" src="./scouts/event_6040_1W_PokeFes_03.00000000000.png"><br>青綠（關都）&化石翼龍<br>（拍檔石盤／EX體系：技術型）</a></p>
+<p align="center"><a href="./grids/美極套裝弗拉達利&波爾凱尼恩.html">美極套裝弗拉達利&波爾凱尼恩<br>（EX體系：技術型）</a></p>
+<p align="center"><a href="./grids/南廈&始祖大鳥.html"><img width="256" height="256" src="./scouts/event_6040_1W_PokeFes_04.00000000000.png"><br>南廈&始祖大鳥<br>（拍檔石盤／EX體系：輔助型）</a></p>
+<p align="center"><a href="./grids/美極套裝阪木&尼多王.html">美極套裝阪木&尼多王<br>（拍檔石盤／EX體系：輔助型）</a></p>
+<p align="center"><a href="./grids/小優（修行套裝）&武道熊師.html">小優（修行套裝）&武道熊師<br>（EX體系：輔助型）</a></p>
 
 ### 2024/04/30
 <p align="center"><a href="./grids/哈奇酷俠&索羅亞克.html"><img width="256" height="256" src="./scouts/event_6040_1W_MasterTicket_08.event_6040_1W_MasterTicket_08_01.png"><br>哈奇酷俠&索羅亞克</a></p>
@@ -25,11 +25,11 @@
 <p align="center"><a href="./grids/麗棗&心蝙蝠.html"><img width="256" height="256" src="./scouts/event_6040_1W_MasterTicket_09.event_6040_1W_MasterTicket_09_01.png"><br>麗棗&心蝙蝠</a></p>
 
 ### 2024/05/05
-<p align="center"><a href="./grids/美極套裝松葉&鳳王.html"><img width="256" height="256" src="./scouts/event_6040_1W_PokeFes_010.event_6040_1W_PokeFes_010_01.png"><br>美極套裝松葉&鳳王<br>(EX體系: 場地型)</a></p>
+<p align="center"><a href="./grids/美極套裝松葉&鳳王.html"><img width="256" height="256" src="./scouts/event_6040_1W_PokeFes_010.event_6040_1W_PokeFes_010_01.png"><br>美極套裝松葉&鳳王<br>（EX體系：場地型）</a></p>
 
 ### 2024/05/07
-<p align="center"><a href="./grids/美極套裝滿充&沙奈朵.html"><img width="256" height="256" src="./scouts/event_6040_2W_PokeFes_01.00000000000.png"><br>美極套裝滿充&沙奈朵<br>(EX體系: 速戰型)</a></p>
-<p align="center"><a href="./grids/彼特&布莉姆溫.html">彼特&布莉姆溫<br>(EX體系: 場地型)</a></p>
+<p align="center"><a href="./grids/美極套裝滿充&沙奈朵.html"><img width="256" height="256" src="./scouts/event_6040_2W_PokeFes_01.00000000000.png"><br>美極套裝滿充&沙奈朵<br>（EX體系：速戰型）</a></p>
+<p align="center"><a href="./grids/彼特&布莉姆溫.html">彼特&布莉姆溫<br>（EX體系：場地型）</a></p>
 
 ### 2024/05/09
 <p align="center"><a href="./grids/古茲馬&阿利多斯.html"><img width="256" height="256" src="./scouts/event_6040_2W_MasterTicket_03.event_6040_2W_MasterTicket_03_01.png"><br>古茲馬&阿利多斯</a></p>
@@ -41,17 +41,17 @@
 <p align="center"><a href="./grids/波琵&巨鍛匠.html"><img width="256" height="256" src="./scouts/event_6040_3W_PokeFes_01.event_6040_3W_PokeFes_01_01.png"><br>波琵&巨鍛匠</a></p>
 
 ### 2024/05/20
-<p align="center"><a href="./grids/美極套裝小銀&狃拉.html"><img width="256" height="256" src="./scouts/event_6040_4W_PokeFes_01.00000000000.png"><br>美極套裝小銀&狃拉<br>(EX體系: 輔助型)</a></p>
-<p align="center"><a href="./grids/水京&水君.html">水京&水君<br>(EX體系: 技術型)</a></p>
+<p align="center"><a href="./grids/美極套裝小銀&狃拉.html"><img width="256" height="256" src="./scouts/event_6040_4W_PokeFes_01.00000000000.png"><br>美極套裝小銀&狃拉<br>（EX體系：輔助型）</a></p>
+<p align="center"><a href="./grids/水京&水君.html">水京&水君<br>（EX體系：技術型）</a></p>
 
 ### 2024/05/25
-<p align="center"><a href="./grids/赤焰松&固拉多.html"><img width="256" height="256" src="./scouts/event_6040_4W_MasterFes_03.event_6040_4W_MasterFes_03_01.png"><br>赤焰松&固拉多<br>(EX體系: 技術型)</a></p>
-<p align="center"><a href="./grids/阿筆&大針蜂.html"><img src="./icons/阿筆&大針蜂.png"><br>阿筆&大針蜂<br>(★6EX)</a></p>
-<p align="center"><a href="./grids/芙蓉&黑夜魔靈.html"><img src="./icons/芙蓉&黑夜魔靈.png"><br>芙蓉&黑夜魔靈<br>(拍檔石盤)</a></p>
+<p align="center"><a href="./grids/赤焰松&固拉多.html"><img width="256" height="256" src="./scouts/event_6040_4W_MasterFes_03.event_6040_4W_MasterFes_03_01.png"><br>赤焰松&固拉多<br>（EX體系：技術型）</a></p>
+<p align="center"><a href="./grids/阿筆&大針蜂.html"><img src="./icons/阿筆&大針蜂.png"><br>阿筆&大針蜂<br>（★6EX）</a></p>
+<p align="center"><a href="./grids/芙蓉&黑夜魔靈.html"><img src="./icons/芙蓉&黑夜魔靈.png"><br>芙蓉&黑夜魔靈<br>（拍檔石盤）</a></p>
 
 ### 專用潛能餅乾
-<p align="center"><a href="./grids/小茜&大奶罐.html"><img src="./icons/小茜&大奶罐.png"><br>小茜&大奶罐<br>(小茜專用潛能餅乾１: 上場時攻擊提升２)</a></p>
-<p align="center"><a href="./grids/鳴依&君主蛇.html"><img src="./icons/鳴依&君主蛇.png"><br>鳴依&君主蛇<br>(鳴依專用潛能餅乾１: 招式後特防提升Ｇ１)</a></p>
+<p align="center"><a href="./grids/小茜&大奶罐.html"><img src="./icons/小茜&大奶罐.png"><br>小茜&大奶罐<br>（小茜專用潛能餅乾１：上場時攻擊提升２）</a></p>
+<p align="center"><a href="./grids/鳴依&君主蛇.html"><img src="./icons/鳴依&君主蛇.png"><br>鳴依&君主蛇<br>（鳴依專用潛能餅乾１：招式後特防提升Ｇ１）</a></p>
 
 <br>
 
