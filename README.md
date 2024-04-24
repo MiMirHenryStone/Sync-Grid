@@ -8,7 +8,7 @@
 <p align="center"><a href="./grids/風露（2022週年慶）&龍捲雲.html"><img width="256" height="256" src="./scouts/event_6040_1W_PokeFes_02.00000000000.png"><br>風露（2022週年慶）&龍捲雲</a></p>
 <p align="center"><a href="./grids/青綠（關都）&化石翼龍.html"><img width="256" height="256" src="./scouts/event_6040_1W_PokeFes_03.00000000000.png"><br>青綠（關都）&化石翼龍</a></p>
 <p align="center"><a href="./grids/南廈&始祖大鳥.html"><img width="256" height="256" src="./scouts/event_6040_1W_PokeFes_04.00000000000.png"><br>南廈&始祖大鳥</a></p>
-<p align="center"><a href="./grids/美極套裝阪木&尼多王.html"><img width="256" height="256" src="./scouts/event_6040_1W_PokeFes_04.00000000000.png"><br>美極套裝阪木&尼多王</a></p>
+<p align="center"><a href="./grids/美極套裝阪木&尼多王.html">美極套裝阪木&尼多王</a></p>
 
 ### 2024/04/30
 <p align="center"><a href="./grids/哈奇酷俠&索羅亞克.html"><img width="256" height="256" src="./scouts/event_6040_1W_MasterTicket_08.event_6040_1W_MasterTicket_08_01.png"><br>哈奇酷俠&索羅亞克</a></p>
