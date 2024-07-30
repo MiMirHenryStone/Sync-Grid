@@ -1,6 +1,8 @@
 <p align="center">⚠<b>石盤點法只保存在本地cookie</b>⚠<br><br>BUG反饋請私信bilibili@米米尔HenryStone<br>或發送郵件至MiMirHenryStone@gmail.com</p><br>
 
 ## 2.47.0
+<p><a href="./eventlog.html">活動</a></p>
+
 ### 2024/07/31
 <p align="center"><a href="./grids/小陽（阿羅拉）&壘磊石.html"><img width="256" height="256" src="./scouts/event_6070_1W_PokeFes_02.event_6070_1W_PokeFes_02_01.png"><br>小陽（阿羅拉）&壘磊石</a></p>
 
