@@ -1,61 +1,46 @@
 <p align="center">⚠<b>石盤點法只保存在本地cookie</b>⚠<br><br>BUG反饋請私信bilibili@米米尔HenryStone<br>或發送郵件至MiMirHenryStone@gmail.com</p><br>
 
-## 2.48.0
-<p><a href="./eventlog.html?v=1724655431">活動</a></p>
+## 2.49.0
+<p><a href="./eventlog.html?v=1727330852">活動</a></p>
 
-### 2024/08/28
-<p align="center"><a href="./grids/阿爾套裝竹蘭&烈咬陸鯊.html"><img width="256" height="256" src="./scouts/event_6080_1W_UltimateFes_01.event_6080_1W_UltimateFes_01_01.png"><br>阿爾套裝竹蘭&烈咬陸鯊</a></p>
-<p align="center"><a href="./grids/芽米&吼鯨王.html"><img src="./icons/芽米&吼鯨王.png"><br>芽米&吼鯨王</a></p>
-<p align="center"><a href="./grids/一樹&呆殼獸.html"><img src="./icons/一樹&呆殼獸.png"><br>一樹&呆殼獸</a></p>
-<p align="center"><a href="./grids/莉莉艾（2024週年慶）&索爾迦雷歐.html"><img src="./icons/莉莉艾（2024週年慶）&索爾迦雷歐.png"><br>莉莉艾（2024週年慶）&索爾迦雷歐</a></p>
-<p align="center"><a href="./grids/露莎米奈&裙兒小姐.html"><img src="./icons/露莎米奈&裙兒小姐.png"><br>露莎米奈&裙兒小姐</a></p>
-<p align="center"><a href="./grids/夜妮&土地雲.html"><img src="./icons/夜妮&土地雲.png"><br>夜妮&土地雲<br>（★6EX）</a></p>
-<p align="center"><a href="./grids/夕絲&炎帝.html"><img src="./icons/夕絲&炎帝.png"><br>夕絲&炎帝<br>（★6EX）</a></p>
-<p align="center"><a href="./grids/晝珠&雷吉艾斯.html"><img src="./icons/晝珠&雷吉艾斯.png"><br>晝珠&雷吉艾斯<br>（★6EX）</a></p>
-<p align="center"><a href="./grids/朝蜜&畢力吉翁.html"><img src="./icons/朝蜜&畢力吉翁.png"><br>朝蜜&畢力吉翁</a></p>
-<p align="center"><a href="./grids/洛茲&喵頭目.html"><img src="./icons/洛茲&喵頭目.png"><br>洛茲&喵頭目</a></p>
-<p align="center"><a href="./grids/主角&雷公.html"><img src="./icons/主角&雷公.png"><br>主角&雷公</a></p>
+### 2024/09/30
+<p align="center"><a href="./grids/皮拿&仆斬將軍.html"><img width="256" height="256" src="./scouts/event_6090_1W_PokeFes_01.event_6090_1W_PokeFes_01_01.png"><br>皮拿&仆斬將軍</a></p>
 
-### 2024/08/30
-<p align="center"><a href="./grids/阿爾套裝大吾&巨金怪.html"><img width="256" height="256" src="./scouts/event_6080_1W_UltimateFes_03.event_6080_1W_UltimateFes_03_01.png"><br>阿爾套裝大吾&巨金怪</a></p>
+### 2024/10/01
+<p align="center"><a href="./grids/鎯琊&流氓鱷.html"><img src="./icons/鎯琊&流氓鱷.png"><br>鎯琊&流氓鱷</a></p>
+<p align="center"><a href="./grids/阿馴&浮潛鼬.html"><img src="./icons/阿馴&浮潛鼬.png"><br>阿馴&浮潛鼬</a></p>
 
-### 2024/09/01
-<p align="center"><a href="./grids/葉子&水箭龜.html"><img width="256" height="256" src="./scouts/event_6080_0W_Mix_01.event_6080_0W_Mix_01_01.png"><br>葉子&水箭龜</a></p>
-<p align="center"><a href="./grids/阿爾套裝阿渡&快龍.html"><img width="256" height="256" src="./scouts/event_6080_1W_UltimateFes_05.event_6080_1W_UltimateFes_05_01.png"><br>阿爾套裝阿渡&快龍</a></p>
-<p align="center"><a href="./grids/阿渡&刺龍王.html"><img src="./icons/阿渡&刺龍王.png"><br>阿渡&刺龍王</a></p>
-<p align="center"><a href="./grids/小銀&叉字蝠.html"><img src="./icons/小銀&叉字蝠.png"><br>小銀&叉字蝠</a></p>
+### 2024/10/02
+<p align="center"><a href="./grids/克拉韋爾&狂歡浪舞鴨.html"><img width="256" height="256" src="./scouts/event_6090_1W_PokeFes_02.event_6090_1W_PokeFes_02_01.png"><br>克拉韋爾&狂歡浪舞鴨</a></p>
 
-### 2024/09/10
-<p align="center"><a href="./grids/丹帝（對戰塔）&多龍巴魯托.html"><img width="256" height="256" src="./scouts/event_6080_2W_PokeFes_01.00000000000.png"><br>丹帝（對戰塔）&多龍巴魯托<br>（EX體系：速戰型）</a></p>
-<p align="center"><a href="./grids/奇巴納（2022週年慶）&沙漠蜻蜓.html">奇巴納（2022週年慶）&沙漠蜻蜓<br>（EX體系：輔助型）</a></p>
+### 2024/10/03
+<p align="center"><a href="./grids/美極套裝阿塞蘿拉&卡璞・哞哞.html"><img width="256" height="256" src="./scouts/event_6090_1W_PokeFes_04.00000000000.png"><br>美極套裝阿塞蘿拉&卡璞・哞哞<br>（EX體系：技術型）</a></p>
+<p align="center"><a href="./grids/美極套裝茉莉&卡璞・鰭鰭.html">美極套裝茉莉&卡璞・鰭鰭<br>（EX體系：速戰型）</a></p>
 
-### 2024/09/12
-<p align="center"><a href="./grids/帕琦拉&烈箭鷹.html"><img width="256" height="256" src="./scouts/event_6080_2W_MasterTicket_01.event_6080_2W_MasterTicket_01_01.png"><br>帕琦拉&烈箭鷹</a></p>
+### 2024/10/07
+<p align="center"><a href="./grids/美極套裝丹帝&無極汰那.html"><img width="256" height="256" src="./scouts/event_6090_1W_PokeFes_010.00000000000.png"><br>美極套裝丹帝&無極汰那<br>（EX體系：輔助型）</a></p>
+<p align="center"><a href="./grids/美極套裝N&酋雷姆.html"><img width="256" height="256" src="./scouts/event_6090_1W_PokeFes_05.00000000000.png"><br>美極套裝N&酋雷姆<br>（EX體系：物理攻擊型）</a></p>
+<p align="center"><a href="./grids/奇巴納&鋁鋼龍.html"><img width="256" height="256" src="./scouts/event_6090_1W_PokeFes_07.00000000000.png"><br>奇巴納&鋁鋼龍<br>（EX體系：技術型）</a></p>
 
-### 2024/09/14
-<p align="center"><a href="./grids/阿四&蚊香泳士.html"><img width="256" height="256" src="./scouts/event_6080_2W_MasterTicket_02.event_6080_2W_MasterTicket_02_01.png"><br>阿四&蚊香泳士</a></p>
+### 2024/10/09
+<p align="center"><a href="./grids/小優（競技服）&閃焰王牌.html"><img width="256" height="256" src="./scouts/event_6090_2W_PokeFes_02.00000000000.png"><br>小優（競技服）&閃焰王牌<br>（EX體系：輔助型）</a></p>
 
-### 2024/09/16
-<p align="center"><a href="./grids/多羅巴&花潔夫人.html"><img width="256" height="256" src="./scouts/event_6080_2W_MasterTicket_03.event_6080_2W_MasterTicket_03_01.png"><br>多羅巴&花潔夫人</a></p>
+### 2024/10/10
+<p align="center"><a href="./grids/卡露妮&沙奈朵.html"><img width="256" height="256" src="./scouts/event_6090_2W_PokeFes_03.00000000000.png"><br>卡露妮&沙奈朵<br>（EX體系：技術型）</a></p>
 
-### 2024/09/17
-<p align="center"><a href="./grids/美極套裝鎯琊&賽富豪.html"><img width="256" height="256" src="./scouts/event_6080_3W_MasterFes_01.event_6080_3W_MasterFes_01_01.png"><br>美極套裝鎯琊&賽富豪</a></p>
-<p align="center"><a href="./grids/棘兒&索財靈.html"><img width="256" height="256" src="./scouts/event_6080_3W_MasterTicket_01.00000000000.png"><br>棘兒&索財靈</a></p>
-<p align="center"><a href="./grids/螺伯&索財靈.html">螺伯&索財靈</a></p>
+### 2024/10/15
+<p align="center"><a href="./grids/奇樹（２０２４秋季）&振翼髮.html"><img width="256" height="256" src="./scouts/event_6090_3W_MasterTicket_01.event_6090_3W_MasterTicket_01_01.png"><br>奇樹（２０２４秋季）&振翼髮</a></p>
 
-### 2024/09/19
-<p align="center"><a href="./grids/鎯琊&胡帕.html"><img width="256" height="256" src="./scouts/event_6080_3W_PokeFes_01.event_6080_3W_PokeFes_01_01.png"><br>鎯琊&胡帕<br>（拍檔石盤／EX體系：特殊攻擊型）</a></p>
-<p align="center"><a href="./grids/棘兒&月亮伊布.html"><img src="./icons/棘兒&月亮伊布.png"><br>棘兒&月亮伊布<br>（★6EX）</a></p>
-<p align="center"><a href="./grids/螺伯&烏鴉頭頭.html"><img src="./icons/螺伯&烏鴉頭頭.png"><br>螺伯&烏鴉頭頭<br>（★6EX）</a></p>
+### 2024/10/17
+<p align="center"><a href="./grids/婉龍（２０２４秋季）&雪妖女.html"><img width="256" height="256" src="./scouts/event_6090_3W_MasterTicket_02.event_6090_3W_MasterTicket_02_01.png"><br>婉龍（２０２４秋季）&雪妖女</a></p>
 
-### 2024/09/25
-<p align="center"><a href="./grids/美極套裝克麗絲&水君.html"><img width="256" height="256" src="./scouts/event_6080_4W_MasterFes_01.event_6080_4W_MasterFes_01_01.png"><br>美極套裝克麗絲&水君<br>（EX體系：速戰型）</a></p>
-<p align="center"><a href="./grids/阿杏&阿利多斯.html"><img src="./icons/阿杏&阿利多斯.png"><br>阿杏&阿利多斯<br>（★6EX）</a></p>
-<p align="center"><a href="./grids/娜姿&胡地.html"><img src="./icons/娜姿&胡地.png"><br>娜姿&胡地<br>（拍檔石盤）</a></p>
+### 2024/10/25
+<p align="center"><a href="./grids/大葉&烈焰猴.html"><img src="./icons/大葉&烈焰猴.png"><br>大葉&烈焰猴<br>（★6EX）</a></p>
+<p align="center"><a href="./grids/莉莉艾&皮皮.html"><img src="./icons/莉莉艾&皮皮.png"><br>莉莉艾&皮皮<br>（拍檔石盤）</a></p>
 
 ### 專用潛能餅乾
-<p align="center"><a href="./grids/棘兒&月亮伊布.html"><img src="./icons/棘兒&月亮伊布.png"><br>棘兒&月亮伊布<br>（棘兒專用潛能餅乾１：上場時速度提升Ｇ２）</a></p>
-<p align="center"><a href="./grids/螺伯&烏鴉頭頭.html"><img src="./icons/螺伯&烏鴉頭頭.png"><br>螺伯&烏鴉頭頭<br>（螺伯專用潛能餅乾１：上場時擊中要害率提升Ｇ１）</a></p>
+<p align="center"><a href="./grids/嘉德麗雅（２０２１秋季）&勾魂眼.html"><img src="./icons/嘉德麗雅（２０２１秋季）&勾魂眼.png"><br>嘉德麗雅（２０２１秋季）&勾魂眼<br>（嘉德麗雅（２０２１秋季）專用潛能餅乾１：訓練家出招後擊中要害率提升Ｇ９）</a></p>
+<p align="center"><a href="./grids/牡丹&仙子伊布.html"><img src="./icons/牡丹&仙子伊布.png"><br>牡丹&仙子伊布<br>（牡丹專用潛能餅乾１：首次拍組招式後下次傷害防禦）</a></p>
 
 <br>
 
