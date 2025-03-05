@@ -60,15 +60,19 @@ function autoPanel(key) {
   else
     include = Array.from(checks[set])
       .map((item, index) => ({ item, index }))
-      .filter(
-        (i) =>
+      .map((i) => {
+        let index = tempAbilityPanel.find(
+          (x) => x.rawIndex == i.index + 1
+        )?.index;
+        if (
           i.item == "1" &&
           !(
-            neighbours[0].includes(i.index + 1) &&
-            tempAbilityPanel[i.index + 1].energy == 0
+            neighbours[0].includes(index) && tempAbilityPanel[index].energy == 0
           )
-      )
-      .map((i) => i.index + 1);
+        )
+          return index;
+      })
+      .filter((i) => i != undefined);
 
   let k = include.length;
 
