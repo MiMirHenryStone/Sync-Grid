@@ -8,23 +8,35 @@ function json2panel(json) {
       index: index + 1,
       name: item[1],
       energy: item[3],
+      lv: item[5],
       x: item[7],
       y: item[8],
     })),
   ];
 }
 
-function autoPanel(key) {
-  if (!confirm("自動石盤僅供參考\n確定要覆蓋當前石盤嗎？")) return;
+window.slv = 5;
 
+function autoPanel(key) {
+  let slv = prompt(
+    "自動石盤僅供參考\n確定要覆蓋當前石盤嗎？\n請輸入招式等級",
+    window.slv
+  );
+  if (!slv || isNaN(slv)) return;
+  slv = Number(slv);
+  window.slv = slv;
   if (!abilityPanel) abilityPanel = json2panel(json);
 
-  let n = abilityPanel.length;
+  let tempAbilityPanel = abilityPanel
+    .filter((i) => i.lv <= slv || !i.lv)
+    .map((i, index) => ({ ...i, rawIndex: i.index, index }));
 
-  let w = abilityPanel.map((item) => item.energy);
+  let n = tempAbilityPanel.length;
 
-  let neighbours = abilityPanel.map((i) =>
-    abilityPanel
+  let w = tempAbilityPanel.map((item) => item.energy);
+
+  let neighbours = tempAbilityPanel.map((i) =>
+    tempAbilityPanel
       .filter((j) => {
         let dx = i.x - j.x;
         let dy = i.y - j.y;
@@ -37,7 +49,7 @@ function autoPanel(key) {
 
   let include;
   if (key)
-    include = abilityPanel
+    include = tempAbilityPanel
       .filter(
         (item) =>
           item.name.match(/拍組招式(?!後).*(威力)?(隨.+)?(提升|↑)/) ||
@@ -48,7 +60,14 @@ function autoPanel(key) {
   else
     include = Array.from(checks[set])
       .map((item, index) => ({ item, index }))
-      .filter((i) => i.item == "1" && !(neighbours[0].includes(i.index + 1) && abilityPanel[i.index + 1].energy == 0))
+      .filter(
+        (i) =>
+          i.item == "1" &&
+          !(
+            neighbours[0].includes(i.index + 1) &&
+            tempAbilityPanel[i.index + 1].energy == 0
+          )
+      )
       .map((i) => i.index + 1);
 
   let k = include.length;
@@ -104,7 +123,9 @@ function autoPanel(key) {
     update();
     newGrid();
   }
-  result = result.map((i) => abilityPanel[i]);
+  result = result
+    .map((i) => tempAbilityPanel[i])
+    .map((i) => ({ ...i, index: i.rawIndex }));
   result.forEach((item) => {
     if (item.id && check[item.index - 1] != 1) c(undefined, item.id);
   });
