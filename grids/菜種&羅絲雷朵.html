@@ -8,22 +8,27 @@
 		.grid {
 			margin: 1rem 0;
 		}
+
 		.title-row {
 			display: flex;
 			justify-content: space-around;
 			white-space: nowrap;
 		}
+
 		.title {
 			font-size: 1.25rem;
 		}
+
 		.text {
 			font-size: 1rem;
 			margin: 0 0.25rem;
 		}
+
 		svg {
 			font-size: 1rem;
 			margin: 0 5%;
 		}
+
 		svg .ability {
 			font-size: 1.25rem;
 			display: flex;
@@ -34,20 +39,25 @@
 			padding: 0.25rem;
 			box-sizing: border-box;
 		}
+
 		table {
 			width: calc(100% - 0.5rem);
 			margin: 0.25rem;
 		}
+
 		.move td:first-child {
 			width: 20%;
 		}
+
 		.team td {
 			width: 33%;
 		}
+
 		.box {
 			position: relative;
 			width: 66%;
 		}
+
 		.tab {
 			margin: 0;
 			padding: 0;
@@ -58,21 +68,25 @@
 			justify-content: space-around;
 			align-items: flex-end;
 		}
+
 		.tab li {
 			background-color: #ccc;
 			border: 1px solid #fff;
 			padding: .5rem;
 		}
+
 		.tab li a {
 			text-decoration: none;
 			color: #000;
 			display: inline-block;
 			text-align: center;
 		}
+
 		.content {
 			border: 1px solid #888;
 			margin-top: 0;
 		}
+
 		.content1,
 		.content2,
 		.content3,
@@ -82,6 +96,7 @@
 			word-break: break-word;
 			word-wrap: break-word;
 		}
+
 		.content1:target,
 		.content2:target,
 		.content3:target,
@@ -89,6 +104,7 @@
 		.content5:target {
 			display: block;
 		}
+
 		.ap-btn {
 			float: right;
 		}
@@ -487,13 +503,18 @@ json = [[1002700000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0], [100270
 		var svgH = svgbottom - svgtop;
 		// svg.setAttribute('width', Math.ceil(svgright - svgleft));
 		// svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
-		if (document.documentElement.clientWidth / document.documentElement.clientHeight > svgW / svgH) {
-			svg.setAttribute('width', Math.ceil(svgW / svgH * document.documentElement.clientHeight * 0.9));
-			svg.setAttribute('height', Math.ceil(document.documentElement.clientHeight * 0.9));
-		}
-		else {
-			svg.setAttribute('height', Math.ceil(svgH / svgW * document.documentElement.clientWidth * 0.9));
-			svg.setAttribute('width', Math.ceil(document.documentElement.clientWidth * 0.9));
+		if (svgH < 1920) {
+			if (document.documentElement.clientWidth / document.documentElement.clientHeight > svgW / svgH) {
+				svg.setAttribute('width', Math.ceil(svgW / svgH * document.documentElement.clientHeight * 0.9));
+				svg.setAttribute('height', Math.ceil(document.documentElement.clientHeight * 0.9) - 20);
+			}
+			else {
+				svg.setAttribute('height', Math.ceil(svgH / svgW * document.documentElement.clientWidth * 0.9));
+				svg.setAttribute('width', Math.ceil(document.documentElement.clientWidth * 0.9) - 20);
+			}
+		} else {
+			svg.setAttribute('width', Math.ceil(document.documentElement.clientWidth * 0.9) - 20)
+			svg.setAttribute('height', '')
 		}
 
 	</script>
