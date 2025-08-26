@@ -55,9 +55,6 @@
 ### 2025/09/15
 <p align="center"><a href="./grids/望羅（馴化師）&騎拉帝納.html"><img width="256" height="256" src="./scouts/event_7080_3W_MasterExFes_01.00000000000.png"><br>望羅（馴化師）&騎拉帝納</a></p>
 
-### 2025/09/22
-<p align="center"><a href="./grids/鳴依（學院）&四季鹿.html"><img src="./icons/鳴依（學院）&四季鹿.png"><br>鳴依（學院）&四季鹿</a></p>
-
 ### 2025/09/25
 <p align="center"><a href="./grids/美極套裝竹蘭（異裝）&騎拉帝納.html"><img width="256" height="256" src="./scouts/event_7080_4W_MasterFes_08.00000000000.png"><br>美極套裝竹蘭（異裝）&騎拉帝納<br>（拍檔石盤）</a></p>
 <p align="center"><a href="./grids/彼特（冠軍）&急凍鳥.html">彼特（冠軍）&急凍鳥<br>（拍檔石盤）</a></p>
