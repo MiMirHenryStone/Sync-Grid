@@ -1,0 +1,554 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8' />
+	<title>拍檔石盤</title>
+	<style>
+		.grid {
+			margin: 1rem 0;
+		}
+
+		.title-row {
+			display: flex;
+			justify-content: space-around;
+			white-space: nowrap;
+		}
+
+		.title {
+			font-size: 1.25rem;
+		}
+
+		.text {
+			font-size: 1rem;
+			margin: 0 0.25rem;
+		}
+
+		svg {
+			font-size: 1rem;
+			margin: 0 5%;
+		}
+
+		svg .ability {
+			font-size: 1.25rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			text-align: center;
+			height: 100%;
+			padding: 0.25rem;
+			box-sizing: border-box;
+		}
+
+		table {
+			width: calc(100% - 0.5rem);
+			margin: 0.25rem;
+		}
+
+		.move td:first-child {
+			width: 20%;
+		}
+
+		.team td {
+			width: 33%;
+		}
+
+		.box {
+			position: relative;
+			width: 66%;
+		}
+
+		.tab {
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			list-style-type: none;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: flex-end;
+		}
+
+		.tab li {
+			background-color: #ccc;
+			border: 1px solid #fff;
+			padding: .5rem;
+		}
+
+		.tab li a {
+			text-decoration: none;
+			color: #000;
+			display: inline-block;
+			text-align: center;
+		}
+
+		.content {
+			border: 1px solid #888;
+			margin-top: 0;
+		}
+
+		.content1,
+		.content2,
+		.content3,
+		.content4,
+		.content5 {
+			display: none;
+			word-break: break-word;
+			word-wrap: break-word;
+		}
+
+		.content1:target,
+		.content2:target,
+		.content3:target,
+		.content4:target,
+		.content5:target {
+			display: block;
+		}
+
+		.ap-btn {
+			float: right;
+		}
+	</style>
+	<script src="./autoPanel.js"></script>
+</head>
+
+
+<body>
+	<div class="grid">
+		<div class="title-row" align="center">
+			<select class="title" id="ms" onchange=changeSet()>
+				<option value="0">No.1</option>
+				<option value="1">No.2</option>
+				<option value="2">No.3</option>
+				<option value="3">No.4</option>
+			</select>
+			<input class="title" type="button" onclick=rename() value="重命名">
+			<input class="title" type="button" onclick=reset() value="全部重設">
+			<span class="title" id="energy">剩餘力量：60</span>
+			<span class="title" id="orb">拍檔滴晶：0</span>
+			<span class="title" id="releaseItemSet"></span>
+			<input class="title" type="button" onclick="autoPanel()" value="自動連接選中格子">
+		</div>
+		<div class="text" id="skill">技能名稱：</div>
+		<div class="text" id="effect">效果：</div>
+		<svg id="grid" align="center" width="9" height="16" viewBox="0 0 1080 1920"></svg>
+		<div class="text" id="sg" style="width: 32%; float: right;">石盤技能：<br></div>
+	</div>
+	<div class="text" class="box" style="width: 64%;">
+		<ul class="tab"><li><a href="#content1">超壞星<br>（太晶屬性：毒）</a></li><li><a href="#content2">超壞星<br>（太晶屬性：毒）</a></li></ul>
+		<div class="content"><div class="content1" id="content1"><table><tr><th colspan="3">EX盛典限定★5 米莫莎♀&超壞星（太晶屬性：毒）♀</th></tr><tr><td style="width:33%;text-align:center">體系</td><td style="width:33%;text-align:center">EX體系</td><td style="width:33%;text-align:center">弱點</td></tr><tr><td style="width:33%;text-align:center">輔助型</td><td style="width:33%;text-align:center">場地型</td><td style="width:33%;text-align:center">超能力</td></tr></table><table><tr style="background:#bededd"><td>Lv.</td><td>1</td><td>100</td><td>140</td><td>180</td><td>200</td></tr><tr style="background:#c5f0d2"><td>ＨＰ</td><td>110</td><td>560</td><td>688</td><td>816</td><td>880</td></tr><tr style="background:#efeccd"><td>攻擊</td><td>13</td><td>264</td><td>336</td><td>408</td><td>444</td></tr><tr style="background:#f2deb9"><td>防禦</td><td>20</td><td>254</td><td>318</td><td>382</td><td>414</td></tr><tr style="background:#d3f0f4"><td>特攻</td><td>8</td><td>124</td><td>156</td><td>188</td><td>204</td></tr><tr style="background:#bed3f0"><td>特防</td><td>20</td><td>242</td><td>306</td><td>370</td><td>402</td></tr><tr style="background:#dbcde7"><td>速度</td><td>6</td><td>207</td><td>263</td><td>319</td><td>347</td></tr></table><table class="move" style="background-color:#81549980"><tr><td>拍組招式</td><td>醫務室天使給你好看之太晶爆發</td></tr><tr><td>屬性</td><td>毒</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>250</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></table><table class="move" style="background-color:#81549980"><tr><td>寶可夢招式</td><td>毒針 ▭</td></tr><tr><td>屬性</td><td>毒</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>12</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>有３０％的機率會讓對手陷入中毒狀態。</td></tr></table><table class="move" style="background-color:#81549980"><tr><td>寶可夢招式</td><td>碉堡 ▭▭ 2/2</td></tr><tr><td>屬性</td><td>毒</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>變成防禦狀態。<br>再次使用此招式時，將會解除防禦狀態。<br>在防禦狀態時，無法做出其他行動。<br>在防禦狀態時，若受到招式攻擊，將會使該招式無效，並且解除防禦狀態。<br>在防禦狀態時，若受到物理招式攻擊，將會讓對手陷入中毒狀態。</td></tr></table><table class="move" style="background-color:#a08c7880"><tr><td>寶可夢招式</td><td>廣域防守 ▭ 1/1</td></tr><tr><td>屬性</td><td>岩石</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>變成防禦狀態。<br>再次使用此招式時，將會解除防禦狀態。<br>在防禦狀態時，無法做出其他行動。<br>在防禦狀態時，若對手使出以我方全體為對象的招式，將會使該招式無效，並且解除防禦狀態。</td></tr></table><table class="move" style="background-color:#6dbfb180"><tr><td>訓練家招式</td><td>好好休息別勉強～ 1/1</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>我方全體拍組</td></tr><tr><td></td><td>提高我方全體拍組的防禦和特防４階段。<br>提高我方全體拍組的擊中要害率２階段。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>帕底亞的快攻<br>首次上場時，<br>發動拍組招式所需的行動數會減少１次。<br>（多隊模式時，<br>會讓我方隊伍在首次上場時<br>發動拍組招式所需的行動數減少１次。）<br>當我方隊伍中擁有帕底亞標籤的拍組越多，<br>此效果還會減少得越多。<br>（每增加１對拍組，發動拍組招式所需的行動數－１次，最多可－３次。）<br>當隊伍中存在多對擁有同名被動技能的拍組，<br>效果不會重複發揮。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>首次上場時拍組毒太晶化<br>首次上場時，<br>會讓自己拍組太晶化，太晶屬性為毒屬性。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>隊伍使出拍組招式後ＨＰ回復３<br>我方隊伍使出拍組招式後，<br>會回復自己的ＨＰ，約為最大ＨＰ的３０％。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>擊中要害無效<br>對手的攻擊不會擊中要害。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>米莫莎專用潛能餅乾１：寶可夢首次使出變化招式時場地招式計量槽加速<br>在寶可夢首次使出變化招式時，<br>會讓我方場地變成招式計量槽加速狀態。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>米莫莎專用的塔潛能餅乾１：被攻擊時ＨＰ回復Ｇ９<br>受到招式攻擊時，<br>會回復我方全體拍組的ＨＰ。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>米莫莎專用的塔潛能餅乾１：首次上場時物理／特殊增強Ｇ１<br>首次上場時，<br>會分別提高我方全體拍組的下次物理招式威力增強和<br>下次特殊招式威力增強１階段。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>米莫莎專用的塔潛能餅乾１：首次上場時拍組招式增強Ｇ３<br>首次上場時，<br>會提高我方全體拍組的下次拍組招式威力增強<br>３階段。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>超覺醒被動技能：醫務室天使<br>當領域為劇毒領域時，<br>會提高我方全體拍組的招式的威力。<br>首次使出招式攻擊成功時，<br>會將領域變成劇毒領域。<br>（劇毒領域會提高毒屬性的攻擊的威力。）<br>領域變成劇毒領域的瞬間在場上時，<br>會延長劇毒領域的持續時間。</td></tr></table><table class="team"><tr><td style="background-color:#81549980">毒屬性<br>／輔助</td><td style="background-color:#6dbfb180">帕底亞<br>／輔助</td><td style="background-color:#6dbfb180">甜點愛好者<br>／輔助</td></tr><tr><td style="background-color:#6dbfb180">大姐姐<br>／輔助</td></tr><tr><td colspan="3" style="text-align:center;background-color:#6dbfb180">淚閃閃↑２</td></tr></table></div><div class="content2" id="content2"><table><tr><th colspan="3">EX盛典限定★5 米莫莎♀&超壞星（太晶屬性：毒）♀</th></tr><tr><td style="width:33%;text-align:center">體系</td><td style="width:33%;text-align:center">EX體系</td><td style="width:33%;text-align:center">弱點</td></tr><tr><td style="width:33%;text-align:center">輔助型</td><td style="width:33%;text-align:center">場地型</td><td style="width:33%;text-align:center">超能力</td></tr></table><table><tr style="background:#efeccd"><td>攻擊 </td><td>100%</td></tr><tr style="background:#f2deb9"><td>防禦 </td><td>100%</td></tr><tr style="background:#d3f0f4"><td>特攻 </td><td>100%</td></tr><tr style="background:#bed3f0"><td>特防 </td><td>100%</td></tr><tr style="background:#dbcde7"><td>速度 </td><td>100%</td></tr></table><table class="move" style="background-color:#81549980"><tr><td>拍組招式</td><td>醫務室天使給你好看之太晶爆發</td></tr><tr><td>屬性</td><td>毒</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>250</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>沒有追加效果。</td></tr></table><table class="move" style="background-color:#81549980"><tr><td>寶可夢招式</td><td>毒針 ▭</td></tr><tr><td>屬性</td><td>毒</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>18</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>有３０％的機率會讓對手陷入中毒狀態。</td></tr></table><table class="move" style="background-color:#81549980"><tr><td>寶可夢招式</td><td>碉堡 ▭▭ 2/2</td></tr><tr><td>屬性</td><td>毒</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>變成防禦狀態。<br>再次使用此招式時，將會解除防禦狀態。<br>在防禦狀態時，無法做出其他行動。<br>在防禦狀態時，若受到招式攻擊，將會使該招式無效，並且解除防禦狀態。<br>在防禦狀態時，若受到物理招式攻擊，將會讓對手陷入中毒狀態。</td></tr></table><table class="move" style="background-color:#a08c7880"><tr><td>寶可夢招式</td><td>廣域防守 ▭ 1/1</td></tr><tr><td>屬性</td><td>岩石</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>自己</td></tr><tr><td></td><td>變成防禦狀態。<br>再次使用此招式時，將會解除防禦狀態。<br>在防禦狀態時，無法做出其他行動。<br>在防禦狀態時，若對手使出以我方全體為對象的招式，將會使該招式無效，並且解除防禦狀態。</td></tr></table><table class="move" style="background-color:#6dbfb180"><tr><td>訓練家招式</td><td>好好休息別勉強～ 1/1</td></tr><tr><td>分類</td><td>變化</td></tr><tr><td>對象</td><td>我方全體拍組</td></tr><tr><td></td><td>提高我方全體拍組的防禦和特防４階段。<br>提高我方全體拍組的擊中要害率２階段。</td></tr></table><table class="move" style="background-color:#81549980"><tr><td>寶可夢招式</td><td>太晶爆發・紫黃 ▭▭ 1/1</td></tr><tr><td>屬性</td><td>毒</td></tr><tr><td>分類</td><td>物理</td></tr><tr><td>威力</td><td>150</td></tr><tr><td>命中</td><td>100</td></tr><tr><td>對象</td><td>對手１對拍組</td></tr><tr><td></td><td>除了特定情況之外，只要攻擊命中就必定會擊中要害。<br>自己發動拍組招式所需的行動數會減少１次。<br>分別提高我方全體拍組的下次物理招式威力增強和下次特殊招式威力增強３階段。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>帕底亞的快攻<br>首次上場時，<br>發動拍組招式所需的行動數會減少１次。<br>（多隊模式時，<br>會讓我方隊伍在首次上場時<br>發動拍組招式所需的行動數減少１次。）<br>當我方隊伍中擁有帕底亞標籤的拍組越多，<br>此效果還會減少得越多。<br>（每增加１對拍組，發動拍組招式所需的行動數－１次，最多可－３次。）<br>當隊伍中存在多對擁有同名被動技能的拍組，<br>效果不會重複發揮。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>毒刺的表演時刻<br>藉由防禦狀態使對手的招式無效時，<br>會幫自己的「太晶爆發・紫黃」的使用次數回復１次。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>隊伍使出拍組招式後ＨＰ回復３<br>我方隊伍使出拍組招式後，<br>會回復自己的ＨＰ，約為最大ＨＰ的３０％。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>擊中要害無效<br>對手的攻擊不會擊中要害。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>米莫莎專用潛能餅乾１：寶可夢首次使出變化招式時場地招式計量槽加速<br>在寶可夢首次使出變化招式時，<br>會讓我方場地變成招式計量槽加速狀態。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>米莫莎專用的塔潛能餅乾１：被攻擊時ＨＰ回復Ｇ９<br>受到招式攻擊時，<br>會回復我方全體拍組的ＨＰ。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>米莫莎專用的塔潛能餅乾１：首次上場時物理／特殊增強Ｇ１<br>首次上場時，<br>會分別提高我方全體拍組的下次物理招式威力增強和<br>下次特殊招式威力增強１階段。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>米莫莎專用的塔潛能餅乾１：首次上場時拍組招式增強Ｇ３<br>首次上場時，<br>會提高我方全體拍組的下次拍組招式威力增強<br>３階段。</td></tr></table><table class="passive" style="background-color:#4ce1f780"><tr><td>超覺醒被動技能：醫務室天使<br>當領域為劇毒領域時，<br>會提高我方全體拍組的招式的威力。<br>首次使出招式攻擊成功時，<br>會將領域變成劇毒領域。<br>（劇毒領域會提高毒屬性的攻擊的威力。）<br>領域變成劇毒領域的瞬間在場上時，<br>會延長劇毒領域的持續時間。</td></tr></table><table class="team"><tr><td style="background-color:#81549980">毒屬性<br>／輔助</td><td style="background-color:#6dbfb180">帕底亞<br>／輔助</td><td style="background-color:#6dbfb180">甜點愛好者<br>／輔助</td></tr><tr><td style="background-color:#6dbfb180">大姐姐<br>／輔助</td></tr><tr><td colspan="3" style="text-align:center;background-color:#6dbfb180">淚閃閃↑２</td></tr></table></div></div></div>
+	</div>
+
+	<script>
+json = [[1033600000, 'ＨＰ+10', 'ＨＰ+10', 0, 5, 1, '568dd1', 1, 0, []], [1033600001, '攻擊+5', '攻擊+5', 0, 5, 1, '568dd1', 1, -1, []], [1033600002, '防禦+5', '防禦+5', 0, 5, 1, '568dd1', 0, -1, []], [1033600003, '攻擊+5', '攻擊+5', 0, 5, 1, '568dd1', -1, 0, []], [1033600004, '特防+5', '特防+5', 0, 5, 1, '568dd1', -1, 1, []], [1033600005, '速度+5', '速度+5', 0, 5, 1, '568dd1', 0, 1, []], [1033600006, '解除妨害狀態', '當自己首次陷入畏縮、混亂或\n束縛狀態時，會解除該狀態。', 7, 84, 2, 'e6ce5e', 0, 2, []], [1033600007, '防禦成功時防禦４↓Ｇ９', '藉由防禦狀態使對手的招式無效時，\n會降低對手全體拍組的防禦４階段。', 10, 120, 4, 'e6ce5e', 0, 4, []], [1033600008, '隊伍使出拍組招式後廣域防守次數回復９', '我方隊伍使出拍組招式後，\n會幫自己的「廣域防守」的使用次數回復１次。', 10, 120, 5, 'e6ce5e', -2, 5, []], [1033600009, '毒屬性防守', '可減輕受到毒屬性招式攻擊時的傷害。', 8, 96, 2, 'e6ce5e', 0, -2, []], [1033600010, '防禦成功時特防４↓Ｇ９', '藉由防禦狀態使對手的招式無效時，\n會降低對手全體拍組的特防４階段。', 10, 120, 4, 'e6ce5e', 0, -4, []], [1033600011, '碉堡：寶可夢首次使出變化招式時碉堡次數回復１', '在寶可夢首次使出變化招式時，\n會幫自己的「碉堡」的使用次數回復１次。', 10, 120, 5, 'e1768a', -2, -3, []], [1033600012, '防禦+5', '防禦+5', 2, 24, 1, '568dd1', 1, 1, []], [1033600013, 'ＨＰ+10', 'ＨＰ+10', 2, 24, 1, '568dd1', 2, 1, []], [1033600014, '特防+5', '特防+5', 2, 24, 1, '568dd1', 1, 2, []], [1033600015, '特防+5', '特防+5', 2, 24, 1, '568dd1', 3, 1, []], [1033600016, '毒針：威力+4', '毒針：威力+4', 3, 36, 1, '4ab897', 2, 2, []], [1033600017, '毒針：威力+4', '毒針：威力+4', 3, 36, 2, '4ab897', 1, 3, []], [1033600018, '毒針：威力+4', '毒針：威力+4', 3, 36, 1, '4ab897', 3, 2, []], [1033600019, '好好休息別勉強～：招式後招式次數回復２', '招式成功時，有３０％的機率\n會幫該招式的使用次數回復１次。', 7, 84, 2, 'e1768a', 2, 3, []], [1033600020, '防禦成功時賦予物理增強(１)Ｇ９', '藉由防禦狀態使對手的招式無效時，\n會提高我方全體拍組的下次物理招式威力增強\n１階段。', 10, 120, 3, 'e6ce5e', 1, 4, []], [1033600021, '好好休息別勉強～：招式後場地招式計量槽加速９', '招式成功時，\n會讓我方場地變成招式計量槽加速狀態。', 8, 96, 2, 'e1768a', 3, 3, []], [1033600022, '上場時攻擊提升Ｇ２', '上場時，\n會提高我方全體拍組的攻擊２階段。', 10, 120, 3, 'e6ce5e', 2, 4, []], [1033600023, '特防+5', '特防+5', 2, 24, 1, '568dd1', -2, 0, []], [1033600024, '太晶爆發・紫黃：威力+2', '太晶爆發・紫黃：威力+2', 3, 36, 1, '4ab897', -3, 0, []], [1033600025, '速度+5', '速度+5', 2, 24, 1, '568dd1', -1, -1, []], [1033600026, '防禦+5', '防禦+5', 2, 24, 1, '568dd1', -2, -1, []], [1033600027, '太晶爆發・紫黃：威力+2', '太晶爆發・紫黃：威力+2', 3, 36, 2, '4ab897', -3, -1, []], [1033600028, '太晶爆發・紫黃：威力+2', '太晶爆發・紫黃：威力+2', 3, 36, 2, '4ab897', -1, -2, []], [1033600029, '碉堡：招式後招式計量槽增加３', '招式成功時，有４０％的機率\n會幫自己增加１條招式計量槽。', 7, 84, 2, 'e1768a', -2, -2, []], [1033600030, '防禦成功時ＨＰ回復９', '藉由防禦狀態使對手的招式無效時，\n會回復自己的ＨＰ，約為自己最大ＨＰ的２０％。', 10, 120, 3, 'e6ce5e', -3, -2, []], [1033600031, '首次危機時ＨＰ回復４', '首次陷入危機時，\n會回復自己的ＨＰ，約為自己最大ＨＰ的４０％。', 10, 120, 3, 'e6ce5e', -1, -3, []], [1033600032, '速度+5', '速度+5', 2, 24, 1, '568dd1', 1, -2, []], [1033600033, '攻擊+5', '攻擊+5', 2, 24, 1, '568dd1', 2, -3, []], [1033600034, 'ＨＰ+10', 'ＨＰ+10', 2, 24, 1, '568dd1', 1, -3, []], [1033600035, '特防下降無效', '特防不會降低。', 5, 60, 1, 'e6ce5e', 3, -4, []], [1033600036, '防禦+5', '防禦+5', 2, 24, 1, '568dd1', 2, -4, []], [1033600037, '毒針：威力+4', '毒針：威力+4', 3, 36, 2, '4ab897', 1, -4, []], [1033600038, '毒針：威力+4', '毒針：威力+4', 3, 36, 1, '4ab897', 3, -5, []], [1033600039, '毒針：招式後招式計量槽增加３', '招式成功時，有４０％的機率\n會幫自己增加１條招式計量槽。', 7, 84, 2, 'e1768a', 2, -5, []], [1033600040, '防禦成功時賦予特殊增強(１)Ｇ９', '藉由防禦狀態使對手的招式無效時，\n會提高我方全體拍組的下次特殊招式威力增強\n１階段。', 10, 120, 3, 'e6ce5e', 1, -5, []], [1033600041, '毒針：異常機率提升１', '當招式的追加效果可使對手陷入異常狀態時，會提高該追加效果的成功率。', 8, 96, 2, 'e1768a', 3, -6, []], [1033600042, '上場時特攻提升Ｇ２', '上場時，\n會提高我方全體拍組的特攻２階段。', 10, 120, 3, 'e6ce5e', 2, -6, []], [1033600043, '速度+5', '速度+5', 2, 24, 1, '568dd1', -2, 2, []], [1033600044, 'ＨＰ+10', 'ＨＰ+10', 2, 24, 1, '568dd1', -1, 2, []], [1033600045, '防禦下降無效', '防禦不會降低。', 5, 60, 1, 'e6ce5e', -3, 3, []], [1033600046, '太晶爆發・紫黃：威力+2', '太晶爆發・紫黃：威力+2', 3, 36, 1, '4ab897', -2, 3, []], [1033600047, '廣域防守：招式後招式計量槽增加３', '招式成功時，有４０％的機率\n會幫自己增加１條招式計量槽。', 7, 84, 2, 'e1768a', -1, 3, []], [1033600048, '太晶爆發・紫黃：威力+2', '太晶爆發・紫黃：威力+2', 3, 36, 2, '4ab897', -3, 4, []], [1033600049, '太晶爆發・紫黃：招式後招式計量槽增加３', '招式成功時，有４０％的機率\n會幫自己增加１條招式計量槽。', 7, 84, 2, 'e1768a', -2, 4, []], [1033600050, '防禦成功時計數加速９', '藉由防禦狀態使對手的招式無效時，\n會讓發動拍組招式所需的行動數減少１次。', 10, 120, 3, 'e6ce5e', -1, 4, []], [1033600051, '廣域防守：招式後招式次數回復４', '招式成功時，有５０％的機率\n會幫該招式的使用次數回復１次。', 10, 120, 3, 'e1768a', -3, 5, []], [1033600052, '醫務室天使給你好看之太晶爆發：威力+25', '醫務室天使給你好看之太晶爆發：威力+25', 5, 60, 3, '8974c3', 0, 3, []], [1033600053, '醫務室天使給你好看之太晶爆發：威力+25', '醫務室天使給你好看之太晶爆發：威力+25', 5, 60, 3, '8974c3', 0, -3, []]]
+
+		function setCookie(cookieName, cookieValue, cookieDates) {
+			var d = new Date();
+			d.setDate(d.getDate() + cookieDates);
+			document.cookie = cookieName + "=" + cookieValue + ";expires=" + d.toGMTString();
+		}
+		function getCookie(cookieName) {
+			var cookieStr = unescape(document.cookie);
+			var arr = cookieStr.split("; ");
+			var cookieValue = "";
+			for (var i = 0; i < arr.length; i++) {
+				var temp = arr[i].split("=");
+				if (temp[0] == cookieName) {
+					cookieValue = temp[1];
+					break;
+				}
+			}
+			return cookieValue;
+		}
+		function removeCookie(cookieName) {
+			document.cookie = encodeURIComponent(cookieName) + "=; expires=" + new Date();
+		}
+
+		function newCookie() {
+			var re = "";
+			for (var i = 0; i < 4; i++) {
+				re = re + checks[i] + ',';
+				re = re + escape(pres[i]) + ',';
+			}
+			re = re + set;
+			return re;
+		}
+
+		function stringLength(str) {
+			var length = 0;
+			for (var i = 0; i < str.length; i++) {
+				if (str.slice(i, i + 1).match(/[\u0000-\u00ff]/g)) length += 0.5;
+				else length++;
+			}
+			return length;
+		}
+
+		class Tile {
+			constructor(id, skill, effect, energy, orb, lv, color, x, y, releaseItemSet, check) {
+				this.id = id;
+				this.skill = skill;
+				this.effect = effect;
+				this.energy = energy;
+				this.orb = orb;
+				this.lv = lv;
+				this.color = color;
+				this.x = x;
+				this.y = y;
+				this.xy = xyz2xy(this.x, this.y);
+				this.hexagon = hexagon(this.xy);
+				this.releaseItemSet = releaseItemSet
+				this.check = check;
+			}
+			draw() {
+				var e = document.getElementById('grid');
+
+				var h = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+				var points = "";
+				for (var i = 0; i < this.hexagon.length; i++) {
+					points = points + this.hexagon[i][0] + "," + this.hexagon[i][1] + " ";
+				}
+				h.setAttribute("points", points);
+				if (this.check == 0) {
+					h.setAttribute("style", `fill:transparent;stroke:#${this.color};stroke-width:4`);
+				}
+				else {
+					h.setAttribute("style", `fill:#${this.color};stroke:#929292;stroke-width:4`);
+					energy = energy - this.energy;
+					orb = orb + this.orb;
+
+					if (this.releaseItemSet) {
+						this.releaseItemSet.forEach(i => {
+							if (!releaseItemSetCountDict[i.item]) releaseItemSetCountDict[i.item] = 0
+							releaseItemSetCountDict[i.item] += i.count
+						})
+					}
+				}
+				h.setAttribute("id", this.id);
+				e.appendChild(h);
+			}
+			skin() {
+				var e = document.getElementById('grid');
+
+				let hw = r * 2;
+				let hh = r * 1.732;
+				let hl = this.xy[0] - hw / 2
+				let ht = this.xy[1] - hh / 2
+				let fo = document.createElementNS('http://www.w3.org/2000/svg', 'foreignObject')
+				fo.setAttribute('width', hw)
+				fo.setAttribute('height', hh)
+				fo.setAttribute('x', hl)
+				fo.setAttribute('y', ht)
+				let abilityDiv = document.createElement('div')
+				abilityDiv.classList.add('ability')
+				abilityDiv.setAttribute("style", `text-shadow:0px 0px 0.5rem #${this.color}`)
+
+				let levelDiv = document.createElement('div')
+				levelDiv.innerHTML = '等級' + this.lv
+				abilityDiv.appendChild(levelDiv)
+
+				let nameDiv = document.createElement('div')
+				abilityDiv.appendChild(nameDiv)
+				if (this.skill.indexOf('：') != -1) nameDiv.innerHTML = this.skill.replace('：', '<br>')
+				else nameDiv.innerHTML = this.skill
+
+				if (this.releaseItemSet?.length) {
+					let energyDiv = document.createElement('div')
+					energyDiv.innerHTML = this.releaseItemSet.map(i => `${i.item.replace('滴晶', '')}${i.count}`).join(' ')
+					abilityDiv.appendChild(energyDiv)
+				} else {
+					let energyDiv = document.createElement('div')
+					energyDiv.innerHTML = '能量' + this.energy
+					abilityDiv.appendChild(energyDiv)
+				}
+
+				fo.appendChild(abilityDiv)
+				e.appendChild(fo)
+
+				var h = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+				var points = "";
+				for (var i = 0; i < this.hexagon.length; i++) {
+					points = points + this.hexagon[i][0] + "," + this.hexagon[i][1] + " ";
+				}
+				h.setAttribute("points", points);
+				h.setAttribute("style", `fill:transparent;stroke:transparent;stroke-width:4`);
+				h.setAttribute("onclick", "c(evt," + this.id + ")");
+				e.appendChild(h);
+			}
+		}
+		function xyz2xy(x, y) {
+			var x1 = x * R * 1.5 + X / 2;
+			var y1 = - x * R * 1.732 / 2 - y * R * 1.732 + Y / 2;
+			return [x1, y1];
+		}
+
+		var svgleft = 540;
+		var svgtop = 960;
+		var svgright = 540;
+		var svgbottom = 960;
+
+		function hexagon(xy) {
+			var x = xy[0];
+			var y = xy[1];
+			var r2 = r / 2;
+			var r3 = r / 2 * 1.732;
+			var re = [[x + r, y],
+			[x + r2, y + r3],
+			[x - r2, y + r3],
+			[x - r, y],
+			[x - r2, y - r3],
+			[x + r2, y - r3]];
+			for (var i = 0; i < 6; i++) {
+				if (re[i][0] < svgleft) svgleft = Math.floor(re[i][0]);
+				if (re[i][0] > svgright) svgright = Math.ceil(re[i][0]);
+				if (re[i][1] < svgtop) svgtop = Math.floor(re[i][1]);
+				if (re[i][1] > svgbottom) svgbottom = Math.ceil(re[i][1]);
+			}
+			return re;
+		}
+
+		function c(evt, id) {
+			var t = tiles.find(item => {
+				return item.id == id;
+			});
+			var target = document.getElementById(id);
+			if (target.style.fill == "transparent") {
+				target.style.fill = "#" + t.color;
+				target.style.stroke = "#929292";
+				energy = energy - t.energy;
+				orb = orb + t.orb;
+				if (t.releaseItemSet) {
+					t.releaseItemSet.forEach(i => {
+						if (!releaseItemSetCountDict[i.item]) releaseItemSetCountDict[i.item] = 0
+						releaseItemSetCountDict[i.item] += i.count
+					})
+				}
+
+				document.getElementById('skill').innerHTML = '技能名稱：' + t.skill;
+				document.getElementById('effect').innerHTML = '效果：' + t.effect;
+				for (var i = 0; i < json.length; i++) {
+					if (json[i][0] == id) {
+						check[i] = 1;
+						break;
+					}
+				}
+			}
+			else {
+				target.style.fill = "transparent";
+				target.style.stroke = "#" + t.color;
+				energy = energy + t.energy;
+				orb = orb - t.orb;
+				if (t.releaseItemSet) {
+					t.releaseItemSet.forEach(i => {
+						if (!releaseItemSetCountDict[i.item]) releaseItemSetCountDict[i.item] = 0
+						releaseItemSetCountDict[i.item] -= i.count
+					})
+				}
+				document.getElementById('skill').innerHTML = '技能名稱：';
+				document.getElementById('effect').innerHTML = '效果：';
+				for (var i = 0; i < json.length; i++) {
+					if (json[i][0] == id) {
+						check[i] = 0;
+						break;
+					}
+				}
+			}
+			checks[set] = check.join('');
+			setCookie('syncgrid' + no, newCookie(), 999);
+			update();
+		};
+
+		function rename() {
+			var pre = prompt("請輸入預設名稱");
+			if (pre != null) {
+				pres[set] = pre;
+				var select = document.getElementById("ms");
+				select.options[set].text = pre;
+				setCookie('syncgrid' + no, newCookie(), 999);
+			}
+		}
+
+		function reset() {
+			if (confirm("確定要重設所有已開放的格子嗎？")) {
+				checks[set] = "";
+				setCookie('syncgrid' + no, newCookie(), 999);
+				update();
+				newGrid();
+			}
+		}
+
+		function changeSet() {
+			var select = document.getElementById("ms");
+			set = select.selectedIndex;
+			setCookie('syncgrid' + no, newCookie(), 999);
+			update();
+			newGrid();
+		}
+
+		function newGrid() {
+			var e = document.getElementById("grid")
+			e.innerHTML = "";
+
+			energy = 60;
+			orb = 0;
+			releaseItemSetCountDict = {}
+
+			var h = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+			var points = "";
+			var hxy = xyz2xy(0, 0);
+			var hxg = hexagon(hxy);
+			for (var i = 0; i < hxg.length; i++) {
+				points = points + hxg[i][0] + "," + hxg[i][1] + " ";
+			}
+			h.setAttribute("points", points);
+			h.setAttribute("style", `fill:#${this.tcolor};opacity:0.5;stroke:#929292;stroke-width:4`);
+			e.appendChild(h);
+
+			let hw = r * 2;
+			let hh = r * 1.732;
+			let hl = hxy[0] - hw / 2
+			let ht = hxy[1] - hh / 2
+			let fo = document.createElementNS('http://www.w3.org/2000/svg', 'foreignObject')
+			fo.setAttribute('width', hw)
+			fo.setAttribute('height', hh)
+			fo.setAttribute('x', hl)
+			fo.setAttribute('y', ht)
+			let abilityDiv = document.createElement('div')
+			abilityDiv.classList.add('ability')
+			abilityDiv.setAttribute("style", `text-shadow:0px 0px 0.5rem #${this.color}`)
+			let levelDiv = document.createElement('div')
+			let nameDiv = document.createElement('div')
+			nameDiv.innerHTML = name.replace('&', '<br>')
+			let energyDiv = document.createElement('div')
+			abilityDiv.appendChild(levelDiv)
+			abilityDiv.appendChild(nameDiv)
+			abilityDiv.appendChild(energyDiv)
+			fo.appendChild(abilityDiv)
+			e.appendChild(fo)
+
+			tiles = new Array();
+			for (var i = 0; i < json.length; i++) {
+				var t = json[i];
+				var tile = new Tile(t[0], t[1], t[2], t[3], t[4], t[5], t[6], t[7], t[8], t[9], check[i]);
+				tile.draw();
+				tiles.push(tile);
+			}
+			for (var i = 0; i < tiles.length; i++) {
+				var tile = tiles[i];
+				tile.skin();
+			}
+			document.getElementById('energy').innerHTML = '剩餘力量:' + energy;
+			document.getElementById('orb').innerHTML = '拍檔滴晶:' + orb;
+			document.getElementById('releaseItemSet').innerHTML = Object.keys(releaseItemSetCountDict).filter(key => releaseItemSetCountDict[key]).map(key => `${key}:${releaseItemSetCountDict[key]}`).join(' ');
+		}
+
+		function update() {
+			var select = document.getElementById("ms");
+			select.selectedIndex = set;
+			check = checks[set];
+			if (check == "") {
+				check = new Array(json.length);
+				for (var i = 0; i < check.length; i++) check[i] = 0;
+			}
+			else {
+				check = check.split('');
+			}
+			document.getElementById('energy').innerHTML = '剩餘力量:' + energy;
+			document.getElementById('orb').innerHTML = '拍檔滴晶:' + orb;
+			document.getElementById('releaseItemSet').innerHTML = Object.keys(releaseItemSetCountDict).filter(key => releaseItemSetCountDict[key]).map(key => `${key}:${releaseItemSetCountDict[key]}`).join(' ');
+			var re = new Array();
+			for (var i = 0; i < check.length; i++) {
+				if (check[i] == 1) {
+					var newline = true;
+					if (json[i][1].indexOf('+') != -1) {
+						for (var j = 0; j < re.length; j++) {
+							if (re[j].indexOf('+') != -1) {
+								if (re[j].slice(0, re[j].indexOf('+')) == json[i][1].slice(0, json[i][1].indexOf('+'))) {
+									re[j] = re[j].slice(0, re[j].indexOf('+') + 1) + (parseInt(re[j].slice(re[j].indexOf('+') + 1, re[j].length)) + parseInt(json[i][1].slice(json[i][1].indexOf('+') + 1, json[i][1].length)));
+									newline = false;
+								}
+							}
+						}
+					}
+					if (newline) {
+						re.push(json[i][1]);
+					}
+				}
+			}
+			document.getElementById('sg').innerHTML = '石盤技能：<br>' + re.join('<br>');
+		}
+
+		var no = "10336000000";
+		var name = "米莫莎&超壞星";
+		var tcolor = "815499";
+		var X = 1080;
+		var Y = 1920;
+		var R = 96;
+		var r = 92;
+		var f = 16;
+		var energy = 60;
+		var orb = 0;
+		var releaseItemSetCountDict = {}
+		var checks = ["", "", "", ""];
+		var pres = ["No.1", "No.2", "No.3", "No.4"];
+		var set = 0;
+		var cookie = getCookie('syncgrid' + no);
+		if (cookie.indexOf(',') != -1) {
+			cookie = cookie.split(',');
+			if (cookie.length == 9) {
+				for (var i = 0; i < 4; i++) {
+					checks[i] = cookie[2 * i];
+					pres[i] = cookie[2 * i + 1];
+				}
+				set = cookie[8];
+			}
+		}
+		else {
+			checks[0] = cookie;
+			checks[1] = '0'.repeat(json.length);
+			checks[2] = '0'.repeat(json.length);
+			checks[3] = '0'.repeat(json.length);
+		}
+
+		var select = document.getElementById("ms");
+		select.selectedIndex = set;
+		for (var i = 0; i < 4; i++) {
+			if (pres[i] == '') select.options[i].text = "No." + (i + 1);
+			else select.options[i].text = pres[i];
+		}
+
+		var check = checks[set];
+		if (check == "") {
+			check = new Array(json.length);
+			for (var i = 0; i < check.length; i++) check[i] = 0;
+		}
+		else {
+			check = check.split('');
+		}
+
+		newGrid();
+		update();
+
+		var svg = document.getElementById("grid");
+		svg.setAttribute('viewBox', svgleft + ' ' + svgtop + ' ' + (svgright - svgleft) + ' ' + (svgbottom - svgtop));
+		var svgW = svgright - svgleft;
+		var svgH = svgbottom - svgtop;
+		// svg.setAttribute('width', Math.ceil(svgright - svgleft));
+		// svg.setAttribute('height', Math.ceil(svgbottom - svgtop));
+		if (svgH < 1920) {
+			if (document.documentElement.clientWidth / document.documentElement.clientHeight > svgW / svgH) {
+				svg.setAttribute('width', Math.ceil(svgW / svgH * document.documentElement.clientHeight * 0.9));
+				svg.setAttribute('height', Math.ceil(document.documentElement.clientHeight * 0.9) - 20);
+			}
+			else {
+				svg.setAttribute('height', Math.ceil(svgH / svgW * document.documentElement.clientWidth * 0.9));
+				svg.setAttribute('width', Math.ceil(document.documentElement.clientWidth * 0.9) - 20);
+			}
+		} else {
+			svg.setAttribute('width', Math.ceil(document.documentElement.clientWidth * 0.9) - 20)
+			svg.setAttribute('height', '')
+		}
+
+	</script>
+</body>
+
+</html>
