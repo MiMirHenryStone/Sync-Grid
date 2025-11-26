@@ -1,7 +1,7 @@
 <p align="center">⚠<b>石盤點法只保存在本地cookie</b>⚠<br><br>BUG反饋請私信bilibili@米米尔HenryStone<br>或發送郵件至MiMirHenryStone@gmail.com</p><br>
 
 ## 2.63.0
-<p><a href="./eventlog.html?v=1764140780">活動</a></p>
+<p><a href="./eventlog.html?v=1764141619">活動</a></p>
 ### 2025/11/28
 <p align="center"><a href="./grids/鬥也（冠軍）&酋雷姆.html"><img width="256" height="256" src="./scouts/event_7110_1W_MasterExFes_01.00000000000.png"><br>鬥也（冠軍）&酋雷姆</a></p>
 
@@ -30,7 +30,7 @@
 <p align="center"><a href="./grids/螺伯&烏鴉頭頭.html"><img src="./icons/螺伯&烏鴉頭頭.png"><br>螺伯&烏鴉頭頭<br>（螺伯專用潛能餅乾２：上場時防禦特防提升１）</a></p>
 <p align="center"><a href="./grids/美極套裝N&酋雷姆.html"><img src="./icons/美極套裝N&酋雷姆.png"><br>美極套裝N&酋雷姆<br>（美極套裝N專用潛能餅乾１：對手麻痺時拍組招式↑４）</a></p>
 <p align="center"><a href="./grids/志米（２０１９冬季）&章魚桶.html"><img src="./icons/志米（２０１９冬季）&章魚桶.png"><br>志米（２０１９冬季）&章魚桶<br>（志米（２０１９冬季）專用潛能餅乾１：攻擊時命中率下降４）</a></p>
-<p align="center"><a href="./grids/丹帝&噴火龍.html"><img src="./icons/丹帝&噴火龍.png"><br>丹帝&噴火龍<br>（）</a></p>
+<p align="center"><a href="./grids/丹帝&噴火龍.html"><img src="./icons/丹帝&噴火龍.png"><br>丹帝&噴火龍<br>（丹帝專用潛能餅乾２：效果絕佳時威力提升５）</a></p>
 <p align="center"><a href="./grids/阿爾套裝丹帝&噴火龍.html"><img src="./icons/阿爾套裝丹帝&噴火龍.png"><br>阿爾套裝丹帝&噴火龍<br>（阿爾套裝丹帝專用潛能餅乾２：特攻↑時拍組極巨化招式威力↑３）</a></p>
 
 <br>
