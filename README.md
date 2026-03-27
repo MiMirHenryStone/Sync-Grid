@@ -1,36 +1,32 @@
 <p align="center">⚠<b>石盤點法只保存在本地cookie</b>⚠<br><br>BUG反饋請私信bilibili@米米尔HenryStone<br>或發送郵件至MiMirHenryStone@gmail.com</p><br>
 
-## 2.66.0
-<p><a href="./eventlog.html?v=1772109080">活動</a></p>
-### 2026/02/27
-<p align="center"><a href="./grids/赤紅（１９９６）&皮卡丘.html"><img width="256" height="256" src="./scouts/event_8020_1W_MasterExFes_01.00000000000.png"><br>赤紅（１９９６）&皮卡丘</a></p>
+## 2.67.0
+<p><a href="./eventlog.html?v=1774595494">活動</a></p>
+### 2026/04/01
+<p align="center"><a href="./grids/阿爾套裝可爾妮&路卡利歐.html"><img width="256" height="256" src="./scouts/event_8030_1W_UltimateFes_01.event_8030_1W_UltimateFes_01_01.png"><br>阿爾套裝可爾妮&路卡利歐</a></p>
+<p align="center"><a href="./grids/北尚&地幔岩.html"><img src="./icons/北尚&地幔岩.png"><br>北尚&地幔岩</a></p>
 
-### 2026/02/28
-<p align="center"><a href="./grids/小春（2026週年慶）&厄鬼椪.html"><img width="256" height="256" src="./scouts/event_8020_1W_MasterExFes_04.00000000000.png"><br>小春（2026週年慶）&厄鬼椪</a></p>
-<p align="center"><a href="./grids/小青（2026週年慶）&太樂巴戈斯.html"><img width="256" height="256" src="./scouts/event_8020_1W_MasterExFes_08.00000000000.png"><br>小青（2026週年慶）&太樂巴戈斯</a></p>
-<p align="center"><a href="./grids/青綠（冠軍）&閃電鳥.html"><img src="./icons/青綠（冠軍）&閃電鳥.png"><br>青綠（冠軍）&閃電鳥<br>（拍檔石盤）</a></p>
+### 2026/04/03
+<p align="center"><a href="./grids/阿爾套裝娜姿&胡地.html"><img width="256" height="256" src="./scouts/event_8030_1W_UltimateFes_03.event_8030_1W_UltimateFes_03_01.png"><br>阿爾套裝娜姿&胡地</a></p>
 
-### 2026/03/01
-<p align="center"><a href="./grids/小霞&哥達鴨.html"><img src="./icons/小霞&哥達鴨.png"><br>小霞&哥達鴨</a></p>
+### 2026/04/14
+<p align="center"><a href="./grids/沙儷（學院）&貓頭夜鷹.html"><img width="256" height="256" src="./scouts/event_8030_3W_MasterTicket_01.event_8030_3W_MasterTicket_01_01.png"><br>沙儷（學院）&貓頭夜鷹</a></p>
+<p align="center"><a href="./grids/索妮亞（學院）&鋼鎧鴉.html"><img width="256" height="256" src="./scouts/event_8030_3W_MasterTicket_03.event_8030_3W_MasterTicket_03_01.png"><br>索妮亞（學院）&鋼鎧鴉</a></p>
+<p align="center"><a href="./grids/派帕&貪心栗鼠.html"><img src="./icons/派帕&貪心栗鼠.png"><br>派帕&貪心栗鼠</a></p>
 
-### 2026/03/07
-<p align="center"><a href="./grids/葉子（冠軍）&火焰鳥.html"><img src="./icons/葉子（冠軍）&火焰鳥.png"><br>葉子（冠軍）&火焰鳥<br>（拍檔石盤）</a></p>
-
-### 2026/03/14
-<p align="center"><a href="./grids/瑪俐（競技服）&長毛巨魔.html"><img width="256" height="256" src="./scouts/event_8020_3W_ExPokeFes_01.00000000000.png"><br>瑪俐（競技服）&長毛巨魔</a></p>
-<p align="center"><a href="./grids/赤紅（冠軍）&急凍鳥.html"><img src="./icons/赤紅（冠軍）&急凍鳥.png"><br>赤紅（冠軍）&急凍鳥<br>（拍檔石盤）</a></p>
-
-### 2026/03/16
-<p align="center"><a href="./grids/彼特（競技服）&烈焰馬.html"><img width="256" height="256" src="./scouts/event_8020_3W_ExPokeFes_02.00000000000.png"><br>彼特（競技服）&烈焰馬</a></p>
-
-### 2026/03/25
-<p align="center"><a href="./grids/美極套裝莎莉娜&基格爾德.html"><img width="256" height="256" src="./scouts/event_8020_4W_MasterFes_04.00000000000.png"><br>美極套裝莎莉娜&基格爾德<br>（拍檔石盤）</a></p>
-<p align="center"><a href="./grids/瑪俐（冠軍）&火焰鳥.html">瑪俐（冠軍）&火焰鳥<br>（拍檔石盤）</a></p>
-<p align="center"><a href="./grids/露璃娜&暴噬龜.html"><img src="./icons/露璃娜&暴噬龜.png"><br>露璃娜&暴噬龜<br>（拍檔石盤）</a></p>
+### 2026/04/25
+<p align="center"><a href="./grids/美極套裝琴音&時拉比.html"><img width="256" height="256" src="./scouts/event_8030_4W_MasterFes_04.00000000000.png"><br>美極套裝琴音&時拉比<br>（拍檔石盤）</a></p>
+<p align="center"><a href="./grids/白露（冠軍）&畢力吉翁.html">白露（冠軍）&畢力吉翁<br>（拍檔石盤）</a></p>
+<p align="center"><a href="./grids/火雁&噴火駝.html"><img src="./icons/火雁&噴火駝.png"><br>火雁&噴火駝<br>（拍檔石盤）</a></p>
 
 ### 專用潛能餅乾
-<p align="center"><a href="./grids/美極套裝鬥也&蓋諾賽克特.html"><img src="./icons/美極套裝鬥也&蓋諾賽克特.png"><br>美極套裝鬥也&蓋諾賽克特<br>（美極套裝鬥也專用潛能餅乾１：效果絕佳時下次效果絕佳威力提升４）</a></p>
-<p align="center"><a href="./grids/聶梓&堵攔熊.html"><img src="./icons/聶梓&堵攔熊.png"><br>聶梓&堵攔熊<br>（聶梓專用潛能餅乾１：首次上場時防禦特防↑Ｇ１）</a></p>
+<p align="center"><a href="./grids/葛吉花&象徵鳥.html"><img src="./icons/葛吉花&象徵鳥.png"><br>葛吉花&象徵鳥<br>（葛吉花專用潛能餅乾１：攻擊時特防下降９）</a></p>
+<p align="center"><a href="./grids/小優&蒼響.html"><img src="./icons/小優&蒼響.png"><br>小優&蒼響<br>（小優專用道館對戰潛能餅乾１：小優的全力對戰）</a></p>
+<p align="center"><a href="./grids/赫普&藏瑪然特.html"><img src="./icons/赫普&藏瑪然特.png"><br>赫普&藏瑪然特<br>（赫普專用道館對戰潛能餅乾１：赫普的百分百能量）</a></p>
+<p align="center"><a href="./grids/瑪俐（冠軍）&火焰鳥.html"><img src="./icons/瑪俐（冠軍）&火焰鳥.png"><br>瑪俐（冠軍）&火焰鳥<br>（瑪俐（冠軍）專用道館對戰潛能餅乾１：瑪俐熊熊燃燒的氣場）</a></p>
+<p align="center"><a href="./grids/彼特（競技服）&烈焰馬.html"><img src="./icons/彼特（競技服）&烈焰馬.png"><br>彼特（競技服）&烈焰馬<br>（彼特（競技服）專用道館對戰潛能餅乾１：彼特不屈的才能）</a></p>
+<p align="center"><a href="./grids/彩豆&蔥遊兵.html"><img src="./icons/彩豆&蔥遊兵.png"><br>彩豆&蔥遊兵<br>（彩豆專用道館對戰潛能餅乾１：彩豆的心靈食糧）</a></p>
+<p align="center"><a href="./grids/派帕&獒教父.html"><img src="./icons/派帕&獒教父.png"><br>派帕&獒教父<br>（寶可夢３０週年派帕專用潛能餅乾：首次上場時＆首次拍組招式後計數加速１）</a></p>
 
 <br>
 
@@ -42,6 +38,7 @@
 <a href="./grids/桄榔&雷吉奇卡斯.html"><img src="./icons/桄榔&雷吉奇卡斯.png" width="64" height="64">桄榔&雷吉奇卡斯</a><br>
 <a href="./grids/阿修&爆炸頭水牛.html"><img src="./icons/阿修&爆炸頭水牛.png" width="64" height="64">阿修&爆炸頭水牛</a><br>
 <a href="./grids/小青（2026週年慶）&太樂巴戈斯.html"><img src="./icons/小青（2026週年慶）&太樂巴戈斯.png" width="64" height="64">小青(2026週年慶)&太樂巴戈斯</a><br>
+<a href="./grids/派帕&貪心栗鼠.html"><img src="./icons/派帕&貪心栗鼠.png" width="64" height="64">派帕&貪心栗鼠</a><br>
 <a href="./grids/美極套裝赤紅&噴火龍.html"><img src="./icons/美極套裝赤紅&噴火龍.png" width="64" height="64">美極套裝赤紅&噴火龍</a><br>
 <a href="./grids/鬥子&炎武王.html"><img src="./icons/鬥子&炎武王.png" width="64" height="64">鬥子&炎武王</a><br>
 <a href="./grids/美極套裝鬥子&比克提尼.html"><img src="./icons/美極套裝鬥子&比克提尼.png" width="64" height="64">美極套裝鬥子&比克提尼</a><br>
@@ -378,6 +375,7 @@
 <a href="./grids/莎娜（偵探）&鑰圈兒.html"><img src="./icons/莎娜（偵探）&鑰圈兒.png" width="64" height="64">莎娜(偵探)&鑰圈兒</a><br>
 <a href="./grids/青葙&盔甲鳥.html"><img src="./icons/青葙&盔甲鳥.png" width="64" height="64">青葙&盔甲鳥</a><br>
 <a href="./grids/赫普&藏瑪然特.html"><img src="./icons/赫普&藏瑪然特.png" width="64" height="64">赫普&藏瑪然特</a><br>
+<a href="./grids/索妮亞（學院）&鋼鎧鴉.html"><img src="./icons/索妮亞（學院）&鋼鎧鴉.png" width="64" height="64">索妮亞(學院)&鋼鎧鴉</a><br>
 <a href="./grids/主角&雷吉斯奇魯.html"><img src="./icons/主角&雷吉斯奇魯.png" width="64" height="64">主角&雷吉斯奇魯</a><br>
 <a href="./grids/大吾&盔甲鳥.html"><img src="./icons/大吾&盔甲鳥.png" width="64" height="64">大吾&盔甲鳥</a><br>
 <a href="./grids/莉佳（２０２０冬季）&花療環環.html"><img src="./icons/莉佳（２０２０冬季）&花療環環.png" width="64" height="64">莉佳(2020冬季)&花療環環</a><br>
@@ -412,6 +410,7 @@
 <a href="./grids/美極套裝彼特&鐵武者.html"><img src="./icons/美極套裝彼特&鐵武者.png" width="64" height="64">美極套裝彼特&鐵武者</a><br>
 <a href="./grids/布爾美麗&耿鬼.html"><img src="./icons/布爾美麗&耿鬼.png" width="64" height="64">布爾美麗&耿鬼</a><br>
 <a href="./grids/阿修&高傲雉雞.html"><img src="./icons/阿修&高傲雉雞.png" width="64" height="64">阿修&高傲雉雞</a><br>
+<a href="./grids/沙儷（學院）&貓頭夜鷹.html"><img src="./icons/沙儷（學院）&貓頭夜鷹.png" width="64" height="64">沙儷(學院)&貓頭夜鷹</a><br>
 <a href="./grids/青綠&胡地.html"><img src="./icons/青綠&胡地.png" width="64" height="64">青綠&胡地</a><br>
 <a href="./grids/明耀（學院）&勇士雄鷹.html"><img src="./icons/明耀（學院）&勇士雄鷹.png" width="64" height="64">明耀(學院)&勇士雄鷹</a><br>
 <a href="./grids/達拉&鐵面忍者.html"><img src="./icons/達拉&鐵面忍者.png" width="64" height="64">達拉&鐵面忍者</a><br>
@@ -484,9 +483,11 @@
 <a href="./grids/阿爾套裝丹帝&噴火龍.html"><img src="./icons/阿爾套裝丹帝&噴火龍.png" width="64" height="64">阿爾套裝丹帝&噴火龍</a><br>
 <a href="./grids/阿爾套裝小銀&鳳王.html"><img src="./icons/阿爾套裝小銀&鳳王.png" width="64" height="64">阿爾套裝小銀&鳳王</a><br>
 <a href="./grids/阿爾套裝小霞&寶石海星.html"><img src="./icons/阿爾套裝小霞&寶石海星.png" width="64" height="64">阿爾套裝小霞&寶石海星</a><br>
+<a href="./grids/阿爾套裝可爾妮&路卡利歐.html"><img src="./icons/阿爾套裝可爾妮&路卡利歐.png" width="64" height="64">阿爾套裝可爾妮&路卡利歐</a><br>
 <a href="./grids/阿爾套裝竹蘭&烈咬陸鯊.html"><img src="./icons/阿爾套裝竹蘭&烈咬陸鯊.png" width="64" height="64">阿爾套裝竹蘭&烈咬陸鯊</a><br>
 <a href="./grids/阿爾套裝青綠&大比鳥.html"><img src="./icons/阿爾套裝青綠&大比鳥.png" width="64" height="64">阿爾套裝青綠&大比鳥</a><br>
 <a href="./grids/阿爾套裝阿響&洛奇亞.html"><img src="./icons/阿爾套裝阿響&洛奇亞.png" width="64" height="64">阿爾套裝阿響&洛奇亞</a><br>
+<a href="./grids/阿爾套裝娜姿&胡地.html"><img src="./icons/阿爾套裝娜姿&胡地.png" width="64" height="64">阿爾套裝娜姿&胡地</a><br>
 <a href="./grids/阿爾套裝阿戴克&火神蛾.html"><img src="./icons/阿爾套裝阿戴克&火神蛾.png" width="64" height="64">阿爾套裝阿戴克&火神蛾</a><br>
 <a href="./grids/阿爾套裝小剛&大岩蛇.html"><img src="./icons/阿爾套裝小剛&大岩蛇.png" width="64" height="64">阿爾套裝小剛&大岩蛇</a><br>
 <a href="./grids/阿爾套裝阿渡&快龍.html"><img src="./icons/阿爾套裝阿渡&快龍.png" width="64" height="64">阿爾套裝阿渡&快龍</a><br>
@@ -588,6 +589,7 @@
 <a href="./grids/小光&結草貴婦.html"><img src="./icons/小光&結草貴婦.png" width="64" height="64">小光&結草貴婦</a><br>
 <a href="./grids/丹瑜&寶包繭.html"><img src="./icons/丹瑜&寶包繭.png" width="64" height="64">丹瑜&寶包繭</a><br>
 <a href="./grids/麗姿&小碎鑽.html"><img src="./icons/麗姿&小碎鑽.png" width="64" height="64">麗姿&小碎鑽</a><br>
+<a href="./grids/北尚&地幔岩.html"><img src="./icons/北尚&地幔岩.png" width="64" height="64">北尚&地幔岩</a><br>
 <a href="./grids/奇巴納&龐岩怪.html"><img src="./icons/奇巴納&龐岩怪.png" width="64" height="64">奇巴納&龐岩怪</a><br>
 <a href="./grids/派帕&鹽石寶.html"><img src="./icons/派帕&鹽石寶.png" width="64" height="64">派帕&鹽石寶</a><br>
 <a href="./grids/阿塞蘿拉&詛咒娃娃.html"><img src="./icons/阿塞蘿拉&詛咒娃娃.png" width="64" height="64">阿塞蘿拉&詛咒娃娃</a><br>
